@@ -41,7 +41,30 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
     }
   } // loop over each text file in directory
 
+  // sort all intervals for rapid search
+  for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
+    for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
+      sort( std::begin(li->second) , std::end(li->second) ,
+            [](const TimeStampRange& a, const TimeStampRange& b) {
+              return ((a.start.ts*1.0E9+a.start.ts_ns_offset) < (b.start.ts*1.0E9+b.start.ts_ns_offset));
+            } );
+    }
+  }
+
   // any checks that the table contents are sane?
+  if( true ) {
+    // compute some statistics
+    unsigned long nIntervals{0ul};
+    unsigned long nLBs{0ul};
+    for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
+      for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
+        ++nLBs;
+        nIntervals += std::distance( std::begin(li->second) , std::end(li->second) );
+      }
+    }
+    cout << " TLALArEventVetoData: loaded " << _t.size() << " runs "
+    << "with " << nIntervals << " intervals in " << nLBs << " LBs from directory " << directory_path << endl;
+  }
   
   return true;
 }
@@ -65,17 +88,12 @@ TLALArEventVetoData::runNumberFromFilename( const boost::filesystem::path filena
 bool
 TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename )
 {
-  // get the run number from the filename
-  RunNumberType run = runNumberFromFilename( filename );
-  if( run==0 ) { 
-    cout << "TLALaArEventVetoData::loadRunFromFilename could not parse the filename " << filename << " for the run number." << endl;
-    return false;
-  }
-  
-  // open the file for the run number
+  // open the file 
   boost::filesystem::ifstream file( filename );
   if( !file || !file.is_open() ) { return false; }
 
+  bool any_insertions{false};
+  
   while( !file.eof() ) {
 
     // read the next line (of up to buffer_length) from the file
@@ -87,7 +105,9 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // is this an event veto line? if not, skip it.
     if( ! starts_with(line,"Event Veto ['") ) { continue; }
 
-    // parse the run, lbn, and timestamp info
+    // parse the run, lbn, and timestamp info. the lbn can either be a single number or
+    // a range "2-3".
+    
     vector<string> fields(25); // 24 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
     split( fields , line , is_any_of(" ,().[]'") , token_compress_on );
     // field(0-21) / desc
@@ -128,12 +148,49 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
       cout << line << endl;
       return false;
     }
-    cout << boost::format("%1% %2% %3% %4% %5% %6%") % line_interval_type % line_run % line_lbni % line_lbnf % line_tsi % line_tsf << endl;
+    // sanity check that run number is correct? no, forget about
+    // whether run is contained in a single file---allow text files
+    // to be any combination of runs, i.e. just any pile of lines that start with "Event Veto"...
+    
+    //cout << boost::format("%1% %2% %3% %4% %5% %6%") % line_interval_type % line_run % line_lbni % line_lbnf % line_tsi % line_tsf << endl;
+    
+    // insert this interval into the table
+    for( auto lbn = line_lbni; lbn!=(line_lbnf+1); ++lbn ) {
+      insertInterval( line_run , lbn , line_tsi , line_tsf );
+      any_insertions = true;
+    }
+    
   } // for each line in the file
+
+  if( !any_insertions ) {
+    // insert an empty run into the table. get the run number from
+    // the filename, since it did not appear in any veto lines.
+    RunNumberType run = runNumberFromFilename( filename );
+    if( run==0 ) { 
+      cout << "TLALaArEventVetoData::loadRunFromFilename could not parse the filename " << filename << " for the run number." << endl;
+      return false;
+    }
+    if( _t.find(run)!=_t.end() ) {
+      cout << "TLALaArEventVetoData::loadRunFromFilename warning: run for " << filename << " already present." << endl;
+    }
+    _t[ run ] = EventVetoLumiBlocks();
+  }
+
   // done
   return true;
 }
 
+void
+TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
+                                     const unsigned long& begin_ts , const unsigned long& end_ts )
+{
+  EventVetoIntervals& intervals = _t[run][lbn];
+  TimeStampType begin_ts_sec = begin_ts / 1000000000L;
+  TimeStampType end_ts_sec = end_ts / 1000000000L;
+  TimeStampType begin_ts_ns = begin_ts % 1000000000L;
+  TimeStampType end_ts_ns = end_ts % 1000000000L;
+  intervals.emplace_back( TimeStampRange({{begin_ts_sec,begin_ts_ns},{end_ts_sec,end_ts_ns}}) );
+}
 
 bool
 TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType& lbn ,

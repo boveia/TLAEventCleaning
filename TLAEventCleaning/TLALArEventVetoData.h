@@ -60,14 +60,16 @@ private:
     EventTimeStamp start;
     EventTimeStamp stop;
   };
-  using EventVetoInterval = std::vector<TimeStampRange>;
-  using EventVetoLumiBlocks = std::map<LumiBlockType,EventVetoInterval>;
+  using EventVetoIntervals = std::vector<TimeStampRange>;
+  using EventVetoLumiBlocks = std::map<LumiBlockType,EventVetoIntervals>;
   using EventVetoTable = std::map<RunNumberType,EventVetoLumiBlocks>;
 
   EventVetoTable _t;
 private:
   bool loadRunFromFilename( const boost::filesystem::path filename );
   RunNumberType runNumberFromFilename( const boost::filesystem::path filename ) const;
+  void insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
+                       const unsigned long& begin_ts , const unsigned long& end_ts );
 };
 
 #endif // WRAP_TLALAREVENTVETODATA_H
