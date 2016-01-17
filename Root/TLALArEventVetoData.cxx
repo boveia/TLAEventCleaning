@@ -37,9 +37,9 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
   }
 
   // iterate over text files in this directory
-  bool loaded_something = false;
+  bool loaded_something{false};
   for( auto dir_entry : directory_iterator(data_directory) ) {
-    bool ok = loadRunFromFilename( dir_entry.path() );
+    bool ok{loadRunFromFilename( dir_entry.path() )};
     if( !ok ) { 
       cout << "TLALArEventVetoData::loadFromDirectory failed to read " << dir_entry.path() << endl;
       return false;
@@ -62,8 +62,8 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
     // compute some statistics
     unsigned long nIntervals{0ul};
     unsigned long nLBs{0ul};
-    unsigned long min_ts = std::numeric_limits<unsigned long>::max();
-    unsigned long max_ts = 0;
+    unsigned long min_ts{std::numeric_limits<unsigned long>::max()};
+    unsigned long max_ts{0ul};
     for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
       for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
         ++nLBs;
@@ -98,7 +98,7 @@ TLALArEventVetoData::runNumberFromFilename( const boost::filesystem::path filena
   split( filename_parts , filename.filename().string() , is_any_of("-.") );
   if( filename_parts.size()<3 ) { return 0; }
   try {
-    RunNumberType run = lexical_cast<RunNumberType>(filename_parts[2]);
+    RunNumberType run{lexical_cast<RunNumberType>(filename_parts[2])};
     return run;
   } catch( const bad_lexical_cast& ) { return 0; }
   return 0;
@@ -117,7 +117,7 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
   while( !file.eof() ) {
 
     // read the next line (of up to buffer_length) from the file
-    constexpr unsigned int buffer_length = 1024u;
+    constexpr unsigned int buffer_length{1024u};
     std::array<char,buffer_length> l_arr;
     file.getline(&l_arr[0],buffer_length);
     string line(l_arr.data());
@@ -185,7 +185,7 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
   if( !any_insertions ) {
     // insert an empty run into the table. get the run number from
     // the filename, since it did not appear in any veto lines.
-    RunNumberType run = runNumberFromFilename( filename );
+    RunNumberType run{runNumberFromFilename( filename )};
     if( run==0 ) { 
       cout << "TLALaArEventVetoData::loadRunFromFilename could not parse the filename " << filename << " for the run number." << endl;
       return false;
@@ -210,11 +210,11 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
     _lbns_for_currun = nullptr;
   }
   // insert
-  EventVetoIntervals& intervals = _t[run][lbn];
-  TimeStampType begin_ts_sec = static_cast<uint32_t>(begin_ts / 1000000000ul);
-  TimeStampType end_ts_sec = static_cast<uint32_t>(end_ts / 1000000000ul);
-  TimeStampType begin_ts_ns = static_cast<uint32_t>(begin_ts % 1000000000ul);
-  TimeStampType end_ts_ns = static_cast<uint32_t>(end_ts % 1000000000ul);
+  EventVetoIntervals& intervals{_t[run][lbn]};
+  TimeStampType begin_ts_sec{static_cast<uint32_t>(begin_ts / 1000000000ul)};
+  TimeStampType end_ts_sec{static_cast<uint32_t>(end_ts / 1000000000ul)};
+  TimeStampType begin_ts_ns{static_cast<uint32_t>(begin_ts % 1000000000ul)};
+  TimeStampType end_ts_ns{static_cast<uint32_t>(end_ts % 1000000000ul)};
   intervals.emplace_back( TimeStampRange({{begin_ts_sec,begin_ts_ns},{end_ts_sec,end_ts_ns}}) );
 }
 
@@ -239,7 +239,7 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   // during a job, we'll
   
   if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
-    auto ir = _t.find(run);
+    auto ir{_t.find(run)};
     if( ir==_t.end() ) { throw std::exception(); }
     _currun = run;
     _lbns_for_currun = &(ir->second);
@@ -247,7 +247,7 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
 
   // look up LB
   const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
-  auto il = blocks.find(lbn);
+  auto il{blocks.find(lbn)};
   if( il == blocks.end() ) { return false; }
   
   // do any intervals contain this timestamp?
