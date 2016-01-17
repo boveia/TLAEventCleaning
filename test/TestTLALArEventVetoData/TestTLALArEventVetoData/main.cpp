@@ -17,7 +17,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
   TLALArEventVetoData data;
   // replace this path with the path to your event veto data directory
-  data.loadFromDirectory("/Users/boveia/Documents/Code/particle-physics/TLA/git-modules/TLAEventCleaning/test/TestTLALArEventVetoData/TestTLALArEventVetoData/../../../data/event-veto-data/");
+  data.loadFromDirectory("./TLAEventCleaning/data/event-veto-data/");
   
   struct TextFileInterval {
     unsigned long start;
