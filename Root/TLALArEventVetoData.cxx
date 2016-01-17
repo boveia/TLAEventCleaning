@@ -19,6 +19,9 @@ using boost::lexical_cast;
 using boost::bad_lexical_cast;
 
 TLALArEventVetoData::TLALArEventVetoData()
+  : _loaded{false}
+  , _currun{0}
+  , _lbns_for_currun{nullptr}
 {}
 
 bool
@@ -34,12 +37,14 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
   }
 
   // iterate over text files in this directory
+  bool loaded_something = false;
   for( auto dir_entry : directory_iterator(data_directory) ) {
     bool ok = loadRunFromFilename( dir_entry.path() );
     if( !ok ) { 
       cout << "TLALArEventVetoData::loadFromDirectory failed to read " << dir_entry.path() << endl;
       return false;
     }
+    loaded_something = true;
   } // loop over each text file in directory
 
   // sort all intervals for rapid search
@@ -73,6 +78,13 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
     << "with " << nIntervals << " intervals in " << nLBs << " LBs from directory " << directory_path << endl;
     cout << " Minimum/Maximum timestamps: " << min_ts << " / " << max_ts << endl;
   }
+
+  if( !loaded_something ) {
+    cout << " TLALArEventVetoData: nothing loaded! " << endl;
+    return false;
+  }
+
+  _loaded = true;
   
   return true;
 }
@@ -192,6 +204,12 @@ void
 TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
                                      const unsigned long& begin_ts , const unsigned long& end_ts )
 {
+  // first check if loaded is true. if so, we have to invalidate the run cache first
+  if( _loaded ) {
+    _currun = 0;
+    _lbns_for_currun = nullptr;
+  }
+  // insert
   EventVetoIntervals& intervals = _t[run][lbn];
   TimeStampType begin_ts_sec = static_cast<uint32_t>(begin_ts / 1000000000ul);
   TimeStampType end_ts_sec = static_cast<uint32_t>(end_ts / 1000000000ul);
@@ -217,12 +235,18 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   // Throws an exception if the event veto data has not been loaded, or if
   // there is no (even empty) event veto data provided for the given run.
     
-  // look up run
-  auto ir = _t.find(run);
-  if( ir==_t.end() ) { throw std::exception(); }
-  const EventVetoLumiBlocks& blocks{ir->second};
+  // look up run. check 'cached' run first. since the LBN table for the run will never be changed
+  // during a job, we'll
   
+  if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
+    auto ir = _t.find(run);
+    if( ir==_t.end() ) { throw std::exception(); }
+    _currun = run;
+    _lbns_for_currun = &(ir->second);
+  }  
+
   // look up LB
+  const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
   auto il = blocks.find(lbn);
   if( il == blocks.end() ) { return false; }
   

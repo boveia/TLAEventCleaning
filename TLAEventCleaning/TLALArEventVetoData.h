@@ -68,6 +68,10 @@ private:
   using EventVetoTable = std::map<RunNumberType,EventVetoLumiBlocks>;
 
   EventVetoTable _t;
+  // cache the run number lookup.
+  mutable RunNumberType _currun;
+  mutable const EventVetoLumiBlocks* _lbns_for_currun;
+  
 private:
   bool loadRunFromFilename( const boost::filesystem::path filename );
   RunNumberType runNumberFromFilename( const boost::filesystem::path filename ) const;
