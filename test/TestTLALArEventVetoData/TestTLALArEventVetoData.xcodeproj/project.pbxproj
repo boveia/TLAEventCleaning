@@ -172,6 +172,7 @@
 				OTHER_LDFLAGS = (
 					"-lboost_system",
 					"-lboost_filesystem",
+					"-lboost_timer",
 				);
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../../**";
@@ -214,6 +215,7 @@
 				OTHER_LDFLAGS = (
 					"-lboost_system",
 					"-lboost_filesystem",
+					"-lboost_timer",
 				);
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../../**";
