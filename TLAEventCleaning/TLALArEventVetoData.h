@@ -55,6 +55,9 @@ private:
   struct EventTimeStamp {
     TimeStampType ts;
     TimeStampType ts_ns_offset;
+    bool operator<(const EventTimeStamp& rhs) const {
+      return( this->ts < rhs.ts || (this->ts==rhs.ts && this->ts_ns_offset<rhs.ts_ns_offset) );
+    }
   };
   struct TimeStampRange {
     EventTimeStamp start;

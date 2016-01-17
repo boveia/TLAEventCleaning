@@ -4,6 +4,7 @@
 #include <iostream>
 #include <array>
 #include <string>
+#include <exception>
 #include <boost/algorithm/string.hpp>
 #include <boost/format.hpp>
 #include <boost/lexical_cast.hpp>
@@ -46,7 +47,7 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
     for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
       sort( std::begin(li->second) , std::end(li->second) ,
             [](const TimeStampRange& a, const TimeStampRange& b) {
-              return ((a.start.ts*1.0E9+a.start.ts_ns_offset) < (b.start.ts*1.0E9+b.start.ts_ns_offset));
+              return ((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
             } );
     }
   }
@@ -56,14 +57,21 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
     // compute some statistics
     unsigned long nIntervals{0ul};
     unsigned long nLBs{0ul};
+    unsigned long min_ts = std::numeric_limits<unsigned long>::max();
+    unsigned long max_ts = 0;
     for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
       for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
         ++nLBs;
         nIntervals += std::distance( std::begin(li->second) , std::end(li->second) );
+        for( auto ii=std::begin(li->second), fi=std::end(li->second); ii!=fi; ++ii ) {
+          min_ts = std::min( (ii->start.ts*1000000000ul)+ii->start.ts_ns_offset , min_ts );
+          max_ts = std::max( (ii->stop.ts*1000000000ul)+ii->stop.ts_ns_offset , max_ts );
+        }
       }
     }
     cout << " TLALArEventVetoData: loaded " << _t.size() << " runs "
     << "with " << nIntervals << " intervals in " << nLBs << " LBs from directory " << directory_path << endl;
+    cout << " Minimum/Maximum timestamps: " << min_ts << " / " << max_ts << endl;
   }
   
   return true;
@@ -115,7 +123,7 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // 17: run number
     // 18: 'LB' if one LB, 'LBs' if range of LBs
     // 19: lumi block
-    // 20,22: start and stop
+    // 22,20: stop and start (note reversed order)
     if( fields.size()!=25 ) {
       cout << "TLALaArEventVetoData::loadRunFromFilename could not parse " << filename << " at line:" << endl;
       cout << line << endl;
@@ -141,8 +149,8 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
         line_lbni = lexical_cast<LumiBlockType>(fields[19]);
         line_lbnf = line_lbni;
       }
-      line_tsi = lexical_cast<unsigned long>(fields[20]);
-      line_tsf = lexical_cast<unsigned long>(fields[22]);
+      line_tsi = lexical_cast<unsigned long>(fields[22]);
+      line_tsf = lexical_cast<unsigned long>(fields[20]);
     } catch( const bad_lexical_cast& ) {
       cout << "TLALaArEventVetoData::loadRunFromFilename could not parse run/lbn/timestamp info from " << filename << "  at line:" << endl;
       cout << line << endl;
@@ -185,10 +193,10 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
                                      const unsigned long& begin_ts , const unsigned long& end_ts )
 {
   EventVetoIntervals& intervals = _t[run][lbn];
-  TimeStampType begin_ts_sec = begin_ts / 1000000000L;
-  TimeStampType end_ts_sec = end_ts / 1000000000L;
-  TimeStampType begin_ts_ns = begin_ts % 1000000000L;
-  TimeStampType end_ts_ns = end_ts % 1000000000L;
+  TimeStampType begin_ts_sec = static_cast<uint32_t>(begin_ts / 1000000000ul);
+  TimeStampType end_ts_sec = static_cast<uint32_t>(end_ts / 1000000000ul);
+  TimeStampType begin_ts_ns = static_cast<uint32_t>(begin_ts % 1000000000ul);
+  TimeStampType end_ts_ns = static_cast<uint32_t>(end_ts % 1000000000ul);
   intervals.emplace_back( TimeStampRange({{begin_ts_sec,begin_ts_ns},{end_ts_sec,end_ts_ns}}) );
 }
 
@@ -208,5 +216,35 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   // Returns true if the event should be excluded, false otherwise.
   // Throws an exception if the event veto data has not been loaded, or if
   // there is no (even empty) event veto data provided for the given run.
-  return true;
+    
+  // look up run
+  auto ir = _t.find(run);
+  if( ir==_t.end() ) { throw std::exception(); }
+  const EventVetoLumiBlocks& blocks{ir->second};
+  
+  // look up LB
+  auto il = blocks.find(lbn);
+  if( il == blocks.end() ) { return false; }
+  
+  // do any intervals contain this timestamp?
+  //   - std::function<bool(const TimeStampType&,const TimeStampType&>> 
+  //     auto ts_compare = ((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
+  const EventVetoIntervals& intervals(il->second);
+  EventTimeStamp event_ts{ts,ts_ns_offset};
+
+  // do any intervals contain this timestamp?
+  for( auto interval : intervals ) {
+    if( event_ts < interval.start ) { continue; }
+    if( interval.stop < event_ts ) { continue; }
+    // yes
+    return true;
+  }
+  
+  // // find first element whose start time is >= this event timestamp
+  // auto i = std::lower_bound( std::begin(intervals) , std::end(intervals) , ts ,
+  //                            [](const TimeStampRange& a, const TimeStampRange& b) {
+  //                              return((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
+  //                            } );
+  
+  return false;
 }
