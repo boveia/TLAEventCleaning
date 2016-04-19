@@ -239,7 +239,7 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   // during a job, we'll
   
   if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
-    auto ir{_t.find(run)};
+    auto ir = _t.find(run);
     if( ir==_t.end() ) { throw std::exception(); }
     _currun = run;
     _lbns_for_currun = &(ir->second);
@@ -247,7 +247,7 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
 
   // look up LB
   const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
-  auto il{blocks.find(lbn)};
+  auto il = blocks.find(lbn);
   if( il == blocks.end() ) { return false; }
   
   // do any intervals contain this timestamp?
