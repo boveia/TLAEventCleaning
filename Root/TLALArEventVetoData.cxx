@@ -210,7 +210,7 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
     _lbns_for_currun = nullptr;
   }
   // insert
-  EventVetoIntervals& intervals{_t[run][lbn]};
+  EventVetoIntervals& intervals = _t[run][lbn];
   TimeStampType begin_ts_sec{static_cast<uint32_t>(begin_ts / 1000000000ul)};
   TimeStampType end_ts_sec{static_cast<uint32_t>(end_ts / 1000000000ul)};
   TimeStampType begin_ts_ns{static_cast<uint32_t>(begin_ts % 1000000000ul)};
