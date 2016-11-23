@@ -1,0 +1,39 @@
+284473 284473
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-04  Run 284473 to 284473
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/AtlasCore/20.1.8/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+Error in <TCint::AutoLoadCallback>: failure loading library libGaudiPythonDict for class basic_ostream<char,char_traits<char> >
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<bool>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<double>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<float>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<short>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-int>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-short>=vector.dll vectorbool.dll> for level 0; ignored
+[?1034hDumping EventVeto data from run 284473 to run 284473  lasting from Mon Nov  2 16:31:34 2015 UTC to Mon Nov  2 22:20:16 2015 UTC
+Event Veto ['NoiseBurst'], Mon Nov  2 18:48:37 2015 UTC-Mon Nov  2 18:48:37 2015 UTC (0.050 )  Run 284473, LB 142 (1446490117080158464.000000,1446490117030042112.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 19:01:17 2015 UTC-Mon Nov  2 19:01:17 2015 UTC (0.050 )  Run 284473, LB 154 (1446490877282572544.000000,1446490877232395776.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 19:24:39 2015 UTC-Mon Nov  2 19:24:39 2015 UTC (0.050 )  Run 284473, LB 179 (1446492279370951936.000000,1446492279320951808.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 19:35:24 2015 UTC-Mon Nov  2 19:35:24 2015 UTC (0.050 )  Run 284473, LB 189 (1446492924323664896.000000,1446492924273664256.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 19:36:29 2015 UTC-Mon Nov  2 19:36:29 2015 UTC (0.050 )  Run 284473, LB 190 (1446492989200261376.000000,1446492989149895168.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 19:44:03 2015 UTC-Mon Nov  2 19:44:03 2015 UTC (0.050 )  Run 284473, LB 201 (1446493443924897792.000000,1446493443874663680.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 20:09:21 2015 UTC-Mon Nov  2 20:09:21 2015 UTC (0.050 )  Run 284473, LB 230 (1446494961766603520.000000,1446494961716603392.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 20:10:14 2015 UTC-Mon Nov  2 20:10:14 2015 UTC (0.050 )  Run 284473, LB 231 (1446495014697709568.000000,1446495014647709184.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 20:24:54 2015 UTC-Mon Nov  2 20:24:54 2015 UTC (0.050 )  Run 284473, LB 245 (1446495894794549248.000000,1446495894744457216.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 20:34:27 2015 UTC-Mon Nov  2 20:34:27 2015 UTC (0.050 )  Run 284473, LB 255 (1446496467932692992.000000,1446496467882657024.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 20:44:59 2015 UTC-Mon Nov  2 20:44:59 2015 UTC (0.050 )  Run 284473, LB 265 (1446497099997644544.000000,1446497099947393024.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 21:13:09 2015 UTC-Mon Nov  2 21:13:10 2015 UTC (0.072 )  Run 284473, LB 296 (1446498790024294656.000000,1446498789952429568.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 21:18:39 2015 UTC-Mon Nov  2 21:18:39 2015 UTC (0.098 )  Run 284473, LB 301 (1446499119805575680.000000,1446499119707756800.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 21:41:36 2015 UTC-Mon Nov  2 21:41:36 2015 UTC (0.053 )  Run 284473, LB 324 (1446500496920786176.000000,1446500496868143872.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 21:53:09 2015 UTC-Mon Nov  2 21:53:09 2015 UTC (0.060 )  Run 284473, LB 336 (1446501189308888064.000000,1446501189248563456.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 21:57:55 2015 UTC-Mon Nov  2 21:57:55 2015 UTC (0.058 )  Run 284473, LB 341 (1446501475680981760.000000,1446501475623391232.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 22:04:12 2015 UTC-Mon Nov  2 22:04:12 2015 UTC (0.050 )  Run 284473, LB 348 (1446501852369604608.000000,1446501852319604224.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 22:06:58 2015 UTC-Mon Nov  2 22:06:58 2015 UTC (0.050 )  Run 284473, LB 351 (1446502018118293504.000000,1446502018068292864.000000)
+Event Veto ['NoiseBurst'], Mon Nov  2 22:12:18 2015 UTC-Mon Nov  2 22:12:19 2015 UTC (0.051 )  Run 284473, LB 358 (1446502339039379200.000000,1446502338988477952.000000)
+Found a total of 19 noisy periods, covering a total of 1.04 seconds
+Found a total of 0 corruption periods, covering a total of 0.00 seconds
+Lumi loss due to noise-bursts: 5.15 nb-1 out of 61198.28 nb-1 (0.08 per-mil)
+Overlaps are counted as noise

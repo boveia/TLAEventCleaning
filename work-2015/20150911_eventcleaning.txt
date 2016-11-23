@@ -1,0 +1,89 @@
+
+
+
+
+
+
+# core only set in simulation?
+
+http://acode-browser.usatlas.bnl.gov/lxr/source/atlas/Simulation/G4Atlas/G4AtlasAlg/src/G4AtlasAlg.cxx
+
+0212   if (abort) {
+0213     ATH_MSG_WARNING("Event was aborted !! ");
+0214     ATH_MSG_WARNING("Simulation will now go on to the next event ");
+0215     if (m_killAbortedEvents){ 
+0216       ATH_MSG_WARNING("setFilterPassed is now False");
+0217       setFilterPassed(false);
+0218     }
+0219     if (m_flagAbortedEvents){ 
+0220       const DataHandle<EventInfo> eic = 0; 
+0221       if ( sgSvc()->retrieve( eic ).isFailure() || !eic ){ 
+0222     ATH_MSG_WARNING( "Failed to retrieve EventInfo" ); 
+0223       } else { 
+0224     // Gotta cast away the const... sadface 
+0225     EventInfo *ei = const_cast< EventInfo * > (&(*eic)); 
+0226     ei->setErrorState(EventInfo::Core,EventInfo::Error); 
+0227     ATH_MSG_WARNING( "Set error state in event info!" ); 
+0228       } 
+0229     } 
+0230   }
+
+
+# requirements for flag toolchains
+
+use AtlasPolicy      AtlasPolicy-* 
+0008 use AthenaKernel     AthenaKernel-*         Control
+0009 use StoreGate        StoreGate-*            Control
+0010 use AthenaBaseComps  AthenaBaseComps-*      Control
+0011 use CxxUtils         CxxUtils-*             Control
+0012 
+0013 use AtlasDetDescr    AtlasDetDescr-*        DetectorDescription
+0014 use Identifier       Identifier-*           DetectorDescription
+0015 
+0016 use AtlasCLHEP       AtlasCLHEP-*           External
+0017 use GaudiInterface   GaudiInterface-*       External
+0018 
+0019 use CaloInterface    CaloInterface-*        Calorimeter
+0020 use CaloDetDescr     CaloDetDescr-*         Calorimeter
+0021 use CaloEvent        CaloEvent-*            Calorimeter
+0022 use CaloIdentifier   CaloIdentifier-*       Calorimeter
+0023 use CaloUtils        CaloUtils-*            Calorimeter
+0024 use CaloConditions   CaloConditions-*       Calorimeter
+0025 use CaloRec          CaloRec-*              Calorimeter
+0026 
+0027 #use LArDetDescr      LArDetDescr-*          LArCalorimeter
+0028 use LArIdentifier    LArIdentifier-*        LArCalorimeter
+0029 use LArRawEvent      LArRawEvent-*          LArCalorimeter
+0030 use LArSimEvent      LArSimEvent-*          LArCalorimeter
+0031 use LArElecCalib     LArElecCalib-*         LArCalorimeter
+0032 use LArRecConditions LArRecConditions-*     LArCalorimeter
+0033 
+0034 #
+0035 
+0036 private
+0037 use AtlasHepMC       AtlasHepMC-*           External
+0038 use AtlasROOT        AtlasROOT-*            External
+0039 use DataModel        DataModel-*            Control
+0040 use AthenaPoolUtilities     AthenaPoolUtilities-*     Database/AthenaPOOL
+0041 use xAODEventInfo      xAODEventInfo-*      Event/xAOD
+0042 #use EventInfo        EventInfo-*           Event
+0043 use GeoModelInterfaces GeoModelInterfaces-*          DetectorDescription/GeoModel
+0044 use GeneratorObjects GeneratorObjects-*     Generators
+0045 use CaloTriggerTool  CaloTriggerTool-*      Calorimeter
+0046 use LArRecEvent      LArRecEvent-*          LArCalorimeter
+0047 #use LArRecUtils      LArRecUtils-*          LArCalorimeter
+0048 use LArTools         LArTools-*             LArCalorimeter
+0049 # for deadOTX correction using L1 energies (These packages are in AtlasConditions and AtlasEvent)
+0050 use TrigT1CaloCalibConditions TrigT1CaloCalibConditions-* Trigger/TrigT1
+0051 # use TrigT1CaloEvent  TrigT1CaloEvent-*      Trigger/TrigT1
+0052 use xAODTrigL1Calo xAODTrigL1Calo-*      Event/xAOD
+0053 use TrigT1CaloCondSvc TrigT1CaloCondSvc-* Trigger/TrigT1 
+0054 end_private
+0055 
+0056 
+0057 library LArCellRec *.cxx -s=components *.cxx
+0058 apply_pattern component_library
+0059 
+0060 apply_pattern declare_joboptions files="*.txt *.py"
+0061 
+0062 apply_pattern declare_python_modules files="*.py"
