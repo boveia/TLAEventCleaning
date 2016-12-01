@@ -29,9 +29,12 @@ def GetProjectTag(runno):
     
     cursor.execute( "SELECT PROJECT FROM SFO_TZ_RUN WHERE RUNNR=:arg_1", arg_1=runno )
     result=cursor.fetchone()
+    #result=cursor.fetchall()
     #print result
     if len(result)>0:
         project=result[0]
+    else:
+        project=projectTag
     cursor.close()
     connection.close()
     return project
@@ -44,7 +47,10 @@ if __name__ == '__main__':
             print "ERROR, expected run-number, got",sys.argv[1]
             sys.exit(-1)
 
-        print GetProjectTag(runno)
+        if runno==303007:
+           print 'data16_13TeV'
+        else:
+           print GetProjectTag(runno)
                
 
     else:

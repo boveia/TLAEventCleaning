@@ -90,6 +90,6 @@ if __name__=='__main__':
          if dbn.find(":/")>-1: #assume complete db name
              dbns+=[dbn]
          else: #assume name of sqlite file
-             dbns+=["sqlite://;schema="+dbn+";dbname=COMP200"]
+             dbns+=["sqlite://;schema="+dbn+";dbname=CONDBR2"]
              
      showChannelsPerPartition(dbns,details)

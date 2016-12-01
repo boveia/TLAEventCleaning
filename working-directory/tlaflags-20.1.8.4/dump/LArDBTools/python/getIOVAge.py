@@ -5,6 +5,7 @@
 
 
 from RunNumInfo import getNextAtlasRunNumber
+import cppyy
 from PyCool import cool
 import sys,getopt
 

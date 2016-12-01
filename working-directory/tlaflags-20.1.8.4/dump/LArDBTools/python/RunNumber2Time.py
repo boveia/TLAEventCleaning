@@ -8,19 +8,19 @@ from CoolConvUtilities.AtlCoolLib import indirectOpen
 
 def RunNumber2Time(runnumber):
 
-    tdaqDB=indirectOpen('COOLONL_TDAQ/COMP200',oracle=True)
+    tdaqDB=indirectOpen('COOLONL_TDAQ/CONDBR2',oracle=True)
     if (tdaqDB is None):
-        print "ERROR: Cannot connect to COOLONL_TDAQ/COMP200"
+        print "ERROR: Cannot connect to COOLONL_TDAQ/CONDBR2"
         return None
     sortime=0
     try:
-        tdaqfolder=tdaqDB.getFolder('/TDAQ/RunCtrl/SOR_Params')
+        tdaqfolder=tdaqDB.getFolder('/TDAQ/RunCtrl/SOR')
         runiov=run << 32
         obj=tdaqfolder.findObject(runiov,0)
         payload=obj.payload()
         sortime=payload['SORTime']
     except Exception,e:
-        print "ERROR accessing /TDAQ/RunCtrl/SOR_Params"
+        print "ERROR accessing /TDAQ/RunCtrl/SOR"
         print e
     tdaqDB.closeDatabase()
     # if we do not have a valid time, exit

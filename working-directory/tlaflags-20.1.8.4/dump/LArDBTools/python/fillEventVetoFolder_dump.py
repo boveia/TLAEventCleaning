@@ -10,9 +10,6 @@
 #projectTag="data15_cos"
 #projectTag="data15_comm"
 #projectTag="data15_13TeV"
-import sys
-import cppyy
-sys.modules['PyCintex'] = PyCintex = cppyy
 
 from PyCool import cool
 from time import asctime,gmtime
@@ -69,8 +66,7 @@ def createFolder(db,name):
     desc='<timeStamp>time</timeStamp><addrHeader><address_header service_type="71" clid="40774348" /></addrHeader><typeName>AthenaAttributeList</typeName>'
     spec = cool.RecordSpecification()
     spec.extend('EventVeto',cool.StorageType.UInt32)
-    fspec=cool.FolderSpecification(cool.FolderVersioning.MULTI_VERSION, spec)
-    return db.createFolder(name,fspec,desc, True)
+    return db.createFolder(name,spec,desc,cool.FolderVersioning.MULTI_VERSION, True)
 
 def ts2string(ts):
     if ts==0:
@@ -129,6 +125,9 @@ def buildFilteredRange(inputSet, nEvents,TimeWindow,word,minStd=0):
             nDropped+=1
         else:
             output.append((inList[i][0]-half,inList[i+j-1][0]+half))
+            print "Timestamps of events constructing veto period: "
+            for kk in range(i,i+j):
+                print inList[kk][0]
             i=i+j
             pass
         pass
@@ -521,8 +520,8 @@ def fillEventVetoForRun(runnumber,withNoise=True):
 
     #Read MissingFEB info from database:
     from LArBadChannelTool.getMissingFebs import getMissingFebs
-    ignoreFebsLB=getMissingFebs(runnumber,"LARBadChannelsOflMissingFEBs-RUN2-UPD4-01")
-    #ignoreFebsLB=getMissingFebs(runnumber)
+    #ignoreFebsLB=getMissingFebs(runnumber,"LARBadChannelsOflMissingFEBs-RUN2-UPD4-01")
+    ignoreFebsLB=getMissingFebs(runnumber)
     if ignoreFebsLB is None:
         print "Failed to get list of missing/corrupt febs from MissingFeb database!"
         sys.exit(-1)
@@ -530,7 +529,6 @@ def fillEventVetoForRun(runnumber,withNoise=True):
     #    print "Missing FEBs:",ignoreFebsLB
 
     ignoreFebs=convertMissingFebList(ignoreFebsLB)
-    print "Missing FEBs:",ignoreFebs
 
     #sys.stdout.flush()
     noisePointsCC=dict()
@@ -576,8 +574,7 @@ def fillEventVetoForRun(runnumber,withNoise=True):
         print "Searching boise burst events in Express and CosmicCalo stream."
         allNoise=noisePointsCC;
         allNoise.update(noisePointsEE);
-        #noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);
-        noiseRangesEECC=buildFilteredRange(allNoise,2,0.05,noiseWord,1);
+        noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);
         print "Found a total of %i veto periods covering %.2f seconds because of noise bursts in the Express+CosmicCalo stream" % (len(noiseRangesEECC),sumRanges(noiseRangesEECC))
 
 

@@ -1,5 +1,11 @@
 #!/bin/env python
 
+# This script is a modified version of one found at /afs/cern.ch/user/l/larcalib/LArDBTools/python/showEventVeto.py.
+# After setting up an Athena release, run it like
+#   python showEventVeto.py -r $runnumber -e $runnumber >& event-veto-$runnumber.txt
+# to save LAr EventVeto intervals for a given run (ranges of timestamps
+# coinciding with LAr noise bursts and data corruption) to a text file.
+
 from PyCool import cool
 from time import asctime,gmtime,localtime
 #from fillEventVetoFolder import RunLumiToTimeStamp

@@ -1,5 +1,6 @@
 #!/bin/env python
 
+import cppyy
 from PyCool import cool
 import sys
 

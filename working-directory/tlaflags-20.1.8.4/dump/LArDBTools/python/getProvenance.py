@@ -1,6 +1,7 @@
 #!/bin/env python
 
 import sys
+import cppyy
 from PyCool import cool
 from pyAMI import pyAMI
 sys.path.append('/afs/cern.ch/user/a/atlcond/CondAFSBufferMgr/python')
