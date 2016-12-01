@@ -1,0 +1,3505 @@
+[?1034hFinished parsing run list: 276073
+276073/0 - 276074/0
+lumiInspector.loadLumiData(276073) called
+Loading Lumi data
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/AtlasCore/20.1.8/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+CoolDataReader.readData() - exception reading folder: /TRIGGER/OFLLUMI/LBLESTOFL
+(file "", line 0) Tag 'OflLumi-8TeV-002' not found in node #3 (C++ exception)
+CoolDataReader.readData() - will try to reconnect (once)
+LumiDBHandler.getFolder( COOLOFL_TRIGGER/CONDBR2 , /TRIGGER/OFLLUMI/LBLESTOFL ) called
+LumiDBHandler.openDB( COOLOFL_TRIGGER/CONDBR2 ) called
+LumiDBHandler.openDB - Connection already exists, closing first due to force=True
+LumiDBHandler.closeDB - Closing connection to COOLOFL_TRIGGER/CONDBR2
+LumiDBHandler.openDB - Connecting to COOLOFL_TRIGGER/CONDBR2
+CoolDataReader.readData() - trying to re-read re-opened folder!
+CoolDataReader.readData() - exception reading folder: /TRIGGER/OFLLUMI/LBLESTOFL
+(file "", line 0) Tag 'OflLumi-8TeV-002' not found in node #3 (C++ exception)
+Read 0 Lumi records
+Loading channels: [0]
+MuHistMaker.loadBCIDData(276073) called
+Loading LBLB data
+Read 660 LBLB records
+First LB 276073/1
+Last  LB 276073/660
+Loading LHC information
+Read 14591 LHC records
+Loading Bunch group data
+Read 6 bunch group records
+Loading BCID masks
+Read 42 BCID Mask records
+Loading BCID luminosity calibrations
+Read 1 Calibration records
+Loading BCID luminosity values
+Read 0 Raw Lumi records
+Loading Bunch Current information
+Read 0 Current records
+Finding stable beam periods
+Stable beam periods found: [(1439436950000000000L, 1439446538000000000L)]
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/1 (15/08/12, 20:11:47 - 15/08/12, 20:12:47) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196]
+ Beam2: [2226]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/2 (15/08/12, 20:12:47 - 15/08/12, 20:12:57) Length 10.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/3 (15/08/12, 20:12:57 - 15/08/12, 20:13:17) Length 20.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/4 (15/08/12, 20:13:17 - 15/08/12, 20:13:27) Length 10.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/5 (15/08/12, 20:13:27 - 15/08/12, 20:14:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/6 (15/08/12, 20:14:27 - 15/08/12, 20:15:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/7 (15/08/12, 20:15:27 - 15/08/12, 20:16:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/8 (15/08/12, 20:16:28 - 15/08/12, 20:17:28) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/9 (15/08/12, 20:17:28 - 15/08/12, 20:18:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/10 (15/08/12, 20:18:28 - 15/08/12, 20:19:28) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246]
+ Beam2: [2226]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/11 (15/08/12, 20:19:28 - 15/08/12, 20:20:28) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296]
+ Beam2: [2226]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/12 (15/08/12, 20:20:28 - 15/08/12, 20:21:28) Length 60.3 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296]
+ Beam2: [2226, 2276]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/13 (15/08/12, 20:21:28 - 15/08/12, 20:22:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346]
+ Beam2: [2226, 2276]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/14 (15/08/12, 20:22:29 - 15/08/12, 20:23:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346]
+ Beam2: [2226, 2276, 2326]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/15 (15/08/12, 20:23:29 - 15/08/12, 20:24:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346, 2396]
+ Beam2: [2226, 2276, 2326]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/16 (15/08/12, 20:24:29 - 15/08/12, 20:25:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346, 2396]
+ Beam2: [2226, 2276, 2326, 2376]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/17 (15/08/12, 20:25:29 - 15/08/12, 20:26:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [2226, 2276, 2326, 2376, 2426]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/18 (15/08/12, 20:26:29 - 15/08/12, 20:27:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/19 (15/08/12, 20:27:29 - 15/08/12, 20:28:29) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/20 (15/08/12, 20:28:29 - 15/08/12, 20:29:29) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/21 (15/08/12, 20:29:29 - 15/08/12, 20:30:29) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/22 (15/08/12, 20:30:29 - 15/08/12, 20:31:29) Length 60.0 sec
+unpackRun2BCIDMask found:
+ Beam1: [2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/23 (15/08/12, 20:31:29 - 15/08/12, 20:32:29) Length 60.0 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/24 (15/08/12, 20:32:29 - 15/08/12, 20:33:29) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/25 (15/08/12, 20:33:29 - 15/08/12, 20:34:30) Length 60.3 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/26 (15/08/12, 20:34:30 - 15/08/12, 20:35:30) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/27 (15/08/12, 20:35:30 - 15/08/12, 20:36:30) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/28 (15/08/12, 20:36:30 - 15/08/12, 20:37:30) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/29 (15/08/12, 20:37:30 - 15/08/12, 20:38:30) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/30 (15/08/12, 20:38:30 - 15/08/12, 20:39:30) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/31 (15/08/12, 20:39:30 - 15/08/12, 20:40:30) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/32 (15/08/12, 20:40:30 - 15/08/12, 20:41:30) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/33 (15/08/12, 20:41:30 - 15/08/12, 20:42:24) Length 53.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/34 (15/08/12, 20:42:24 - 15/08/12, 20:43:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/35 (15/08/12, 20:43:24 - 15/08/12, 20:44:24) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/36 (15/08/12, 20:44:24 - 15/08/12, 20:45:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/37 (15/08/12, 20:45:24 - 15/08/12, 20:46:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/38 (15/08/12, 20:46:24 - 15/08/12, 20:46:34) Length 10.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/39 (15/08/12, 20:46:34 - 15/08/12, 20:47:34) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/40 (15/08/12, 20:47:34 - 15/08/12, 20:48:34) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/41 (15/08/12, 20:48:34 - 15/08/12, 20:49:34) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/42 (15/08/12, 20:49:34 - 15/08/12, 20:50:34) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/43 (15/08/12, 20:50:34 - 15/08/12, 20:51:34) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/44 (15/08/12, 20:51:34 - 15/08/12, 20:52:34) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/45 (15/08/12, 20:52:34 - 15/08/12, 20:53:34) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/46 (15/08/12, 20:53:34 - 15/08/12, 20:54:35) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/47 (15/08/12, 20:54:35 - 15/08/12, 20:55:35) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/48 (15/08/12, 20:55:35 - 15/08/12, 20:56:35) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/49 (15/08/12, 20:56:35 - 15/08/12, 20:57:35) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/50 (15/08/12, 20:57:35 - 15/08/12, 20:58:35) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2196, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/51 (15/08/12, 20:58:35 - 15/08/12, 20:59:35) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2226, 2276, 2326, 2376, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/52 (15/08/12, 20:59:35 - 15/08/12, 21:00:35) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/53 (15/08/12, 21:00:35 - 15/08/12, 21:00:56) Length 20.7 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/54 (15/08/12, 21:00:56 - 15/08/12, 21:01:06) Length 10.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/55 (15/08/12, 21:01:06 - 15/08/12, 21:02:07) Length 60.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/56 (15/08/12, 21:02:07 - 15/08/12, 21:03:07) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/57 (15/08/12, 21:03:07 - 15/08/12, 21:04:07) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/58 (15/08/12, 21:04:07 - 15/08/12, 21:05:07) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/59 (15/08/12, 21:05:07 - 15/08/12, 21:06:07) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/60 (15/08/12, 21:06:07 - 15/08/12, 21:07:07) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/61 (15/08/12, 21:07:07 - 15/08/12, 21:08:07) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/62 (15/08/12, 21:08:07 - 15/08/12, 21:09:07) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/63 (15/08/12, 21:09:07 - 15/08/12, 21:10:07) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/64 (15/08/12, 21:10:07 - 15/08/12, 21:11:07) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/65 (15/08/12, 21:11:07 - 15/08/12, 21:12:07) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/66 (15/08/12, 21:12:07 - 15/08/12, 21:13:08) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/67 (15/08/12, 21:13:08 - 15/08/12, 21:14:08) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/68 (15/08/12, 21:14:08 - 15/08/12, 21:15:08) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/69 (15/08/12, 21:15:08 - 15/08/12, 21:16:08) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/70 (15/08/12, 21:16:08 - 15/08/12, 21:17:08) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/71 (15/08/12, 21:17:08 - 15/08/12, 21:17:33) Length 24.7 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/72 (15/08/12, 21:17:33 - 15/08/12, 21:18:33) Length 60.2 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/73 (15/08/12, 21:18:33 - 15/08/12, 21:19:33) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/74 (15/08/12, 21:19:33 - 15/08/12, 21:20:33) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/75 (15/08/12, 21:20:33 - 15/08/12, 21:20:58) Length 24.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/76 (15/08/12, 21:20:58 - 15/08/12, 21:21:58) Length 60.4 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/77 (15/08/12, 21:21:58 - 15/08/12, 21:22:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/78 (15/08/12, 21:22:58 - 15/08/12, 21:23:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/79 (15/08/12, 21:23:58 - 15/08/12, 21:24:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/80 (15/08/12, 21:24:58 - 15/08/12, 21:25:59) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/81 (15/08/12, 21:25:59 - 15/08/12, 21:26:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/82 (15/08/12, 21:26:59 - 15/08/12, 21:27:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/83 (15/08/12, 21:27:59 - 15/08/12, 21:28:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/84 (15/08/12, 21:28:59 - 15/08/12, 21:29:59) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/85 (15/08/12, 21:29:59 - 15/08/12, 21:30:59) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/86 (15/08/12, 21:30:59 - 15/08/12, 21:31:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/87 (15/08/12, 21:31:59 - 15/08/12, 21:32:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/88 (15/08/12, 21:32:59 - 15/08/12, 21:33:59) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/89 (15/08/12, 21:33:59 - 15/08/12, 21:35:00) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/90 (15/08/12, 21:35:00 - 15/08/12, 21:36:00) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/91 (15/08/12, 21:36:00 - 15/08/12, 21:37:00) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/92 (15/08/12, 21:37:00 - 15/08/12, 21:38:00) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/93 (15/08/12, 21:38:00 - 15/08/12, 21:39:00) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/94 (15/08/12, 21:39:00 - 15/08/12, 21:40:01) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/95 (15/08/12, 21:40:01 - 15/08/12, 21:41:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/96 (15/08/12, 21:41:01 - 15/08/12, 21:42:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/97 (15/08/12, 21:42:01 - 15/08/12, 21:43:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/98 (15/08/12, 21:43:01 - 15/08/12, 21:44:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/99 (15/08/12, 21:44:01 - 15/08/12, 21:45:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/100 (15/08/12, 21:45:01 - 15/08/12, 21:46:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/101 (15/08/12, 21:46:01 - 15/08/12, 21:47:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/102 (15/08/12, 21:47:01 - 15/08/12, 21:48:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/103 (15/08/12, 21:48:01 - 15/08/12, 21:49:01) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/104 (15/08/12, 21:49:01 - 15/08/12, 21:50:01) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/105 (15/08/12, 21:50:01 - 15/08/12, 21:51:02) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/106 (15/08/12, 21:51:02 - 15/08/12, 21:52:02) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/107 (15/08/12, 21:52:02 - 15/08/12, 21:53:02) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/108 (15/08/12, 21:53:02 - 15/08/12, 21:54:02) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/109 (15/08/12, 21:54:02 - 15/08/12, 21:55:02) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/110 (15/08/12, 21:55:02 - 15/08/12, 21:55:56) Length 54.4 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/111 (15/08/12, 21:55:56 - 15/08/12, 21:56:57) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/112 (15/08/12, 21:56:57 - 15/08/12, 21:57:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/113 (15/08/12, 21:57:57 - 15/08/12, 21:58:57) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/114 (15/08/12, 21:58:57 - 15/08/12, 21:59:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/115 (15/08/12, 21:59:57 - 15/08/12, 22:00:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/116 (15/08/12, 22:00:57 - 15/08/12, 22:01:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/117 (15/08/12, 22:01:57 - 15/08/12, 22:02:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/118 (15/08/12, 22:02:57 - 15/08/12, 22:03:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/119 (15/08/12, 22:03:57 - 15/08/12, 22:04:57) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/120 (15/08/12, 22:04:57 - 15/08/12, 22:05:57) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/121 (15/08/12, 22:05:57 - 15/08/12, 22:06:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/122 (15/08/12, 22:06:57 - 15/08/12, 22:07:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/123 (15/08/12, 22:07:57 - 15/08/12, 22:08:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/124 (15/08/12, 22:08:57 - 15/08/12, 22:09:57) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/125 (15/08/12, 22:09:57 - 15/08/12, 22:10:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/126 (15/08/12, 22:10:58 - 15/08/12, 22:11:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/127 (15/08/12, 22:11:58 - 15/08/12, 22:12:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/128 (15/08/12, 22:12:58 - 15/08/12, 22:13:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/129 (15/08/12, 22:13:58 - 15/08/12, 22:14:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/130 (15/08/12, 22:14:58 - 15/08/12, 22:15:58) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/131 (15/08/12, 22:15:58 - 15/08/12, 22:16:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/132 (15/08/12, 22:16:58 - 15/08/12, 22:17:58) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/133 (15/08/12, 22:17:58 - 15/08/12, 22:18:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/134 (15/08/12, 22:18:58 - 15/08/12, 22:19:58) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/135 (15/08/12, 22:19:58 - 15/08/12, 22:20:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/136 (15/08/12, 22:20:59 - 15/08/12, 22:21:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/137 (15/08/12, 22:21:59 - 15/08/12, 22:22:59) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/138 (15/08/12, 22:22:59 - 15/08/12, 22:23:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/139 (15/08/12, 22:23:59 - 15/08/12, 22:24:59) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/140 (15/08/12, 22:24:59 - 15/08/12, 22:25:59) Length 60.3 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2276, 2326, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/141 (15/08/12, 22:25:59 - 15/08/12, 22:26:59) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/142 (15/08/12, 22:26:59 - 15/08/12, 22:28:00) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/143 (15/08/12, 22:28:00 - 15/08/12, 22:29:00) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/144 (15/08/12, 22:29:00 - 15/08/12, 22:30:00) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/145 (15/08/12, 22:30:00 - 15/08/12, 22:31:00) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2276, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/146 (15/08/12, 22:31:00 - 15/08/12, 22:32:00) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2246, 2296, 2346, 2396, 2446]
+ Beam2: [1, 892, 2426, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/147 (15/08/12, 22:32:00 - 15/08/12, 22:32:39) Length 39.6 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/148 (15/08/12, 22:32:39 - 15/08/12, 22:33:40) Length 60.3 sec
+unpackRun2BCIDMask found:
+ Beam1: []
+ Beam2: []
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/149 (15/08/12, 22:33:40 - 15/08/12, 22:34:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/150 (15/08/12, 22:34:40 - 15/08/12, 22:35:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/151 (15/08/12, 22:35:40 - 15/08/12, 22:36:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/152 (15/08/12, 22:36:40 - 15/08/12, 22:37:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/153 (15/08/12, 22:37:40 - 15/08/12, 22:38:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/154 (15/08/12, 22:38:40 - 15/08/12, 22:39:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/155 (15/08/12, 22:39:40 - 15/08/12, 22:40:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/156 (15/08/12, 22:40:40 - 15/08/12, 22:41:40) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/157 (15/08/12, 22:41:40 - 15/08/12, 22:42:40) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/158 (15/08/12, 22:42:40 - 15/08/12, 22:43:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/159 (15/08/12, 22:43:41 - 15/08/12, 22:44:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/160 (15/08/12, 22:44:41 - 15/08/12, 22:45:41) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/161 (15/08/12, 22:45:41 - 15/08/12, 22:46:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/162 (15/08/12, 22:46:41 - 15/08/12, 22:47:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/163 (15/08/12, 22:47:41 - 15/08/12, 22:48:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/164 (15/08/12, 22:48:41 - 15/08/12, 22:49:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/165 (15/08/12, 22:49:41 - 15/08/12, 22:50:41) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/166 (15/08/12, 22:50:41 - 15/08/12, 22:51:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/167 (15/08/12, 22:51:41 - 15/08/12, 22:52:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/168 (15/08/12, 22:52:41 - 15/08/12, 22:53:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/169 (15/08/12, 22:53:41 - 15/08/12, 22:54:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/170 (15/08/12, 22:54:41 - 15/08/12, 22:55:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/171 (15/08/12, 22:55:42 - 15/08/12, 22:56:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/172 (15/08/12, 22:56:42 - 15/08/12, 22:57:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/173 (15/08/12, 22:57:42 - 15/08/12, 22:58:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/174 (15/08/12, 22:58:42 - 15/08/12, 22:59:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/175 (15/08/12, 22:59:42 - 15/08/12, 23:00:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/176 (15/08/12, 23:00:42 - 15/08/12, 23:01:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/177 (15/08/12, 23:01:42 - 15/08/12, 23:02:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/178 (15/08/12, 23:02:42 - 15/08/12, 23:03:42) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/179 (15/08/12, 23:03:42 - 15/08/12, 23:04:42) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/180 (15/08/12, 23:04:42 - 15/08/12, 23:05:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/181 (15/08/12, 23:05:42 - 15/08/12, 23:06:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/182 (15/08/12, 23:06:43 - 15/08/12, 23:07:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/183 (15/08/12, 23:07:43 - 15/08/12, 23:08:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/184 (15/08/12, 23:08:43 - 15/08/12, 23:09:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/185 (15/08/12, 23:09:43 - 15/08/12, 23:10:43) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/186 (15/08/12, 23:10:43 - 15/08/12, 23:11:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/187 (15/08/12, 23:11:43 - 15/08/12, 23:12:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/188 (15/08/12, 23:12:43 - 15/08/12, 23:13:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/189 (15/08/12, 23:13:43 - 15/08/12, 23:14:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/190 (15/08/12, 23:14:43 - 15/08/12, 23:15:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/191 (15/08/12, 23:15:43 - 15/08/12, 23:16:44) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/192 (15/08/12, 23:16:44 - 15/08/12, 23:17:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/193 (15/08/12, 23:17:44 - 15/08/12, 23:18:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/194 (15/08/12, 23:18:44 - 15/08/12, 23:19:44) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/195 (15/08/12, 23:19:44 - 15/08/12, 23:20:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/196 (15/08/12, 23:20:44 - 15/08/12, 23:21:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/197 (15/08/12, 23:21:44 - 15/08/12, 23:22:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/198 (15/08/12, 23:22:44 - 15/08/12, 23:23:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/199 (15/08/12, 23:23:44 - 15/08/12, 23:24:44) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/200 (15/08/12, 23:24:44 - 15/08/12, 23:25:45) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/201 (15/08/12, 23:25:45 - 15/08/12, 23:26:45) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/202 (15/08/12, 23:26:45 - 15/08/12, 23:27:45) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/203 (15/08/12, 23:27:45 - 15/08/12, 23:28:45) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2446]
+ Beam2: []
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/204 (15/08/12, 23:28:45 - 15/08/12, 23:29:45) Length 60.0 sec
+unpackRun2BCIDMask found:
+ Beam1: [2446]
+ Beam2: [2476]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/205 (15/08/12, 23:29:45 - 15/08/12, 23:30:45) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/206 (15/08/12, 23:30:45 - 15/08/12, 23:31:45) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/207 (15/08/12, 23:31:45 - 15/08/12, 23:32:45) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/208 (15/08/12, 23:32:45 - 15/08/12, 23:33:45) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/209 (15/08/12, 23:33:45 - 15/08/12, 23:34:45) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2446]
+ Beam2: []
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/210 (15/08/12, 23:34:45 - 15/08/12, 23:35:46) Length 60.3 sec
+unpackRun2BCIDMask found:
+ Beam1: [2446]
+ Beam2: [2476]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/211 (15/08/12, 23:35:46 - 15/08/12, 23:36:46) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/212 (15/08/12, 23:36:46 - 15/08/12, 23:37:46) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/213 (15/08/12, 23:37:46 - 15/08/12, 23:38:46) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/214 (15/08/12, 23:38:46 - 15/08/12, 23:39:46) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [2446]
+ Beam2: [1, 2476]
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/215 (15/08/12, 23:39:46 - 15/08/12, 23:40:46) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2446]
+ Beam2: [1, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/216 (15/08/12, 23:40:46 - 15/08/12, 23:41:46) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2446]
+ Beam2: [1, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/217 (15/08/12, 23:41:46 - 15/08/12, 23:42:47) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 1786, 2446]
+ Beam2: [1, 892, 2476]
+ Coll:  [1]
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/218 (15/08/12, 23:42:47 - 15/08/12, 23:43:47) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/219 (15/08/12, 23:43:47 - 15/08/12, 23:44:47) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/220 (15/08/12, 23:44:47 - 15/08/12, 23:45:47) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/221 (15/08/12, 23:45:47 - 15/08/12, 23:46:47) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/222 (15/08/12, 23:46:47 - 15/08/12, 23:47:47) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/223 (15/08/12, 23:47:47 - 15/08/12, 23:48:48) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/224 (15/08/12, 23:48:48 - 15/08/12, 23:49:48) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/225 (15/08/12, 23:49:48 - 15/08/12, 23:50:48) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/226 (15/08/12, 23:50:48 - 15/08/12, 23:51:48) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/227 (15/08/12, 23:51:48 - 15/08/12, 23:52:48) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/228 (15/08/12, 23:52:48 - 15/08/12, 23:53:19) Length 30.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/229 (15/08/12, 23:53:19 - 15/08/12, 23:54:19) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/230 (15/08/12, 23:54:19 - 15/08/12, 23:55:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/231 (15/08/12, 23:55:19 - 15/08/12, 23:56:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/232 (15/08/12, 23:56:19 - 15/08/12, 23:57:19) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/233 (15/08/12, 23:57:19 - 15/08/12, 23:58:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/234 (15/08/12, 23:58:19 - 15/08/12, 23:59:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/235 (15/08/12, 23:59:20 - 15/08/13, 00:00:20) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/236 (15/08/13, 00:00:20 - 15/08/13, 00:01:20) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/237 (15/08/13, 00:01:20 - 15/08/13, 00:02:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/238 (15/08/13, 00:02:20 - 15/08/13, 00:03:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/239 (15/08/13, 00:03:20 - 15/08/13, 00:04:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/240 (15/08/13, 00:04:20 - 15/08/13, 00:05:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/241 (15/08/13, 00:05:20 - 15/08/13, 00:06:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/242 (15/08/13, 00:06:21 - 15/08/13, 00:07:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/243 (15/08/13, 00:07:21 - 15/08/13, 00:07:31) Length 10.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/244 (15/08/13, 00:07:31 - 15/08/13, 00:07:41) Length 10.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/245 (15/08/13, 00:07:41 - 15/08/13, 00:08:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/246 (15/08/13, 00:08:41 - 15/08/13, 00:09:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/247 (15/08/13, 00:09:41 - 15/08/13, 00:10:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/248 (15/08/13, 00:10:41 - 15/08/13, 00:11:41) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/249 (15/08/13, 00:11:41 - 15/08/13, 00:12:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/250 (15/08/13, 00:12:42 - 15/08/13, 00:13:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/251 (15/08/13, 00:13:42 - 15/08/13, 00:14:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/252 (15/08/13, 00:14:42 - 15/08/13, 00:15:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/253 (15/08/13, 00:15:42 - 15/08/13, 00:16:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/254 (15/08/13, 00:16:42 - 15/08/13, 00:17:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/255 (15/08/13, 00:17:42 - 15/08/13, 00:18:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/256 (15/08/13, 00:18:42 - 15/08/13, 00:19:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/257 (15/08/13, 00:19:42 - 15/08/13, 00:20:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/258 (15/08/13, 00:20:42 - 15/08/13, 00:21:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/259 (15/08/13, 00:21:42 - 15/08/13, 00:22:42) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/260 (15/08/13, 00:22:42 - 15/08/13, 00:23:43) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/261 (15/08/13, 00:23:43 - 15/08/13, 00:24:43) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/262 (15/08/13, 00:24:43 - 15/08/13, 00:25:16) Length 33.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/263 (15/08/13, 00:25:16 - 15/08/13, 00:26:17) Length 60.5 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/264 (15/08/13, 00:26:17 - 15/08/13, 00:27:17) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/265 (15/08/13, 00:27:17 - 15/08/13, 00:28:17) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/266 (15/08/13, 00:28:17 - 15/08/13, 00:29:17) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/267 (15/08/13, 00:29:17 - 15/08/13, 00:30:17) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/268 (15/08/13, 00:30:17 - 15/08/13, 00:31:17) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/269 (15/08/13, 00:31:17 - 15/08/13, 00:32:17) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/270 (15/08/13, 00:32:17 - 15/08/13, 00:33:17) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/271 (15/08/13, 00:33:17 - 15/08/13, 00:34:17) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/272 (15/08/13, 00:34:17 - 15/08/13, 00:35:18) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/273 (15/08/13, 00:35:18 - 15/08/13, 00:36:18) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/274 (15/08/13, 00:36:18 - 15/08/13, 00:37:18) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/275 (15/08/13, 00:37:18 - 15/08/13, 00:38:18) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/276 (15/08/13, 00:38:18 - 15/08/13, 00:39:18) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/277 (15/08/13, 00:39:18 - 15/08/13, 00:40:18) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/278 (15/08/13, 00:40:18 - 15/08/13, 00:41:18) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/279 (15/08/13, 00:41:18 - 15/08/13, 00:42:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/280 (15/08/13, 00:42:19 - 15/08/13, 00:43:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/281 (15/08/13, 00:43:19 - 15/08/13, 00:44:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/282 (15/08/13, 00:44:19 - 15/08/13, 00:45:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/283 (15/08/13, 00:45:19 - 15/08/13, 00:46:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/284 (15/08/13, 00:46:19 - 15/08/13, 00:47:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/285 (15/08/13, 00:47:19 - 15/08/13, 00:48:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/286 (15/08/13, 00:48:19 - 15/08/13, 00:49:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/287 (15/08/13, 00:49:19 - 15/08/13, 00:50:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/288 (15/08/13, 00:50:19 - 15/08/13, 00:51:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/289 (15/08/13, 00:51:19 - 15/08/13, 00:52:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/290 (15/08/13, 00:52:19 - 15/08/13, 00:53:19) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/291 (15/08/13, 00:53:19 - 15/08/13, 00:54:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/292 (15/08/13, 00:54:20 - 15/08/13, 00:55:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/293 (15/08/13, 00:55:20 - 15/08/13, 00:56:20) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/294 (15/08/13, 00:56:20 - 15/08/13, 00:57:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/295 (15/08/13, 00:57:20 - 15/08/13, 00:58:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/296 (15/08/13, 00:58:20 - 15/08/13, 00:59:20) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/297 (15/08/13, 00:59:20 - 15/08/13, 01:00:20) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/298 (15/08/13, 01:00:20 - 15/08/13, 01:01:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/299 (15/08/13, 01:01:21 - 15/08/13, 01:02:21) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: []
+ Beam2: []
+ Coll:  []
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/300 (15/08/13, 01:02:21 - 15/08/13, 01:03:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/301 (15/08/13, 01:03:21 - 15/08/13, 01:04:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/302 (15/08/13, 01:04:21 - 15/08/13, 01:05:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/303 (15/08/13, 01:05:21 - 15/08/13, 01:06:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/304 (15/08/13, 01:06:21 - 15/08/13, 01:07:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/305 (15/08/13, 01:07:21 - 15/08/13, 01:08:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/306 (15/08/13, 01:08:21 - 15/08/13, 01:09:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/307 (15/08/13, 01:09:21 - 15/08/13, 01:10:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/308 (15/08/13, 01:10:21 - 15/08/13, 01:11:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/309 (15/08/13, 01:11:21 - 15/08/13, 01:12:21) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/310 (15/08/13, 01:12:21 - 15/08/13, 01:13:22) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/311 (15/08/13, 01:13:22 - 15/08/13, 01:14:22) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/312 (15/08/13, 01:14:22 - 15/08/13, 01:15:22) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/313 (15/08/13, 01:15:22 - 15/08/13, 01:16:22) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/314 (15/08/13, 01:16:22 - 15/08/13, 01:17:22) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/315 (15/08/13, 01:17:22 - 15/08/13, 01:18:23) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/316 (15/08/13, 01:18:23 - 15/08/13, 01:19:23) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/317 (15/08/13, 01:19:23 - 15/08/13, 01:20:23) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/318 (15/08/13, 01:20:23 - 15/08/13, 01:21:23) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/319 (15/08/13, 01:21:23 - 15/08/13, 01:22:23) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/320 (15/08/13, 01:22:23 - 15/08/13, 01:23:23) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/321 (15/08/13, 01:23:23 - 15/08/13, 01:24:24) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/322 (15/08/13, 01:24:24 - 15/08/13, 01:25:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/323 (15/08/13, 01:25:24 - 15/08/13, 01:26:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/324 (15/08/13, 01:26:24 - 15/08/13, 01:27:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/325 (15/08/13, 01:27:24 - 15/08/13, 01:28:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/326 (15/08/13, 01:28:24 - 15/08/13, 01:29:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/327 (15/08/13, 01:29:24 - 15/08/13, 01:30:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/328 (15/08/13, 01:30:24 - 15/08/13, 01:31:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/329 (15/08/13, 01:31:24 - 15/08/13, 01:32:24) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/330 (15/08/13, 01:32:24 - 15/08/13, 01:33:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/331 (15/08/13, 01:33:24 - 15/08/13, 01:34:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/332 (15/08/13, 01:34:24 - 15/08/13, 01:35:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/333 (15/08/13, 01:35:24 - 15/08/13, 01:36:24) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/334 (15/08/13, 01:36:24 - 15/08/13, 01:37:25) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/335 (15/08/13, 01:37:25 - 15/08/13, 01:38:25) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/336 (15/08/13, 01:38:25 - 15/08/13, 01:39:25) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/337 (15/08/13, 01:39:25 - 15/08/13, 01:40:25) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/338 (15/08/13, 01:40:25 - 15/08/13, 01:41:26) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/339 (15/08/13, 01:41:26 - 15/08/13, 01:42:26) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/340 (15/08/13, 01:42:26 - 15/08/13, 01:43:26) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/341 (15/08/13, 01:43:26 - 15/08/13, 01:44:26) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/342 (15/08/13, 01:44:26 - 15/08/13, 01:45:26) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/343 (15/08/13, 01:45:26 - 15/08/13, 01:46:26) Length 60.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/344 (15/08/13, 01:46:26 - 15/08/13, 01:47:26) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/345 (15/08/13, 01:47:26 - 15/08/13, 01:48:26) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/346 (15/08/13, 01:48:26 - 15/08/13, 01:49:27) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/347 (15/08/13, 01:49:27 - 15/08/13, 01:50:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/348 (15/08/13, 01:50:27 - 15/08/13, 01:51:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/349 (15/08/13, 01:51:27 - 15/08/13, 01:52:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/350 (15/08/13, 01:52:27 - 15/08/13, 01:53:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/351 (15/08/13, 01:53:27 - 15/08/13, 01:54:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/352 (15/08/13, 01:54:27 - 15/08/13, 01:55:27) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/353 (15/08/13, 01:55:27 - 15/08/13, 01:56:28) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/354 (15/08/13, 01:56:28 - 15/08/13, 01:57:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/355 (15/08/13, 01:57:28 - 15/08/13, 01:58:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/356 (15/08/13, 01:58:28 - 15/08/13, 01:59:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/357 (15/08/13, 01:59:28 - 15/08/13, 02:00:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/358 (15/08/13, 02:00:28 - 15/08/13, 02:01:28) Length 60.3 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/359 (15/08/13, 02:01:28 - 15/08/13, 02:02:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/360 (15/08/13, 02:02:28 - 15/08/13, 02:03:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/361 (15/08/13, 02:03:28 - 15/08/13, 02:04:28) Length 60.1 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/362 (15/08/13, 02:04:28 - 15/08/13, 02:04:45) Length 17.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/363 (15/08/13, 02:04:45 - 15/08/13, 02:04:57) Length 12.0 sec
+Bunch Group Length: 1 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/364 (15/08/13, 02:04:57 - 15/08/13, 02:05:58) Length 60.2 sec
+Bunch Group Length: 22 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/365 (15/08/13, 02:05:58 - 15/08/13, 02:06:58) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/366 (15/08/13, 02:06:58 - 15/08/13, 02:07:58) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: []
+ Beam2: [895]
+ Coll:  []
+Bunch Group Length: 22 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/367 (15/08/13, 02:07:58 - 15/08/13, 02:08:58) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [895]
+ Beam2: [895]
+ Coll:  [895]
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/368 (15/08/13, 02:08:58 - 15/08/13, 02:09:58) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/369 (15/08/13, 02:09:58 - 15/08/13, 02:10:58) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/370 (15/08/13, 02:10:58 - 15/08/13, 02:11:58) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/371 (15/08/13, 02:11:58 - 15/08/13, 02:12:58) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/372 (15/08/13, 02:12:58 - 15/08/13, 02:13:58) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/373 (15/08/13, 02:13:58 - 15/08/13, 02:14:58) Length 60.0 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/374 (15/08/13, 02:14:58 - 15/08/13, 02:15:59) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/375 (15/08/13, 02:15:59 - 15/08/13, 02:16:59) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/376 (15/08/13, 02:16:59 - 15/08/13, 02:17:59) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/377 (15/08/13, 02:17:59 - 15/08/13, 02:18:59) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/378 (15/08/13, 02:18:59 - 15/08/13, 02:19:59) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/379 (15/08/13, 02:19:59 - 15/08/13, 02:20:59) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/380 (15/08/13, 02:20:59 - 15/08/13, 02:22:00) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/381 (15/08/13, 02:22:00 - 15/08/13, 02:23:00) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/382 (15/08/13, 02:23:00 - 15/08/13, 02:24:00) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895]
+ Beam2: [895]
+ Coll:  [895]
+Bunch Group Length: 22 Colliding BCIDs: 1
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/383 (15/08/13, 02:24:00 - 15/08/13, 02:25:00) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895]
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/384 (15/08/13, 02:25:00 - 15/08/13, 02:26:00) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/385 (15/08/13, 02:26:00 - 15/08/13, 02:27:00) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/386 (15/08/13, 02:27:00 - 15/08/13, 02:28:00) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895]
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/387 (15/08/13, 02:28:00 - 15/08/13, 02:29:01) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/388 (15/08/13, 02:29:01 - 15/08/13, 02:30:01) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/389 (15/08/13, 02:30:01 - 15/08/13, 02:31:01) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/390 (15/08/13, 02:31:01 - 15/08/13, 02:32:01) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 13
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/391 (15/08/13, 02:32:01 - 15/08/13, 02:33:01) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/392 (15/08/13, 02:33:01 - 15/08/13, 02:34:01) Length 60.0 sec
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/393 (15/08/13, 02:34:01 - 15/08/13, 02:35:01) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/394 (15/08/13, 02:35:01 - 15/08/13, 02:36:01) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/395 (15/08/13, 02:36:01 - 15/08/13, 02:37:01) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780, 2674]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906]
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/396 (15/08/13, 02:37:01 - 15/08/13, 02:38:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/397 (15/08/13, 02:38:02 - 15/08/13, 02:39:02) Length 60.3 sec
+Bunch Group Length: 22 Colliding BCIDs: 24
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/398 (15/08/13, 02:39:02 - 15/08/13, 02:40:02) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780, 2674]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780]
+Bunch Group Length: 22 Colliding BCIDs: 25
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/399 (15/08/13, 02:40:02 - 15/08/13, 02:41:02) Length 60.1 sec
+unpackRun2BCIDMask found:
+ Beam1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780, 2674]
+ Beam2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780, 2674]
+ Coll:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 1780, 2674]
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/400 (15/08/13, 02:41:02 - 15/08/13, 02:42:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/401 (15/08/13, 02:42:02 - 15/08/13, 02:43:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/402 (15/08/13, 02:43:02 - 15/08/13, 02:44:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/403 (15/08/13, 02:44:02 - 15/08/13, 02:45:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/404 (15/08/13, 02:45:02 - 15/08/13, 02:46:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/405 (15/08/13, 02:46:02 - 15/08/13, 02:47:02) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/406 (15/08/13, 02:47:02 - 15/08/13, 02:48:03) Length 60.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/407 (15/08/13, 02:48:03 - 15/08/13, 02:48:13) Length 10.1 sec
+Bunch Group Length: 22 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/408 (15/08/13, 02:48:13 - 15/08/13, 02:49:13) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/409 (15/08/13, 02:49:13 - 15/08/13, 02:49:23) Length 10.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/410 (15/08/13, 02:49:23 - 15/08/13, 02:50:23) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/411 (15/08/13, 02:50:23 - 15/08/13, 02:51:23) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/412 (15/08/13, 02:51:23 - 15/08/13, 02:52:23) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/413 (15/08/13, 02:52:23 - 15/08/13, 02:53:23) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/414 (15/08/13, 02:53:23 - 15/08/13, 02:54:23) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/415 (15/08/13, 02:54:23 - 15/08/13, 02:55:24) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/416 (15/08/13, 02:55:24 - 15/08/13, 02:56:24) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/417 (15/08/13, 02:56:24 - 15/08/13, 02:57:24) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/418 (15/08/13, 02:57:24 - 15/08/13, 02:58:24) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/419 (15/08/13, 02:58:24 - 15/08/13, 02:59:24) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/420 (15/08/13, 02:59:24 - 15/08/13, 03:00:24) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/421 (15/08/13, 03:00:24 - 15/08/13, 03:01:24) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/422 (15/08/13, 03:01:24 - 15/08/13, 03:02:24) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/423 (15/08/13, 03:02:24 - 15/08/13, 03:03:25) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/424 (15/08/13, 03:03:25 - 15/08/13, 03:04:25) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/425 (15/08/13, 03:04:25 - 15/08/13, 03:05:25) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/426 (15/08/13, 03:05:25 - 15/08/13, 03:05:47) Length 22.2 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/427 (15/08/13, 03:05:47 - 15/08/13, 03:05:57) Length 10.2 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/428 (15/08/13, 03:05:57 - 15/08/13, 03:06:58) Length 60.4 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/429 (15/08/13, 03:06:58 - 15/08/13, 03:07:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/430 (15/08/13, 03:07:58 - 15/08/13, 03:08:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/431 (15/08/13, 03:08:58 - 15/08/13, 03:09:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/432 (15/08/13, 03:09:58 - 15/08/13, 03:10:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/433 (15/08/13, 03:10:58 - 15/08/13, 03:11:58) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/434 (15/08/13, 03:11:58 - 15/08/13, 03:12:58) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/435 (15/08/13, 03:12:58 - 15/08/13, 03:13:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/436 (15/08/13, 03:13:58 - 15/08/13, 03:14:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/437 (15/08/13, 03:14:59 - 15/08/13, 03:15:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/438 (15/08/13, 03:15:59 - 15/08/13, 03:16:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/439 (15/08/13, 03:16:59 - 15/08/13, 03:17:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/440 (15/08/13, 03:17:59 - 15/08/13, 03:18:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/441 (15/08/13, 03:18:59 - 15/08/13, 03:19:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/442 (15/08/13, 03:19:59 - 15/08/13, 03:20:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/443 (15/08/13, 03:20:59 - 15/08/13, 03:21:59) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/444 (15/08/13, 03:21:59 - 15/08/13, 03:22:59) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/445 (15/08/13, 03:22:59 - 15/08/13, 03:23:49) Length 49.8 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/446 (15/08/13, 03:23:49 - 15/08/13, 03:24:49) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/447 (15/08/13, 03:24:49 - 15/08/13, 03:25:49) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/448 (15/08/13, 03:25:49 - 15/08/13, 03:26:49) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/449 (15/08/13, 03:26:49 - 15/08/13, 03:27:49) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/450 (15/08/13, 03:27:49 - 15/08/13, 03:28:49) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/451 (15/08/13, 03:28:49 - 15/08/13, 03:29:50) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/452 (15/08/13, 03:29:50 - 15/08/13, 03:30:50) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/453 (15/08/13, 03:30:50 - 15/08/13, 03:31:50) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/454 (15/08/13, 03:31:50 - 15/08/13, 03:32:50) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/455 (15/08/13, 03:32:50 - 15/08/13, 03:33:51) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/456 (15/08/13, 03:33:51 - 15/08/13, 03:34:51) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/457 (15/08/13, 03:34:51 - 15/08/13, 03:35:51) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/458 (15/08/13, 03:35:51 - 15/08/13, 03:36:51) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/459 (15/08/13, 03:36:51 - 15/08/13, 03:37:51) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/460 (15/08/13, 03:37:51 - 15/08/13, 03:38:51) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/461 (15/08/13, 03:38:51 - 15/08/13, 03:39:51) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/462 (15/08/13, 03:39:51 - 15/08/13, 03:40:51) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/463 (15/08/13, 03:40:51 - 15/08/13, 03:41:51) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/464 (15/08/13, 03:41:51 - 15/08/13, 03:42:53) Length 61.2 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/465 (15/08/13, 03:42:53 - 15/08/13, 03:43:54) Length 61.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/466 (15/08/13, 03:43:54 - 15/08/13, 03:44:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/467 (15/08/13, 03:44:54 - 15/08/13, 03:45:54) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/468 (15/08/13, 03:45:54 - 15/08/13, 03:46:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/469 (15/08/13, 03:46:54 - 15/08/13, 03:47:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/470 (15/08/13, 03:47:54 - 15/08/13, 03:48:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/471 (15/08/13, 03:48:54 - 15/08/13, 03:49:54) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/472 (15/08/13, 03:49:54 - 15/08/13, 03:50:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/473 (15/08/13, 03:50:54 - 15/08/13, 03:51:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/474 (15/08/13, 03:51:54 - 15/08/13, 03:52:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/475 (15/08/13, 03:52:54 - 15/08/13, 03:53:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/476 (15/08/13, 03:53:54 - 15/08/13, 03:54:54) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/477 (15/08/13, 03:54:54 - 15/08/13, 03:55:55) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/478 (15/08/13, 03:55:55 - 15/08/13, 03:56:55) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/479 (15/08/13, 03:56:55 - 15/08/13, 03:57:55) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/480 (15/08/13, 03:57:55 - 15/08/13, 03:58:55) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/481 (15/08/13, 03:58:55 - 15/08/13, 03:59:55) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/482 (15/08/13, 03:59:55 - 15/08/13, 04:00:56) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/483 (15/08/13, 04:00:56 - 15/08/13, 04:01:56) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/484 (15/08/13, 04:01:56 - 15/08/13, 04:02:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/485 (15/08/13, 04:02:56 - 15/08/13, 04:03:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/486 (15/08/13, 04:03:56 - 15/08/13, 04:04:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/487 (15/08/13, 04:04:56 - 15/08/13, 04:05:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/488 (15/08/13, 04:05:56 - 15/08/13, 04:06:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/489 (15/08/13, 04:06:56 - 15/08/13, 04:07:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/490 (15/08/13, 04:07:56 - 15/08/13, 04:08:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/491 (15/08/13, 04:08:56 - 15/08/13, 04:09:56) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/492 (15/08/13, 04:09:56 - 15/08/13, 04:10:57) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/493 (15/08/13, 04:10:57 - 15/08/13, 04:11:57) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/494 (15/08/13, 04:11:57 - 15/08/13, 04:12:41) Length 44.8 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/495 (15/08/13, 04:12:41 - 15/08/13, 04:13:42) Length 60.5 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/496 (15/08/13, 04:13:42 - 15/08/13, 04:14:42) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/497 (15/08/13, 04:14:42 - 15/08/13, 04:15:42) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/498 (15/08/13, 04:15:42 - 15/08/13, 04:16:42) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/499 (15/08/13, 04:16:42 - 15/08/13, 04:17:00) Length 17.4 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/500 (15/08/13, 04:17:00 - 15/08/13, 04:18:00) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/501 (15/08/13, 04:18:00 - 15/08/13, 04:19:00) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/502 (15/08/13, 04:19:00 - 15/08/13, 04:20:00) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/503 (15/08/13, 04:20:00 - 15/08/13, 04:20:47) Length 46.4 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/504 (15/08/13, 04:20:47 - 15/08/13, 04:21:24) Length 37.5 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/505 (15/08/13, 04:21:24 - 15/08/13, 04:22:24) Length 60.2 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/506 (15/08/13, 04:22:24 - 15/08/13, 04:23:24) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/507 (15/08/13, 04:23:24 - 15/08/13, 04:24:24) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/508 (15/08/13, 04:24:24 - 15/08/13, 04:25:25) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/509 (15/08/13, 04:25:25 - 15/08/13, 04:25:35) Length 10.2 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/510 (15/08/13, 04:25:35 - 15/08/13, 04:26:35) Length 60.4 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/511 (15/08/13, 04:26:35 - 15/08/13, 04:27:36) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/512 (15/08/13, 04:27:36 - 15/08/13, 04:28:36) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/513 (15/08/13, 04:28:36 - 15/08/13, 04:29:36) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/514 (15/08/13, 04:29:36 - 15/08/13, 04:30:36) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/515 (15/08/13, 04:30:36 - 15/08/13, 04:31:36) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/516 (15/08/13, 04:31:36 - 15/08/13, 04:32:36) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/517 (15/08/13, 04:32:36 - 15/08/13, 04:33:36) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/518 (15/08/13, 04:33:36 - 15/08/13, 04:34:08) Length 31.5 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/519 (15/08/13, 04:34:08 - 15/08/13, 04:35:08) Length 60.5 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/520 (15/08/13, 04:35:08 - 15/08/13, 04:36:08) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/521 (15/08/13, 04:36:08 - 15/08/13, 04:37:08) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/522 (15/08/13, 04:37:08 - 15/08/13, 04:38:08) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/523 (15/08/13, 04:38:08 - 15/08/13, 04:39:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/524 (15/08/13, 04:39:09 - 15/08/13, 04:40:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/525 (15/08/13, 04:40:09 - 15/08/13, 04:41:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/526 (15/08/13, 04:41:09 - 15/08/13, 04:42:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/527 (15/08/13, 04:42:09 - 15/08/13, 04:43:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/528 (15/08/13, 04:43:09 - 15/08/13, 04:44:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/529 (15/08/13, 04:44:09 - 15/08/13, 04:45:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/530 (15/08/13, 04:45:09 - 15/08/13, 04:46:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/531 (15/08/13, 04:46:09 - 15/08/13, 04:47:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/532 (15/08/13, 04:47:09 - 15/08/13, 04:48:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/533 (15/08/13, 04:48:09 - 15/08/13, 04:49:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/534 (15/08/13, 04:49:09 - 15/08/13, 04:50:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/535 (15/08/13, 04:50:09 - 15/08/13, 04:51:09) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/536 (15/08/13, 04:51:09 - 15/08/13, 04:52:10) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/537 (15/08/13, 04:52:10 - 15/08/13, 04:53:10) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/538 (15/08/13, 04:53:10 - 15/08/13, 04:54:10) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/539 (15/08/13, 04:54:10 - 15/08/13, 04:55:10) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/540 (15/08/13, 04:55:10 - 15/08/13, 04:56:10) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/541 (15/08/13, 04:56:10 - 15/08/13, 04:56:20) Length 10.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/542 (15/08/13, 04:56:20 - 15/08/13, 04:57:20) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/543 (15/08/13, 04:57:20 - 15/08/13, 04:58:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/544 (15/08/13, 04:58:20 - 15/08/13, 04:59:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/545 (15/08/13, 04:59:20 - 15/08/13, 05:00:20) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/546 (15/08/13, 05:00:20 - 15/08/13, 05:01:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/547 (15/08/13, 05:01:20 - 15/08/13, 05:02:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/548 (15/08/13, 05:02:21 - 15/08/13, 05:03:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/549 (15/08/13, 05:03:21 - 15/08/13, 05:04:21) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/550 (15/08/13, 05:04:21 - 15/08/13, 05:05:21) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/551 (15/08/13, 05:05:21 - 15/08/13, 05:06:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/552 (15/08/13, 05:06:21 - 15/08/13, 05:07:15) Length 53.4 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/553 (15/08/13, 05:07:15 - 15/08/13, 05:08:15) Length 60.5 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/554 (15/08/13, 05:08:15 - 15/08/13, 05:09:15) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/555 (15/08/13, 05:09:15 - 15/08/13, 05:10:15) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/556 (15/08/13, 05:10:15 - 15/08/13, 05:11:16) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/557 (15/08/13, 05:11:16 - 15/08/13, 05:12:16) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/558 (15/08/13, 05:12:16 - 15/08/13, 05:13:16) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/559 (15/08/13, 05:13:16 - 15/08/13, 05:14:16) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/560 (15/08/13, 05:14:16 - 15/08/13, 05:15:16) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/561 (15/08/13, 05:15:16 - 15/08/13, 05:16:17) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/562 (15/08/13, 05:16:17 - 15/08/13, 05:17:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/563 (15/08/13, 05:17:17 - 15/08/13, 05:18:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/564 (15/08/13, 05:18:17 - 15/08/13, 05:19:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/565 (15/08/13, 05:19:17 - 15/08/13, 05:20:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/566 (15/08/13, 05:20:17 - 15/08/13, 05:21:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/567 (15/08/13, 05:21:17 - 15/08/13, 05:22:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/568 (15/08/13, 05:22:17 - 15/08/13, 05:23:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/569 (15/08/13, 05:23:17 - 15/08/13, 05:24:17) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/570 (15/08/13, 05:24:17 - 15/08/13, 05:25:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/571 (15/08/13, 05:25:18 - 15/08/13, 05:26:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/572 (15/08/13, 05:26:18 - 15/08/13, 05:27:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/573 (15/08/13, 05:27:18 - 15/08/13, 05:28:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/574 (15/08/13, 05:28:18 - 15/08/13, 05:29:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/575 (15/08/13, 05:29:18 - 15/08/13, 05:30:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/576 (15/08/13, 05:30:18 - 15/08/13, 05:31:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/577 (15/08/13, 05:31:18 - 15/08/13, 05:32:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/578 (15/08/13, 05:32:18 - 15/08/13, 05:33:18) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/579 (15/08/13, 05:33:18 - 15/08/13, 05:34:18) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/580 (15/08/13, 05:34:18 - 15/08/13, 05:35:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/581 (15/08/13, 05:35:18 - 15/08/13, 05:36:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/582 (15/08/13, 05:36:18 - 15/08/13, 05:37:18) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/583 (15/08/13, 05:37:18 - 15/08/13, 05:38:19) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/584 (15/08/13, 05:38:19 - 15/08/13, 05:39:19) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/585 (15/08/13, 05:39:19 - 15/08/13, 05:40:19) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/586 (15/08/13, 05:40:19 - 15/08/13, 05:41:19) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/587 (15/08/13, 05:41:19 - 15/08/13, 05:42:19) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/588 (15/08/13, 05:42:19 - 15/08/13, 05:43:19) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/589 (15/08/13, 05:43:19 - 15/08/13, 05:44:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/590 (15/08/13, 05:44:20 - 15/08/13, 05:45:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/591 (15/08/13, 05:45:20 - 15/08/13, 05:46:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/592 (15/08/13, 05:46:20 - 15/08/13, 05:47:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/593 (15/08/13, 05:47:20 - 15/08/13, 05:48:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/594 (15/08/13, 05:48:20 - 15/08/13, 05:49:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/595 (15/08/13, 05:49:20 - 15/08/13, 05:50:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/596 (15/08/13, 05:50:20 - 15/08/13, 05:51:20) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/597 (15/08/13, 05:51:20 - 15/08/13, 05:52:20) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/598 (15/08/13, 05:52:20 - 15/08/13, 05:53:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/599 (15/08/13, 05:53:21 - 15/08/13, 05:54:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/600 (15/08/13, 05:54:21 - 15/08/13, 05:55:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/601 (15/08/13, 05:55:21 - 15/08/13, 05:56:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/602 (15/08/13, 05:56:21 - 15/08/13, 05:57:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/603 (15/08/13, 05:57:21 - 15/08/13, 05:58:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/604 (15/08/13, 05:58:21 - 15/08/13, 05:59:21) Length 60.0 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/605 (15/08/13, 05:59:21 - 15/08/13, 06:00:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/606 (15/08/13, 06:00:21 - 15/08/13, 06:01:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/607 (15/08/13, 06:01:21 - 15/08/13, 06:02:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/608 (15/08/13, 06:02:21 - 15/08/13, 06:03:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/609 (15/08/13, 06:03:21 - 15/08/13, 06:04:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/610 (15/08/13, 06:04:21 - 15/08/13, 06:05:21) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/611 (15/08/13, 06:05:21 - 15/08/13, 06:06:22) Length 60.3 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/612 (15/08/13, 06:06:22 - 15/08/13, 06:07:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/613 (15/08/13, 06:07:22 - 15/08/13, 06:08:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/614 (15/08/13, 06:08:22 - 15/08/13, 06:09:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/615 (15/08/13, 06:09:22 - 15/08/13, 06:10:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/616 (15/08/13, 06:10:22 - 15/08/13, 06:11:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/617 (15/08/13, 06:11:22 - 15/08/13, 06:12:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/618 (15/08/13, 06:12:22 - 15/08/13, 06:13:22) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/619 (15/08/13, 06:13:22 - 15/08/13, 06:14:23) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/620 (15/08/13, 06:14:23 - 15/08/13, 06:15:23) Length 60.1 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/621 (15/08/13, 06:15:23 - 15/08/13, 06:15:55) Length 32.6 sec  -> stable
+Bunch Group Length: 26 Colliding BCIDs: 26
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/622 (15/08/13, 06:15:55 - 15/08/13, 06:16:56) Length 60.5 sec
+unpackRun2BCIDMask found:
+ Beam1: []
+ Beam2: []
+ Coll:  []
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/623 (15/08/13, 06:16:56 - 15/08/13, 06:17:56) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/624 (15/08/13, 06:17:56 - 15/08/13, 06:18:56) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/625 (15/08/13, 06:18:56 - 15/08/13, 06:19:56) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/626 (15/08/13, 06:19:56 - 15/08/13, 06:20:56) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/627 (15/08/13, 06:20:56 - 15/08/13, 06:21:56) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/628 (15/08/13, 06:21:56 - 15/08/13, 06:22:57) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/629 (15/08/13, 06:22:57 - 15/08/13, 06:23:57) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/630 (15/08/13, 06:23:57 - 15/08/13, 06:24:57) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/631 (15/08/13, 06:24:57 - 15/08/13, 06:25:57) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/632 (15/08/13, 06:25:57 - 15/08/13, 06:26:57) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/633 (15/08/13, 06:26:57 - 15/08/13, 06:27:57) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/634 (15/08/13, 06:27:57 - 15/08/13, 06:28:57) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/635 (15/08/13, 06:28:57 - 15/08/13, 06:29:57) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/636 (15/08/13, 06:29:57 - 15/08/13, 06:30:57) Length 60.0 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/637 (15/08/13, 06:30:57 - 15/08/13, 06:31:58) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/638 (15/08/13, 06:31:58 - 15/08/13, 06:32:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/639 (15/08/13, 06:32:58 - 15/08/13, 06:33:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/640 (15/08/13, 06:33:58 - 15/08/13, 06:34:58) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/641 (15/08/13, 06:34:58 - 15/08/13, 06:35:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/642 (15/08/13, 06:35:58 - 15/08/13, 06:36:58) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/643 (15/08/13, 06:36:58 - 15/08/13, 06:37:41) Length 42.4 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/644 (15/08/13, 06:37:41 - 15/08/13, 06:38:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/645 (15/08/13, 06:38:41 - 15/08/13, 06:39:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/646 (15/08/13, 06:39:41 - 15/08/13, 06:40:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/647 (15/08/13, 06:40:41 - 15/08/13, 06:41:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/648 (15/08/13, 06:41:41 - 15/08/13, 06:42:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/649 (15/08/13, 06:42:41 - 15/08/13, 06:43:41) Length 60.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/650 (15/08/13, 06:43:41 - 15/08/13, 06:44:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/651 (15/08/13, 06:44:41 - 15/08/13, 06:45:41) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/652 (15/08/13, 06:45:41 - 15/08/13, 06:46:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/653 (15/08/13, 06:46:42 - 15/08/13, 06:47:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/654 (15/08/13, 06:47:42 - 15/08/13, 06:48:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/655 (15/08/13, 06:48:42 - 15/08/13, 06:49:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/656 (15/08/13, 06:49:42 - 15/08/13, 06:50:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/657 (15/08/13, 06:50:42 - 15/08/13, 06:51:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/658 (15/08/13, 06:51:42 - 15/08/13, 06:52:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/659 (15/08/13, 06:52:42 - 15/08/13, 06:53:42) Length 60.1 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!
+
+---------------------------------------------------------------------------------------------
+Found Run/LB 276073/660 (15/08/13, 06:53:42 - 15/08/13, 06:54:19) Length 37.3 sec
+Bunch Group Length: 26 Colliding BCIDs: 0
+No offline lumi data found!

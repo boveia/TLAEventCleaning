@@ -1,0 +1,1321 @@
+2015-03-23  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRawChannelNoiseFilter: ignore channels with noise sigma more than some threshold
+          in calculating correction (drop condition if noisy status in DB)
+	* TileCellNoiseFilter: ignore channels with noise sigma more than some threshold
+          in calculating correction, threshold is set up by property MaxNoiseSigma (5 by default)
+	  works only in the case Tile noise DB is used
+	* Tagging TileRecUtils-00-09-47
+
+2015-03-05  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRawChannelNoiseFilter: ignore channels with noisy status in DB or with noise sigma more than some threshold
+	  in calculating correction, threshold is set up by property MaxNoiseSigma (5 by default)
+	* Tagging TileRecUtils-00-09-46
+
+2015-02-20  Sanya Solodkov  <solodkov@lxplus0154.cern.ch>
+
+	* python/TileRawChannelGetter.py:
+	  do not check beam energy when determine bunch spacing and window for parabolic correction
+	  correct window for parabolic correction in MC should be done in TileSimAlgs
+	* Tagging TileRecUtils-00-09-45
+
+2015-02-17  Bernardo Peralva  <bernardo@cern.ch>
+
+	* updates in COF to set default values to parameters and flags in JO level
+	* Tagging TileRecUtils-00-09-44
+
+2015-02-09  Bernardo Peralva  <bernardo@cern.ch>
+
+	* updates in COF for amplitude/time correction condition
+	* Tagging TileRecUtils-00-09-43
+
+2015-02-04  Bernardo Peralva  <bernardo@cern.ch>
+
+	* updates in the COF algorithm  (TileRawChannelBuilderMF.cxx), a iterative correction for high amplitude signals
+	* Tagging TileRecUtils-00-09-42
+
+2015-02-02  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* using of2 flag to apply proper parabolic correction in TileCellBuilder
+	* using one parameter for parabolic correction for OF1 (TileRawChannelBuilder.cxx)
+	* updates in the COF algorithm  (TileRawChannelBuilderMF.cxx)
+	* Tagging TileRecUtils-00-09-41
+
+2015-01-30 Bernardo Peralva <bernardo@cern.ch>
+
+        * Adding OF1 parabolic correction to TileRawChannelBuilder.cxx, and update the reco algs
+        * Tagging TileRecUtils-00-09-40
+
+2015-01-17 Bernardo Peralva <bernardo@cern.ch>
+
+        * Setting the DB pedestal value as default in the COF algorithm (TileRawChannelBuilderMF.cxx)
+        * Tagging TileRecUtils-00-09-39
+
+2015-01-15 Walter Lampl <walter.lampl@ cern.ch>
+	* Changes for AthenaHive, obo Paolo
+	* tag TileRecUtils-00-09-38
+
+2014-11-19  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* more Coverity fixes
+	* Tagging TileRecUtils-00-09-37.
+
+2014-11-18  scott snyder  <snyder@bnl.gov>
+
+	* Tagging TileRecUtils-00-09-36.
+	* TileRecUtils/TileRawChannelVerify.h: Fix include guard.
+	* src/TileRawChannelNoiseFilter.cxx, src/TileRawChannelMaker.cxx:
+	Const fixes.
+	* src/TileFilterTester.cxx: Coverity fix.
+
+2014-11-18  scott snyder  <snyder@bnl.gov>
+
+	* Tagging TileRecUtils-00-09-35.
+	* Looks like previous tag wasn't on the trunk.  Copy it into the
+	trunk.
+
+2014-11-06  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* Coverity fixes
+	* Tagging TileRecUtils-00-09-34
+
+2014-10-09  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* changeing threshold in TileRawChannelNoiseFilter to 3 sigma
+	* bug fix in TileRawChannelBuilder::commitContainer()
+	* Tagging TileRecUtils-00-09-33
+
+2014-09-29  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* Updates in TileCellBuilder for E4' cells
+	* Tagging TileRecUtils-00-09-32
+
+2014-08-11  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* Tagging TileRecUtils-00-09-31
+
+2014-08-09  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileRawChannelBuilderOpt2Filter.cxx: does not retrieve TileCondOfcTool (calculates OFCs on the fly)
+	  if OFCs from COOL are used
+
+2014-07-24  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* fix for special C10 in RUN2 geometry in TileCellBuilder.cxx
+	* Tagging TileRecUtils-00-09-29
+
+2014-07-02  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* New approach to apply noise filter was implemented
+	* in case of incomplete TileDigitsContainer (when digits come from frag1)
+	* noise corrections are calculated only using DSP RawChannelContainer
+	# and those corrections are applied also to offline reconstructed amplitudes
+	* this new approach can be disabled by special flag in TileRawChannelBuilder
+	* UseDSPCorrection
+	* Tagging TileRecUtils-00-09-29
+
+2014-06-20  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRecUtils/TileBeamInfoProvider.h: added new property SimulateTrips
+	  to simulate drawer trips;
+	* src/TileBeamInfoProvider.cxx: added functionality to simulate drawer trips
+	  by setting up DQ status to bad, actually global CRC error set up for whole drawer for both gains
+	* python/TileRecFlags.py: added new property simulateTrips
+	* Tagging TileRecUtils-00-09-28
+
+2014-05-09 Walter Lampl <walter.lampl@ cern.ch>
+	* migrate to xAOD::EventInfo
+	* tag TileRecUtils-00-09-27
+
+2014-03-18  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* Tagging TileRecUtils-00-09-26
+
+2014-03-14  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileCellBuilder.cxx: do not set property of TileBeamInfoProvider
+
+2014-02-17  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* for two-gain calib runs skip one of two tains in TileCellBuilder
+	* Tagging TileRecUtils-00-09-25
+
+2014-02-17  Bernardo Peralva  <bernardo@cern.ch>
+
+	* src/TileRawChannelBuilderMF.cxx: add option to run pure MF (for muon receiver board simulation)
+	* Tagging TileRecUtils-00-09-24
+
+2014-02-14  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileCellMaskingTool.cxx: included SystemOfUnits.h for CLHEP::MeV unit
+	* Tagging TileRecUtils-00-09-23
+
+2014-02-13  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRecUtils/TileRawChannelBuilderMF.h: ITileCondToolOfc used for possibility
+	  to use TileCondToolOfcCool or TileCondToolOfc.
+	* Tagging TileRecUtils-00-09-22
+
+2014-02-12  Bernardo Peralva  <bernardo@cern.ch>
+
+	* src/TileRawChannelBuilderMF.cxx: add options for pedestal values in MF/COF algorithm
+
+2013-11-26  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileRawChannelBuilder.cxx: the case overflow + underflow in raw channel also prepared for fitting
+	* src/TileRawChannelMaker.cxx: set up pedestal (33000) in the case overflow + underflow in raw channel
+
+2013-11-19  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileCellBuilder: no MBTS splitting.
+	* Tagging TileRecUtils-00-09-18
+
+2013-11-15  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileCellBuilder: splitted E1 and MBTS for run2.
+
+2013-11-06  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileRawChannelBuilderOpt2Filter.cxx: added new pedestal modes (as Sasha proposed): 71 and 7621
+
+2013-10-24 Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* python/TileRecFlags.py: added new property doTileOverflowFit
+	* TileRawChannelBuilder: added function getOverflowedChannels; 
+	  added property DataPoolSize to set initial DataPool size. 
+	* TileRawChannelBuilderFlatFilter: used DataPool size set up in TileRawChannelBuilder.
+	* TileRawChannelBuilderManyAmps: used DataPool size set up in TileRawChannelBuilder
+	* TileRawChannelBuilderOptFilter: used DataPool size set up in TileRawChannelBuilder
+	* TileRawChannelBuilderOpt2Filter: used DataPool size set up in TileRawChannelBuilder
+	* TileRawChannelBuilderFitFilter: used DataPool size set up in TileRawChannelBuilder
+	* TileRawChannelBuilderFitFilterCool: used DataPool size set up in TileRawChannelBuilder
+	* TileRawChannelBuilderMF: used DataPool size set up in TileRawChannelBuilder
+	* TileRawChannelMaker: added possibility fit overflowed channels; added properties
+	  FitOverflow and TileRawChannelBuilderFitOverflow (which fitter should be used).
+	* python/TileRawChannelGetter.py: added possibility to set up fitting overflowed channels
+	* Tagging TileRecUtils-00-09-17.
+		
+2013-10-23  Bernardo Peralva  <bernardo@cern.ch>
+
+	* tunning the MF/COF code
+	* Tagging TileRecUtils-00-09-16.
+
+2013-10-16  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* Tagging TileRecUtils-00-09-15.
+
+2013-10-13  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* python/TileRecFlags.py: property doTileOF1DBPeds renamed to doTileOF1
+	* python/TileRawChannelGetter.py: modified in order to take into 
+	  account modified TileRecFlags.
+		
+2013-07-02  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileBeamInfoProvider: added some variables 
+	  to constructor initialization list.
+	
+2013-08-07  scott snyder  <snyder@bnl.gov>
+
+	* Tagging TileRecUtils-00-09-14.
+	* src/TileRawChannelBuilderMF.cxx: Fix compilation warnings.
+
+2013-07-02  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileRawChannelBuilder: fixed initialization.
+	* Tagging TileRecUtils-00-09-13.
+
+2013-06-28  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* Tagging TileRecUtils-00-09-12.
+
+2013-06-10  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRecUtils/TileCellMaskingTool.h: Turned into AthAlgTool.
+	* src/TileCellMaskingTool.cxx: Updated to use benefit from AthAlgTool.
+	* TileRecUtils/TileRawChannelVerify.h: Turned into AthAlgTool.
+	* src/TileCellMaskingTool.cxx: Updated to use benefit from AthAlgTool.
+	* TileRecUtils/TileRawCorrelatedNoise.h: Turned into AthAlgTool.
+	* src/TileRawCorrelatedNoise.cxx: Updated to use benefit from AthAlgTool.
+	
+	
+
+2013-06-06  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRecUtils/TileCellBuilder.h: Turned into AthAlgTool.
+	* TileRecUtils/TileCellBuilder.icc: Updated to use benefit from AthAlgTool.
+	* src/TileCellBuilder.cxx: Updated to use benefit from AthAlgTool.
+	* src/TileTowerBuilderTool.cxx: Avoid creating msg stream.
+	
+2013-06-05  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRawChannelBuilderFitFilter: Updated to use benefit from AthAlgTool.
+	* TileRawChannelBuilderFitFilterCool: Updated to use benefit from AthAlgTool.
+	* TileRawChannelBuilderMF: Updated to use benefit from AthAlgTool.
+	* TileRawChannelBuilder: Cleaned up from m_log, m_lVerbose, m_lDebug, 
+	  m_StoreGate (these variables should be used from AthAlgtTool).
+
+2013-06-04  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRawChannelBuilder: Turned into AthAlgTool.
+	* TileRawChannelBuilderFlatFilter: Updated to use benefit of AthAlgTool.
+	* TileRawChannelBuilderManyAmps: Updated to use benefit of AthAlgTool.
+	* TileRawChannelBuilderOptFilter: Updated to use benefit of AthAlgTool.
+	* TileRawChannelBuilderOpt2Filter: Updated to use benefit of AthAlgTool.
+
+2013-05-29  Bernardo Peralva  <bernardo@cern.ch>
+
+	* Changing Matched Filter code to estimate 7 BC energies  
+
+2013-05-25  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* share/TileCellBuilder_cosmics_jobOptions.py: parameter maskBadChannels 
+	  removed from TileROD_Decoder setup. Bad channels are masked always in
+	  TileROD_Decoder.
+
+2013-03-21  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileRawChannelNoiseFilter.cxx: Used CHECK() to check StatusCode. 
+	* TileRecUtils/TileRawChannelMaker.h: Turned into AthAlgorithm.
+	* src/TileRawChannelMaker.cxx: Updated to use benefit from AthAlgorithm.
+	* TileRecUtils/TileCellFakeProb.h: Turned into AthAlgTool.
+	* src/TileCellFakeProb.cxx: Updated to use benefit from AthAlgTool.
+	* src/TileCellNoiseFilter.cxx: Used CHECK() to check StatusCode.  
+
+2013-03-13  scott snyder  <snyder@bnl.gov>
+
+        * Tagging TileRecUtils-00-09-10.
+	* Fix clang warnings.  Remove vile #define private public
+	directives (didn't work correctly with clang).
+
+2013-03-07  scott snyder  <snyder@bnl.gov>
+
+        * Tagging TileRecUtils-00-09-09.
+	* TileRecUtils/TileTowerBuilderTool.h,
+	src/TileTowerBuilderTool.cxx: Replace with a tool using
+	CaloTowerBuilderTool (adapted from LArTowerBuilderTool).  No
+	longer uses CaloTowerContainer::getOverlaps().
+	* cmt/requirements: Update dependencies.
+
+2013-02-21  scott snyder  <snyder@bnl.gov>
+
+        * Tagging TileRecUtils-00-09-08.
+	* Fix gcc 4.7 warnings.
+        * Tagging TileRecUtils-00-09-07.
+	* src/TileCellNoiseFilter.cxx: Fix clang warnings.
+
+2013-02-08  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+        * Tagging TileRecUtils-00-09-06.
+	* TileTowerBuilderTool: updated to use benefit from AthAlgTool
+	* src/TileTowerBuilderTool.cxx: avoid coping of vectors for optimization
+
+2012-12-28  Bernardo Peralva  <bernardo.cern.ch>
+
+        * Adding pedestal estimation to TileRawChannelBuilderMF based on events
+        * tagging TileRecUtils-00-09-05
+
+2012-12-10  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* Do not adjust min/max time of parabolic correction in digitization job
+	  if beam energy is below 10 TeV (i.e. in all MC10,MC11,MC12)
+        * tagging TileRecUtils-00-09-04
+
+2012-12-07  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* min amplitude and min/max time for parabolic correction 
+	  are set via jobOptions now
+	* use jobproperties.Beam.bunchSpacing to set
+	  time limits for parabolic corrections 
+        * tagging TileRecUtils-00-09-03
+
+2012-11-12  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* changing level2 threshold in TileRawChannelBuilder::CorruptedData()
+	  from 199.9 to 149.9
+          low gain channel will be masked if all 7 samples are above this threshold
+
+        * tagging TileRecUtils-00-09-02
+	
+2012-10-25  Bernardo Peralva  <bernardo@cern.ch>
+
+        * TileRawChannelBuilderMF.cxx:  Fix minor bug (setting a fixed ped value a one given channel)
+        * tagging TileRecUtils-00-09-01
+
+2012-10-18  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+        * tagging TileRecUtils-00-09-00
+
+2012-10-17  Guilherme Lima  <jlima@cernNOSPAM.ch>
+
+	* TileRawChannelBuilderOpt2Filter: Fix bug (missing 'break') when setting pedestal from cond DB
+
+2012-10-17  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileBeamInfoProvider: corrected
+
+2012-10-16  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileCellBuilder: fullSizeCont is always treated as true; take into account 
+          that TileRawChannel::cell_ID_index already returns cell hash as index
+
+2012-10-14  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileBeamInfoProvider: optimized
+
+2012-10-10  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* storing number of consecutive masked modules and first
+	* Put warning if there are 2 consecutive masked modules
+
+	* masking half-drawer if there are too many errors in this half
+	  masked module from this group in eventInfo
+	* bad pattern detection is applied to all OF alorithms in base class
+	  and information about errors in stored in TileRawChannel pedestal
+	  TileCellBuilder later mask all channels with errors
+
+        * tagging TileRecUtils-00-08-32
+
+2012-10-04  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* src/TileCellBuilder.cxx: TileBchStatus has been got by using const reference
+
+2012-10-03  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* new version of TileFlags in EventInfo (filled by TileCellBuilder)
+        * tagging TileRecUtils-00-08-31
+
+2012-09-28  Bernardo Peralva  <bernardo@cern.ch>
+
+        * Implement the Matched Filter, TileMF
+        * tagging TileRecUtils-00-08-30
+
+2012-09-15  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* detection of corrupted data moved to base class TileRawChannelBuilder
+        * detection of narrow pulses added to the algorithm
+	* Tagging TileRecUtils-00-08-27
+
+2012-09-06  Guilherme Lima  <jlima@cernNOSPAM.ch>
+
+	* Implement new OptFilter algorithm, called OF1DBPeds
+	* Tagging TileRecUtils-00-08-26
+
+2012-07-03  scott snyder  <snyder@bnl.gov>
+
+	* Tagging TileRecUtils-00-08-25.
+	* Update for clhep 2.
+
+2012-06-25  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* new parameters for jump detection in corrupted data
+	  (allow +/-2 counts variation at every constant level)
+	* Tagged TileRecUtils-00-08-24
+
+2012-06-22  Sanya Solodkov  <solodkov@pcatl01.cern.ch>
+
+	* new thresholds for jump detection in corrupted data
+	* TileCellMaskingTool updates
+	* Tagged TileRecUtils-00-08-22
+
+2012-05-31  Vakho Tsulaia  <tsulaia@mail.cern.ch>
+
+	* Drop dependency on GeoModelSvc
+
+2012-05-04  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* check also jumps to 0 and jumps to 1023
+	* put quality=9999 if jump is detected
+	* Tagged TileRecUtils-00-08-18
+
+2012-04-09  Sanya Solodkov  <solodkov@pcbec3.ihep.su>
+
+	* additional filter to detect damaged data:
+	  - mask whole drawer if all 4 MB have BCID errors
+	  - mask all channels with energy below -10 GeV
+          - in Opt2 filter do not reconstruct channels
+	    with >100 counts jump between two values
+	* Tagged TileRecUtils-00-08-16
+
+2012-03-30  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* Tagged TileRecUtils-00-08-15
+
+2012-03-29  Siarhei Harkusha  <Siarhei.Harkusha@cern.ch>
+
+	* TileRawChannelBilder: TileRawChannelContainer created with policy SG::VIEW_ELEMENTS for DataPool usage 
+	* TileRawChannelBuilderFitFilter: DataPool used for TileRawChannel
+	* TileRawChannelBuilderFitFilterCool: DataPool used for TileRawChannel
+	* TileRawChannelBuilderFlatFilter: DataPool used for TileRawChannel
+	* TileRawChannelBuilderManyAmps: DataPool used for TileRawChannel
+	* TileRawChannelBuilderOptFilter: DataPool used for TileRawChannel
+	* TileRawChannelBuilderOpt2Filter: DataPool used for TileRawChannel
+
+2012-02-27  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* TileCellBuilder:
+	  - special treatment of special C10 cells:
+	    set energy of disconnected channel 4 to zero always
+	    and if channel 5 is masked, assign the same bad status to channel 4
+          Tagged TileRecUtils-00-08-14
+
+2012-02-26  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* TileCellBuilder:
+	  - fixing bug in merging of two TileRawChannel containers
+	    (if DSP container was not complete, one cell might be missing
+	     in final merged container)
+	  - Keep channel gain when channel is masked, don't set low gain
+	  - set quality of masked channel equak to quality of good channel
+	    plus gain difference: qual2 = qual1 + (gain2-gain1)
+          Tagged TileRecUtils-00-08-13
+
+2011-12-03  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* TileRawChannelBuilderFitFilter and TileRawChannelBuilderFitFilterCool
+	   - change all the functions with interpolate pulse shape
+	     instead of many identical functions call just singke one
+	   - when derivatives are extrapolated, set zero value
+	     if time is outside limits (might affect a bit the results0
+	* fixing coverity errrors as well
+          Tagged TileRecUtils-00-08-11
+
+2011-12-02  Andrei Artamonov  <artamono@lxplus403.cern.ch>
+
+	* modifications to python/TileRawChannelGetter.py
+	to make selective loading of Tile folders - corresponds 
+	to TileConditions modifications
+	tagged: TileRecUtils-00-08-10
+
+2011-09-19  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* bug fix (array index outside limits) in emulate DSP part of optimal filter
+          Tagged TileRecUtils-00-08-09
+
+2011-06-02  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* reducing number of HWIdentifier pack/unpack calls 
+	  in bad channel masking in TileCellBuilder
+          Tagged TileRecUtils-00-08-06
+
+2011-04-26    <solodkov@pcbec3.ihep.su>
+
+	* bug fix in TileCellBuilder - due to wrong () 
+	  masking of channels with bad DCS status did not work at all 
+	* additional masking of channels with bad timing (similar to bad channel masking)
+	  i.e. time from channel with good timing is used instead of bad one
+          Tagged TileRecUtils-00-08-05
+
+2011-04-06  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* apply parabolic amplitude correction in optimal filter only 
+	  if abs(time)<25 ns and amplitude>15 ADC counts
+	  Those cuts are applied both in TileRawChannelBuilder* and in TileCellBuilter
+          Tagged TileRecUtils-00-08-04
+
+2011-02-15  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* Introducing special cut for MBTS energy in TileCellBuilder
+	  (energy is considered as good if it's above 0.03675 pC = 3 ADC counts)
+	* Concider MBTS cells with time=+/-75 ns as cells with no time - 
+	  do not set MASK_TIME bit for them
+	* distinguish DSP reco results coming from frag4 and frag5, 
+	  since meaning of quality is different for them
+	
+2010-11-10  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* adding TileRawCorrelatedNoise algorithm
+          Tagged TileRecUtils-00-08-00
+	
+2010-11-01  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* check DCS channel status and mask bad channels in TileCellBuilder
+
+2010-10-22    <solodkov@pcbec3.ihep.su>
+
+	* adding possibility to merge 2 raw channel containers
+	in TileCellBuilder
+	* when needed, apply noise filter to second container 
+	(which comes directly from DSP) before merge
+
+2010-08-06  Helena Santos  <helena@lip.pt>
+        * Replace of the method in TileBeamInfoProvider::isChanDCSgood to
+	retrieve DCS drawer states. Now it retrieves the status at pmt level.
+
+2010-07-12  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* Enabling noise filter for real data by default
+
+2010-07-06  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* allow time correction in TileRawChannelBuilder 
+	  for any kind of run, not only for physics run
+        * Tagged TileRecUtils-00-07-44
+	
+2010-06-23  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* bug fix in BCID checks in TileDQStatus - 
+	for new type of DQ fragment with FragBCID filled by DSP
+	BCID errors for individual DMUs were not taken into account
+
+2010-06-15  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* TileRawChannelNoiseFilter: adding possibility to specify
+	minimal number of channels in motherboard as percentage of good channels
+	in this moterboard; default value is 60%
+	
+	* TileCellNoiseFilter: adding possibility to specify
+	minimal number of channels in motherboard as percentage of good channels
+	in this moterboard; default value is 60%
+	* TileCellNoiseFilter: adding possibility to use TILE ADC noise DB 
+	instead of CellNoise DB; This possibility is switched on by default, 
+	i.e. CellNoiseFilter is equivalent to RawChannelNoiseFilter, 
+	but it "sees" less number of channels (only channels which are 
+	connected to real cells can be used)
+
+        * Tagged TileRecUtils-00-07-39
+
+2010-05-31  Bernardo Sotto-Maior Peralva  <bernardo@cern.ch>
+	* extended cispar array broke into separated parameters according to
+	https://twiki.cern.ch/twiki/bin/view/Atlas/TileCIS
+
+
+2010-05-07  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* cispar array in TileBeamInfoProvider has dimension 110 now - to hold all 
+	parameters in special CIS runs
+
+2010-04-29  Helena Santos  <helena@lip.pt>
+
+	* Added method TileBeamInfoProvider::isChanDCSgood to retrieve DCS drawer states
+        * Tagged TileRecUtils-00-07-35
+	
+2010-04-21  Luca Fiorini  <lfiorini@cern.ch>
+
+        * More fixed for the DQStatus
+        * Tagged TileRecUtils-00-07-34
+
+
+2010-04-20  Luca Fiorini  <lfiorini@cern.ch>
+
+        * Added check of the DSP BCID in the DQStatus
+        * Tagged TileRecUtils-00-07-33
+
+2010-03-16  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* adding TileRawChannelNoiseFilter tool, which is
+	equivalent to TileCellNoiseFilter, but works at the channel level
+
+2010-03-08  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* adding TileCellNoiseFilter tool written by Shimpei Yamamoto
+	* can be used either by TileCellBuilder or by CaloCellMaker
+	
+2010-02-17  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* bug in TileDQstatus::isChEmpty fixed - ch 18,19 in special EB are not empty
+	* all algorithms migrated to float digits
+        * Tagged TileRecUtils-00-07-27
+	
+2010-02-09  Andrei Artamonov  <artamono@lxplus204.cern.ch>
+
+	* new QF (a la DSP) is now always used (EmalateDSP flag protection
+	  removed)
+        * Tagged TileRecUtils-00-07-26
+
+2009-12-10  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* fixing bug in TileRawChannelBuilderOpt2 introduced in previous tag
+        * Tagged TileRecUtils-00-07-25
+	
+2009-12-07  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* do not correct time in TileCellBuilder if it's exactly 0
+	  (i.e. time was not calculated at all by OptFilter) 
+
+2009-11-28  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* BestPhaseFromCOOL flag added to TileRecFlags
+        * Tagged TileRecUtils-00-07-24
+
+2009-11-19  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* set zero energy for masked MBTS cells istead of 0.5 
+	* use opposite sign for BestPhase from COOL
+        * Tagged TileRecUtils-00-07-23
+	
+2009-11-11  Andrei Artamonov  <artamono@lxplus249.cern.ch>
+
+	* changed formula for QF in TileRawChannelBuilderOpt2Filter.cxx
+	in case of emulateDsp
+
+2009-10-13  Andrei Artamonov  <artamono@lxplus241.cern.ch>
+
+	* modification from Ketevi Assamagan: m_storeGate modified as a
+	ServiceHandle now
+
+2009-09-21  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* store in eventInfo error state (NotSet, Warning, Error) 
+	* and event flags (4 partitions separatetly 32 bits in total)  
+        * event flag > 0xfffff means "error"
+	* event flag > 0xffff means warning
+	* see TileCellBuilder.cxx for details
+	
+2009-09-04  Andrei Artamonov  <artamono@lxplus241.cern.ch>
+
+	* new calculation of quality factor implemented in
+	TileRawChannelBuilderOpt2Filter. Is activated by jo flag
+	EmulateDSP
+
+2009-08-20  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* additional method TileBeamInfoProvider:setContainers() added
+	  to set pointers to all containers
+	This method will be used in event overlay
+        * Tagged TileRecUtils-00-07-18
+
+2009-08-18  Luca Fiorini  <Luca.Fiorini@cern.ch>
+        * TileDQStatus takes the bcid from the digits for the bcid checks
+        * Tagged TileRecUtils-00-07-17
+
+2009-07-15  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* adding BeginRun incident to TileBeamInfoProvider
+	to set DQStatus to _all_good_
+        * Tagged TileRecUtils-00-07-15
+
+2009-06-19  Luca Fiorini  <Luca.Fiorini@cern.ch>
+        * Fix gcc4 warnings
+        * Tagged TileRecUtils-00-07-14
+
+2009-06-15  Luca Fiorini  <Luca.Fiorini@cern.ch>
+        * TileDQStatus bugfix and changes for bcid check
+	* Tagged TileRecUtils-00-07-11
+
+2009-06-09  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* don't use SimDigitsPedSigma from TileInfo anymore in FitFilter
+	
+	* set MBTS DetDescrElement pointer for all MBTS cells in TileCellBuilder
+
+	* new options to correct time and amplitude in TileCellBuilder
+	
+2009-06-09  Andrei Artamonov  <artamono@lxplus227.cern.ch>
+
+	* small bug fixes in TileRawChannelBuilderOpt2Filter
+
+2009-06-02  Jose Maneira  <maneira@lip.pt>
+
+        * *documentation updates
+
+2009-05-25  Andrei Artamonov  <artamono@lxplus236.cern.ch>
+
+	* improved doxygen documentation for TileRawChannelBuilderOpt2Filter
+
+2009-05-20  Andrei Artamonov  <artamono@lxplus231.cern.ch>
+
+	* modified TileRawChannelBuilderOpt2Filter - first
+	implementation of "emulate DSP" option
+
+2009-05-18  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* disable reading of OFC from COOL if NSamples!=7
+
+2009-03-17  Andrei Artamonov  <artamono@lxplus237.cern.ch>
+
+	* new class "OfcFromCOOL" in TileRecFlags.py
+	* new automatic settings in for Opt2Fileter and OptATLAS
+	  in case of OfcFromCOOL=True in file TileRawChannelGetter.py
+
+2009-02-25  Andrei Artamonov  <artamono@lxplus228.cern.ch>
+
+	* bug fixed in TileRawChannelBuilderFitFilterCool for
+	pedestal run
+
+2009-01-28  Sanya Solodkov  <solodkov@lxplus208.cern.ch>
+
+	* migrating to new Calo interface package
+
+2009-01-14  Sanya Solodkov  <solodkov@lxplus226.cern.ch>
+
+	* minor fix in TileBeamInfoProvider for 64bit platform
+
+2008-12-17  Sanya Solodkov  <solodkov@pcatl03.cern.ch>
+
+	* TileBeamInfoProvider: protection against unexpected size
+	of the TileDMU header vector in TileDigitsContainer
+
+2008-12-02 Luca Fiorini <Luca.Fiorini@cern.ch>
+
+	* TileBeamInfoProvider: fixed DQStatus buf in bigain runs
+	* Tagged: TileRecUtils-00-06-16 
+
+2008-11-19  Andrei Artamonov  <artamono@lxplus214.cern.ch>
+
+	* updated TileRawChannelBuilderOpt2Filter: new option
+	"OfcfromCool" to allow extraction OFCs from DB instead of on-the-fly
+	calculations
+
+2008-11-11  Sanya Solodkov  <solodkov@lxplus226.cern.ch>
+
+	* adding more flags in TileRecFlags
+
+2008-11-04  Andrei Artamonov  <artamono@lxplus241.cern.ch>
+
+	* added new property to TileRawChannelBuilderOpt2Filter (BestPhase)
+
+	* in TileRawChannelBuilderOpt2Filter now in case of
+	"without iterations" the phase is not "zero", but is extracted 
+	from COOL DB (the best phase for particular channel)
+
+2008-10-28  Sanya Solodkov  <solodkov@pcatl03>
+
+	* minor fixes in Opt filter and Opt2 filter
+	a) use parameters like Nsamples, TriggerSample from TileInfo 
+	   instead of guessing internaly - to be consistent with digitization
+	b) delay initialization of Opt2 until GeoModel (and COOL) are initialized
+	c) move parabolic-shape correction to the base class and convert it to
+	   the fuction which simply returns correction factor
+
+	* migration to Opt2 method as default method in reconstrution
+
+	* new TileRecFlags property - name of the raw channel container to be used 
+	  for all other algorithms as input, set this name in TileRawChannelGetter
+
+	* one more protection against empty DQ fragments in RawChannelContainer
+	
+2008-10-27  Andrei Artamonov  <artamono@lxplus241.cern.ch>
+
+	* added new TileRawChannelBuilderFitFilterCool. It uses
+	pulse shapes from COOL, instead of ASCII files
+
+2008-10-23  Luca Fiorini  <Luca.Fiorini@cern.ch>
+        * Create a DQstatus status by default
+
+2008-10-21  Luca Fiorini  <Luca.Fiorini@cern.ch>
+        * skip DQ creation if containers are not retrieved correctly
+
+2008-10-08  Sanya Solodkov  <solodkov@pcata001.cern.ch>
+
+	* set proper provenance bits in TileCell if one or two channels 
+	were masked
+
+2008-09-25  Luca Fiorini  <Luca.Fiorini@cern.ch>
+        * Intoduced cell masking on the fly from DQstatus fragment results
+
+2008-09-02  Andrei Artamonov  <artamono@lxplus203.cern.ch>
+
+	* Fix for proper reconstruction of saturated pulses
+	in TileRawChannelBuilderOpt2Filter (a la Ximo)
+
+2008-09-01  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Fix fro proper reconstruction of saturated pulses.
+
+2008-08-29 Ilija Vukotic <ivukotic@cern.ch>
+	* completely change the way tile towers are built.
+	* should be 2x faster and much less complicated.
+	* tagging TileRecUtils-00-06-03
+
+2008-08-25  Andrei Artamonov  <artamono@lxplus231.cern.ch>
+	* Fixed typo in TileRawChannelBuilderOpt2Filter in Compute and
+	Iterator method (following Ximo's changes)
+
+2008-08-22  Ximo Poveda Torres  <jpoveda@cern.ch>
+	* Fixed typo in OF Compute method
+
+2008-07-22  Sanya Solodkov  <solodkov@pcatl01>
+	* migrating to new quality flags for TileCell
+
+2008-07-15 Claire Adam-Bourdarios <claire.bourdarios@cern.ch>
+	* adding geoModel callback to TileCellBuilder.h ( preparation for data driven mode )
+	* tagging TileRecUtils-00-05-08
+
+2008-07-10  Sanya Solodkov  <solodkov@pcatl01>
+
+	* adding DMstatus to TileBeamInfoProvider
+	
+	* new option in TileCellBuilder - fake E3/E4 cells with zero energy on request
+
+2008-07-09  Andrei Artamonov  <artamono@lxplus223.cern.ch>
+
+	* added TileRawChannelBuilderOpt2Filter. Reconstruction
+	with Optimal Filtering using TileCondToolOfc which calculats OFCs
+
+2008-06-13  Sanya Solodkov  <solodkov@lxplus206.cern.ch>
+
+	* masking bad channels in TileCellBuilder by default
+
+2008-05-22  Sanya Solodkov  <solodkov@pcatl01>
+
+	* migrating to new TileConditions
+
+2008-05-21  Sanya Solodkov  <solodkov@pcatl01>
+
+	* taking TileRawChannel units enum from TileIdentifier package
+
+2008-04-07  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Small changes in OF for 7 samples
+
+2008-04-01  Sanya Solodkov  <solodkov@pcatl01>
+
+	* moving TileTowerBuilderTool from TileRecAlgs to TileRecUtils
+
+2008-02-29  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Small fix in OptFilter quality (preventing infinite values when a sample is zero) and in TileRawChannelGetter.py.
+	
+2008-02-28  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* New doTileOptATLAS RecFlag for MC reconstruction and updates in TileRawChannelGetter.
+	* Laser timing correction added to TileRawChannelBuilderOptFilter.
+
+2008-02-15  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Update in TileRawChannelGetter.py for new OF weight file names
+
+2008-01-24  Ximo POVEDA TORRES  <jpoveda@cern.ch>
+
+	* Major updates in Optimal Filtering (pedestal calculation, amplitude correction for high phases when no iteration is applied, etc.)
+
+2008-01-23   Jose Maneira <maneira@lip.pt>
+       * remove TileMuonFitter and related classes (moved to TileCosmicAlgs)
+
+2007-12-11  Sanya Solodkov  <solodkov@pcatl01>
+
+	* disable TileBeamInfoProvider for MC data
+
+2007-11-29  Tomas Davidek  <davidek@lxplus237.cern.ch>
+
+	* Minor modification in TileRawChannelBuilderFitFilter: the extra interation 
+	is only performed if one or more samples are outside the m_MaxTimeFromPeak 
+	limit from the peak position.
+
+2007-11-21  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* More fixes for TileCellBuilder interface 
+
+2007-11-09  Tomas Davidek  <davidek@lxplus239.cern.ch>
+
+	* Change in TileRawChannelBuilderFitFilter: after finding the best iteration, 
+	perform one more, avoiding to use samples more than m_MaxTimeFromPeak (see also
+	note of 2007-10-06 below)
+
+2007-10-26  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Interface method in TileCellBuider again in place for TileByteStream package
+	
+	* Fixes in TileCellBuider
+	
+2007-10-20  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Documentation updates
+	
+2007-10-16  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Updates for interfaceID in TileCellBuilder and TileCellMaskingTool
+
+2007-10-14  Sanya Solodkov  <solodkov@pcatl01>
+
+	* Adding possibility to mask bad channels in TileCellBuilder
+
+2007-10-12  Jose Maneira <maneira@lip.pt>
+
+    * Several updates on TileMuonFitter:
+	   * Use TileInfo::GetChannelStatus to mask bad channels
+	   * Remove previous jobOptions-based noisy drawer masking
+	   * Set jobOptions and configurables with more standard defaults
+	   * Added doxygen documentation
+
+2007-10-06  Tomas Davidek  <davidek@lxplus005.cern.ch>
+
+	* Restrict the fit in the signal window so that samples beyond m_MaxTimeFromPeak
+	are not considered. Default value is 90 ns.
+
+2007-09-25  Sanya Solodkov  <solodkov@pcatl01>
+
+	* fixing bug with units in TileRawChannelBuilder
+
+2007-09-18  Tomas Davidek  <davidek@lxplus007.cern.ch>
+
+	* introducing CIS pulse shape separately for low- and high-gain. 
+	Corresponding changes to TileConditions as well.
+
+2007-08-09  Sanya Solodkov  <solodkov@lxplus204.cern.ch>
+
+	* adding TileCellMaskingTool
+
+2007-08-02  Nils Gollub  <ngollub@lxplus209.cern.ch>
+
+	* Fixed TileInfoLoader initialization in TileRawChannelGetter.py
+
+2007-08-01  Nils Gollub  <ngollub@lxplus202.cern.ch>
+
+	* Fixed calls to TileInfo::TimeCalib
+
+2007-07-23  Sanya Solodkov  <solodkov@lxplus206.cern.ch>
+
+	* all algorithms updated to work with new TileConditions
+
+2007-07-17  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Upgrade in Optimal Filtering to handle drawers with all digits=1023 when data are acquired but module is not powered 
+	
+2007-07-16  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Minor updates in TileRawChannelBuilderOptFilter
+
+2007-07-12  Jose Maneira  <maneira@lip.pt>
+
+    * Removed approximate WLS fiber length correction from TileMuonFitter,
+	since it's done (more accurately) in TileConditions now
+	* increased default threshold to 200 in ComTimeGetter.py
+
+2007-07-12  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* New JobProperties defined for reco methods (doTileFit, doTileOpt, etc.).
+
+2007-07-10  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* TileRawChannelMaker making use of  ToolHandleArray for handling TileRawChannelBuilderTools. Changes in python for configurables.
+	
+2007-07-07  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Doxygen documentation and some code cleaning
+
+2007-07-03 Joao Gentil Saraiva <gentil@lip.pt>
+
+        * Protect TileMuonFitter from high noise level in modules; complete module(s) is(are) skiped.
+        * ATT: LBC41 is being removed by default (problematic M3 TileCal module).
+        * Default threshold set to 200 MeV.
+
+2007-06-18  Sanya Solodkov  <solodkov@lxplus214.cern.ch>
+
+	* new TileCellBuilder_cosmics_jobOptions.py to select proper
+	  container with RawChannels
+
+2007-05-15  Jose Maneira <maneira@lip.pt>
+
+        * split TileMuonFitter jobOptions in alg and CBNT part
+
+2007-06-08  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Major updates in TileRawChannelBuilderOptFilter.cxx
+
+2007-06-07  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Fixes for TileInfoLoader configuration in Fit and OF2 getter modules
+
+2007-05-18 Jose Maneira <maneira@lip.pt>
+
+    * bugfix in CBNTAA_TileMuonFitter (convert arrays to float)
+    * add flag in TMF jobOptions for simulated data 
+
+2007-04-25  Tomas Davidek  <davidek@lxplus220.cern.ch>
+
+	* introduce a fix that suppresses the zero samples in the fit method 
+	  (important for CIS in high-gain, where leakage pulse is large)
+	  
+
+2007-04-11 Jose Maneira <maneira@lip.pt>
+     
+        * protect TileMuonFitter against crash with EB partitions by 
+          skipping MBTS cells.
+
+2007-04-03  Sanya Solodkov  <solodkov@lxplus201.cern.ch>
+
+	* bug fix for TileCell gain 
+	 (bug was introduced in TileCellBuilder during migration to DataPOOL)
+
+2007-04-02 Jose Maneirs <maneira@lip.pt>
+
+        * Fix for TileMuonFitter
+
+2007-03-30  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Fix for Opt Filtering
+
+2007-03-37 Jose Maneira <maneira@lip.pt>
+
+	* bugfix in TileMuonFitter (thanks to Adam Gibson)
+	* added jobOption setting of minimum number of cells and top/bottom requirement in TMF
+
+2007-03-23  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Fix in Getter modules
+	* TileRawChannelManyAmpsGetter.py added 
+
+2007-03-22  Ilija Vukotic <ivukotic@cern.ch>
+	* Change in TileCellBuilder to use DataPOOL
+	* tagged TileRecUtils-00-02-03
+	
+2007-03-21  Sanya Solodkov  <solodkov@lxplus202.cern.ch>
+
+	* unpack trigger boards information in BeamInfoProvider
+
+2007-03-14  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Added Getter modules for TileMuonFitter and TileRawChannelBuilder in the python directory.
+	* Cosmetic changes in TileRawChannelBuilderOptFilter	
+
+2007-03-07 Jose Maneira <maneira@lip.pt>
+
+        * Added new algorithm for normal and Athena-aware CBNT output of the TileMuonFitter algorithm.
+        * Changed TileMuonFitter cell time averaging to energy-weighted
+        * Increased TMF cell threshold to 120 MeV
+        * Changed TileMuonFitter jobOptions to run the new algorithms instead of standalone ntuple.
+        * Changed TileMuonFitter jobOptions to exclude bottom modules from time calculation, until 
+        inter-module time calibration is available.
+
+
+2007-03-05  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* Major updates in TileRawChannelBuilderOptFilter: OF2 implemented, use of new weights between -100 ns to 100 ns in steps of 1ns, new treatment of pedestal-like events. Some old properties removed.
+	* TileOptFilterCorrelation algorithm moved to TileCalibTileCalibAlgs.
+	* jobOptions_TileTB_b_phys_noise_example.py updated for compatibility with TileRawChannelBuilderOptFilter.
+	
+
+2007-03-05  Nils Gollub  <ngollub@lxplus204.cern.ch>
+
+	* Remove chi2 comparison after 3-par fit
+
+2007-02-01 Jose Maneira <maneira@lip.pt>
+       
+        * fixed bug in TileMuonFitter that removed too many good cells from fit
+
+        * ComTimeToNtuple is not compatible with AthenaAwareCBNT, so changed jobOptions 
+          to only write if AthenaAware is off  
+
+2006-11-09  Sanya Solodkov  <solodkov@lxplus074.cern.ch>
+
+	* fixing bug in TileRawChannelBuilderFitFilter 
+	which could affect all non-CIS events when there is a pulse
+	with maximum far away from t=0
+
+2006-11-06 Jose Maneira <maneira@lip.pt>
+
+	* added line to turn on led/laser time calibration in TileMuonFitter_jobOptions.py
+
+	* raised default cell energy threshold to 100 MeV for TileMuonFitter
+
+	* added possibility to select which modules to include in time calculation
+	in TileMuonFitter, since not all have time calibration constants yet. The setting
+	is done in the jobOptions, that contains the default for October06
+ 
+2006-10-19  Sanya Solodkov  <solodkov@pcata007.cern.ch>
+
+	* better logic to find type of run (bigain or monogain)
+	in TileBeamInfoProvider - loop over all fragments instead
+	of taking only first one (which can be damaged)
+
+2006-10-15  Sanya Solodkov  <solodkov@pcata007.cern.ch>
+
+	* new options for TileRawChannelBuilderFitFilter:
+	   if RMSChannelNoise = 3, ped RMS values are taken
+	  from proper CalibVec in TileInfo (with individual value
+	  per every channel). Those values can be initialized either
+	  from COOL or from ASCII files (see Tile2006.ped in TileConditions)
+	
+2006-10-13  Tomas Davidek  <davidek@lxplus053.cern.ch>
+
+	* Slightly modified TileRawChannelBuilderFitFilter::pulseFit 
+	   - avoid subsequent iterations at the Tfit limit (Sasha)
+	   - correct pulse shapes functions for incorrect indices (thanks to
+	     Belen)
+	   - add info about ROS, now different noise RMS for individual barrel
+	     and extended barrel channels
+
+2006-10-06  Joao Gentil Mendes Saraiva  <gentil@lip.pt>
+
+	* corrected bug in TileMuonFitter. Now checks for invalid channels and runs on data.
+	* added ComTimeToNtuple ( adding folder to ntuple storing position, direction and time )
+
+2006-09-29  Sanya Solodkov  <solodkov@pcata001>
+
+	* add possibility to apply time correction for every channel 
+	in TileRawChannelBuilder* AlgTools
+
+2006-07-28  Sanya Solodkov  <solodkov@pcata001>
+
+	* use pCb as units for MBTS cells in TileCellBuilder
+
+2006-07-10 Jose Maneira  <maneira@lip.pt>
+	
+	* Added new algorithm that fits muon track from TileCal only
+
+2006-07-05  Ximo Poveda Torres  <jpoveda@cern.ch>
+
+	* TileOptFilterCorrelation: added new finalCalc() method in finalize & cosmestic changes
+
+2006-06-26  Sanya Solodkov  <solodkov@lxplus019.cern.ch>
+
+	* TileCellBuilder updated to work with MBTS 
+
+2006-04-07  Karl GELLERSTEDT  <kgellers@cern.ch>
+
+	* Tagging TileRecUtil-00-01-03
+
+	* src/TileRawChannelVerify.cxx: fix for gcc344 (fabs from math.h)
+
+2006-03-20  Sanya Solodkov  <solodkov@lxplus006.cern.ch>
+
+	* TileRawChannelBuilderManyAmp added
+	(it is equivalent to TileDigitsToRawChannel from TileRecAlgs
+	but uses new pulse shapes)
+
+2006-03-13  Sanya Solodkov  <solodkov@lxplus061.cern.ch>
+
+	* do not setup BeginOfEvent incident in TileBeamInfoProvider
+	if both input containers are empty strings
+
+2006-03-06  Sanya Solodkov  <solodkov@lxplus061.cern.ch>
+
+	* move TileRawChannelMaker from TileRecAlgs to
+	make project builds happy (it is needed for 
+	simulation and reconstruction projects has
+	to be in this package)
+
+2006-03-01  Tomas Davidek  <davidek@lxplus069.cern.ch>
+
+	* Improved treatment of pedestal-like events. Symmetric
+	  cut applied, offset now much closer to zero.
+
+2006-02-16  Tomas Davidek  <davidek@lxplus071.cern.ch>
+
+	* Additional two options implemented:
+	  - NoiseThresholdRMS: if the signal is pedesta-like, only 
+	    2-param fit is applied (value in terms of RMS)
+	  - SaturatedSampleError: error to be assigned to saturated
+	    sample (value in terms of RMS)
+
+2005-09-04 Kai Voss  <kai.voss@cern.ch>
+	* Added new tool: TileCellFakeProb which scales the energy in
+	cells in order to simulate readout problems
+
+	* tag TileRecUtils-00-00-42
+	
+2005-07-02  Sanya Solodkov  <solodkov@lxplus051.cern.ch>
+
+	* put "docis" flag to true when we have bigain
+	even if trig is zero. In such a case cis events are
+	treated correctly but bi-gain pedestal runs are screwed up!
+	
+2005-07-01  Tomas Davidek  <davidek@lxplus058.cern.ch>
+
+	* limits on total time found with fit method
+	* limits can be changed in jobOptions (see TileTBRec package)
+
+2005-06-21  Sanya Solodkov  <solodkov@lxplus061.cern.ch>
+
+	* bug fix in TileRawChannelBuilder (appeared after optimization)
+	
+2005-06-09  Sanya Solodkov  <solodkov@pcata001>
+
+        * use BeginEvent insident in TileBeamInfoProvider
+	* optimize all builders
+
+2005-05-16  Sanya Solodkov  <solodkov@lxplus017.cern.ch>
+
+	* provide template method to call TileCellBuilder from TileByteStream/TileROD_Decoder
+
+2005-05-14  Sanya Solodkov  <solodkov@lxplus012.cern.ch>
+
+	* modify handling of non-connected channels
+
+2005-04-28  David Rousseau  <droussea@lxplus058.cern.ch>
+
+	* src/TileCellBuilder.cxx: remove spurious WARNING caused by
+	CaloCellContainer change (hasCalo is now automatically set)
+
+2005-03-15  Martina Hurwitz  <hurwitz@lxplus060.cern.ch>
+
+	* Cuts on channel fit results before including cell in container
+	  in TileCellBuilder
+
+2005-01-07  Cristobal CUENCA ALMENAR  <ccuenca@valtical12.cern.ch>
+
+	* Algorithm for noise autocorrelation and OF weights calculation added
+	* New feature in OF tool: it can calculate weights as needed from noise autocorrelation and shape form
+	* Old jobOptions removed and new sample ones added
+
+2004-10-20  Sanya Solodkov  <solodkov@lxplus052.cern.ch>
+
+	* do not look for containers in StoreGate if name is an empty string
+	(in BeamInfoProvider)
+	
+2004-09-17  Sanya Solodkov  <solodkov@pcata001.cern.ch>
+
+	* replace MSG::FATAL by MSG::DEBUG in OptFilter
+	and other minor changes
+
+2004-08-25  Cristobal CUENCA ALMENAR  <ccuenca@valtical13.cern.ch>
+
+	* Some changes in the iteration for the OptFilter implemented
+	* Weights per channel implemented
+	* Some new Properties added and pulse shapes accessed from the tool
+
+2004-08-10  Sanya Solodkov  <solodkov@pcbech.ihep.su>
+
+	* bug fix in TileCellBuilder
+
+2004-08-09  Sanya Solodkov  <solodkov@pcbech.ihep.su>
+
+	* use CLHEP removed
+
+2004-07-22  Cristobal CUENCA ALMENAR  <ccuenca@valtical13.cern.ch>
+
+	* minor change in the declaration of TileRawChannel for OptFilter
+
+2004-06-30  Sanya Solodkov  <solodkov@pcata007.cern.ch>
+
+	* TileCellBuilder AlgTool added
+	It creates TileCells from TileRawChannels and puts them
+	in a container passed to AlgTool by pointer
+
+2004-06-29  Sanya Solodkov  <solodkov@pcata007.cern.ch>
+
+	* remove dependency on TileByteStream
+	Beam ROD header and Event header retrival moved to TileByteStream
+
+2004-06-23  Cristobal Cuenca Almenar  <ccuenca@lxplus060.cern.ch>
+
+	* update of OptFilter: several properties added.
+
+2004-06-22  Sanya Solodkov  <solodkov@lxplus058.cern.ch>
+
+	* update of BeamInfoProvider
+	now it can provide Beam ROD header and Event header
+	as well as "calibration mode" - normal/cis calib
+
+2004-06-10  Sanya Solodkov  <solodkov@pcata001.cern.ch>
+
+	* trigType is taken from the ROD header
+
+2004-06-08  Cristobal Cuenca Almenar  <ccuenca@lxplus005.cern.ch>
+
+	* OptFilter weights read via TileInfo (TileConditions)
+	and code cleaned up
+
+2004-06-08  Sanya Solodkov  <solodkov@pcata007.cern.ch>
+
+	* some obsolete options removed
+
+2004-06-04  Cristobal Cuenca Almenar  <ccuenca@lxplus020.cern.ch>
+
+	* OptFilter added
+
+2004-06-04  Tomas DAVIDEK  <davidek@pcpraha03.cern.ch>
+
+	* FitFilter updated
+
+2004-06-04  Sanya Solodkov  <solodkov@pcata007.cern.ch>
+
+	* TileBeamInfoProvider AlgTool added
+
+2004-03-01  Sanya Solodkov  <solodkov@lxplus016.cern.ch>
+
+	* TileRawChannelBuilder AlgTools moved from TileRecAlgs
+	

@@ -1,0 +1,8 @@
+document optdebug_library TileRecUtilsLib_optdebug_library library=TileRecUtilsLib
+make_fragment make_header /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/CMT/v1r25p20140131/mgr/fragments/make_header
+make_fragment dependencies /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/AtlasCore/20.1.8/AtlasPolicy/cmt/fragments/dependencies
+make_fragment cleanup_header /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/AtlasCore/20.1.8/AtlasPolicy/cmt/fragments/cleanup_header
+make_fragment optdebug_library -header=optdebug_library_header /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/DetCommon/20.1.8/AtlasCommonPolicy/cmt/fragments/optdebug_library
+make_fragment optdebug_library_header /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/DetCommon/20.1.8/AtlasCommonPolicy/cmt/fragments/optdebug_library_header
+make_fragment document_header /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/CMT/v1r25p20140131/mgr/fragments/document_header
+make_fragment dependency /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/CMT/v1r25p20140131/mgr/fragments/dependency

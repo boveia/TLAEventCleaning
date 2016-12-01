@@ -1,0 +1,1395 @@
+2015-08-09 Benjamin Trocme
+	* LArNoisyROTool: no longer consider HEC SatTight flags
+	* tag LArCellRec-02-12-94-03
+
+2015-06-03 Walter Lampl <walter.lampl@ cern.ch>
+	* Fix copy-paste error in LArNoisyROFlags.py
+	* tag LArCellRec-02-12-94-02
+	
+2015-05-12 Walter Lampl <walter.lampl@ cern.ch>
+	* Branch LArCellRec-02-12-94-branch
+	* Merge in changes -95 to 097 whitch are:
+	* LArCellHVCorr
+	  - Implement interface class  ILArCellHVCorr
+	  - New method to get the correction factor applies
+	    Client: CaloNoiseToolDB for automatic noise rescaling
+	* Add new file LArCellHVCorrDefault.py to consistently configure this tool
+	* branch tag LArCellRec-02-12-94-01
+
+2015-02-20  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-94.
+	* LArCellRec/LArCellEmMiscalib.h: Fix clang warning (remove unused
+	member).
+
+2015-02-20 Walter Lampl <walter.lampl@ cern.ch>
+	* LArCellRec:Protect against hvcorr=0.0
+	* tag LArCellRec-02-12-93
+
+2015-02-04 Charles Leggett
+	* make Hive compatible (no DataPools for now) with #ifdef ATHENAHIVE
+	* tag LArCellRec-02-12-92
+
+M       src/LArCellBuilderFromLArRawChannelTool.cxx
+
+2015-01-30 Hong Ma<hma@bnl.gov>
+	* fix LArCellDeadOTXCorr for using xAOD::TriggerTower
+	* tag LArCellRec-02-12-91
+
+2014-12-12 Walter Lampl <walter.lampl@ cern.ch>
+	* add forgotten file
+	* tag LArCellRec-02-12-90
+
+2014-12-12 Walter Lampl <walter.lampl@ cern.ch>
+	* Split LArNoisyROAlg into Alg & Tool
+	   - Tool will be share with HLT version of noise-burst hunting code
+	* Introduce new jobProperties LArNoisyROFlags for consistent configuration of
+	  LArNoisyROAlg/Tool and related monitoring tools
+	* tag LArCellRec-02-12-89
+
+2014-11-18  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-88.
+	* Fix some problems with the previous tag.
+
+2014-11-17  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-87.
+	* AthenaBaseComps migration.
+
+	* Tagging LArCellRec-02-12-86.
+	* LArCellRec/LArCellEmMiscalib.h: Fix header guard.
+
+2014-09-04 Walter Lampl <walter.lampl@ cern.ch>
+	* migrate tool to AthAlgTool
+	* tag LArCellRec-02-12-85
+
+2014-06-19 Benjamin Trocme
+	* LArNoisyROSummaryMaker: Include back the bit definition for SaturatedMedium
+        * Tag LArCellRec-02-12-84
+
+2014-06-18 Benjamin Trocme
+	* LArNoisyROSummaryMaker: new optimized LArNoisyROAlg
+        * Tag LArCellRec-02-12-83
+
+2014-06-05  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-82.
+	* src/LArCellBuilderFromLArHitTool.cxx: Const fix.
+
+2014-04-09 Walter Lampl <walter.lampl@ cern.ch>
+	* migrate to xAOD::EventInfo
+	* tag LArCellRec-02-12-81
+
+2013-07-31 Walter Lampl <walter.lampl@ cern.ch>
+	* remove obsolete class LArCellHVCorrection
+	* tag LArCellRec-02-12-80
+
+2013-03-14  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-79.
+	* Fix more clang warnings.
+
+2013-02-17  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-78.
+	* src/LArCellBuilderFromLArRawChannelTool.cxx: Fix clang
+	warnings.
+
+2012-10-22  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-77.
+	* src/LArCellBuilderFromLArHitTool.cxx
+	(initializeCellPermamentCollection): Remove use of deprecated
+	CaloDetDescrElement::identifyHash().
+
+2012-07-12  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-76.
+	* Updates for clhep 2.
+
+2012-06-14  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-75.
+	* Coverity warning fixes.
+
+2012-06-07  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-74.
+	* obo Vakho: GeoModel refactoring.
+
+2012-04-11 Walter Lampl
+	* Remove CBNT jobOpts
+	* tag  LArCellRec-02-12-73
+
+2011-11-18 Walter Lampl
+	* Turn LArCellMerger into an AthAlgTool
+	* tag  LArCellRec-02-12-72
+
+2011-11-16 Walter Lampl
+	* Simplification/Speedup of LArCellBuilderFromLArRawChannelTool:
+	  - Drop legacy functionality (as agreed in the CaloPerf phone meeting on Nov 9th)
+	    - Option to build CaloCell conatiner for only one subdetector
+	    - Check if cells with no DDE are indeed disconnected
+	    - Check if energy>threshold
+	  - New strategy for incomplete LArRawChannel input:
+	    1. Resize the CaloCellContainer to hash-max
+	    2. Fill it in-place, so the cell-container is always ordered
+	    3. If the number of filled cells < total container size remove the holes (NULL pointers)
+	       This is also done in-place by moving the pointer values from larger indices to smaller indices
+	       filling up the empty places
+	  Speedup wrt to LArCellRec-02-12-69: 20ms/event
+	* tag  LArCellRec-02-12-71
+
+2011-11-11 Walter Lampl
+	* First round of improvments in LArCellBuilderFromLArRawChannelTool
+	  - Check completness using the size of the FebHeaderContainer + missing FEBs == # of Febs
+	  - The Channels for missing FEBs are now also filled in-place, so at least the LAr part of the 
+	    CaloCellContainer is now complete and ordered. 
+	  More improvments are in the pipeline ....
+	* tag LArCellRec-02-12-70
+
+2011-09-13 Walter Lampl 
+	* Fix (mostly harmless) coverity complains about LArNoiseROAlg, LArCellBuilderFromLArHitsTool, LArCollisionTimeAlg and LArTimeVetoAlg
+	* Turn LArTimeVetoAlg into an AthAlgorithm
+	* tag  LArCellRec-02-12-69
+
+2011-07-27 G.Unal
+       * LArTimeVetoAlg: use DATACORRUPTEDVETO bit for information
+       * tag  LArCellRec-02-12-68
+
+2011-07-22 Walter Lampl
+	* LArCellBuilderFromLArRawChannelTool:
+	  - Don't call 'addDeadOTX' if input is complete anyway
+	    (Fix for bugs 81741 and 84597)
+	  -Iterate over cells of missing FEBs only until channelInSlotMax 
+	   (instead of hardcoded 128)
+	  - A bit more ERROR output if needed
+	* tag LArCellRec-02-12-67
+	
+2011-06-21 Walter Lampl
+	* LArTimeVetoAlg: Fix bug in bit-mask
+        * tag LArCellRec-02-12-66
+	
+2011-06-21 Walter Lampl
+	* LArTimeVetoAlg: Use EventVeto folder, flag also data corruption
+        * tag LArCellRec-02-12-65
+	
+2011-06-15 G.Unal
+        * checkreq fix
+        * tag LArCellRec-02-12-64
+
+2011-06-10 G.Unal
+        * add LArTimeVetoAlg  + get warning lar bits from LArEventBitInfo (require LArRecEvent-01-03-05)
+        * tag LArCellRec-02-12-63
+
+2011-06-10 G.Unal
+        * cleanup include of IOVSvcDefs.h
+        * tag LArCellRec-02-12-62
+
+2011-06-06 Laurent Duflot
+	* LArNoisyROAlg: the criteria on the number of bad FEB now applies per
+	partition. Also fill bitpattern to show which partition flagged the event
+	for the three algorithms (bad FEB, saturated Q cells medium and tight).
+	* tag LArCellRec-02-12-61
+
+2011-05-07  scott snyder  <snyder@bnl.gov>
+
+	* cmt/requirements: Fix checkreq warnings.
+	* src/LArCellEmMiscalib.cxx, src/LArCellBuilderFromLArHitTool.cxx,
+	src/LArCellDeadOTXCorr.cxx: Fix unused variable warnings.
+	* tag LArCellRec-02-12-60
+
+2011-04-25 Hong Ma
+	* LArCellBuilderFromLArRawChannelTool:
+	  change ERROR to WARNING in addCell method.
+	* tag LArCellRec-02-12-59
+
+2011-03-29 Walter Lampl 
+	* LArCellBuilderFromLArRawChannelTool: 
+	  - Turn into AthAlgTool
+	  - Clarify some error messages
+	* tag LArCellRec-02-12-58
+
+2011-03-19 G.Unal
+        * change ERROR to WARNING in src/LArCellBuilderFromLArRawChannelTool.cxx in case of non complete raw channel container
+        * tag LArCellRec-02-12-57
+
+2010-10-12 L. Duflot
+	* flag the event if there are too many cells in EMB/EMEC/HEC with satturated quality (medium: 9 cells with E>500MeV, tight: 20 cells with E>1GeV)
+	* tag LArCellRec-02-12-56
+
+2010-10-11 G.Unal
+       * src/LArBadFebMaskingTool.cxx : don't set LAr event flag to error if feb dataintegrity error comes from deadFeb (that should be normally disabled from the readout, except
+           for the run just when they die)
+       * tag LArCellRec-02-12-55
+
+2010-10-02 G.Unal
+       *  python/LArCellDeadOTXCorrToolDefault.py  : removed hardcoded access to oracle trigger db, use TRIGGER logical name instead
+       * tag LArCellRec-02-12-54
+
+2010-09-20 G.Unal
+       * don't require anymore that time iteration converges to compute lar collision time, to work both in case of OFC iteration reco and single phase OFC reco
+       * tag  LArCellRec-02-12-53
+
+2010-09-11 G.Unal
+       * python/LArCellDeadOTXCorrToolDefault.py  : fix dtabase configuration to avoid accesing directly oracle, use LAR_OFL logical name instead
+       * tag LArCellRec-02-12-52
+
+2010-08-29 G.Unal
+       * python/LArCellDeadOTXCorrToolDefault.py  : don't use L1 pedestal correction in cosmics run (to protect against missing db data for old cosmics run)
+       * tag LArCellRec-02-12-51
+
+2010-08-27  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArCellRec-02-12-50.
+	* src/LArCollisionTimeAlg.cxx: Coverity warning fix.
+	* src/LArG3Escale.cxx: Fix compilation warning.
+
+2010-08-26 JB Sauvan
+      * LArCellDeadOTXCorr : use L1 energy after eta-dependent calibration to calculate the energy-dependent calibration
+      * tag LArCellRec-02-12-49
+
+2010-08-25 G.Unal
+      * fixes coverity warnings
+      * remove tag override for deadOTX corr
+      * tag LArCellRec-02-12-48
+
+2010-08-23 JB Sauvan 
+      * LArCellDeadOTXCorr : enable L1Calo DB for data
+      * tag LArCellRec-02-12-47
+
+2010-08-19 Walter Lampl <walter.lampl@cern.ch> 
+      * LArCellDeadOTXCorr: Use const TriggerTower and const TriggerTowerCollection
+      * tag LArCellRec-02-12-46
+
+2010-08-05 JB Sauvan
+      * LArCellDeadOTXCorr : add some DEBUG messages
+      * tag LArCellRec-02-12-45
+
+2010-07-30 JB Sauvan
+      * LArCellDeadOTXCorr : use oracle database to get calibration factors
+      * tag LArCellRec-02-12-44
+
+2010-07-30 G.Unal
+      * add LArCellGainPathology.cxx to emulate problem affecting part of the data (corruption of gain information in some cases)
+      * tag LArCellRec-02-12-43
+
+2010-07-21 JB Sauvan
+      * LArCellDeadOTXCorr : improve time performance 
+      * tag LArCellRec-02-12-42
+
+2010-07-17 JB Sauvan
+      * python/LArCellDeadOTXCorrToolDefault.py : fix wrong noise cut parameters
+      * tag LArCellRec-02-12-41
+
+2010-07-14 JB Sauvan
+      * python/LArCellDeadOTXCorrToolDefault.py : update calibrations
+      * LArCellDeadOTXCorr : derive it from CaloRec::ToolWithConstantsMixin
+      * LArCellDeadOTXCorr : add list of bad TT that are ignored for the correction
+      * tag LArCellRec-02-12-40
+
+2010-06-17 JB Sauvan
+      * python/LArCellDeadOTXCorrToolDefault.py : tighter cuts for bad trigger pulses suppression
+      * tag LArCellRec-02-12-39
+
+2010-06-13 JB Sauvan
+      * LArCellDeadOTXCorr : use L1Calo DB to get pedestal (disable by default)
+      * LArCellDeadOTXCorr : don't use pulses with bad shape for the correction
+      * tag LArCellRec-02-12-38
+
+2010-06-09 JB Sauvan
+      * src/LArCellDeadOTXCorr.cxx : add protections to avoid FPEs
+      * tag LArCellRec-02-12-37
+
+2010-06-05 JB Sauvan
+      * src/LArCellDeadOTXCorr.cxx : remove Landau-Landau fit 
+      * tag LArCellRec-02-12-36
+
+2010-05-05 G.Unal
+      * src/LArCellMerger.cxx : limit to 100 warning per event
+      * src/LArBadFebMaskingTool.cxx : also flag event has bad if no LAr cell is present in calo container
+      * tag LArCellRec-02-12-35
+
+2010-04-17 G.Unal
+      * small cleanup in energy==0 test
+      * tag LArCellRec-02-12-34
+
+2010-04-16 JB Sauvan
+       * LArCellDeadOTXCorr : L1 energy estimated with Landau-Landau fit + eta
+	   dependent corrections
+       * tag LArCellRec-02-12-33
+
+2010-03-19 G.Unal
+       * fix checkreq warning (add use TrigT1CaloCalibConditions)
+       * tag LArCellRec-02-12-32
+
+2010-03-16  scott s snyder  <snyder@bnl.gov>
+
+	* python/LArCollisionTimeGetter.py: Put object in objKeyStore as
+	transient.
+	* tag LArCellRec-02-12-31
+
+2010-03-15  scott s snyder  <snyder@bnl.gov>
+
+	* python/LArCollisionTimeGetter.py: (new)
+	* tag LArCellRec-02-12-30
+
+2010-03-15 G.Unal
+       * fix type in #define in LArCollisionTimeAlg.h
+       * allow cell container to be a property of LArCollisionsTimeAlg ('AllCalo' by default)
+       * tag LArCellRec-02-12-29
+
+2010-02-26 David Cote <david.cote@cern.ch>
+       * Added include.block("LArCellRec/LArCollisionTime_jobOptions.py"), needed when TAG_COMM and DESD are made in a single job
+       * tag LArCellRec-02-12-28
+
+2010-01-20 J.B. sauvan
+       * calculate trigger energy with a parabola fit from three ADC samples
+	   * correct minor bugs
+	   * tag LArCellRec-02-12-27
+	
+2010-01-14 G.Unal
+       * add possibility to apply LArCellEmMiscalibration with opposite sign, to undo it
+       * tag LArCellRec-02-12-26
+
+2009-12-23 L. Duflot
+       * LarNoisyROAlg: change message about bad FEB/pream from INFO to DEBUG
+       * tag LArCellRec-02-12-25
+
+2009-12-14 G.Unal
+       * propagate LArCollisionTimeAlg improvements from branch
+       * tag LArCellRec-02-12-24
+
+2009-12-07 G.Unal
+       * fix unchecked status code in LArCollisionTimeAlg in case of no calo cells available
+       * tag LArCellRec-02-12-23
+
+2009-11-28 G.Unal
+       *  add LArCollisionTimeAlg
+       * tag LArCellRec-02-12-22
+
+2009-10-30 L.Duflot
+	* LArNoisyROSummaryGetter.py: fix typo from cut & paste, enable persistence of LArNoisyROSummary
+
+2009-10-24 G.Unal
+        * checkreq fixes
+        * tag LArCellRec-02-12-20
+
+2009-10-22 G.Unal
+        * fixes for 64 bits identifier compatibility
+        * tag LArCellRec-02-12-19
+
+2009-10-22 G.Unal  
+        * add LArNoisyROAlg to find noisy PA/Febs per event based on cell quality from L.Duflot
+        * tag LArCellRec-02-12-18  (requires LArRecEvent-01-03-02)
+
+2009-10-17 Hong Ma <hma@bnl.gov> 
+	* LArBadFebMaskingTool: use BadGain bit 
+	* tag LArCellRec-02-12-17
+
+2009-10-13 G.Unal
+      * fix gcc43 compilation warning
+      * tag LArCellRec-02-12-16 (still consistent with 15.5.X)
+
+2009-10-06 G.Unal
+      * fix provenance setting
+      * tag LArCellRec-02-12-15  (still consistent with 15.5.X)
+
+2009-10-05 G.Unal
+      * create missing cells in all cases of bad Feb,  but only if events has non empty LAr data
+      * tag LArCellRec-02-12-14  (still consistent with 15.5.X)
+ 
+2009-10-01 G.Unal
+      * implicit declaration of use of CLHEP::HepRandomEngine in LArCellEmMiscalib.h to avoid compilation failure
+         with new AthenaKernel version
+      * tag LArCellRec-02-12-13
+
+2009-08-27 G.Unal
+      * requirements fix
+      * tag  LArCellRec-02-12-12
+
+2009-08-27 G.Unal
+      * first version of LArCellDeadOTXCorr from Deepak
+          Some L1ID tools method had to be copied there to solve project dependency issues (temporary solution until better one is found)
+       * tag  LArCellRec-02-12-11
+
+2009-07-20 G.Unal
+      * LArCellBuilderFromLArRawChannelTool: add option to add cells from missing Feb with dead OTX so that they can be corrected later
+      * tag  LArCellRec-02-12-10
+
+2009-07-09 G.Unal
+      * add LArCellMerger tool to merge raw channel container from sparse digits to main calo cell container
+         (as a backup possibility to increase flexibility of reconstruction configuration)
+      " tag LArCellRec-02-12-09
+
+2009-06-12 G.Unal
+       * use new LArBadFeb database in LArBadFebMaskingTool
+       * tag  LArCellRec-02-12-08
+
+2009-05-07 G.Unal
+       * set LAr error bit in EventInfo in case "unexpected" febs are masked
+       * tag  LArCellRec-02-12-07
+
+2009-04-24 G.Unal
+       * add tool for masking of cells from "bad" febs (decoding errors or listed in database)
+       * tag LArCellRec-02-12-06
+
+2009-02-11 G.Unal
+        * add tools for LAr noise cell masking (LArCellNoiseMaskingTool) and recalibraton (LArCellRecalibration)
+        * tag LArCellRec-02-12-05
+
+2009-02-10  scott s snyder  <snyder@bnl.gov>
+
+	* src/LArG3Escale.cxx: Fix compilation warnings.
+	* src/LArG3Escale_TDR.cxx: Fix compilation warnings.
+	* tag LArCellRec-02-12-04
+
+2009-01-30 G.Unal
+      * calo interfaces moved
+      * tag LArCellRec-02-12-03
+
+2009-01-16 G.Unal
+      * move to component library
+      * tag LArCellRec-02-12-02
+
+2009-01-12 G.Unal
+      * set dead bit in cell provenance
+      * tag LArCellRec-02-12-01
+
+2008-11-12 G.Unal
+      * adapt to quality/provenance split in LArRawChannel
+      * tag LArCellRec-02-12-00
+
+2008-10-20 G.Unal 
+      * add LArCellHVCorr tool to apply at cell level refined HV correction
+      * tag LArCellRec-02-11-15
+
+2008-10-13 G.Unal
+      * HepMC migration in requirement
+      * tag LArRellRec-02-11-14
+
+2008-09-16 G.Unal
+       * fix protection against not complete raw channel container
+       * tag LArCellRec-02-11-13
+
+2008-09-08 G.Unal
+       * fix requirements
+       * tag LArCellRec-02-11-12
+
+2008-08-26 G.Unal
+       * Fill separately quality / provenance in CaloCell
+       * tag LArCellec-02-10-11
+
+2008-08-03  scott s snyder  <snyder@bnl.gov>
+
+        * tag LArCellRec-02-10-10
+	* src/LArCellBuilderFromLArRawChannelTool.cxx: Fix compilation
+	warning.
+
+2008-07-15 Claire Adam-Bourdarios <claire.bourdarios@cern.ch>
+	* add callbacks to LArCellEmMiscalibration and LArNonLinearity
+	  ( ignore LArG3Escale which is declared as obsolete )
+        * tag LArCellRec-02-10-09	
+
+2008-07-11 Claire Adam-Bourdarios <claire.bourdarios@cern.ch>
+	* add callbacks to LArCellBuilder(s) for data driven GeoModel initialization
+        * tag LArCellRec-02-10-08
+
+2008-06-30 Sandrine Laplace <laplace@lapp.in2p3.fr>
+      	* Added default collection raw channels name in LArCellBuilderFromRawChannelTool  
+	
+2008-06-24 G.Unal
+      * correct protection against not masking tool in LArCellFromLArRawChannel
+      * tag LArCellRec-02-10-06
+
+2008-06-22 G.Unal
+      * noisy cel masking in  LArCellFromLArRawChannel
+      * tag LArCellRec-02-10-05
+
+2008-04-10 G.Unal <Guillaume.Unal @ cern.ch>
+       * set identifier in LArCellBuilderFromLArRawChannel
+       * tag LArCellRec-02-10-04
+
+2008-04-10 G.Unal <Guillaume.Unal @ cern.ch>
+       * remove LArCellIDC_Test
+       * tag LArCellRec-02-10-03
+
+2008-03-01 Walter Lampl <walter.lampl @cern.ch>
+        * Fix cell-hash access in LArCellMaskingTool.cxx
+	* tag LArCellRec-02-10-02
+
+2008-02-11  Walter Lampl <walter.lampl @cern.ch>
+	* Fix some false warnings in LArCellFromLArRawChannelMaker
+	* Tag LArCellRec-02-10-01	
+
+2008-02-07  Walter Lampl <walter.lampl @cern.ch>
+	* Adapt to change of LArRawChannelContainer (not an IdentifableContainer any more)
+        * Some streamlining of LArCellFromLArRawChannelMaker
+        * Tag LArCellRec-02-10-00
+	
+2007-11-29 G.Unal <Guillaume.Unal@cern.ch>
+        * clean up jobOptions
+
+2007-11-01 Hong ma <hma@bnl.gov>
+	* make LArCellBuilderFromLArRawChannel use iovCallBack 
+
+2006-10-07  Walter Lampl <walter.lampl@cern.ch>
+        * Add decalareInterface to tools
+	
+2007-10-04 Sandrine Laplace <laplace@lapp.in2p3.fr>
+	*  cleaned up LArCellBuilderFromLArHitTool: removed WorkMode (default behaviour
+	   now corresponds to WorkMode=1) - thus LArEpart2Edep - and geant3 stuff
+	*  removed LArEpart2Edep things in LArG3Escale files
+	
+2007-07-12  Walter Lampl <walter.lampl@cern.ch>
+       * Add tool LArCellMaskingTool
+
+2007-07-07 Hong Ma <hma@bnl.gov>
+	* add doc/mainpage.h
+	  update doxygen comments.
+
+2007-06-15 Sandrine Laplace <laplace@lapp.in2p3.fr>
+	*  Remove LArCellTest (using obsolete LArCellContainer)
+
+2007-03-02 Ilija Vukotic <ivukotic@cern.ch>
+	* in LArCellBuilderFromLArRawChannelTool: LArCell is now using DataPool
+	* Tagged LArCellRec-02-09-61
+2006-03-01 G.Unal <Guillaume.Unal@cern.ch>
+        * Fix unit in LArNonLinearity.cxx
+
+2006-02-24  Walter Lampl <walter.lampl@cern.ch> 
+        * LArCellRescaler Tool: Move sanity checks from initialize to IOV callback function
+	  since constants from COOL are not avialable at initialization stage. 
+	
+2006-12-21  Walter Lampl <walter.lampl@cern.ch>
+	* Add Tool LArCellRescaler to apply cell weights typically obtained from
+	  Z->ee calibration.
+
+2006-12-01  David Rousseau  <droussea@lxplus057.cern.ch>
+
+	* src/LArCellEmMiscalib.cxx : cosmetics and small efficiency improvement 
+
+2006-10-30 G.Unal <Guillaume.Unal@cern.ch>
+        * Add tool for EM miscalibration (LArCellEmMiscalib)
+
+2006-08-14 Karim Bernardet <bernardet@cppm.in2p3.fr>
+	* share/LArCellMakerTool_jobOptions.py : remove of the lines related to ZEBRA format
+	* Tagging LArCellRec-02-09-55
+
+2006-07-21  David Rousseau  <droussea@lxplus003.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx (process): check StatusCode 
+
+2006-06-13  scott s snyder  <snyder@bnl.gov>
+
+	* src/LArCellBuilderFromLArHitTool.cxx (initialize): Fix a comment
+	typo.
+	* src/LArCellIDC_Test.cxx (execute): Avoid compilation warning
+	with optimization.
+	* Tagging LArCellRec-02-09-53.
+
+2006-06-09  David Rousseau  <droussea@lxplus058.cern.ch>
+
+	* share/LArCellMakerTool_jobOptions.py : do not set
+	LArAutoCorrTotalTool etc... done elsewhere. This was causing noise
+	with pileup to be wrong 
+
+
+2006-05-01  scott s snyder  <snyder@bnl.gov>
+
+	* src/LArCellBuilderFromLArHitTool.cxx,
+	LArCellRec/LArCellBuilderFromLArHitTool.h: Change m_LArEpart2Edep
+	to be a pointer rather than an instance.  We can't reliably create
+	these objects in our constructor, because the det descr manager
+	might not be available yet.  This fixes a genconf crash.
+	* Tagging LArCellRec-02-09-50.
+
+
+2006-05-01  scott s snyder  <snyder@bnl.gov>
+
+	* src/LArCellBuilderFromLArHitTool.cxx,
+	LArCellRec/LArCellBuilderFromLArHitTool.h: Change m_LArEpart2Edep
+	to be a pointer rather than an instance.  We can't reliably create
+	these objects in our constructor, because the det descr manager
+	might not be available yet.  This fixes a genconf crash.
+	* Tagging LArCellRec-02-09-50.
+
+
+2006-03-15  scott s snyder  <snyder@bnl.gov>
+
+	* src/LArCellIDC_Test.cxx: Fix compilation warnings.
+	* src/LArCellTest.cxx: Likewise.
+	* src/LArG3Escale.cxx: Likewise.
+
+2005-10-17  David Rousseau  <droussea@lxplus016.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : correct printout
+	about big negative energy cell 
+
+2005-09-29  David Rousseau  <droussea@lxplus061.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : switch off
+	protection against rawchanel with very large negative energy. Keep
+	WARNING, also print a summary warning at the end
+
+2005-07-26 Rob McPherson <Robert.McPherson@cern.ch>
+	* Only issue detector duplication warning in
+	* LArCellBuilderFromLArRawChannelTool if CellContainer
+	* is "complete" (to avoid incorrect warnings for TB)
+	
+2005-07-22 Rob McPherson <Robert.McPherson@cern.ch>
+	* Updated share/LArCellFromLArRawTool_H6_jobOptions.py
+		
+2005-06-29  David Rousseau  <droussea@lxplus071.cern.ch>
+
+	* src/LArCellBuilderFromLArHitTool.cxx : put back larg3escale for
+	geant3 data 
+
+2005-06-29  David Rousseau  <droussea@lxplus068.cern.ch>
+
+	* src/LArCellBuilderFromLArHitTool.cxx : move use of CaloNoiseTool
+	LArScale to LArG3EScale (not finished for Geant3)
+
+	* src/LArG3Escale.cxx: can get correction through caloDDE
+
+2005-06-20  David Rousseau  <droussea@lxplus012.cern.ch>
+
+	* LArG3Escale, LArG3Escale_TDR,LArNonLinearity,LArCellBuilderFromLArRawChannelTool,LArCellBuilderFromHitTool : remove lardetdescr dependence 
+
+2005-06-14  David Rousseau  <droussea@lxplus016.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : check statuscode 
+
+2005-05-10  David Rousseau  <droussea@lxplus002.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : if cell below
+	threshold, remove with a warning
+
+2005-01-28  Claire Adam
+
+	* LarCellHVCorrection uses LArRecUtils HV tools
+	* LArCellRec-02-09-35
+
+2004-11-19  David Rousseau  <droussea@lxplus051.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : clean up and leave
+	only  usage of map<hwId,caloDDE>
+
+2004-11-18  David Rousseau  <droussea@lxplus051.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : more protection 
+	   if missing rawchannels
+
+2004-11-17  David Rousseau  <droussea@lxplus012.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : was problem with 
+	BS due to unConnected cells (which do have a calo hash).
+	Code is now overly safe but very slow, to be improved.
+
+2004-10-13  David Rousseau  <droussea@lxplus007.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx (initialize):
+	optimize further
+
+2004-10-12  David Rousseau  <droussea@lxplus064.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : optimise LArCell
+	building (do not use MakeCellFromRaw anymore (temporary)) 
+
+2004-09-09  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* share : 
+	- remove 5 obsolete jobOptions
+	- remove the setting of the property NMinBias in the jobOptions
+	  (done in CaloNoiseTool_jobOptions)
+	- remove the include of CaloNoiseTool_jobOptions
+	  (done in RecExCommon (AllDet_detDescr.py) for Calo)
+
+2004-08-10 Claire Adam <claire.bourdarios@cern.ch>
+	* src/LArCellHVCorrection.cxx : HV correction for the PS
+	  was on the wrong feedthrough
+	* tag LArCellRec-02-09-28
+
+2004-08-06 Claire Adam <claire.bourdarios@cern.ch>
+	* src/LArCellHVCorrection.cxx : cut on CaloCell positions 
+	  and on run number to 
+	  implement fetch factors urgently needed for H8
+	* tag LArCellRec-02-09-27
+
+
+2004-08-04  Peter Loch <loch@physics.arizona.edu>
+	* cmt/requirements: change external dependencies to AtlasXXXX
+	packages
+
+2004-07-29  David Rousseau  <droussea@lxplus013.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : check wether a
+	cell is connected only when it could not be built and only when
+	bool property CheckConnected is True (default)
+
+2004-07-21  David Rousseau  <droussea@lxplus035.cern.ch>
+
+	* src/LArCellHVCorrection.cxx : first skeleton 
+
+	* share/LArCellMakerTool_jobOptions.py : final fix. Now working
+	fine.(at least for g3/g4 atlas). All LArCell_xyz_jobOptions will eventually be obsolete
+
+2004-07-07  David Rousseau  <droussea@lxplus026.cern.ch>
+
+	* share/LArCellMakerTool_jobOptions.py : first version of "doall"
+	joboption (do not use it yet) 
+
+2004-06-23  David Rousseau  <droussea@lxplus044.cern.ch>
+
+	* src/LArCellBuilderFromXYZTool.cxx : 	CaloCellContainer->setHasCalo(caloNum)  (was forgotten) 
+
+2004-06-23  Peter Loch <loch@physics.arizona.edu>
+	* share/LArCellFromLarRawTool_H6_jobOptions.py: updated for testbeam
+
+2004-06-22  David Rousseau  <droussea@lxplus072.cern.ch>
+
+	* share/LArCellFromLArRawTool_MC/MCG4_jobOptions.py: test on DetFlags
+
+2004-06-21  Peter Loch <loch@physics.arizona.edu>
+	* LArCellBuilderFromLArRawChannelTool[.h,.cxx]: added check on 
+	connected channel before building cell
+	* cmt/requirements: added new LArTool dependency for cabling service
+	* share/LArCellFromLArRawTool_H6_jobOptions.py: added jobOptions for
+	H6 testbeam
+	
+2004-06-18  David Rousseau  <droussea@lxplus009.cern.ch>
+
+	* remove obsolete LArCellMaker, LArCellBuilderFromLArHit, LArCellBuilderFromLArRaw
+
+2004-06-10  David Rousseau  <droussea@lxplus013.cern.ch>
+
+	* src/LArCellBuilderFromLArHitTool.cxx (process): make sure no
+	zero or less energy hits are lost
+
+2004-06-04  David Rousseau  <droussea@lxplus028.cern.ch>
+
+	* src/LArG3Escale, LArNonLinearity : from LArCellCorrection to CaloCellCorrection
+
+2004-06-03  David Rousseau  <droussea@lxplus026.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannelTool.cxx : tool to replace the alg 
+
+2004-05-09 Peter Loch <loch@physics.arizona.edu>
+	* LArMiniCellBuilder[.h,.cxx]: obsolete, removed
+
+2004-05-05 Peter Loch <loch@physics.arizona.edu>
+	* share/LArCellFromLArRaw_MC_jobOptions[.txt,.py]: fixed for use
+	by trigger
+
+2004-05-03 Peter Loch <loch@physics.arizona.edu>
+	* share/*_jobOptions[.txt,.py]: removed LArMiniCellBuilder from
+	jobOptions due to incompatibility with new tower builder tools
+
+2004-04-20 Peter Loch <loch@physics.arizona.edu>
+	* src/LArMiniCellBuilder.cxx: adapt to small changes in LArMiniCell
+
+2004-04-20 Hong Ma <hma@bnl.gov> 
+	* use G3/G4 specific LArCOndCnv jobOpt.
+2004-04-18 Hong Ma <hma@bnl.gov> 
+	* remove LArG3Escale form G4 jobOpt.
+2004-04-08  Peter Loch <loch@physics.arizona.edu>
+	* src/LArMiniCellBuilder.cxx : adapt to new LArMiniCell/Calo EDM
+
+2004-04-06  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* share/LArCellFromLAr* : include CaloNoiseTool_jobOptions
+
+2004-04-02 S. Rajagopalan <srinir@bnl.gov>
+	* fix requirement file for updated LArRecEvent, CaloEvent
+	* tag LArCellRec-02-09-00
+	
+2004-03-24  David Rousseau  <droussea@lxplus028.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx (MakeTheCell): correctly
+	  estimate the gain even if no noise
+
+2004-03-23  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* share/LArCellFromLArRaw_MC_jobOptions.txt: 
+	use new calibration classes by default
+
+2004-03-22  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	*  bug fix in jobOptions (new database)
+
+2004-03-22  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	*  use LArfSampl instead of Epart2Edep
+	   - in LArCellBuilderFromLArHit
+	   - in LArG3Escale (scale factors of HEC and FCAL being moved in 
+	                     LArfSampl)
+	*  WorkMode=1 (new database) for direct MC by default
+
+2004-03-19 Hong Ma <hma@bnl.gov>
+	* Remove Identifier32 
+
+2004-03-18  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* share/LArCellFromLArRaw_MCG4_jobOptions.txt: 
+	use the Nova database (needed for CaloNoiseTool, itself needed by 
+	CaloTopoCluster)
+
+2004-03-16  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	*  update MC jobOptions in order to use symmetry in calibration tools
+
+2004-03-12  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* src/LArCellBuilderFromLArHit.cxx :
+	- now derives from IIncidentListener in order to use the 
+	  new calibration classes
+	- use new interface of CaloNoiseTool
+	- possibility to add the pileup from CaloNoiseTool (only for checks)
+
+	* share : add the property NMinBias for CaloNoiseTool and 
+	          LArAutoCorrTotalTool in all jobOptions
+		  (both have to be changed together in order to be consistant)
+	
+2004-03-02  David Rousseau  <droussea@lxplus034.cern.ch>
+
+	* share/LArCellFromLArRaw_MCG4_jobOptions.txt: new jobO
+
+2004-02-26  G.Unal <unal@in2p3.fr>
+
+        * src/LArCellBuilderFromLArRawChannel.cxx :
+           propagate CaloGain from LArRawChannel to LArCell
+
+2004-02-25  David Rousseau  <droussea@lxplus005.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx : CaloGain in LArCell 
+
+2004-02-18  claire adam <claire.bourdarios@cern.ch>
+        * take ID's from Calo in minicellbuilder
+
+2004-02-13  G.Unal <unal@in2p3.fr>
+        * fix for new online ID 
+
+2004-01-30  David Rousseau  <droussea@lxplus022.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx (execute): gain in cell
+
+2004-01-28  David Rousseau  <droussea@lxplus024.cern.ch>
+
+	* LArCellRec/LArHitInfo.h (class LArHitInfo): move to MeV
+
+2004-01-21  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* src/LArCellBuilderFromLArHit.cxx: 
+	replacement of LArNoiseTool by CaloNoiseTool  + cleaning
+
+2004-01-21  G.Unal <unal@in2p3.fr>
+
+        * Correct LArNonLinearity to use CLHEP units
+
+2004-01-20  David Rousseau  <droussea@lxplus037.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx (execute): Cell in MeV
+
+2004-01-13  Hong Ma <hma@bnl.gov>
+	* jobOpt fix
+
+2003-12-15  David Rousseau  <droussea@lxplus069.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx (defineWindow): ALWAYS read hits in MeV
+
+2003-12-08  David Rousseau  <droussea@lxplus029.cern.ch>
+
+	* cmt/requirements: only necessary uses
+
+	* src/LArCellBuilderFromLArHit.cxx (execute): read hits in MeV
+
+2003-12-03  David Rousseau  <droussea@lxplus034.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx (execute): ABCLArHit->LArHit
+
+2003-11-20  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* LArCellRec/LArCellBuilderFromLArHit.cxx : choose now the gain 
+	as in LArDigitMaker (thanks to new functions of LArNoiseTool)
+	* LArCellRec/LArG3Escale.cxx : add a property to apply or not the Weights
+2003-10-30  David Rousseau  <droussea@lxplus023.cern.ch>
+
+	* share/LArCell_jobOptions.txt and others: #include
+	<PACKAGE/bla.txt everywhere 
+
+	* share/LArCellFromLArRaw_MC_jobOptions.txt: add LArRecUtils.DLL
+
+2003-10-29  David Rousseau  <droussea@lxplus081.cern.ch>
+
+	* src/LArCellBuilderFromLArRawChannel.cxx (execute): remove
+	reference to obsolete MakeFcalCell.h
+
+2003-10-22  Peter Loch <loch@physics.arizona.edu>
+
+	* include LArDetDescr in requirements
+	
+2003-10-21  Peter Loch <loch@physics.arizona.edu>
+
+	* remove DataHandle access to TES data objects
+	
+2003-10-16  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* src/LArCellBuilderFromLArHit.cxx (defineWindow): change access
+	to McEventCollection
+
+2003-10-7  Hong Ma <hma@bnl.gov>
+	* update the jobOpt for G4.
+
+2003-09-26 G.Unal <unal@in2p3.fr>
+        * Add LArNonLinearity correction to implement residual
+          non linearities after ROD/L2 calibration for EM barrel
+
+2003-09-05 Hong Ma <hma@bnl.gov>
+	* fix LArCellFromLArHit_G4_jobOptions.txt 
+
+2003-09-03  David Rousseau  <droussea@lxplus090.cern.ch>
+
+	* src/LArMiniCellBuilder.cxx (execute): lock LArMiniCell
+	* jobOPtion in install area
+
+2003-08-12  RD Schaffer  <R.D.Schaffer@cern.ch>
+
+	* tagging LArCellRec-02-08-13
+	
+	* src/LArCellIDC_Test.cxx (execute): changes for id's getString
+
+2003-08-07 S. Rajagopalan <srinir@bnl.gov>
+	* Fix identifier printout in many algorithms
+	* tag 02-08-12
+	
+2003-07-25  David Rousseau  <droussea@lxplus069.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx: use random generator service
+	      to reset seed
+
+2003-07-23  David Rousseau  <droussea@lxplus081.cern.ch>
+
+	* src/LArCellMaker.cxx: lock cell container when done
+
+2003-07-18  David Rousseau  <droussea@lxplus018.cern.ch>
+
+	* LArCellRec/LArG3Escale.h, LArCellBuilderFromLarhit.h : fix include
+
+2003-07-08 Hong Ma <hma@bnl.gov>
+	* fix in LArCellBuilderFromLArRawChannel for ownership in LArCellContainer
+
+2003-07-07 Hong Ma <hma@bnl.gov>
+	* fix CBNT jobOpt.
+
+2003-07-07  David Rousseau  <droussea@lxplus093.cern.ch>
+
+	* src/LArG3Escale_TDR.cxx: correct use of atlasdetectorID
+
+	* src/LArCellBuilderFromLArHit.cxx: clean-up safety tests
+
+2003-07-01  David Rousseau  <droussea@lxplus070.cern.ch>
+
+	* src/LArG3Escale.cxx : use m_emID instead of atlasID 
+
+	* src/LArCellBuilderFromLArHit.cxx : protect against holes in caloDDE
+
+2003-06-30  David Rousseau  <droussea@lxplus070.cern.ch>
+
+	* src/LArCellBuilderFromLArHit.cxx : revisit
+	completely to use caloDDE
+
+2003-06-27 Hong Ma <hma@bnl.gov>
+	* use new MakeLArCellFromRaw
+
+2003-06-13 Hong Ma <hma@bnl.gov>
+	* remove dependency on LArConditions.
+
+2003-06-10 S. Rajagopalan <srinir@bnl.gov>
+	* retrieve all identifier helper classes from LArDetDescrManager
+	* cache pointer to helper in algorithm
+	* almost all algorithms have changed from this.
+	* tag LArCellRec-02-08-00
+	
+2003-06-02 Peter Loch <loch@physics.arizona.edu>
+	* cmt/requirements removed CxxFeatures 
+	* src/*.cxx improve code to suppress warnings from pedantic compiler
+
+2003-05-24 Hong Ma <hma@bnl.gov>
+	* LArRawUtils is dual_use now. load DLL in jobOpt.
+
+2003-05-16 Hong Ma <hma@bnl.gov>
+	* fix LArCellFromLArHit_G4_jobOptions.txt (e_threshold)
+	* LArCellIDC for extended TT ID. 
+
+2003-05-06 S. Rajagopalan <srinir@bnl.gov>
+	* remove -DNDEBUG option from requirement
+	* tag LArCellRec-02-07-15
+	
+2003-05-05  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+	* src/LArCellBuilderFromLArHit.cxx: merged with
+	LArCellBuilderFromLarHitWithNoise
+	* src/LArG3Escale.cxx: property "FromHit" removed
+	* LArHitInfo and LArHitMap modified to accept the modified LArNoiseTool
+
+2003-04-04 Hong Ma < hma@bnl.gov >
+	* One more gcc3.2 fixes in LArCellIDC_test.cxx 
+
+2003-04-02 Hong Ma < hma@bnl.gov >
+	* gcc3.2 fixes. 
+
+2003-03-28 S. Rajgopalan <srinir@bnl.gov>
+	* tag for 6.0.2 (LArCellRec-02-07-11)
+	
+2003-03-21  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* src/LArCellBuilderFromLArHitWithNoise.cxx: retrieve E scale on
+	LArNoiseTool instead of copy/paste of functions of LArG3Escale
+	* modify all jobOptions to have only one (instead of 3) instance of LArG3Escale
+
+2003-03-16 S. Rajagopalan <srinir@bnl.gov>
+	* Updated LArG3Escale from Leonardo Carminati:
+	  - includes application of weights at the cell level.
+	* caching of identifiers to improve performance.
+	* tag LArCellRec-02-07-10
+	
+2003-03-14  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+
+	* src/LArCellBuilderFromLArHitWithNoise.cxx : now uses
+	LArNoiseTool (functions InitNoise, RetrieveDatabase, StoreABC 
+	and StoreSIGMANOISE transfered in LArNoiseTool)
+
+
+2003-03-10 Hong Ma <hma@bnl.gov>
+	* Test both LArTT_Selector::setRoIs methods
+
+2003-03-08 Hong Ma <hma@bnl.gov>
+	* use new LArTT_Selector for LArCellIDC. 
+
+2003-02-26 Hong Ma <hma@bnl.gov>
+	* add LArCellIDC_Test_jobOptions.txt 
+
+2003-02-18 S. Rajagopalan <srinir@bnl.gov>
+	* Fix entries file
+	* tag 02-07-05
+	
+2003-02-18 S. Rajagopalan <srinir@bnl.gov>
+	* Move LArG3Escale to LArG3Escale_TDR
+	* Create new LArG3Escale with DC1 corrections from L. Carminati
+	* add new tool to entries file
+	* tag 02-07-04
+	
+2003-02-17 Hong Ma <hma@bnl.gov>
+	* use TT hash id, in LArCellIDC_Test
+2003-02-14 Hong Ma <hma@bnl.gov>
+	* jobOpt for LArCellFromLArHitWithNoise
+
+2003-02-14  Matthieu Lechowski  <lechowsk@lxplus041.cern.ch>
+
+	* src/LArCellBuilderFromLArHitWithNoise.cxx and other files: new noise 
+
+2003-02-12 Hong Ma <hma@bnl.gov>
+	* e threshold in MakeLArCell 
+
+2003-02-05 S. Rajagopalan <srinir@bnl.gov>
+	* change e_threshold to -999. to handle pile-up (neg energies)
+	* tag 02-06-01
+	
+2003-01-12 Hong Ma <hma@bnl.gov>
+	* Moved LArCellCorrection,  MakeLArCellFromRaw and MakeFCalCell 
+	  to LArRecUtils.
+
+2003-01-07 Hong Ma <hma@bnl.gov>
+        * make some methods in MakeLArCellFromRaw and MakeFCalCell const
+	* tag LArCellRec-02-05-09
+	
+2003-01-06  Matthieu Lechowski  <lechowsk@lal.in2p3.fr>
+	* src/LArHitMap.cxx (DefineWindows): corrected particle code for
+	electrons (12->11) 
+
+2003-01-03 S. Rajagopalan <srinir@bnl.gov>
+	* jobOptions changes only:
+	* LArG3Escale property specified as ToolSvc.name.prop
+	* MiniCellBuilder is treated as a topAlg instead of a sub-alg
+	  because the move of LArG3Escale to a tool instead of an alg
+	  in not compatible with the way MiniCellBuilder is structured.
+	  Long-term: need to fix minicellBuilder.
+	* tag LArCellRec-02-05-07 
+	
+2003-01-02 S. Rajagopalan <srinir@bnl.gov>
+	* LArMiniCellBuilder.cxx: property names for cell container changed
+	  "CellContainer" refers to output cell container to be consistent
+	  with other cell builders (changed from "MiniCellContainer")
+	  "InputFCalCellContainers" refers to input containers (changed from
+	  "CellContainers"
+	* Associated changes made in all jobOptions files also.
+	* tag LArCellRec-02-05-06
+	
+2002-12-14 S. Rajagopalan <srinir@bnl.gov>
+	* LArG3Escale turns into a tool from a sub-algorithm
+	* LArCellCorrection is therefore also a tool
+	* LArCellCorrection::execute takes cell container as input
+	* LArCellCorrection: No longer retrieves cell container from SG
+	* LArCellMaker: creates tool in initialize
+	* LArCellMaker: retrieves container from SG to pass to tool
+	* tag LArCellRec-02-05-05
+	
+2002-12-23 S. Rajagopalan <srinir@bnl.gov>
+	* LArHitMap.cxx: Part->perp() does not exist 
+	  change to Part->momentum().perp() (pt from HepLorentzVec)
+	* LArCellBuilderFromLArHitWithNoise: reorder init variables
+	  in constructor to remove warning.
+	* tag LArCellRec-02-05-04
+	
+2002-12-20  David Rousseau  for Matthieu Lechowski: 
+	  implement LArCellBuilderFromLArHitWithNoise to  
+	 generate directly the noise at the level of the cells.
+         There is the possibility to make cut in sigma (noise) or in
+	 energy, symmetric or assymetric.
+	 There is also a possibility to add noise only in a window 
+	 around high pt electron and photon
+
+	* cmt/requirements: 
+
+2002-12-09 H. Ma <hma@bnl.gov>
+	* make MiniCell in LArCellFromLArRaw_MC_jobOptions.txt 
+
+2002-12-09 H. Ma <hma@bnl.gov>
+	* use LArSimEvent-01 and LArIdentifier 
+	* Add MakeLArCellFromRaw class. 
+	   make LArCell object from LAr Raw information. 
+	* Add LArCellIDC_Test class
+	   Test access LArCell through LArCellIDC. 
+
+2002-09-23 H. Ma <hma@bnl.gov>
+	* add jobOpt for G4 
+	   LArCellFromLArHit_G4_jobOptions.txt 
+
+2002-09-13 H. Ma <hma@bnl.gov>
+	* Turn off RD event in LArCellRec_test_jobOptions.txt 
+
+2002-09-04 H. Ma <hma@bnl.gov>
+	* Make LArCellBuilderFromLArRawChannel work with full LAr
+	  Calorimeter
+	* update jobOptions.
+
+2002-08-30 S. Rajagopalan <srinir@bnl.gov>
+	* Modifications corresponding to use of DataVector in LArRecEvent
+	* removed use of derived_iterators and use this feature directly 
+	  from StoreGate.
+	* Code modified: 
+	  LArCellBuilderFromLArHit, LArCellBuilderFromLArRawChannel,
+	  LArCellCorrection, LArCellTest, LArG3CellBuilder
+
+2002-08-05   H. Ma <hma@bnl.gov> 
+	* cmt does not understand LArCellRec_test_jobOptions.* 
+	   in runtime jobOptions specification in requirements. 
+           use LArCellRec_test_jobOptions.txt explicitly. 
+
+2002-07-29     J. Collot <collot@in2p3.fr>
+
+        * - removed redundant uses in req file
+	* - correct sampling() into module for fcal in LArG3Escale
+	* - take EventInfo.h and EventID.h from EventInfo
+	* - use LArHitZebraCnv in LArCell_jobOptions.txt for standard reconstruction
+	
+	tagging 02-01-00
+	 
+2002-06-23      Hong Ma <hma@bnl.gov>
+        * add Pythons scripts. 
+
+2002-06-12      Hong Ma <hma@bnl.gov>
+        * use new FCAL identifier 
+
+2002-05-23      Hong Ma <hma@bnl.gov>
+        * fix LArG3Escale for new Identifier 
+
+2002-05-21      Hong Ma <hma@bnl.gov>
+        * New LArDetDescr
+
+2002-04-23 Hong Ma <hma@bnl.gov>
+	* Use LArHit from LArSimEvent
+
+2002-04-12 Hong Ma <hma@bnl.gov>
+	* Use LArRawChannel from LArRawEvent
+
+2002-04-11 Hong Ma <hma@bnl.gov>
+	* Moved classes to LArRecEVent, LArRecUtils
+
+2002-04-10 Hong Ma <hma@bnl.gov>
+	* jobOptions update for 3.1.0
+
+2002-02-18 J. Collot <collot@in2p3.fr>
+
+        * portage to Solaris 
+	* std::vector
+	*
+	* tagging 01-02-07
+
+2002-02-15 H. Ma <hma@bnl.gov>
+	* LArG3Escale has an overall scale factor 
+		(Property OverallScale)
+
+2002-02-04 H. Ma <hma@bnl.gov>
+	* put namespace std:: for cout, string and endl 
+
+2002-01-23 H. Ma <hma@bnl.gov>
+	* CBNT_LArCell_jobOptions.txt makes 3 ntuples
+	  one for each region (EM, HEC, FCAL)
+
+2002-01-22 H. Ma <hma@bnl.gov>
+	* add MakeFCalCell class: 
+            make LArCell object for FCAL, using id, e, t, q.
+	    code copied from LArG3CellBuilder. 
+	* LArCellBuilderFromLArHit, LArCellBuilderFromLArRawChannel
+	    use MakeFCalCell to make LArCell for FCal. 
+
+2001-02-18 H. Ma <hma@bnl.gov>
+	* LArCellBuilderFromLArRawChannel
+	  Scale energy from MeV to GeV, apply threshold. 
+
+2001-12-31 H. Ma <hma@bnl.gov>
+	* explicitly load CaloRec in CBNT_LArCell_jobOptions.txt
+	* this is needed after CaloRec package changed to src/components
+
+2001-12-27 S. Rajagopalan <srinir@bnl.gov>
+	* implement dual-use libraries
+	* create src/component
+	* remove src/LArCellRec_entries, load:  moved to components
+	* remove algorithm factory declarations from all algorithms
+	
+2001-12-14	Hong Ma <hma@bnl.gov>
+  	* make const access
+	* mv jobOptions_runLArCellRec.txt to LArCellRec_test_jobOptions.txt 
+	* rm SRT files
+
+2001-11-27  Ed Frank  <efrank@lxplus027.cern.ch>
+
+	* Plug into new navigation code (Reconstruction/NavigationRep).
+	  Cells now inherit from Navigable and have a navigation token.
+	  See also CaloRec/CaloCell.
+
+2001-11-09 S. Rajagopalan <srinir@bnl.gov> 
+	* use ListItem in LArCellMaker
+
+2001-10-26 H. Ma <hma@bnl.gov> 
+	* new class LArCellTest for testing LArCell.
+	* share/LArCellTest_jobOptions.txt 
+	* use LArROD-01-*
+
+2001-10-25 H. Ma <hma@bnl.gov> 
+	* move to new StoreGate
+	* cleanup  SmartDataPtr 
+	* add jobOptions in share/
+
+2001-10-22 S. Rajagopalan <srinir@bnl.gov>
+	* Remove EventManagement dependency in LArCellRec
+	* Remove #includes in G3CellBuilder and CellCorrection
+	* Add AtlasPolicy dependency in requirements
+
+2001-07-02  H. Ma <hma@bnl.gov>
+	* Add LArCellBuilderFromLArRawChannel class.
+          This builds LArCell objects from LArRawChannel. 
+
+2001-06-12  H. Ma <hma@bnl.gov>
+	* tag for 1.3.7 LArCellRec-00-01-02 
+	  including cmt/requirements update.
+2001-06-10  H. Ma <hma@bnl.gov>
+	* Updated LArCellBuilderFromLArHit
+	   symLink for container.
+	   remove pileup flag, now handled in the converter.  
+2001-05-31  H. Ma <hma@bnl.gov>
+	* add class LArCellBuilderFromLArHit
+	* dependency on LArSim 
+2001-05-23  S. Rajagopalan <srinir@bnl.gov>
+	* Move to StoreGate
+	* FCAL Mini Cell from P. Loch
+	* Various miscellaneous changes
+	
+2001-05-10  H. Ma <hma@bnl.gov> 
+	* Tag for 1.3.4
+	* GaudiKernel for .h files
+	* remove GaudiBase in GNUmakefile.in
+
+2001-04-01  S. Rajagopalan <srinir@bnl.gov>
+	* Change configure.in - Allow recompilation with gcc-2.95
+	* Retag for 1.3.3
+	
+2001-02-12  Hong Ma  <hma@atlas012.cern.ch>
+
+	* fix #include's <> to "" 
+2001-01-10  Hong Ma  <hma@atlas012.cern.ch>
+
+	* src/LArG3CellBuilder.cxx, LArG3Escale.cxx 
+	  new AtlasDetectorID
+        * LArCell.h: 
+          order static/virtual/const properly
+        * All classes:  
+          Modified to adhere to QC comments from S. Albrand 
+	* GNUMakefile.in: 
+          Modified for Gaudi 6.2 (component library) 
+        * src/LArCellRec_entries.cxx, LArCellRec_load.cxx
+	  Added for Gaudi 6.2 (component library)
+
+2000-12-02  Monika Wielers  <mwielers@atlas005.cern.ch>
+
+	* LArCellRec/LArCell.h: add LArCell for FCAL  
+
+	* src/LArG3CellBuilder.cxx: fill FCAL digits in Cell container 
+
+	* src/LArG3Escale.cxx: apply FCAL calib correctly, FCAL sampling are 
+	1-3 not 0-2
+
+2000-11-28  Hong Ma  <hma@atlas010.cern.ch>
+
+	* LArCellRec/LArCell.h, src/LArG3CellBuilder.cxx
+	remove #include <DetectorDescription/Identifier.h>
+	* LArCellRec/LArG3CellBuilder.h: 
+	use new Identifier/Range.h
+
+2000-11-03  S. Rajagopalan  <srini@atlas006.cern.ch>
+
+	The following changed due to the introduction of CaloRec package
+	* src/LArCell.cxx, LArCellRec/LArCell.cxx
+	  also constructor changed to add time, quality
+	* src/LArCellContainer.cxx, LArCellRec/LArCellContainer.h
+	    derived iterator also implemented here
+	* src/LArCellCorrection.cxx  uses above derived iterator
+	* src/LArCellList.cxx        uses above derived iterator
+	* src/LArG3CellBuilder       reflects change in LArCellconstructor
+
+2000-10-15  Hong Ma  <hma@atlas009.cern.ch>
+
+	The following changes are due to the new TDS in 1.1.6
+	* src/LArG3CellBuilder.cxx: 
+	     /Event becomes /Event/PhysicsTDR
+	* src/LArCellCorrection.cxx:
+	     EventInfo replace ZebraTDREvent	  
+
+	* Tag LArCellRec-00-00-01 was actually for 1.1.5.
+	  Tag LArCellRec-00-00-02 is for 1.1.6
+
+2000-10-11  Hong Ma  <hma@atlas009.cern.ch>
+        *   Tag LArCellRec-00-00-01 under 1.1.6, prepared for the next 
+	    release, (1.2.0)
+	
+2000-10-10  Hong Ma  <hma@atlas009.cern.ch>
+
+	* GNUmakefile.in: no test subdir
+	* configure.in: no test subdir
+
+2000-10-09  Hong Ma  <hma@atlas006.cern.ch>
+
+	* configure.in: compile on linux only 
+
+	* GNUmakefile.in (TARGET_SHLIBS): add @HASH@ to avoid compiling on sun
+
+2000-10-06  Hong Ma  <hma@atlas006.cern.ch>
+
+	* src/divdif.F (main): removed, because it is never used.
+
+	* PACKAGE (version): GaudiInterface --> External
+	                     ZebraTDRCnv    --> Event
+			     no EventManagement
+	
+

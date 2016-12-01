@@ -1,0 +1,367 @@
+2015-02-16 Walter Lampl <walter.lampl@ cern.ch>
+	* complete CONDBR2 migration
+	* tag LArBadChannelTool-00-00-77
+
+16-02-2015 Pavol Strizenec
+	* updates to keep 32 bit identifiers in BadChannel folders
+	* updates for CONDBR2
+	* tag LArBadChannelTool-00-00-76
+
+2015-01-08  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArBadChannelTool-00-00-75.
+	* Algorithm -> AthAlgorithm; AlgTool -> AthAlgTool.
+
+2014-09-04 David Quarrie <David.Quarrie@cern.ch>
+	* cmt/requirements
+		Change to a dual_use_library since the cmake-based lcgdict dictionary generation only works on linked libraries.
+		I realise this isn't fully backwards-compatible, but hopefully it will not have any real adverse impact.
+	* Tagged as LArBadChannelTool-00-00-74
+
+2013-02-14  scott snyder  <snyder@bnl.gov>
+
+	* Tagging LArBadChannelTool-00-00-73.
+	* cmt/requirements: Fix checkreq warnings.
+
+2012-08-10 Walter Lampl
+	* LArBuildBadChannelDB.sh, LArBuildMissingFebDB.sh: Print warning if IOV begin
+	  is not part of the NEMO run watchlist
+	* tag LArBadChannelTool-00-00-72
+	  
+
+2012-04-20 Walter Lampl
+	* getMissingFebs: Returns now data for all IOVs with a particular run.
+	* tag LArBadChannelTool-00-00-71
+	
+2012-01-11 Walter Lampl
+	* Add py module getMissingFebs return a set of bad Febs of a particular run
+	  Needed EventVeto upload. 
+	* tag LArBadChannelTool-00-00-70
+
+2011-10-21 Teddy Todorov <Teddy.Todorov@cern.ch>
+	* Adding bits deadSCACell and badFirstSample to default mask
+	* tag LArBadChannelTool-00-00-69
+	
+2011-10-19  scott snyder  <snyder@bnl.gov>
+
+	* LArBadChannelTool/LArBadChannelDBTools.h: Fix for gcc 4.7
+	compilation.
+	* tag LArBadChannelTool-00-00-68
+
+11-07-2011 Walter Lampl
+	* Changes to uploading script for bad channels and missing FEBs:
+	  - Make the work with rel 17 (GlobalFlags -> globalflags)
+	  - Automatically resolve 'current' Global tag to get UPD4-nn folder level tag
+	    (WARNING: This requires at least LArConditionsCommon-00-02-52)
+	* tag LArBadChannelTool-00-00-67
+
+10-06-0211 G.Unal
+        * clean up include of StoreGateSvc
+        * tag LArBadChannelTool-00-00-66
+
+10-05-2011 Walter Lampl
+	* LArBadChannelSummary.py: Set global DB tag explicitly
+	* tag LArBadChannelTool-00-00-64
+
+10-05-2011 Walter Lampl
+	* LArBadChannels2Ascii 
+	  - Add missing/dead FEBs to executive summary
+	  - Better handling of missing FEBs in general
+	  - Update Geometry and conditions tag in jobOpts
+	* Add jobO fragmemt LArBadChannelSummary.py to create execute summary
+	* tag LArBadChannelTool-00-00-63
+
+30-04-2011 P. Strizenec
+       * Bug fixed in LArBuildMissingFebDB.sh for closed IOV, and LB!=0
+       * tag LArBadChannelTool-00-00-62
+
+31-03-2011 G.Unal
+       * Change UPD4 tag for bad channel upload from UPD4-00 to UPD4-01 in  LArBuildBadChannelDB.sh
+       * tag LArBadChannelTool-00-00-61
+
+24-03-2011 G.Unal
+       * Change UPD3 to Bulk in the LArBuildBadChannelDB.sh
+          and add option to add channels only to Bulk
+       * tag LArBadChannelTool-00-00-60
+
+17-03-2011 P. Strizenec
+        * adding the filling of UPD3 tag together with UPD4 in LArBuildBadChannelDB.sh
+        * tag LArBadChannelTool-00-00-59
+
+1-03-2011 P. Strizenec
+        * improvements in bad channel script for default closed IOV
+        * improvements in LArBuildMissingFebDB.sh script (adding options)
+        * tag LArBadChannelTool-00-00-58
+
+19-02-2011 P. Strizenec
+        * update the bad channel script to produce by default the closed IOV update
+        * share/LArBuildBadChannelDB.sh
+        * tag LArBadChannelTool-00-00-57
+
+2011-02-15 Walter Lampl
+	* selection.xml: Add one method, clean up others
+        * tag LArBadChannelTool-00-00-56
+
+2011-02-08 Walter Lampl
+       * LArBadChannel2Ascii: Add option to save 'executive summary' text file
+       * tag LArBadChannelTool-00-00-55
+ 
+2010-09-10 G.Unal for P.Strizenec
+       * improve bad channel upload scripts to allow closed IoV for UPD4 update
+       *  share/LArBadChannelDBAlg.py,  share/LArBadChannel2Ascii.py, share/LArBuildBadChannelDB.sh
+       * tag LArBadChannelTool-00-00-54
+
+2010-08-20  scott snyder  <snyder@bnl.gov>
+
+	* src/LArBadChannel2Ascii.cxx, src/LArBadChannelDBAlg.cxx,
+	src/LArBadChannelTimingAlg.cxx, src/LArBadChannelToolTest.cxx,
+	src/LArBadFeb2Ascii.cxx: Coverity warning fixes.
+	* tag LArBadChannelTool-00-00-53
+
+2010-06-28 Walter Lampl
+        * LArBuildMissingFebDB.sh: Little bug-fix setting IOVs
+	* tag LArBadChannelTool-00-00-52
+
+2010-05-21 Walter Lampl
+	* LArBuildBadChannelDB.sh is now more flexible: UPD1 and UPD4 can be treated independently
+	* tag LArBadChannelTool-00-00-51
+
+2010-04-14 Walter Lampl
+	* Fix stupid typo introduced in previous update
+	* tag LArBadChannelTool-00-00-50
+
+2010-04-14 Walter Lampl
+	* Prepartion for 36h calib loop:
+	  Include UPD4 tags into DB uploading scripts and allow Lumi-Block granularity
+	* tag LArBadChannelTool-00-00-49
+
+2010-02-25 Walter Lampl
+        * Adapt jobOptions and script for DB uploading to 
+	  online/offline split of BadChannel and MissingFEB DB
+	* tag LArBadChannelTool-00-00-48
+	
+2009-12-11 Walter Lampl
+	* LArBuild*DB.sh: Fix typos, improve MissingFEB script.
+	* tag LArBadChannelTool-00-00-47
+
+2009-12-10 Walter Lampl
+	* One bugfix and few improvments for LArBuildBadChannelDB.sh and associated jobOpts
+	* tag LArBadChannelTool-00-00-46
+
+2009-12-09 Walter Lampl
+	* Introduce script LArBuildMissingFebDB.sh to help uploading missing FEB lists
+	* tag LArBadChannelTool-00-00-45
+
+2009-12-08 Walter Lampl
+	* Introduce script LArBuildBadChannelDB.sh to help uploading bad-channel lists
+	* tag LArBadChannelTool-00-00-44
+	
+2009-11-16 Walter Lampl
+	* LArBadFeb2Ascii: Dump also FEBs with error masking"
+	* tag LArBadChannelTool-00-00-43
+
+2009-10-21 Hong Ma <hma@bnl.gov>
+        * even more fixes for 64 bit identifier. 
+	* tag LArBadChannelTool-00-00-41
+
+2009-10-19 Hong Ma <hma@bnl.gov>
+        * more fixes for 64 bit identifier. 
+	* tag LArBadChannelTool-00-00-40 
+	
+2009-10-19 Hong Ma <hma@bnl.gov>
+        * more fixes for 64 bit identifier. 
+	  id.get_compact() --> id.get_identifier32().get_compact() 
+	* tag LArBadChannelTool-00-00-39 
+	
+2009-10-19 Hong Ma <hma@bnl.gov>
+	* LArBadChanBlobUtils.h:  use Identifier32::value_type, fix for 64 bit Identifier
+	* tag LArBadChannelTool-00-00-38
+	
+2009-09-11  scott s snyder  <snyder@bnl.gov>
+
+	* src/mergeDuplicateEntries.h: Fix compilation warning.
+	* tag LArBadChannelTool-00-00-37
+
+Aug 4, 2009 Ryan Taylor
+	* small update to list of problems masked by default
+	* tag LArBadChannelTool-00-00-36
+
+Aug 3, 2009 Ryan Taylor
+	* change LArBadChannelDecoder.cxx to use the updated LArBadChannelParser
+	* requires LArRecConditions-00-00-22
+	* tag LArBadChannelTool-00-00-35
+
+08-06-2008 Teddy Todorov <Teddy.Todorov@cern.ch>
+	* Adding status info for bad FEBs
+	* splitting LArBadChannelDBTools into DB and Blob tools
+	* Tagging LArBadChannelTool-00-00-34
+	
+2009-04-30 Walter Lampl
+	* LArBadChannelDBTools.cxx: Create all COOL channels if empty ist is requested
+	* tag LArBadChannelTool-00-00-33
+
+2009-02-28  RD Schaffer  <R.D.Schaffer@cern.ch>
+
+	* tagging LArBadChannelTool-00-00-32
+	* LArBadChannelTool/selection.xml: removing duplicate dict
+	definition of attrlist, hwid
+	* python/LArDBFolderBrowser_MissingFEBs.py: removing explicit
+	loading of dict - should be automatically loaded via rootmap
+
+2009-02-18 Walter Lampl <walter.lampl@ cern.ch>
+        * Some JobO updates
+	* tag LArBadChannelTool-00-00-31
+	
+2009-01-21 Walter Lampl <walter.lampl@ cern.ch>
+	* add pair<bool,ProblemType> to lcgdict
+	* tag LArBadChannelTool-00-00-30
+
+2009-01-06  scott s snyder  <snyder@bnl.gov>
+
+	* Tagging LArBadChannelTool-00-00-29.
+	* src/LArBadChannelParser2.cxx: Fix compilation warning.
+
+25-11-2008 Teddy Todorov <Teddy.Todorov@cern.ch>
+	* Add a second Cool folder for bad channel info
+
+18-11-2008 Walter Lampl <walter.lampl@ cern.ch>
+	* LArBadChanTool: Set CaloBadChannel::Noise bit if LArBadChannel::sporadicBurstNoise bit is set
+	* LArBadChannelTool-00-00-27
+	
+
+22-10-2008 Sabine Elles <Sabine.Elles@cern.ch>	
+        * remove duplicate dictionnary entry
+
+14-10-2008 Hong Ma <hma@bnl.gov>
+	* add dictionary for LArBadChanTool and LArBadChannelMasker for python use. 
+	* change order of declaration in LArBadChannelMasker to avoid python binding problem.
+	
+10-10-2008 Sabine Elles <Sabine.Elles@cern.ch>	
+        * add python script to modify interactively  BadChannel and MissingFEBs folders
+	* mv src/LArBadChannelDBTools.h to LArBadChannelTool/LArBadChannelDBTools.h 
+	* modify include "LArBadChannelDBTools.h" line in .cxx files (see line above)
+	
+01-10-2008 Teddy Todorov <Teddy.Todorov@cern.ch>
+	* Fix slow offline ID access when missing FEBs present
+	* Protect against invalid channel or FEB IDs
+        * Add "short" to default mask (Ryan)
+	* tag LArBadChannelTool-00-00-25
+	
+08-09-2008 Walter Lampl <Walter.Lampl @cern.ch>
+        * Add use of AthenaKernel and CaloIdentifier to requirements
+	  to fix checkreq warning
+	* tag LArBadChannelTool-00-00-24
+	
+02-09-2008 Teddy Todorov <Teddy.Todorov@cern.ch>
+	* Add missing FEBs information 
+	* Change bad channel cache structure
+
+18-07-2008 Walter Lampl <Walter.Lampl@ cern.ch>
+	* Minor improvement for log-output (add # of bad channels read from db)
+	* tag LArBadChannelTool-00-00-22
+
+13-05-2008 Walter Lampl <Walter.Lampl@ cern.ch>
+	* add LArBadChannel2Ascii algorithm + jobO
+	* tag LArBadChannelTool-00-00-21
+	
+6-05-2008 Ryan Taylor
+	* Further streamlining of the Masker
+	* Can now query tools via FEB id and channel number
+	* Masker now has default values for the 'ProblemsToMask' property
+	* tag LArBadChannelTool-00-00-20
+
+9-04-2008 Ryan Taylor
+	* Some streamlining to Masker
+	* Use new gain masks from LArBadChanBitPacking 
+	   (requires LArRecConditions-00-00-15)
+	* A few more changes and tag coming soon 
+
+28-02-288 Walter Lampl <walter.lampl@ cern.ch>
+	 * Change default folder name to /LAR/BadChannels/BadChannels
+         * tag LArBadChannelTool-00-00-19
+	
+26-02-2008 Teddy Todorov <teddy.todorov@cern.ch>
+	* bug fix from Ryan (channels from new ASCII file not added correctly to DB) and make ASCII dump conditional
+	* tag LArBadChannelTool-00-00-18
+
+26-02-2008 Walter Lampl <walter.lampl @cern.ch>
+	* LArBadChanTool:
+	  - Set jobOption readFromASCII to false by default 
+	  - refine translation from LArBadChannel to CaloBadChannel word"
+	 * tag LArBadChannelTool-00-00-17
+	
+25-02-2008 Walter Lampl <walter.lampl@ cern.ch>
+	* LArBadChannelMasker: 
+	  - add 'gain' parameter to cellShouldBeMasked method
+	  - remove some superfluous methods
+        * tagging LArBadChannelTool-00-00-16
+	
+24-02-2008 Walter Lampl <walter.lampl@ cern.ch>
+	* LArBadChanTool.cxx: Reset state of LArOnlineID::do_checks after reading of
+	  ASCII file is finished. See also <http://savannah.cern.ch/bugs/?33824>
+	* tagging LArBadChannelTool-00-00-15  
+	
+18-02-2008 Ryan Taylor <rptaylor@uvic.ca>
+	* LArBadChannelMasker: Must log masked cells
+	  directly instead of caching.
+
+16-02-2008 Ryan Taylor <rptaylor@uvic.ca>
+	* LArBadChannelMasker: Sacrifice inline implementation
+	  to allow logging of masked channels.
+
+14-02-2008 Teddy Todorov <teddy.todorov@cern.ch>
+	* mproving dump format, adding more checks for cool channel 
+	* correspondance to ascii file content"
+	* tag LArBadChannelTool-00-00-14
+
+14-02-2008 Ryan Taylor <rptaylor@uvic.ca>
+	* Tagging current iteration of LArBadChannelMasker
+	* tag LArBadChannelTool-00-00-13
+
+2008-02-13  scott s snyder  <snyder@bnl.gov>
+
+	* src/LArBadChannelDBAlg.cxx: Fix compilation warnings.
+	* src/LArBadChannelDBTools.cxx: Fix compilation warnings.
+
+08-02-2008 Ryan Taylor <rptaylor@uvic.ca>
+	* Add a simple and generic interface to help 
+	  do cell masking, the LArBadChannelMasker AlgTool.
+
+07-02-2008 Teddy Todorov <teddy.todorov@cern.ch>
+	* fix posNeg definition
+	* tag LArBadChannelTool-00-00-12
+
+30-01-2008 Walter Lampl <walter.lampl @cern.ch>
+	* move ID checking from parser to BadChannelTool
+	* tag LArBadChannelTool-00-00-11
+	
+30-01-2008 Walter Lampl <walter.lampl @cern.ch>
+        * requirments: Install jobOption fragment
+        * LArBadChanTool.cxx: Fix unchecked StatusCode
+	* jobO cleanup
+	* tag LArBadChannelTool-00-00-10
+	
+29-01-2008 Teddy Todorov <teddy.todorov@cern.chOD>
+	Added merging of DB and ASCII input, reduced verbosity
+	tag LArBadChannelTool-00-00-09
+
+28-01-2008 Teddy Todorov <teddy.todorov@cern.ch>
+	Add reading from DB via callback
+	tag LArBadChannelTool-00-00-08
+
+28-01-2008 Walter Lampl <walter.lampl @cern.ch>
+        * Some work together with Teddy. Writing to a sqlite file works now
+	* tag LArBadChannelTool-00-00-07
+
+21-01-2008 Walter Lampl <walter.lampl @cern.ch>
+	* Get access with offline ID going
+	* tag LArBadChannelTool-00-00-06
+
+16-01-2008 Teddy Todorov <teddy.todorov@cern.ch>
+	Adapted to new ASCII file format, cleaned up, added DEBUG output
+	tag LArBadChannelTool-00-00-05
+	
+2-11-2007 Teddy Todorov <teddy.todorov@cern.ch>
+	* Initial commit 
+	tag LArBadChannelTool-00-00-00
+	

@@ -1,0 +1,159 @@
+{
+  "argValues": {
+    "AMITag": "f628", 
+    "athenaopts": [
+      "--preloadlib=/cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/sw/IntelSoftware/linux/x86_64/xe2013/composer_xe_2013.3.163/compiler/lib/intel64/libintlc.so.5:/cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/sw/IntelSoftware/linux/x86_64/xe2013/composer_xe_2013.3.163/compiler/lib/intel64/libimf.so"
+    ], 
+    "conditionsTag": {
+      "all": "CONDBR2-BLKPA-2015-14"
+    }, 
+    "geometryVersion": {
+      "all": "ATLAS-R2-2015-03-01-00"
+    }, 
+    "inputBSFile": [
+      "../r00278912_multiple_events.RAW.data"
+    ], 
+    "outputESDFile": [
+      "esd.pool.root"
+    ], 
+    "preExec": {
+      "all": [
+        "DQMonFlags.doCTPMon=False;jobproperties.Beam.bunchSpacing.set_Value_and_Lock(25)"
+      ]
+    }
+  }, 
+  "cmdLine": "'/cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/AtlasReconstruction/20.1.8/InstallArea/share/bin/Reco_tf.py' '--AMITag=f628' '--inputBSFile' '../r00278912_multiple_events.RAW.data' '--outputESDFile' 'esd.pool.root' '--conditionsTag' 'CONDBR2-BLKPA-2015-14' '--geometryVersion' 'ATLAS-R2-2015-03-01-00' '--preExec' 'DQMonFlags.doCTPMon=False;jobproperties.Beam.bunchSpacing.set_Value_and_Lock(25)'", 
+  "created": "2015-12-17T13:45:07", 
+  "executor": [
+    {
+      "asetup": null, 
+      "errMsg": "", 
+      "exeConfig": {
+        "inputs": [
+          "BS"
+        ], 
+        "outputs": [
+          "ESD"
+        ], 
+        "script": "athena.py", 
+        "substep": "r2e"
+      }, 
+      "logfileReport": {
+        "countSummary": {
+          "CATASTROPHE": 0, 
+          "CRITICAL": 0, 
+          "DEBUG": 1, 
+          "ERROR": 0, 
+          "FATAL": 0, 
+          "IGNORED": 0, 
+          "INFO": 17482, 
+          "UNKNOWN": 4721, 
+          "VERBOSE": 1, 
+          "WARNING": 542
+        }, 
+        "details": {}
+      }, 
+      "metaData": {}, 
+      "name": "RAWtoESD", 
+      "rc": 0, 
+      "statusOK": true, 
+      "validation": true
+    }
+  ], 
+  "exitAcronym": "OK", 
+  "exitCode": 0, 
+  "exitMsg": "OK", 
+  "exitMsgExtra": "", 
+  "files": {
+    "input": [
+      {
+        "dataset": null, 
+        "nentries": 10, 
+        "subFiles": [
+          {
+            "file_guid": "5E098A31-BAA4-E511-BD9D-02163E010F70", 
+            "name": "r00278912_multiple_events.RAW.data"
+          }
+        ], 
+        "type": "BS"
+      }
+    ], 
+    "output": [
+      {
+        "argName": "outputESDFile", 
+        "dataset": null, 
+        "subFiles": [
+          {
+            "AODFixVersion": "", 
+            "beam_energy": [
+              6500000.0
+            ], 
+            "beam_type": [
+              "collisions"
+            ], 
+            "conditions_tag": "CONDBR2-BLKPA-2015-14", 
+            "file_guid": "38CB0506-E529-E54A-894D-9446437AC741", 
+            "file_size": 34446203, 
+            "file_type": "pool", 
+            "geometry": "ATLAS-R2-2015-03-01-00", 
+            "integrity": true, 
+            "lumi_block": [
+              144
+            ], 
+            "name": "esd.pool.root", 
+            "nentries": 10, 
+            "run_number": [
+              278912
+            ]
+          }
+        ], 
+        "type": "ESD"
+      }
+    ]
+  }, 
+  "name": "Reco_tf", 
+  "reportVersion": "1.0.6", 
+  "resource": {
+    "executor": {
+      "RAWtoESD": {
+        "cpuTime": 234, 
+        "dbData": 147506426, 
+        "dbTime": 144.26, 
+        "memory": {
+          "Avg": {
+            "avgPSS": 1260383, 
+            "avgRSS": 1278576, 
+            "avgSwap": 0, 
+            "avgVMEM": 2000114
+          }, 
+          "Max": {
+            "maxPSS": 2889128, 
+            "maxRSS": 2925876, 
+            "maxSwap": 0, 
+            "maxVMEM": 3980284
+          }
+        }, 
+        "nevents": 10, 
+        "wallTime": 399
+      }
+    }, 
+    "machine": {
+      "cpu_family": "6", 
+      "hepspec": "101.114", 
+      "linux_distribution": [
+        "Scientific Linux CERN SLC", 
+        "6.7", 
+        "Carbon"
+      ], 
+      "model": "42", 
+      "model_name": "Intel Xeon E312xx (Sandy Bridge)", 
+      "node": "lxplus0013.cern.ch", 
+      "platform": "Linux-2.6.32-504.16.2.el6.x86_64-x86_64-with-redhat-6.7-Carbon"
+    }, 
+    "transform": {
+      "cpuTime": 25, 
+      "externalCpuTime": 30, 
+      "wallTime": 461
+    }
+  }
+}
