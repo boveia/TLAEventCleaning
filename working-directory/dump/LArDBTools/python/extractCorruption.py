@@ -1,5 +1,6 @@
 #!/bin/env python
 
+import cppyy
 from PyCool import cool
 #from time import asctime,gmtime,localtime
 

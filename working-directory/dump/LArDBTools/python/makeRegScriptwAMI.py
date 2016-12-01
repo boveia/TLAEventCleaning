@@ -1,5 +1,6 @@
 #!/bin/env python
 import sys,os
+import cppyy
 from PyCool import cool
 sys.path.append('/afs/cern.ch/user/a/atlcond/CondAFSBufferMgr/python')
 from ReadPoolFileCatalog import fileCatalogParser
