@@ -1,6 +1,7 @@
 #!/bin/bash
 setupATLAS
-asetup 20.1.8.4,here
+#asetup 20.1.8.4,here
+asetup 20.7.5.2,here
 
 # cmt co -r LArCellRec-02-12-94-03 LArCalorimeter/LArCellRec
 # cmt co -r TileRecUtils-00-09-47 TileCalorimeter/TileRecUtils
