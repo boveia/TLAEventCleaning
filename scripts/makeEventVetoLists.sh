@@ -1,14 +1,14 @@
 #!/bin/bash
 
-LISTOFRUNNUMBERS=../data/list-2015-tla-runnumbers.txt
-EVENTVETOLISTDIR=../data/event-veto-info
+LISTOFRUNNUMBERS=./list-2016-runnumbers.txt
+EVENTVETOLISTDIR=./data/event-veto-info
 
 ################################################################
 
 # set up some version of Athena
 if [ "$SITEROOT" == "" ]; then
     # exact version doesn't matter
-    source /afs/cern.ch/atlas/software/dist/AtlasSetup/scripts/asetup.sh 20.1.4.8
+    source /afs/cern.ch/atlas/software/dist/AtlasSetup/scripts/asetup.sh 20.7.5.2
 fi
 
 # make the output directory
