@@ -664,9 +664,13 @@ Things that could be improved:
 
 # Notes on 2016 development [notes2016]
 
-Because 2016 is another year, let's carefully check whether the tool still works. 
+Because 2016 is another year, let's carefully check whether the tool
+still works. Pavol Strizenec wrote some documentation of the 2016
+calibration procedures
+here:
+[https://twiki.cern.ch/twiki/bin/view/AtlasComputing/LArDatabaseUpdateHowTo](AtlasComputing/LArDatabaseUpdateHowTo).
 
-I retrieved the LArDBTools from
+I also retrieved the LArDBTools from
 
 ```
 /afs/cern.ch/user/l/larcalib/LArDBTools
@@ -676,13 +680,51 @@ and examined the differences between it and the code I used in 2015.
 
 There are some interesting ones:
 
-- in fillEventVetoFolder.py,
-  ```noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);```
-  becomes
-  ```noiseRangesEECC=buildFilteredRange(allNoise,2,0.05,noiseWord,1);```
+- there are now 'mini noise bursts'
 
-  I suspect this file is the code that runs online on the
-  express/calibration data and fills the database.
+- ```LARBadChannelsOflEventVeto-RUN2-UPD1-00``` instead of ```LARBadChannelsOflEventVeto-RUN2-UPD4-04```
+
+- in fillEventVetoFolder.py,
+  ```noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);``` becomes ```noiseRangesEECC=buildFilteredRange(allNoise,2,0.05,noiseWord,1);``` and elsewhere ```window``` changes similarly from 0.2 s to 0.05 s
+
+
+and some routine ones
+
+- Athena ```20.7.5.2``` instead of ```20.1.4.8```
+
+From the above twiki, 
+
+> The Event Veto folder is now updated for noise bursts by application
+> running online. The cron job running the script for data corruption
+> and MiniNoise burst EventVeto, should send an email, in case some
+> corruption periods were found. In such case the produced sqlite file
+> and/or log should be inspected and uploaded in case everything looks
+> fine.
+
+> Because of online application for MiniNoise bursts is not fully
+> debugged yet, it is recommended to run the EventVeto hunting script
+> for every collisions run. It has to be updated for the bulk
+> processing based on the result of the express processing. So this
+> step has to be done before the 48h calibration loop expires and
+> after the merged DQ Monitoring histogram files from the express
+> processing have arrived on eos. In case of many MinINoise bursts, a
+> second processing of CosmicCalo could be asked, after uploading the
+> EvenVeto from first processing.
+
+> We have currently three cronjob daemons running, trying to extract
+> the EventVeto immediatelly (sic), once the files are available:
+
+> - one looking to a data corruption only, it produces the sqlite
+>   files with name: EventVeto<run>.db, usually not used currently
+
+> - second one is looking for Noise and data corruption, produces the
+>   files with name: EventVeto<run>_Noise_CORR_CosmicCalo.db
+
+> - third one is looking for MNB and data corruption,it is reading
+>   also the express_express files, and produces the file with name:
+>   EventVeto<run>_MNB_CORR.db
+
+
 
 
 # Appendix

@@ -1,6 +1,5 @@
 project = AtlasOffline
-release = 19.3.0
-#grouparea = /afs/cern.ch/atlas/maxidisk/d20/Automation/AtlasProduction-17.0.2.10
+release = 20.7.5.2
 testarea = /afs/cern.ch/user/l/larcalib/LArDBTools
 
 [defaults]
