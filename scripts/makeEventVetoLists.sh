@@ -11,6 +11,8 @@ if [ "$SITEROOT" == "" ]; then
     source /afs/cern.ch/atlas/software/dist/AtlasSetup/scripts/asetup.sh 20.7.5.2
 fi
 
+export PYTHONPATH=.:${PYTHONPATH}
+
 # make the output directory
 mkdir -p ${EVENTVETOLISTDIR}
 # look over the list of run numbers and do showEventVeto for each run

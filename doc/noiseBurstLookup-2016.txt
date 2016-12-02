@@ -724,6 +724,57 @@ From the above twiki,
 >   also the express_express files, and produces the file with name:
 >   EventVeto<run>_MNB_CORR.db
 
+## Mini-noise bursts
+
+Prior to 2016, time intervals were flagged to veto as LAr "noise
+bursts" (NB) when calibration processing identified coherent noise in
+the EM endcap (EMEC) affecting multiple front-end boards (FEBs). In
+2016, LAr began also flagged time intervals as "mini noise bursts"
+(MNB) when coherent noise was identified in specific isolated FEBs in
+the EM barrel (EMB). For an overview of the LAr changes in 2016, see
+Steffan
+Starz's
+[talk](https://indico.cern.ch/event/402291/contributions/2294963/attachments/1356441/2050446/2016_10_ATLAS_week_LAr_status_report.pdf),
+at the ATLAS Week in October 2016,
+and
+[this talk](https://indico.cern.ch/event/569856/contributions/2311894/attachments/1345622/2029979/20160929_MLB_MNBStudies.pdf) on
+mini-noise bursts
+and
+[this overview](https://indico.cern.ch/event/569856/contributions/2304541/attachments/1345345/2028137/20160929-LArWeekPlenary.pdf) at
+the ATLAS LAr Week in September 2016.
+
+The algorithm to identify MNBs began as an offline algorithm during
+2016 commissioning, and began running online on the LArNoiseBurst
+stream as of run 306384.
+
+
+
+
+## Hasty first attempt
+
+On the afternoon before Thanksgiving, I glanced through the diffs
+above, copied what seemed to be the mini-noise-burst changes in
+```showEventVeto.py```, and ran the ```makeEventVetoLists.sh``` script
+for all of the 2016 runs. Will Kalderon passed this data into my
+TLAEventCleaning reader and compared to the offline LArError flag for
+physics_Main data
+in
+[this talk](https://indico.cern.ch/event/591250/contributions/2386293/attachments/1379515/2096484/2016.11.29_TLA_weekly.pdf). He
+found that, for 1/3 of Run 304006, the tool failed to flag 98.2% of
+Time Veto events. So something is drastically wrong. (It did not flag
+any events bad that were ok, so its performance could have been
+worse!)
+
+## Thoughtful attempt
+
+
+
+
+
+
+```
+    source /afs/cern.ch/atlas/software/dist/AtlasSetup/scripts/asetup.sh 20.7.5.2
+```
 
 
 
