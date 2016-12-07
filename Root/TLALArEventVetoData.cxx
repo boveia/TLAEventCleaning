@@ -128,6 +128,9 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // parse the run, lbn, and timestamp info. the lbn can either be a single number or
     // a range "2-3".
     
+    // normal line:
+    // Event Veto ['MiniNoiseBurst'], Mon Aug 15 00:21:38 2016 UTC-Mon Aug 15 00:21:38 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220498122718208.000000,1471220498112718080.000000)
+
     vector<string> fields(25); // 24 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
     split( fields , line , is_any_of(" ,().[]'") , token_compress_on );
     // field(0-21) / desc
@@ -136,9 +139,25 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // 18: 'LB' if one LB, 'LBs' if range of LBs
     // 19: lumi block
     // 22,20: stop and start (note reversed order)
+
+    // with mini noise bursts, some lines can look like:
+    // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Mon Aug 15 00:21:52 2016 UTC-Mon Aug 15 00:21:52 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220512684932864.000000,1471220512674932736.000000)
+    // in this case, concatenate the elements of the vector to give 'NoiseBurst+MiniNoiseBurst'
+    if (fields.size()==26) {
+      vector<string> newfields(25);
+      newfields[0] = fields[0];
+      newfields[1] = fields[1];
+      newfields[2] = fields[2]+"+"+fields[3];
+      for(int i_field = 3; i_field < fields.size()-1; i_field++) {
+	newfields[i_field] = fields[i_field+1];
+      }
+      fields = newfields;
+    }
+
     if( fields.size()!=25 ) {
       cout << "TLALaArEventVetoData::loadRunFromFilename could not parse " << filename << " at line:" << endl;
       cout << line << endl;
+      cout << "fields.size() = " << fields.size() << endl;
       return false;
     }
     const string line_interval_type{fields[2]};
@@ -210,7 +229,7 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
     _lbns_for_currun = nullptr;
   }
   // insert
-  EventVetoIntervals& intervals{_t[run][lbn]};
+  EventVetoIntervals& intervals = _t[run][lbn];
   TimeStampType begin_ts_sec{static_cast<uint32_t>(begin_ts / 1000000000ul)};
   TimeStampType end_ts_sec{static_cast<uint32_t>(end_ts / 1000000000ul)};
   TimeStampType begin_ts_ns{static_cast<uint32_t>(begin_ts % 1000000000ul)};
