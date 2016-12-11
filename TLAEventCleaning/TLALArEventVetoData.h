@@ -49,6 +49,10 @@ public:
   
   bool shouldVeto( const RunNumberType& run , const LumiBlockType& lbn ,
                    const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const;
+
+  std::string vetoType( const RunNumberType& run , const LumiBlockType& lbn ,
+			const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const;
+
 private:
   bool _loaded;
 
@@ -62,6 +66,7 @@ private:
   struct TimeStampRange {
     EventTimeStamp start;
     EventTimeStamp stop;
+    std::string interval_type;
   };
   using EventVetoIntervals = std::vector<TimeStampRange>;
   using EventVetoLumiBlocks = std::map<LumiBlockType,EventVetoIntervals>;
@@ -76,7 +81,8 @@ private:
   bool loadRunFromFilename( const boost::filesystem::path filename );
   RunNumberType runNumberFromFilename( const boost::filesystem::path filename ) const;
   void insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
-                       const unsigned long& begin_ts , const unsigned long& end_ts );
+                       const unsigned long& begin_ts , const unsigned long& end_ts,
+		       const std::string& interval_type );
 };
 
 #endif // WRAP_TLALAREVENTVETODATA_H
