@@ -1,0 +1,1 @@
+This package, cloned from https://github.com/boveia/TLAEventCleaning on 30.03.17, is used by TLAAlgos to implement the TLA-specific event cleaning based on timestamp information in the text files in data/
