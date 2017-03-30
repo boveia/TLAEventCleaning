@@ -1,0 +1,38 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  SG::GenericElementLinkBase<SG::IdentContIndexingPolicy<Muon::MuonPrepDataContainer<Muon::MuonPrepDataCollection<Muon::MdtPrepData> > > > found in MuonRIO_OnTrackDict.so  is already in iMuGirlStauDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<unsigned int,double> found in CaloEventDict.so  is already in libPileupReweightingLib.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  L1CaloCoolChannelId found in TrigT1CaloCalibConditionsDict.so  is already in LArMonitoringDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<unsigned int,unsigned int> found in AtlasSTLAddReflexDict.so  is already in libPileupReweightingLib.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<int,float> found in libCore.so  is already in AtlasSTLAddReflexDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<string,double> found in libCore.so  is already in AtlasSTLAddReflexDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<double> > found in libGenVector.so  is already in xAODCoreAthenaDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  ROOT::Math::PtEtaPhiM4D<double> found in libGenVector.so  is already in xAODCoreAthenaDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD1-00  Run 307126 to 307126
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc49-opt/20.7.5/AtlasCore/20.7.5/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+[?1034hDumping EventVeto data from run 307126 to run 307126  lasting from Thu Aug 25 02:37:43 2016 UTC to Thu Aug 25 07:43:26 2016 UTC
+Event Veto ['NoiseBurst'], Thu Aug 25 04:23:46 2016 UTC-Thu Aug 25 04:23:46 2016 UTC (0.010 )  Run 307126, LB 112 (1472099026718163712.000000,1472099026708163584.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:25:26 2016 UTC-Thu Aug 25 04:25:26 2016 UTC (0.010 )  Run 307126, LB 114 (1472099126731937792.000000,1472099126721756928.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:26:58 2016 UTC-Thu Aug 25 04:26:58 2016 UTC (0.010 )  Run 307126, LB 116 (1472099218388717056.000000,1472099218378697472.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:27:53 2016 UTC-Thu Aug 25 04:27:53 2016 UTC (0.010 )  Run 307126, LB 117 (1472099273940779776.000000,1472099273930779392.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:29:10 2016 UTC-Thu Aug 25 04:29:10 2016 UTC (0.010 )  Run 307126, LB 118 (1472099350297973248.000000,1472099350287955456.000000)
+Event Veto ['MiniNoiseBurst'], Thu Aug 25 04:35:11 2016 UTC-Thu Aug 25 04:35:11 2016 UTC (0.010 )  Run 307126, LB 124 (1472099711110947840.000000,1472099711100947968.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:35:28 2016 UTC-Thu Aug 25 04:35:28 2016 UTC (0.010 )  Run 307126, LB 124 (1472099728958376960.000000,1472099728948357376.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:40:57 2016 UTC-Thu Aug 25 04:40:57 2016 UTC (0.010 )  Run 307126, LB 130 (1472100057814277120.000000,1472100057804115456.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:44:07 2016 UTC-Thu Aug 25 04:44:07 2016 UTC (0.010 )  Run 307126, LB 133 (1472100247662456576.000000,1472100247652302080.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:46:13 2016 UTC-Thu Aug 25 04:46:13 2016 UTC (0.010 )  Run 307126, LB 135 (1472100373845250048.000000,1472100373835075328.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 04:50:40 2016 UTC-Thu Aug 25 04:50:40 2016 UTC (0.010 )  Run 307126, LB 140 (1472100640915258880.000000,1472100640905258496.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 05:11:13 2016 UTC-Thu Aug 25 05:11:13 2016 UTC (0.010 )  Run 307126, LB 161 (1472101873619419904.000000,1472101873609233920.000000)
+Event Veto ['MiniNoiseBurst'], Thu Aug 25 05:17:45 2016 UTC-Thu Aug 25 05:17:45 2016 UTC (0.010 )  Run 307126, LB 168 (1472102265085371904.000000,1472102265075371776.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 05:50:27 2016 UTC-Thu Aug 25 05:50:27 2016 UTC (0.010 )  Run 307126, LB 200 (1472104227072739840.000000,1472104227062644224.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 05:58:44 2016 UTC-Thu Aug 25 05:58:44 2016 UTC (0.011 )  Run 307126, LB 209 (1472104724176336384.000000,1472104724164979456.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 06:13:55 2016 UTC-Thu Aug 25 06:13:55 2016 UTC (0.011 )  Run 307126, LB 224 (1472105635053268992.000000,1472105635042703104.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 06:14:13 2016 UTC-Thu Aug 25 06:14:13 2016 UTC (0.010 )  Run 307126, LB 225 (1472105653502026752.000000,1472105653491837184.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 06:32:13 2016 UTC-Thu Aug 25 06:32:13 2016 UTC (0.010 )  Run 307126, LB 242 (1472106733684871936.000000,1472106733674711040.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 06:59:38 2016 UTC-Thu Aug 25 06:59:38 2016 UTC (0.010 )  Run 307126, LB 271 (1472108378491419136.000000,1472108378481305856.000000)
+Event Veto ['MiniNoiseBurst'], Thu Aug 25 07:02:13 2016 UTC-Thu Aug 25 07:02:13 2016 UTC (0.010 )  Run 307126, LB 274 (1472108533819247872.000000,1472108533809247744.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 07:21:38 2016 UTC-Thu Aug 25 07:21:38 2016 UTC (0.010 )  Run 307126, LB 293 (1472109698312666368.000000,1472109698302545664.000000)
+Event Veto ['NoiseBurst'], Thu Aug 25 07:31:52 2016 UTC-Thu Aug 25 07:31:52 2016 UTC (0.010 )  Run 307126, LB 303 (1472110312121676544.000000,1472110312111675648.000000)
+Found a total of 19 noisy periods, covering a total of 0.19 seconds
+Found a total of 3 Mini noise periods, covering a total of 0.03 seconds
+Lumi loss due to noise-bursts: 0.51 nb-1 out of 30679.75 nb-1 (0.02 per-mil)
+Lumi loss due to mini-noise-bursts: 0.08 nb-1 out of 30679.75 nb-1 (0.00 per-mil)
