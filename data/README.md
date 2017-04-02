@@ -4,4 +4,5 @@ There are various sets of event veto data:
 * event-veto-data-old: 2016 with 2015 tool
 * event-veto-data: first attempt at adding miniNoiseBursts for 2016
 * event-veto-info-periodF: correct tool for period F
-* event-veto-info-merge: the most recent offering for all runs (a mix of info-periodF and data)
+* event-veto-info-all2016: as above, for full year up to 311481 (info-periodF is a subset)
+* event-veto-info-merge: the most recent offering for all runs (a mix of info-all2016 and data -- as of 02.04 17:30 CEST, 309759, 310249, 310341, 310468 and 311287 crashed without finishing in info-all2016 so the old files are used here)
