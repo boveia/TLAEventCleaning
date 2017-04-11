@@ -8,6 +8,8 @@ def main():
     info1 = '../data/event-veto-info-merge'
     info2 = '../data/event-veto-info-all2016'
 
+    info1 = '../data/event-veto-info-all2016'
+    info2 = '/afs/cern.ch/user/d/doglioni/public/TLA/event-veto-info-all2016/'
 
     checkstr = '-3*'
 
