@@ -9,7 +9,8 @@ def main():
     info2 = '../data/event-veto-info-all2016'
 
     info1 = '../data/event-veto-info-all2016'
-    info2 = '/afs/cern.ch/user/d/doglioni/public/TLA/event-veto-info-all2016/'
+    info1 = '../data/event-veto-info-merge'
+    # info2 = '/afs/cern.ch/user/d/doglioni/public/TLA/event-veto-info-all2016/'
 
     checkstr = '-3*'
 
@@ -92,6 +93,16 @@ def getNumbers(filename):
     outDict = {}
     nInterestingLines = 0
     outDict['crashed'] = False
+
+    # Event Veto ['MiniNoiseBurst'], Sun Oct  9 17:47:00 2016 UTC-Sun Oct  9 17:47:00 2016 UTC (0.010 )  Run 310249, LB 554 (1476035220072295168.000000,1476035220062295296.000000)
+    # Event Veto ['MiniNoiseBurst'], Sun Oct  9 17:47:00 2016 UTC-Sun Oct  9 17:47:00 2016 UTC (0.010 ) CORAL/RelationalPlugins/oracle Error ORA-25408: can not safely replay call (retrieving the describe handle of ATLAS_COOLONL_TRIGGER."COOL_C2" (Schema::existsTable))
+    # Connection lost! Skipping  1476035220972258155
+    # Run 0, LBs 0-554 (1476035220982258176.000000,1476035220972258048.000000)
+
+    os.system('grep "Connection failed" '+filename)
+    # for line in lines:
+        # if line.startswith('Event Veto') and not line.endswith('.000000)'):
+            
 
     # for line in lines[-7:]:
     for line in lines[-20:]:
