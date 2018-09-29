@@ -748,8 +748,7 @@ The algorithm to identify MNBs began as an offline algorithm during
 stream as of run 306384.
 
 
-
-
+ 
 ## Hasty first attempt
 
 On the afternoon before Thanksgiving, I glanced through the diffs
@@ -767,15 +766,28 @@ worse!)
 
 ## Thoughtful attempt
 
-
-
-
-
+I've patched the TLA dumping code to match the LArDBTools currently on AFS, which use
 
 ```
     source /afs/cern.ch/atlas/software/dist/AtlasSetup/scripts/asetup.sh 20.7.5.2
 ```
 
+The 'hasty' attempt only included a partial patch of the
+showEventVeto.py, with the wrong output format. This attempt fixed the
+output format and included the changes to the other python code in the
+package. The result: the output now contains mini noise bursts as
+of Run 306310, which was recorded on 14 August. 
+
+Using the hasty-attempt output, Will checked a run prior to this run. So we have two questions
+
+- does the output that includes mini noise bursts (and has been
+  reformatted) agree with the offline LAr veto more than 1.8% of the time?
+  
+- what about runs < 306310? The LAr Week talks state that the MNB
+  algorithm ran throughout 2016, but prior to 306310 it ran offline
+  and somehow fed into the bulk processing. Where is the output of
+  that offline run?
+  
 
 
 # Appendix
