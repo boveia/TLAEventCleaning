@@ -1,0 +1,54 @@
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD1-00  Run 303007 to 303007
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.4/AtlasCore/20.1.4/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+Error in <TCint::AutoLoadCallback>: failure loading library libGaudiPythonDict for class basic_ostream<char,char_traits<char> >
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<bool>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<double>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<float>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<short>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-int>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-short>=vector.dll vectorbool.dll> for level 0; ignored
+[?1034hDumping EventVeto data from run 303007 to run 303007  lasting from Wed Jun 29 22:13:49 2016 UTC to Thu Jun 30 01:49:50 2016 UTC
+Event Veto ['NoiseBurst'], Thu Jun 30 00:06:54 2016 UTC-Thu Jun 30 00:06:54 2016 UTC (0.010 )  Run 303007, LB 121 (1467245214172974848.000000,1467245214162974208.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 00:56:57 2016 UTC-Thu Jun 30 00:56:57 2016 UTC (0.010 )  Run 303007, LB 173 (1467248217371714560.000000,1467248217361582336.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 00:57:22 2016 UTC-Thu Jun 30 00:57:22 2016 UTC (0.010 )  Run 303007, LB 174 (1467248242819913216.000000,1467248242809903872.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 00:58:13 2016 UTC-Thu Jun 30 00:58:13 2016 UTC (0.010 )  Run 303007, LB 175 (1467248293445301504.000000,1467248293435300864.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 00:58:31 2016 UTC-Thu Jun 30 00:58:31 2016 UTC (0.010 )  Run 303007, LB 175 (1467248311076247808.000000,1467248311066177536.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 00:59:32 2016 UTC-Thu Jun 30 00:59:32 2016 UTC (0.010 )  Run 303007, LB 176 (1467248372924391680.000000,1467248372914088960.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:00:24 2016 UTC-Thu Jun 30 01:00:24 2016 UTC (0.011 )  Run 303007, LB 177 (1467248424946968832.000000,1467248424935475968.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:01:11 2016 UTC-Thu Jun 30 01:01:11 2016 UTC (0.010 )  Run 303007, LB 178 (1467248471129069568.000000,1467248471119069184.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:01:29 2016 UTC-Thu Jun 30 01:01:29 2016 UTC (0.020 )  Run 303007, LB 178 (1467248489644610560.000000,1467248489625026560.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:02:55 2016 UTC-Thu Jun 30 01:02:56 2016 UTC (0.010 )  Run 303007, LB 179 (1467248576000599040.000000,1467248575990506496.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:03:35 2016 UTC-Thu Jun 30 01:03:35 2016 UTC (0.010 )  Run 303007, LB 180 (1467248615198447872.000000,1467248615188446976.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:10:26 2016 UTC-Thu Jun 30 01:10:26 2016 UTC (0.010 )  Run 303007, LB 187 (1467249026726800128.000000,1467249026716641536.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:10:57 2016 UTC-Thu Jun 30 01:10:57 2016 UTC (0.020 )  Run 303007, LB 188 (1467249057057384704.000000,1467249057037473280.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:13:02 2016 UTC-Thu Jun 30 01:13:02 2016 UTC (0.011 )  Run 303007, LB 190 (1467249182240977920.000000,1467249182230413568.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:13:34 2016 UTC-Thu Jun 30 01:13:34 2016 UTC (0.013 )  Run 303007, LB 191 (1467249214293012736.000000,1467249214280097024.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:14:38 2016 UTC-Thu Jun 30 01:14:38 2016 UTC (0.010 )  Run 303007, LB 192 (1467249278316962304.000000,1467249278306621440.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:16:23 2016 UTC-Thu Jun 30 01:16:23 2016 UTC (0.017 )  Run 303007, LB 194 (1467249383465080832.000000,1467249383447875584.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:18:05 2016 UTC-Thu Jun 30 01:18:05 2016 UTC (0.017 )  Run 303007, LB 195 (1467249485308582400.000000,1467249485291445248.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:19:54 2016 UTC-Thu Jun 30 01:19:54 2016 UTC (0.014 )  Run 303007, LB 197 (1467249594987270144.000000,1467249594973267968.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:20:05 2016 UTC-Thu Jun 30 01:20:05 2016 UTC (0.010 )  Run 303007, LB 197 (1467249605889535232.000000,1467249605879459072.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:20:17 2016 UTC-Thu Jun 30 01:20:17 2016 UTC (0.013 )  Run 303007, LB 197 (1467249617612591616.000000,1467249617599439616.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:20:24 2016 UTC-Thu Jun 30 01:20:24 2016 UTC (0.010 )  Run 303007, LB 198 (1467249624064049920.000000,1467249624053970944.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:21:28 2016 UTC-Thu Jun 30 01:21:28 2016 UTC (0.016 )  Run 303007, LB 199 (1467249688583237120.000000,1467249688567675904.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:22:13 2016 UTC-Thu Jun 30 01:22:13 2016 UTC (0.010 )  Run 303007, LB 199 (1467249733863645696.000000,1467249733853529344.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:23:50 2016 UTC-Thu Jun 30 01:23:50 2016 UTC (0.010 )  Run 303007, LB 201 (1467249830474612736.000000,1467249830464415232.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:27:48 2016 UTC-Thu Jun 30 01:27:48 2016 UTC (0.012 )  Run 303007, LB 205 (1467250068833100288.000000,1467250068820810496.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:29:32 2016 UTC-Thu Jun 30 01:29:32 2016 UTC (0.012 )  Run 303007, LB 207 (1467250172904120832.000000,1467250172892102912.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:29:48 2016 UTC-Thu Jun 30 01:29:48 2016 UTC (0.010 )  Run 303007, LB 207 (1467250188188855552.000000,1467250188178680320.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:30:12 2016 UTC-Thu Jun 30 01:30:12 2016 UTC (0.020 )  Run 303007, LB 207 (1467250212822849280.000000,1467250212802467328.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:30:14 2016 UTC-Thu Jun 30 01:30:14 2016 UTC (0.011 )  Run 303007, LB 207 (1467250214624565248.000000,1467250214613068800.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:30:49 2016 UTC-Thu Jun 30 01:30:49 2016 UTC (0.012 )  Run 303007, LB 208 (1467250249865884416.000000,1467250249854352640.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:31:37 2016 UTC-Thu Jun 30 01:31:38 2016 UTC (0.010 )  Run 303007, LB 209 (1467250298001302784.000000,1467250297991149568.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:32:15 2016 UTC-Thu Jun 30 01:32:16 2016 UTC (0.020 )  Run 303007, LB 209 (1467250336011309824.000000,1467250335991594496.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:33:21 2016 UTC-Thu Jun 30 01:33:21 2016 UTC (0.021 )  Run 303007, LB 210 (1467250401770085632.000000,1467250401749525760.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:33:26 2016 UTC-Thu Jun 30 01:33:26 2016 UTC (0.011 )  Run 303007, LB 211 (1467250406833731840.000000,1467250406823064832.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:35:18 2016 UTC-Thu Jun 30 01:35:18 2016 UTC (0.017 )  Run 303007, LB 215 (1467250518566621696.000000,1467250518549185280.000000)
+Event Veto ['NoiseBurst'], Thu Jun 30 01:35:56 2016 UTC-Thu Jun 30 01:35:56 2016 UTC (0.018 )  Run 303007, LB 215 (1467250556748630272.000000,1467250556730340096.000000)
+Found a total of 37 noisy periods, covering a total of 0.48 seconds
+Lumi loss due to noise-bursts: 4.70 nb-1 out of 25718.73 nb-1 (0.18 per-mil)

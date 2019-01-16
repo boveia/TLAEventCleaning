@@ -1,0 +1,23 @@
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD1-00  Run 302831 to 302831
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.4/AtlasCore/20.1.4/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+Error in <TCint::AutoLoadCallback>: failure loading library libGaudiPythonDict for class basic_ostream<char,char_traits<char> >
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<bool>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<double>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<float>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<short>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-int>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-short>=vector.dll vectorbool.dll> for level 0; ignored
+[?1034hDumping EventVeto data from run 302831 to run 302831  lasting from Sun Jun 26 04:30:12 2016 UTC to Sun Jun 26 06:30:34 2016 UTC
+Event Veto ['NoiseBurst'], Sun Jun 26 04:33:07 2016 UTC-Sun Jun 26 04:33:07 2016 UTC (0.010 )  Run 302831, LB 5 (1466915587257474816.000000,1466915587247474176.000000)
+Event Veto ['NoiseBurst'], Sun Jun 26 05:07:23 2016 UTC-Sun Jun 26 05:07:23 2016 UTC (0.010 )  Run 302831, LB 39 (1466917643162131712.000000,1466917643151674112.000000)
+Event Veto ['NoiseBurst'], Sun Jun 26 05:09:17 2016 UTC-Sun Jun 26 05:09:17 2016 UTC (0.010 )  Run 302831, LB 41 (1466917757225051648.000000,1466917757214731520.000000)
+Event Veto ['NoiseBurst'], Sun Jun 26 05:39:06 2016 UTC-Sun Jun 26 05:39:06 2016 UTC (0.010 )  Run 302831, LB 73 (1466919546204037888.000000,1466919546193725696.000000)
+Event Veto ['NoiseBurst'], Sun Jun 26 05:58:27 2016 UTC-Sun Jun 26 05:58:27 2016 UTC (0.010 )  Run 302831, LB 93 (1466920707865643264.000000,1466920707855378688.000000)
+Event Veto ['NoiseBurst'], Sun Jun 26 06:00:16 2016 UTC-Sun Jun 26 06:00:16 2016 UTC (0.010 )  Run 302831, LB 95 (1466920816394270464.000000,1466920816383945728.000000)
+Found a total of 6 noisy periods, covering a total of 0.06 seconds
+Lumi loss due to noise-bursts: 0.24 nb-1 out of 26311.58 nb-1 (0.01 per-mil)

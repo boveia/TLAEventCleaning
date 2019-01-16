@@ -1,0 +1,18 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  SG::GenericElementLinkBase<SG::IdentContIndexingPolicy<Muon::MuonPrepDataContainer<Muon::MuonPrepDataCollection<Muon::MdtPrepData> > > > found in MuonRIO_OnTrackDict.so  is already in iMuGirlStauDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<unsigned int,double> found in CaloEventDict.so  is already in libPileupReweightingLib.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  L1CaloCoolChannelId found in TrigT1CaloCalibConditionsDict.so  is already in LArMonitoringDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<unsigned int,unsigned int> found in AtlasSTLAddReflexDict.so  is already in libPileupReweightingLib.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<int,float> found in libCore.so  is already in AtlasSTLAddReflexDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  pair<string,double> found in libCore.so  is already in AtlasSTLAddReflexDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<double> > found in libGenVector.so  is already in xAODCoreAthenaDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  ROOT::Math::PtEtaPhiM4D<double> found in libGenVector.so  is already in xAODCoreAthenaDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD1-00  Run 301912 to 301912
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc49-opt/20.7.5/AtlasCore/20.7.5/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+[?1034hDumping EventVeto data from run 301912 to run 301912  lasting from Sat Jun 11 07:55:10 2016 UTC to Sat Jun 11 10:41:52 2016 UTC
+Event Veto ['NoiseBurst'], Sat Jun 11 09:46:41 2016 UTC-Sat Jun 11 09:46:41 2016 UTC (0.010 )  Run 301912, LB 119 (1465638401151618304.000000,1465638401141518592.000000)
+Event Veto ['NoiseBurst'], Sat Jun 11 09:47:19 2016 UTC-Sat Jun 11 09:47:19 2016 UTC (0.010 )  Run 301912, LB 120 (1465638439708811776.000000,1465638439698699264.000000)
+Event Veto ['NoiseBurst'], Sat Jun 11 10:16:27 2016 UTC-Sat Jun 11 10:16:27 2016 UTC (0.010 )  Run 301912, LB 150 (1465640187379436288.000000,1465640187369310720.000000)
+Event Veto ['NoiseBurst'], Sat Jun 11 10:21:47 2016 UTC-Sat Jun 11 10:21:47 2016 UTC (0.010 )  Run 301912, LB 155 (1465640507396149760.000000,1465640507385960448.000000)
+Found a total of 4 noisy periods, covering a total of 0.04 seconds
+Lumi loss due to noise-bursts: 0.10 nb-1 out of 10269.25 nb-1 (0.01 per-mil)

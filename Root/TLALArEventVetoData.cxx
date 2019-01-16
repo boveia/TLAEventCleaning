@@ -128,6 +128,9 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // parse the run, lbn, and timestamp info. the lbn can either be a single number or
     // a range "2-3".
     
+    // normal line:
+    // Event Veto ['MiniNoiseBurst'], Mon Aug 15 00:21:38 2016 UTC-Mon Aug 15 00:21:38 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220498122718208.000000,1471220498112718080.000000)
+
     vector<string> fields(25); // 24 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
     split( fields , line , is_any_of(" ,().[]'") , token_compress_on );
     // field(0-21) / desc
@@ -136,9 +139,25 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // 18: 'LB' if one LB, 'LBs' if range of LBs
     // 19: lumi block
     // 22,20: stop and start (note reversed order)
+
+    // with mini noise bursts, some lines can look like:
+    // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Mon Aug 15 00:21:52 2016 UTC-Mon Aug 15 00:21:52 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220512684932864.000000,1471220512674932736.000000)
+    // in this case, concatenate the elements of the vector to give 'NoiseBurst+MiniNoiseBurst'
+    if (fields.size()==26) {
+      vector<string> newfields(25);
+      newfields[0] = fields[0];
+      newfields[1] = fields[1];
+      newfields[2] = fields[2]+"+"+fields[3];
+      for(int i_field = 3; i_field < fields.size()-1; i_field++) {
+	newfields[i_field] = fields[i_field+1];
+      }
+      fields = newfields;
+    }
+
     if( fields.size()!=25 ) {
       cout << "TLALaArEventVetoData::loadRunFromFilename could not parse " << filename << " at line:" << endl;
       cout << line << endl;
+      cout << "fields.size() = " << fields.size() << endl;
       return false;
     }
     const string line_interval_type{fields[2]};
@@ -176,7 +195,8 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     
     // insert this interval into the table
     for( auto lbn = line_lbni; lbn!=(line_lbnf+1); ++lbn ) {
-      insertInterval( line_run , lbn , line_tsi , line_tsf );
+      // insertInterval( line_run , lbn , line_tsi , line_tsf );
+      insertInterval( line_run , lbn , line_tsi , line_tsf, line_interval_type );
       any_insertions = true;
     }
     
@@ -202,7 +222,8 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
 
 void
 TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
-                                     const unsigned long& begin_ts , const unsigned long& end_ts )
+                                     const unsigned long& begin_ts , const unsigned long& end_ts, 
+				     const std::string& interval_type)
 {
   // first check if loaded is true. if so, we have to invalidate the run cache first
   if( _loaded ) {
@@ -215,7 +236,7 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
   TimeStampType end_ts_sec{static_cast<uint32_t>(end_ts / 1000000000ul)};
   TimeStampType begin_ts_ns{static_cast<uint32_t>(begin_ts % 1000000000ul)};
   TimeStampType end_ts_ns{static_cast<uint32_t>(end_ts % 1000000000ul)};
-  intervals.emplace_back( TimeStampRange({{begin_ts_sec,begin_ts_ns},{end_ts_sec,end_ts_ns}}) );
+  intervals.emplace_back( TimeStampRange({{begin_ts_sec,begin_ts_ns},{end_ts_sec,end_ts_ns},interval_type}) );
 }
 
 bool
@@ -272,3 +293,58 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   
   return false;
 }
+
+
+std::string
+TLALArEventVetoData::vetoType( const RunNumberType& run , const LumiBlockType& lbn ,
+			       const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const
+{
+  // Check the type of LAr event veto that has fired for the event
+  // recorded at the given timestamp (which has two parts, 'ts'
+  // (seconds) and 'ts_ns_offset' (nanoseconds)) for the lumiblock
+  // 'lbn' during run number 'run'. All four variables can be found
+  // from the EventInfo header for an event.
+  //
+  // Returns a string e.g. "NoiseBurst", "MiniNoiseBurst", "MoiseBurst+MiniNoiseBurts"
+  // based on the entry in the input file. Returns "none" if event not vetoed.
+  // Throws an exception if the event veto data has not been loaded, or if
+  // the event did not re is no (even empty) event veto data provided for the given run.
+    
+  // look up run. check 'cached' run first. since the LBN table for the run will never be changed
+  // during a job, we'll
+  
+  if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
+    auto ir = _t.find(run);
+    if( ir==_t.end() ) { throw std::exception(); }
+    _currun = run;
+    _lbns_for_currun = &(ir->second);
+  }  
+
+  // look up LB
+  const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
+  auto il = blocks.find(lbn);
+  if( il == blocks.end() ) { return false; }
+  
+  // do any intervals contain this timestamp?
+  //   - std::function<bool(const TimeStampType&,const TimeStampType&>> 
+  //     auto ts_compare = ((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
+  const EventVetoIntervals& intervals(il->second);
+  EventTimeStamp event_ts{ts,ts_ns_offset};
+
+  // do any intervals contain this timestamp?
+  for( auto interval : intervals ) {
+    if( event_ts < interval.start ) { continue; }
+    if( interval.stop < event_ts ) { continue; }
+    // yes
+    return interval.interval_type;
+  }
+  
+  // // find first element whose start time is >= this event timestamp
+  // auto i = std::lower_bound( std::begin(intervals) , std::end(intervals) , ts ,
+  //                            [](const TimeStampRange& a, const TimeStampRange& b) {
+  //                              return((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
+  //                            } );
+  
+  return "none";
+}
+
