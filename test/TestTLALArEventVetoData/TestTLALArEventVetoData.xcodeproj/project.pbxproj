@@ -8,196 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		166C70CE1C4BDF0E001AD2DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 166C70CD1C4BDF0E001AD2DC /* main.cpp */; };
-		166C70D51C4BE020001AD2DC /* TLALArEventVetoData.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */; settings = {ASSET_TAGS = (); }; };
-		166C71311C4C0ED6001AD2DC /* event-veto-276073.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70D71C4C0EB0001AD2DC /* event-veto-276073.txt */; };
-		166C71321C4C0ED6001AD2DC /* event-veto-276147.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70D81C4C0EB0001AD2DC /* event-veto-276147.txt */; };
-		166C71331C4C0ED6001AD2DC /* event-veto-276161.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70D91C4C0EB0001AD2DC /* event-veto-276161.txt */; };
-		166C71341C4C0ED6001AD2DC /* event-veto-276176.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70DA1C4C0EB0001AD2DC /* event-veto-276176.txt */; };
-		166C71351C4C0ED6001AD2DC /* event-veto-276181.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70DB1C4C0EB0001AD2DC /* event-veto-276181.txt */; };
-		166C71361C4C0ED6001AD2DC /* event-veto-276183.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70DC1C4C0EB0001AD2DC /* event-veto-276183.txt */; };
-		166C71371C4C0ED6001AD2DC /* event-veto-276189.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70DD1C4C0EB0001AD2DC /* event-veto-276189.txt */; };
-		166C71381C4C0ED6001AD2DC /* event-veto-276212.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70DE1C4C0EB0001AD2DC /* event-veto-276212.txt */; };
-		166C71391C4C0ED6001AD2DC /* event-veto-276245.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70DF1C4C0EB0001AD2DC /* event-veto-276245.txt */; };
-		166C713A1C4C0ED6001AD2DC /* event-veto-276262.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E01C4C0EB0001AD2DC /* event-veto-276262.txt */; };
-		166C713B1C4C0ED6001AD2DC /* event-veto-276329.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E11C4C0EB0001AD2DC /* event-veto-276329.txt */; };
-		166C713C1C4C0ED6001AD2DC /* event-veto-276330.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E21C4C0EB0001AD2DC /* event-veto-276330.txt */; };
-		166C713D1C4C0ED6001AD2DC /* event-veto-276336.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E31C4C0EB0001AD2DC /* event-veto-276336.txt */; };
-		166C713E1C4C0ED6001AD2DC /* event-veto-276416.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E41C4C0EB0001AD2DC /* event-veto-276416.txt */; };
-		166C713F1C4C0ED6001AD2DC /* event-veto-276511.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E51C4C0EB0001AD2DC /* event-veto-276511.txt */; };
-		166C71401C4C0ED6001AD2DC /* event-veto-276689.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E61C4C0EB0001AD2DC /* event-veto-276689.txt */; };
-		166C71411C4C0ED6001AD2DC /* event-veto-276731.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E71C4C0EB0001AD2DC /* event-veto-276731.txt */; };
-		166C71421C4C0ED6001AD2DC /* event-veto-276778.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E81C4C0EB0001AD2DC /* event-veto-276778.txt */; };
-		166C71431C4C0ED6001AD2DC /* event-veto-276790.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70E91C4C0EB0001AD2DC /* event-veto-276790.txt */; };
-		166C71441C4C0ED6001AD2DC /* event-veto-276952.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70EA1C4C0EB0001AD2DC /* event-veto-276952.txt */; };
-		166C71451C4C0ED6001AD2DC /* event-veto-276954.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70EB1C4C0EB0001AD2DC /* event-veto-276954.txt */; };
-		166C71461C4C0ED6001AD2DC /* event-veto-277025.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70EC1C4C0EB0001AD2DC /* event-veto-277025.txt */; };
-		166C71471C4C0ED6001AD2DC /* event-veto-278727.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70ED1C4C0EB0001AD2DC /* event-veto-278727.txt */; };
-		166C71481C4C0ED6001AD2DC /* event-veto-278729.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70EE1C4C0EB0001AD2DC /* event-veto-278729.txt */; };
-		166C71491C4C0ED6001AD2DC /* event-veto-278731.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70EF1C4C0EB0001AD2DC /* event-veto-278731.txt */; };
-		166C714A1C4C0ED6001AD2DC /* event-veto-278734.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F01C4C0EB0001AD2DC /* event-veto-278734.txt */; };
-		166C714B1C4C0ED6001AD2DC /* event-veto-278748.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F11C4C0EB0001AD2DC /* event-veto-278748.txt */; };
-		166C714C1C4C0ED6001AD2DC /* event-veto-278880.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F21C4C0EB0001AD2DC /* event-veto-278880.txt */; };
-		166C714D1C4C0ED6001AD2DC /* event-veto-278912.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F31C4C0EB0001AD2DC /* event-veto-278912.txt */; };
-		166C714E1C4C0ED6001AD2DC /* event-veto-278968.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F41C4C0EB0001AD2DC /* event-veto-278968.txt */; };
-		166C714F1C4C0ED6001AD2DC /* event-veto-278970.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F51C4C0EB0001AD2DC /* event-veto-278970.txt */; };
-		166C71501C4C0ED6001AD2DC /* event-veto-279169.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F61C4C0EB0001AD2DC /* event-veto-279169.txt */; };
-		166C71511C4C0ED6001AD2DC /* event-veto-279259.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F71C4C0EB0001AD2DC /* event-veto-279259.txt */; };
-		166C71521C4C0ED6001AD2DC /* event-veto-279279.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F81C4C0EB0001AD2DC /* event-veto-279279.txt */; };
-		166C71531C4C0ED6001AD2DC /* event-veto-279284.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70F91C4C0EB0001AD2DC /* event-veto-279284.txt */; };
-		166C71541C4C0ED6001AD2DC /* event-veto-279345.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70FA1C4C0EB0001AD2DC /* event-veto-279345.txt */; };
-		166C71551C4C0ED6001AD2DC /* event-veto-279515.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70FB1C4C0EB0001AD2DC /* event-veto-279515.txt */; };
-		166C71561C4C0ED6001AD2DC /* event-veto-279598.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70FC1C4C0EB0001AD2DC /* event-veto-279598.txt */; };
-		166C71571C4C0ED6001AD2DC /* event-veto-279685.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70FD1C4C0EB0001AD2DC /* event-veto-279685.txt */; };
-		166C71581C4C0ED6001AD2DC /* event-veto-279764.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70FE1C4C0EB0001AD2DC /* event-veto-279764.txt */; };
-		166C71591C4C0ED6001AD2DC /* event-veto-279813.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C70FF1C4C0EB0001AD2DC /* event-veto-279813.txt */; };
-		166C715A1C4C0ED6001AD2DC /* event-veto-279867.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71001C4C0EB0001AD2DC /* event-veto-279867.txt */; };
-		166C715B1C4C0ED6001AD2DC /* event-veto-279928.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71011C4C0EB0001AD2DC /* event-veto-279928.txt */; };
-		166C715C1C4C0ED6001AD2DC /* event-veto-279932.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71021C4C0EB0001AD2DC /* event-veto-279932.txt */; };
-		166C715D1C4C0ED6001AD2DC /* event-veto-279984.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71031C4C0EB0001AD2DC /* event-veto-279984.txt */; };
-		166C715E1C4C0ED6001AD2DC /* event-veto-280231.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71041C4C0EB0001AD2DC /* event-veto-280231.txt */; };
-		166C715F1C4C0ED6001AD2DC /* event-veto-280273.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71051C4C0EB0001AD2DC /* event-veto-280273.txt */; };
-		166C71601C4C0ED6001AD2DC /* event-veto-280319.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71061C4C0EB0001AD2DC /* event-veto-280319.txt */; };
-		166C71611C4C0ED6001AD2DC /* event-veto-280368.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71071C4C0EB0001AD2DC /* event-veto-280368.txt */; };
-		166C71621C4C0ED6001AD2DC /* event-veto-280422.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71081C4C0EB0001AD2DC /* event-veto-280422.txt */; };
-		166C71631C4C0ED6001AD2DC /* event-veto-280423.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71091C4C0EB0001AD2DC /* event-veto-280423.txt */; };
-		166C71641C4C0ED6001AD2DC /* event-veto-280464.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C710A1C4C0EB0001AD2DC /* event-veto-280464.txt */; };
-		166C71651C4C0ED6001AD2DC /* event-veto-280500.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C710B1C4C0EB0001AD2DC /* event-veto-280500.txt */; };
-		166C71661C4C0ED6001AD2DC /* event-veto-280520.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C710C1C4C0EB0001AD2DC /* event-veto-280520.txt */; };
-		166C71671C4C0ED6001AD2DC /* event-veto-280614.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C710D1C4C0EB0001AD2DC /* event-veto-280614.txt */; };
-		166C71681C4C0ED6001AD2DC /* event-veto-280673.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C710E1C4C0EB0001AD2DC /* event-veto-280673.txt */; };
-		166C71691C4C0ED6001AD2DC /* event-veto-280753.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C710F1C4C0EB0001AD2DC /* event-veto-280753.txt */; };
-		166C716A1C4C0ED6001AD2DC /* event-veto-280853.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71101C4C0EB0001AD2DC /* event-veto-280853.txt */; };
-		166C716B1C4C0ED6001AD2DC /* event-veto-280862.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71111C4C0EB0001AD2DC /* event-veto-280862.txt */; };
-		166C716C1C4C0ED6001AD2DC /* event-veto-280950.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71121C4C0EB0001AD2DC /* event-veto-280950.txt */; };
-		166C716D1C4C0ED6001AD2DC /* event-veto-280977.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71131C4C0EB0001AD2DC /* event-veto-280977.txt */; };
-		166C716E1C4C0ED6001AD2DC /* event-veto-281070.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71141C4C0EB0001AD2DC /* event-veto-281070.txt */; };
-		166C716F1C4C0ED6001AD2DC /* event-veto-281074.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71151C4C0EB0001AD2DC /* event-veto-281074.txt */; };
-		166C71701C4C0ED6001AD2DC /* event-veto-281075.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71161C4C0EB0001AD2DC /* event-veto-281075.txt */; };
-		166C71711C4C0ED6001AD2DC /* event-veto-281130.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71171C4C0EB0001AD2DC /* event-veto-281130.txt */; };
-		166C71721C4C0ED6001AD2DC /* event-veto-281143.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71181C4C0EB0001AD2DC /* event-veto-281143.txt */; };
-		166C71731C4C0ED6001AD2DC /* event-veto-281317.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71191C4C0EB0001AD2DC /* event-veto-281317.txt */; };
-		166C71741C4C0ED6001AD2DC /* event-veto-281327.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C711A1C4C0EB0001AD2DC /* event-veto-281327.txt */; };
-		166C71751C4C0ED6001AD2DC /* event-veto-281381.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C711B1C4C0EB0001AD2DC /* event-veto-281381.txt */; };
-		166C71761C4C0ED6001AD2DC /* event-veto-281385.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C711C1C4C0EB0001AD2DC /* event-veto-281385.txt */; };
-		166C71771C4C0ED6001AD2DC /* event-veto-281411.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C711D1C4C0EB0001AD2DC /* event-veto-281411.txt */; };
-		166C71781C4C0ED6001AD2DC /* event-veto-282625.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C711E1C4C0EB0001AD2DC /* event-veto-282625.txt */; };
-		166C71791C4C0ED6001AD2DC /* event-veto-282631.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C711F1C4C0EB0001AD2DC /* event-veto-282631.txt */; };
-		166C717A1C4C0ED6001AD2DC /* event-veto-282712.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71201C4C0EB0001AD2DC /* event-veto-282712.txt */; };
-		166C717B1C4C0ED6001AD2DC /* event-veto-282784.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71211C4C0EB0001AD2DC /* event-veto-282784.txt */; };
-		166C717C1C4C0ED6001AD2DC /* event-veto-282992.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71221C4C0EB0001AD2DC /* event-veto-282992.txt */; };
-		166C717D1C4C0ED6001AD2DC /* event-veto-283074.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71231C4C0EB0001AD2DC /* event-veto-283074.txt */; };
-		166C717E1C4C0ED6001AD2DC /* event-veto-283155.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71241C4C0EB0001AD2DC /* event-veto-283155.txt */; };
-		166C717F1C4C0ED6001AD2DC /* event-veto-283270.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71251C4C0EB0001AD2DC /* event-veto-283270.txt */; };
-		166C71801C4C0ED6001AD2DC /* event-veto-283429.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71261C4C0EB0001AD2DC /* event-veto-283429.txt */; };
-		166C71811C4C0ED6001AD2DC /* event-veto-283608.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71271C4C0EB0001AD2DC /* event-veto-283608.txt */; };
-		166C71821C4C0ED6001AD2DC /* event-veto-283780.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71281C4C0EB0001AD2DC /* event-veto-283780.txt */; };
-		166C71831C4C0ED6001AD2DC /* event-veto-284006.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71291C4C0EB0001AD2DC /* event-veto-284006.txt */; };
-		166C71841C4C0ED6001AD2DC /* event-veto-284154.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C712A1C4C0EB0001AD2DC /* event-veto-284154.txt */; };
-		166C71851C4C0ED6001AD2DC /* event-veto-284213.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C712B1C4C0EB0001AD2DC /* event-veto-284213.txt */; };
-		166C71861C4C0ED6001AD2DC /* event-veto-284285.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C712C1C4C0EB0001AD2DC /* event-veto-284285.txt */; };
-		166C71871C4C0ED6001AD2DC /* event-veto-284420.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C712D1C4C0EB0001AD2DC /* event-veto-284420.txt */; };
-		166C71881C4C0ED6001AD2DC /* event-veto-284427.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C712E1C4C0EB0001AD2DC /* event-veto-284427.txt */; };
-		166C71891C4C0ED6001AD2DC /* event-veto-284473.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C712F1C4C0EB0001AD2DC /* event-veto-284473.txt */; };
-		166C718A1C4C0ED6001AD2DC /* event-veto-284484.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 166C71301C4C0EB0001AD2DC /* event-veto-284484.txt */; };
+		166C70D51C4BE020001AD2DC /* TLALArEventVetoData.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */; };
+		16E411AC21EFBB060031BE17 /* event-veto-info-merge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16E411AB21EFB81C0031BE17 /* event-veto-info-merge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		166C70C81C4BDF0E001AD2DC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
-			dstPath = "./TLAEventCleaning/data/event-veto-data";
+			dstPath = ./TLAEventCleaning/data;
 			dstSubfolderSpec = 16;
 			files = (
-				166C71311C4C0ED6001AD2DC /* event-veto-276073.txt in CopyFiles */,
-				166C71321C4C0ED6001AD2DC /* event-veto-276147.txt in CopyFiles */,
-				166C71331C4C0ED6001AD2DC /* event-veto-276161.txt in CopyFiles */,
-				166C71341C4C0ED6001AD2DC /* event-veto-276176.txt in CopyFiles */,
-				166C71351C4C0ED6001AD2DC /* event-veto-276181.txt in CopyFiles */,
-				166C71361C4C0ED6001AD2DC /* event-veto-276183.txt in CopyFiles */,
-				166C71371C4C0ED6001AD2DC /* event-veto-276189.txt in CopyFiles */,
-				166C71381C4C0ED6001AD2DC /* event-veto-276212.txt in CopyFiles */,
-				166C71391C4C0ED6001AD2DC /* event-veto-276245.txt in CopyFiles */,
-				166C713A1C4C0ED6001AD2DC /* event-veto-276262.txt in CopyFiles */,
-				166C713B1C4C0ED6001AD2DC /* event-veto-276329.txt in CopyFiles */,
-				166C713C1C4C0ED6001AD2DC /* event-veto-276330.txt in CopyFiles */,
-				166C713D1C4C0ED6001AD2DC /* event-veto-276336.txt in CopyFiles */,
-				166C713E1C4C0ED6001AD2DC /* event-veto-276416.txt in CopyFiles */,
-				166C713F1C4C0ED6001AD2DC /* event-veto-276511.txt in CopyFiles */,
-				166C71401C4C0ED6001AD2DC /* event-veto-276689.txt in CopyFiles */,
-				166C71411C4C0ED6001AD2DC /* event-veto-276731.txt in CopyFiles */,
-				166C71421C4C0ED6001AD2DC /* event-veto-276778.txt in CopyFiles */,
-				166C71431C4C0ED6001AD2DC /* event-veto-276790.txt in CopyFiles */,
-				166C71441C4C0ED6001AD2DC /* event-veto-276952.txt in CopyFiles */,
-				166C71451C4C0ED6001AD2DC /* event-veto-276954.txt in CopyFiles */,
-				166C71461C4C0ED6001AD2DC /* event-veto-277025.txt in CopyFiles */,
-				166C71471C4C0ED6001AD2DC /* event-veto-278727.txt in CopyFiles */,
-				166C71481C4C0ED6001AD2DC /* event-veto-278729.txt in CopyFiles */,
-				166C71491C4C0ED6001AD2DC /* event-veto-278731.txt in CopyFiles */,
-				166C714A1C4C0ED6001AD2DC /* event-veto-278734.txt in CopyFiles */,
-				166C714B1C4C0ED6001AD2DC /* event-veto-278748.txt in CopyFiles */,
-				166C714C1C4C0ED6001AD2DC /* event-veto-278880.txt in CopyFiles */,
-				166C714D1C4C0ED6001AD2DC /* event-veto-278912.txt in CopyFiles */,
-				166C714E1C4C0ED6001AD2DC /* event-veto-278968.txt in CopyFiles */,
-				166C714F1C4C0ED6001AD2DC /* event-veto-278970.txt in CopyFiles */,
-				166C71501C4C0ED6001AD2DC /* event-veto-279169.txt in CopyFiles */,
-				166C71511C4C0ED6001AD2DC /* event-veto-279259.txt in CopyFiles */,
-				166C71521C4C0ED6001AD2DC /* event-veto-279279.txt in CopyFiles */,
-				166C71531C4C0ED6001AD2DC /* event-veto-279284.txt in CopyFiles */,
-				166C71541C4C0ED6001AD2DC /* event-veto-279345.txt in CopyFiles */,
-				166C71551C4C0ED6001AD2DC /* event-veto-279515.txt in CopyFiles */,
-				166C71561C4C0ED6001AD2DC /* event-veto-279598.txt in CopyFiles */,
-				166C71571C4C0ED6001AD2DC /* event-veto-279685.txt in CopyFiles */,
-				166C71581C4C0ED6001AD2DC /* event-veto-279764.txt in CopyFiles */,
-				166C71591C4C0ED6001AD2DC /* event-veto-279813.txt in CopyFiles */,
-				166C715A1C4C0ED6001AD2DC /* event-veto-279867.txt in CopyFiles */,
-				166C715B1C4C0ED6001AD2DC /* event-veto-279928.txt in CopyFiles */,
-				166C715C1C4C0ED6001AD2DC /* event-veto-279932.txt in CopyFiles */,
-				166C715D1C4C0ED6001AD2DC /* event-veto-279984.txt in CopyFiles */,
-				166C715E1C4C0ED6001AD2DC /* event-veto-280231.txt in CopyFiles */,
-				166C715F1C4C0ED6001AD2DC /* event-veto-280273.txt in CopyFiles */,
-				166C71601C4C0ED6001AD2DC /* event-veto-280319.txt in CopyFiles */,
-				166C71611C4C0ED6001AD2DC /* event-veto-280368.txt in CopyFiles */,
-				166C71621C4C0ED6001AD2DC /* event-veto-280422.txt in CopyFiles */,
-				166C71631C4C0ED6001AD2DC /* event-veto-280423.txt in CopyFiles */,
-				166C71641C4C0ED6001AD2DC /* event-veto-280464.txt in CopyFiles */,
-				166C71651C4C0ED6001AD2DC /* event-veto-280500.txt in CopyFiles */,
-				166C71661C4C0ED6001AD2DC /* event-veto-280520.txt in CopyFiles */,
-				166C71671C4C0ED6001AD2DC /* event-veto-280614.txt in CopyFiles */,
-				166C71681C4C0ED6001AD2DC /* event-veto-280673.txt in CopyFiles */,
-				166C71691C4C0ED6001AD2DC /* event-veto-280753.txt in CopyFiles */,
-				166C716A1C4C0ED6001AD2DC /* event-veto-280853.txt in CopyFiles */,
-				166C716B1C4C0ED6001AD2DC /* event-veto-280862.txt in CopyFiles */,
-				166C716C1C4C0ED6001AD2DC /* event-veto-280950.txt in CopyFiles */,
-				166C716D1C4C0ED6001AD2DC /* event-veto-280977.txt in CopyFiles */,
-				166C716E1C4C0ED6001AD2DC /* event-veto-281070.txt in CopyFiles */,
-				166C716F1C4C0ED6001AD2DC /* event-veto-281074.txt in CopyFiles */,
-				166C71701C4C0ED6001AD2DC /* event-veto-281075.txt in CopyFiles */,
-				166C71711C4C0ED6001AD2DC /* event-veto-281130.txt in CopyFiles */,
-				166C71721C4C0ED6001AD2DC /* event-veto-281143.txt in CopyFiles */,
-				166C71731C4C0ED6001AD2DC /* event-veto-281317.txt in CopyFiles */,
-				166C71741C4C0ED6001AD2DC /* event-veto-281327.txt in CopyFiles */,
-				166C71751C4C0ED6001AD2DC /* event-veto-281381.txt in CopyFiles */,
-				166C71761C4C0ED6001AD2DC /* event-veto-281385.txt in CopyFiles */,
-				166C71771C4C0ED6001AD2DC /* event-veto-281411.txt in CopyFiles */,
-				166C71781C4C0ED6001AD2DC /* event-veto-282625.txt in CopyFiles */,
-				166C71791C4C0ED6001AD2DC /* event-veto-282631.txt in CopyFiles */,
-				166C717A1C4C0ED6001AD2DC /* event-veto-282712.txt in CopyFiles */,
-				166C717B1C4C0ED6001AD2DC /* event-veto-282784.txt in CopyFiles */,
-				166C717C1C4C0ED6001AD2DC /* event-veto-282992.txt in CopyFiles */,
-				166C717D1C4C0ED6001AD2DC /* event-veto-283074.txt in CopyFiles */,
-				166C717E1C4C0ED6001AD2DC /* event-veto-283155.txt in CopyFiles */,
-				166C717F1C4C0ED6001AD2DC /* event-veto-283270.txt in CopyFiles */,
-				166C71801C4C0ED6001AD2DC /* event-veto-283429.txt in CopyFiles */,
-				166C71811C4C0ED6001AD2DC /* event-veto-283608.txt in CopyFiles */,
-				166C71821C4C0ED6001AD2DC /* event-veto-283780.txt in CopyFiles */,
-				166C71831C4C0ED6001AD2DC /* event-veto-284006.txt in CopyFiles */,
-				166C71841C4C0ED6001AD2DC /* event-veto-284154.txt in CopyFiles */,
-				166C71851C4C0ED6001AD2DC /* event-veto-284213.txt in CopyFiles */,
-				166C71861C4C0ED6001AD2DC /* event-veto-284285.txt in CopyFiles */,
-				166C71871C4C0ED6001AD2DC /* event-veto-284420.txt in CopyFiles */,
-				166C71881C4C0ED6001AD2DC /* event-veto-284427.txt in CopyFiles */,
-				166C71891C4C0ED6001AD2DC /* event-veto-284473.txt in CopyFiles */,
-				166C718A1C4C0ED6001AD2DC /* event-veto-284484.txt in CopyFiles */,
+				16E411AC21EFBB060031BE17 /* event-veto-info-merge in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,96 +29,7 @@
 		166C70CA1C4BDF0E001AD2DC /* TestTLALArEventVetoData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestTLALArEventVetoData; sourceTree = BUILT_PRODUCTS_DIR; };
 		166C70CD1C4BDF0E001AD2DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TLALArEventVetoData.cxx; path = ../../../Root/TLALArEventVetoData.cxx; sourceTree = "<group>"; };
-		166C70D71C4C0EB0001AD2DC /* event-veto-276073.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276073.txt"; sourceTree = "<group>"; };
-		166C70D81C4C0EB0001AD2DC /* event-veto-276147.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276147.txt"; sourceTree = "<group>"; };
-		166C70D91C4C0EB0001AD2DC /* event-veto-276161.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276161.txt"; sourceTree = "<group>"; };
-		166C70DA1C4C0EB0001AD2DC /* event-veto-276176.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276176.txt"; sourceTree = "<group>"; };
-		166C70DB1C4C0EB0001AD2DC /* event-veto-276181.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276181.txt"; sourceTree = "<group>"; };
-		166C70DC1C4C0EB0001AD2DC /* event-veto-276183.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276183.txt"; sourceTree = "<group>"; };
-		166C70DD1C4C0EB0001AD2DC /* event-veto-276189.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276189.txt"; sourceTree = "<group>"; };
-		166C70DE1C4C0EB0001AD2DC /* event-veto-276212.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276212.txt"; sourceTree = "<group>"; };
-		166C70DF1C4C0EB0001AD2DC /* event-veto-276245.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276245.txt"; sourceTree = "<group>"; };
-		166C70E01C4C0EB0001AD2DC /* event-veto-276262.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276262.txt"; sourceTree = "<group>"; };
-		166C70E11C4C0EB0001AD2DC /* event-veto-276329.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276329.txt"; sourceTree = "<group>"; };
-		166C70E21C4C0EB0001AD2DC /* event-veto-276330.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276330.txt"; sourceTree = "<group>"; };
-		166C70E31C4C0EB0001AD2DC /* event-veto-276336.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276336.txt"; sourceTree = "<group>"; };
-		166C70E41C4C0EB0001AD2DC /* event-veto-276416.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276416.txt"; sourceTree = "<group>"; };
-		166C70E51C4C0EB0001AD2DC /* event-veto-276511.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276511.txt"; sourceTree = "<group>"; };
-		166C70E61C4C0EB0001AD2DC /* event-veto-276689.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276689.txt"; sourceTree = "<group>"; };
-		166C70E71C4C0EB0001AD2DC /* event-veto-276731.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276731.txt"; sourceTree = "<group>"; };
-		166C70E81C4C0EB0001AD2DC /* event-veto-276778.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276778.txt"; sourceTree = "<group>"; };
-		166C70E91C4C0EB0001AD2DC /* event-veto-276790.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276790.txt"; sourceTree = "<group>"; };
-		166C70EA1C4C0EB0001AD2DC /* event-veto-276952.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276952.txt"; sourceTree = "<group>"; };
-		166C70EB1C4C0EB0001AD2DC /* event-veto-276954.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-276954.txt"; sourceTree = "<group>"; };
-		166C70EC1C4C0EB0001AD2DC /* event-veto-277025.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-277025.txt"; sourceTree = "<group>"; };
-		166C70ED1C4C0EB0001AD2DC /* event-veto-278727.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278727.txt"; sourceTree = "<group>"; };
-		166C70EE1C4C0EB0001AD2DC /* event-veto-278729.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278729.txt"; sourceTree = "<group>"; };
-		166C70EF1C4C0EB0001AD2DC /* event-veto-278731.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278731.txt"; sourceTree = "<group>"; };
-		166C70F01C4C0EB0001AD2DC /* event-veto-278734.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278734.txt"; sourceTree = "<group>"; };
-		166C70F11C4C0EB0001AD2DC /* event-veto-278748.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278748.txt"; sourceTree = "<group>"; };
-		166C70F21C4C0EB0001AD2DC /* event-veto-278880.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278880.txt"; sourceTree = "<group>"; };
-		166C70F31C4C0EB0001AD2DC /* event-veto-278912.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278912.txt"; sourceTree = "<group>"; };
-		166C70F41C4C0EB0001AD2DC /* event-veto-278968.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278968.txt"; sourceTree = "<group>"; };
-		166C70F51C4C0EB0001AD2DC /* event-veto-278970.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-278970.txt"; sourceTree = "<group>"; };
-		166C70F61C4C0EB0001AD2DC /* event-veto-279169.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279169.txt"; sourceTree = "<group>"; };
-		166C70F71C4C0EB0001AD2DC /* event-veto-279259.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279259.txt"; sourceTree = "<group>"; };
-		166C70F81C4C0EB0001AD2DC /* event-veto-279279.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279279.txt"; sourceTree = "<group>"; };
-		166C70F91C4C0EB0001AD2DC /* event-veto-279284.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279284.txt"; sourceTree = "<group>"; };
-		166C70FA1C4C0EB0001AD2DC /* event-veto-279345.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279345.txt"; sourceTree = "<group>"; };
-		166C70FB1C4C0EB0001AD2DC /* event-veto-279515.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279515.txt"; sourceTree = "<group>"; };
-		166C70FC1C4C0EB0001AD2DC /* event-veto-279598.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279598.txt"; sourceTree = "<group>"; };
-		166C70FD1C4C0EB0001AD2DC /* event-veto-279685.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279685.txt"; sourceTree = "<group>"; };
-		166C70FE1C4C0EB0001AD2DC /* event-veto-279764.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279764.txt"; sourceTree = "<group>"; };
-		166C70FF1C4C0EB0001AD2DC /* event-veto-279813.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279813.txt"; sourceTree = "<group>"; };
-		166C71001C4C0EB0001AD2DC /* event-veto-279867.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279867.txt"; sourceTree = "<group>"; };
-		166C71011C4C0EB0001AD2DC /* event-veto-279928.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279928.txt"; sourceTree = "<group>"; };
-		166C71021C4C0EB0001AD2DC /* event-veto-279932.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279932.txt"; sourceTree = "<group>"; };
-		166C71031C4C0EB0001AD2DC /* event-veto-279984.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-279984.txt"; sourceTree = "<group>"; };
-		166C71041C4C0EB0001AD2DC /* event-veto-280231.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280231.txt"; sourceTree = "<group>"; };
-		166C71051C4C0EB0001AD2DC /* event-veto-280273.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280273.txt"; sourceTree = "<group>"; };
-		166C71061C4C0EB0001AD2DC /* event-veto-280319.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280319.txt"; sourceTree = "<group>"; };
-		166C71071C4C0EB0001AD2DC /* event-veto-280368.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280368.txt"; sourceTree = "<group>"; };
-		166C71081C4C0EB0001AD2DC /* event-veto-280422.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280422.txt"; sourceTree = "<group>"; };
-		166C71091C4C0EB0001AD2DC /* event-veto-280423.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280423.txt"; sourceTree = "<group>"; };
-		166C710A1C4C0EB0001AD2DC /* event-veto-280464.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280464.txt"; sourceTree = "<group>"; };
-		166C710B1C4C0EB0001AD2DC /* event-veto-280500.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280500.txt"; sourceTree = "<group>"; };
-		166C710C1C4C0EB0001AD2DC /* event-veto-280520.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280520.txt"; sourceTree = "<group>"; };
-		166C710D1C4C0EB0001AD2DC /* event-veto-280614.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280614.txt"; sourceTree = "<group>"; };
-		166C710E1C4C0EB0001AD2DC /* event-veto-280673.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280673.txt"; sourceTree = "<group>"; };
-		166C710F1C4C0EB0001AD2DC /* event-veto-280753.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280753.txt"; sourceTree = "<group>"; };
-		166C71101C4C0EB0001AD2DC /* event-veto-280853.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280853.txt"; sourceTree = "<group>"; };
-		166C71111C4C0EB0001AD2DC /* event-veto-280862.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280862.txt"; sourceTree = "<group>"; };
-		166C71121C4C0EB0001AD2DC /* event-veto-280950.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280950.txt"; sourceTree = "<group>"; };
-		166C71131C4C0EB0001AD2DC /* event-veto-280977.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-280977.txt"; sourceTree = "<group>"; };
-		166C71141C4C0EB0001AD2DC /* event-veto-281070.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281070.txt"; sourceTree = "<group>"; };
-		166C71151C4C0EB0001AD2DC /* event-veto-281074.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281074.txt"; sourceTree = "<group>"; };
-		166C71161C4C0EB0001AD2DC /* event-veto-281075.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281075.txt"; sourceTree = "<group>"; };
-		166C71171C4C0EB0001AD2DC /* event-veto-281130.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281130.txt"; sourceTree = "<group>"; };
-		166C71181C4C0EB0001AD2DC /* event-veto-281143.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281143.txt"; sourceTree = "<group>"; };
-		166C71191C4C0EB0001AD2DC /* event-veto-281317.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281317.txt"; sourceTree = "<group>"; };
-		166C711A1C4C0EB0001AD2DC /* event-veto-281327.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281327.txt"; sourceTree = "<group>"; };
-		166C711B1C4C0EB0001AD2DC /* event-veto-281381.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281381.txt"; sourceTree = "<group>"; };
-		166C711C1C4C0EB0001AD2DC /* event-veto-281385.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281385.txt"; sourceTree = "<group>"; };
-		166C711D1C4C0EB0001AD2DC /* event-veto-281411.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-281411.txt"; sourceTree = "<group>"; };
-		166C711E1C4C0EB0001AD2DC /* event-veto-282625.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-282625.txt"; sourceTree = "<group>"; };
-		166C711F1C4C0EB0001AD2DC /* event-veto-282631.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-282631.txt"; sourceTree = "<group>"; };
-		166C71201C4C0EB0001AD2DC /* event-veto-282712.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-282712.txt"; sourceTree = "<group>"; };
-		166C71211C4C0EB0001AD2DC /* event-veto-282784.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-282784.txt"; sourceTree = "<group>"; };
-		166C71221C4C0EB0001AD2DC /* event-veto-282992.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-282992.txt"; sourceTree = "<group>"; };
-		166C71231C4C0EB0001AD2DC /* event-veto-283074.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-283074.txt"; sourceTree = "<group>"; };
-		166C71241C4C0EB0001AD2DC /* event-veto-283155.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-283155.txt"; sourceTree = "<group>"; };
-		166C71251C4C0EB0001AD2DC /* event-veto-283270.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-283270.txt"; sourceTree = "<group>"; };
-		166C71261C4C0EB0001AD2DC /* event-veto-283429.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-283429.txt"; sourceTree = "<group>"; };
-		166C71271C4C0EB0001AD2DC /* event-veto-283608.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-283608.txt"; sourceTree = "<group>"; };
-		166C71281C4C0EB0001AD2DC /* event-veto-283780.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-283780.txt"; sourceTree = "<group>"; };
-		166C71291C4C0EB0001AD2DC /* event-veto-284006.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284006.txt"; sourceTree = "<group>"; };
-		166C712A1C4C0EB0001AD2DC /* event-veto-284154.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284154.txt"; sourceTree = "<group>"; };
-		166C712B1C4C0EB0001AD2DC /* event-veto-284213.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284213.txt"; sourceTree = "<group>"; };
-		166C712C1C4C0EB0001AD2DC /* event-veto-284285.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284285.txt"; sourceTree = "<group>"; };
-		166C712D1C4C0EB0001AD2DC /* event-veto-284420.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284420.txt"; sourceTree = "<group>"; };
-		166C712E1C4C0EB0001AD2DC /* event-veto-284427.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284427.txt"; sourceTree = "<group>"; };
-		166C712F1C4C0EB0001AD2DC /* event-veto-284473.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284473.txt"; sourceTree = "<group>"; };
-		166C71301C4C0EB0001AD2DC /* event-veto-284484.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "event-veto-284484.txt"; sourceTree = "<group>"; };
+		16E411AB21EFB81C0031BE17 /* event-veto-info-merge */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "event-veto-info-merge"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,109 +62,11 @@
 		166C70CC1C4BDF0E001AD2DC /* TestTLALArEventVetoData */ = {
 			isa = PBXGroup;
 			children = (
-				166C70D61C4C0EB0001AD2DC /* event-veto-data */,
+				16E411AB21EFB81C0031BE17 /* event-veto-info-merge */,
 				166C70CD1C4BDF0E001AD2DC /* main.cpp */,
 				166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */,
 			);
 			path = TestTLALArEventVetoData;
-			sourceTree = "<group>";
-		};
-		166C70D61C4C0EB0001AD2DC /* event-veto-data */ = {
-			isa = PBXGroup;
-			children = (
-				166C70D71C4C0EB0001AD2DC /* event-veto-276073.txt */,
-				166C70D81C4C0EB0001AD2DC /* event-veto-276147.txt */,
-				166C70D91C4C0EB0001AD2DC /* event-veto-276161.txt */,
-				166C70DA1C4C0EB0001AD2DC /* event-veto-276176.txt */,
-				166C70DB1C4C0EB0001AD2DC /* event-veto-276181.txt */,
-				166C70DC1C4C0EB0001AD2DC /* event-veto-276183.txt */,
-				166C70DD1C4C0EB0001AD2DC /* event-veto-276189.txt */,
-				166C70DE1C4C0EB0001AD2DC /* event-veto-276212.txt */,
-				166C70DF1C4C0EB0001AD2DC /* event-veto-276245.txt */,
-				166C70E01C4C0EB0001AD2DC /* event-veto-276262.txt */,
-				166C70E11C4C0EB0001AD2DC /* event-veto-276329.txt */,
-				166C70E21C4C0EB0001AD2DC /* event-veto-276330.txt */,
-				166C70E31C4C0EB0001AD2DC /* event-veto-276336.txt */,
-				166C70E41C4C0EB0001AD2DC /* event-veto-276416.txt */,
-				166C70E51C4C0EB0001AD2DC /* event-veto-276511.txt */,
-				166C70E61C4C0EB0001AD2DC /* event-veto-276689.txt */,
-				166C70E71C4C0EB0001AD2DC /* event-veto-276731.txt */,
-				166C70E81C4C0EB0001AD2DC /* event-veto-276778.txt */,
-				166C70E91C4C0EB0001AD2DC /* event-veto-276790.txt */,
-				166C70EA1C4C0EB0001AD2DC /* event-veto-276952.txt */,
-				166C70EB1C4C0EB0001AD2DC /* event-veto-276954.txt */,
-				166C70EC1C4C0EB0001AD2DC /* event-veto-277025.txt */,
-				166C70ED1C4C0EB0001AD2DC /* event-veto-278727.txt */,
-				166C70EE1C4C0EB0001AD2DC /* event-veto-278729.txt */,
-				166C70EF1C4C0EB0001AD2DC /* event-veto-278731.txt */,
-				166C70F01C4C0EB0001AD2DC /* event-veto-278734.txt */,
-				166C70F11C4C0EB0001AD2DC /* event-veto-278748.txt */,
-				166C70F21C4C0EB0001AD2DC /* event-veto-278880.txt */,
-				166C70F31C4C0EB0001AD2DC /* event-veto-278912.txt */,
-				166C70F41C4C0EB0001AD2DC /* event-veto-278968.txt */,
-				166C70F51C4C0EB0001AD2DC /* event-veto-278970.txt */,
-				166C70F61C4C0EB0001AD2DC /* event-veto-279169.txt */,
-				166C70F71C4C0EB0001AD2DC /* event-veto-279259.txt */,
-				166C70F81C4C0EB0001AD2DC /* event-veto-279279.txt */,
-				166C70F91C4C0EB0001AD2DC /* event-veto-279284.txt */,
-				166C70FA1C4C0EB0001AD2DC /* event-veto-279345.txt */,
-				166C70FB1C4C0EB0001AD2DC /* event-veto-279515.txt */,
-				166C70FC1C4C0EB0001AD2DC /* event-veto-279598.txt */,
-				166C70FD1C4C0EB0001AD2DC /* event-veto-279685.txt */,
-				166C70FE1C4C0EB0001AD2DC /* event-veto-279764.txt */,
-				166C70FF1C4C0EB0001AD2DC /* event-veto-279813.txt */,
-				166C71001C4C0EB0001AD2DC /* event-veto-279867.txt */,
-				166C71011C4C0EB0001AD2DC /* event-veto-279928.txt */,
-				166C71021C4C0EB0001AD2DC /* event-veto-279932.txt */,
-				166C71031C4C0EB0001AD2DC /* event-veto-279984.txt */,
-				166C71041C4C0EB0001AD2DC /* event-veto-280231.txt */,
-				166C71051C4C0EB0001AD2DC /* event-veto-280273.txt */,
-				166C71061C4C0EB0001AD2DC /* event-veto-280319.txt */,
-				166C71071C4C0EB0001AD2DC /* event-veto-280368.txt */,
-				166C71081C4C0EB0001AD2DC /* event-veto-280422.txt */,
-				166C71091C4C0EB0001AD2DC /* event-veto-280423.txt */,
-				166C710A1C4C0EB0001AD2DC /* event-veto-280464.txt */,
-				166C710B1C4C0EB0001AD2DC /* event-veto-280500.txt */,
-				166C710C1C4C0EB0001AD2DC /* event-veto-280520.txt */,
-				166C710D1C4C0EB0001AD2DC /* event-veto-280614.txt */,
-				166C710E1C4C0EB0001AD2DC /* event-veto-280673.txt */,
-				166C710F1C4C0EB0001AD2DC /* event-veto-280753.txt */,
-				166C71101C4C0EB0001AD2DC /* event-veto-280853.txt */,
-				166C71111C4C0EB0001AD2DC /* event-veto-280862.txt */,
-				166C71121C4C0EB0001AD2DC /* event-veto-280950.txt */,
-				166C71131C4C0EB0001AD2DC /* event-veto-280977.txt */,
-				166C71141C4C0EB0001AD2DC /* event-veto-281070.txt */,
-				166C71151C4C0EB0001AD2DC /* event-veto-281074.txt */,
-				166C71161C4C0EB0001AD2DC /* event-veto-281075.txt */,
-				166C71171C4C0EB0001AD2DC /* event-veto-281130.txt */,
-				166C71181C4C0EB0001AD2DC /* event-veto-281143.txt */,
-				166C71191C4C0EB0001AD2DC /* event-veto-281317.txt */,
-				166C711A1C4C0EB0001AD2DC /* event-veto-281327.txt */,
-				166C711B1C4C0EB0001AD2DC /* event-veto-281381.txt */,
-				166C711C1C4C0EB0001AD2DC /* event-veto-281385.txt */,
-				166C711D1C4C0EB0001AD2DC /* event-veto-281411.txt */,
-				166C711E1C4C0EB0001AD2DC /* event-veto-282625.txt */,
-				166C711F1C4C0EB0001AD2DC /* event-veto-282631.txt */,
-				166C71201C4C0EB0001AD2DC /* event-veto-282712.txt */,
-				166C71211C4C0EB0001AD2DC /* event-veto-282784.txt */,
-				166C71221C4C0EB0001AD2DC /* event-veto-282992.txt */,
-				166C71231C4C0EB0001AD2DC /* event-veto-283074.txt */,
-				166C71241C4C0EB0001AD2DC /* event-veto-283155.txt */,
-				166C71251C4C0EB0001AD2DC /* event-veto-283270.txt */,
-				166C71261C4C0EB0001AD2DC /* event-veto-283429.txt */,
-				166C71271C4C0EB0001AD2DC /* event-veto-283608.txt */,
-				166C71281C4C0EB0001AD2DC /* event-veto-283780.txt */,
-				166C71291C4C0EB0001AD2DC /* event-veto-284006.txt */,
-				166C712A1C4C0EB0001AD2DC /* event-veto-284154.txt */,
-				166C712B1C4C0EB0001AD2DC /* event-veto-284213.txt */,
-				166C712C1C4C0EB0001AD2DC /* event-veto-284285.txt */,
-				166C712D1C4C0EB0001AD2DC /* event-veto-284420.txt */,
-				166C712E1C4C0EB0001AD2DC /* event-veto-284427.txt */,
-				166C712F1C4C0EB0001AD2DC /* event-veto-284473.txt */,
-				166C71301C4C0EB0001AD2DC /* event-veto-284484.txt */,
-			);
-			name = "event-veto-data";
-			path = "../../../data/event-veto-data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,6 +259,7 @@
 				166C70D31C4BDF0E001AD2DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
