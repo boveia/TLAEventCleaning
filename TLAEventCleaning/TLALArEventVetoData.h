@@ -4,17 +4,15 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <tuple>
 #include <utility>
 
-// namespace xAOD {
-//   class EventInfo;
-// }
-
-namespace boost {
-  namespace filesystem {
-    class path;
-  }
-}
+#include <boost/filesystem/path.hpp>
+//namespace boost {
+//  namespace filesystem {
+//    class path;
+//  }
+//}
 
 
 class
@@ -48,13 +46,14 @@ public:
   // there is no (even empty) event veto data provided for the given run.
   
   bool shouldVeto( const RunNumberType& run , const LumiBlockType& lbn ,
-                   const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const;
+                   const TimeStampType& ts , const TimeStampType& ts_ns_offset );
 
   std::string vetoType( const RunNumberType& run , const LumiBlockType& lbn ,
-			const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const;
+			const TimeStampType& ts , const TimeStampType& ts_ns_offset );
 
 private:
   bool _loaded;
+  bool _debug;
 
   struct EventTimeStamp {
     TimeStampType ts;
@@ -70,7 +69,12 @@ private:
   };
   using EventVetoIntervals = std::vector<TimeStampRange>;
   using EventVetoLumiBlocks = std::map<LumiBlockType,EventVetoIntervals>;
-  using EventVetoTable = std::map<RunNumberType,EventVetoLumiBlocks>;
+  // in an EventVetoFileHandle, the first element is the path to the
+  // event veto data file for a particular run, the second element is
+  // whether that file has already been loaded from disk
+  // (true=loaded), and the last is the map of EventVetoLumiBlocks.
+  using EventVetoFileHandle = std::tuple<boost::filesystem::path,bool,EventVetoLumiBlocks>;
+  using EventVetoTable = std::map<RunNumberType,EventVetoFileHandle>;
 
   EventVetoTable _t;
   // cache the run number lookup.
@@ -78,11 +82,13 @@ private:
   mutable const EventVetoLumiBlocks* _lbns_for_currun;
   
 private:
-  bool loadRunFromFilename( const boost::filesystem::path filename );
+  bool loadRunFromFilename( const boost::filesystem::path filename , const bool testOnly = false );
   RunNumberType runNumberFromFilename( const boost::filesystem::path filename ) const;
   void insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
                        const unsigned long& begin_ts , const unsigned long& end_ts,
 		       const std::string& interval_type );
+  void updateRunCache(const RunNumberType& run);
+  void dumpLoadedTable();
 };
 
 #endif // WRAP_TLALAREVENTVETODATA_H

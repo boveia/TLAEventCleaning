@@ -4,6 +4,8 @@
 #include <iostream>
 #include <array>
 #include <string>
+#include <tuple>
+#include <utility>
 #include <exception>
 #include <boost/algorithm/string.hpp>
 #include <boost/format.hpp>
@@ -22,6 +24,7 @@ TLALArEventVetoData::TLALArEventVetoData()
   : _loaded{false}
   , _currun{0}
   , _lbns_for_currun{nullptr}
+  , _debug{false}
 {}
 
 bool
@@ -36,51 +39,27 @@ TLALArEventVetoData::loadFromDirectory( const std::string directory_path )
     return false;
   }
 
-  // iterate over text files in this directory
-  bool loaded_something{false};
+  // iterate over text files in this directory and construct file handles. do not load anything from disk (lazy loading).
+  bool found_something{false};
   for( auto dir_entry : directory_iterator(data_directory) ) {
-    bool ok{loadRunFromFilename( dir_entry.path() )};
+    
+    bool ok{loadRunFromFilename( dir_entry.path() , true /*testOnly=true*/ )};
     if( !ok ) { 
       cout << "TLALArEventVetoData::loadFromDirectory failed to read " << dir_entry.path() << endl;
       return false;
     }
-    loaded_something = true;
+    found_something = true;
+    // create file handle for later use
+
   } // loop over each text file in directory
 
-  // sort all intervals for rapid search
-  for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
-    for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
-      sort( std::begin(li->second) , std::end(li->second) ,
-            [](const TimeStampRange& a, const TimeStampRange& b) {
-              return ((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
-            } );
-    }
-  }
-
   // any checks that the table contents are sane?
-  if( true ) {
-    // compute some statistics
-    unsigned long nIntervals{0ul};
-    unsigned long nLBs{0ul};
-    unsigned long min_ts{std::numeric_limits<unsigned long>::max()};
-    unsigned long max_ts{0ul};
-    for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
-      for( auto li=std::begin(ri->second), lf=std::end(ri->second); li!=lf; ++li ) {
-        ++nLBs;
-        nIntervals += std::distance( std::begin(li->second) , std::end(li->second) );
-        for( auto ii=std::begin(li->second), fi=std::end(li->second); ii!=fi; ++ii ) {
-          min_ts = std::min( (ii->start.ts*1000000000ul)+ii->start.ts_ns_offset , min_ts );
-          max_ts = std::max( (ii->stop.ts*1000000000ul)+ii->stop.ts_ns_offset , max_ts );
-        }
-      }
-    }
-    cout << " TLALArEventVetoData: loaded " << _t.size() << " runs "
-    << "with " << nIntervals << " intervals in " << nLBs << " LBs from directory " << directory_path << endl;
-    cout << " Minimum/Maximum timestamps: " << min_ts << " / " << max_ts << endl;
+  if( _debug ) {
+      dumpLoadedTable();
   }
 
-  if( !loaded_something ) {
-    cout << " TLALArEventVetoData: nothing loaded! " << endl;
+  if( !found_something ) {
+    cout << " TLALArEventVetoData: no event veto data found! " << endl;
     return false;
   }
 
@@ -104,15 +83,15 @@ TLALArEventVetoData::runNumberFromFilename( const boost::filesystem::path filena
   return 0;
 }
 
-
 bool
-TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename )
+TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename , const bool testOnly )
 {
   // open the file 
   boost::filesystem::ifstream file( filename );
   if( !file || !file.is_open() ) { return false; }
 
   bool any_insertions{false};
+  set<RunNumberType> found_runs;
   
   while( !file.eof() ) {
 
@@ -188,12 +167,34 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // to be any combination of runs, i.e. just any pile of lines that start with "Event Veto"...
     
     //cout << boost::format("%1% %2% %3% %4% %5% %6%") % line_interval_type % line_run % line_lbni % line_lbnf % line_tsi % line_tsf << endl;
+
+    // if testOnly, then do not insert entries into the table. just return an empty table for the current run number.
+    if( testOnly ) {
+      if( _t.find(line_run)!=_t.end() ) {
+        cout << "TLALaArEventVetoData::loadRunFromFilename run data already read for " << line_run << endl;
+        return false;
+      }
+      _t[line_run] = EventVetoFileHandle(filename,false,EventVetoLumiBlocks());
+      return true;
+    }
+    
+    assert( !testOnly );
     
     // insert this interval into the table
     for( auto lbn = line_lbni; lbn!=(line_lbnf+1); ++lbn ) {
       // insertInterval( line_run , lbn , line_tsi , line_tsf );
+      if( _debug ) {
+        cout << " inserting interval:"
+             << " run " << line_run
+             << " LBN " << lbn
+             << " start: " << line_tsi
+             << " end " << line_tsf
+             << " type " << line_interval_type
+             << endl;
+      }
       insertInterval( line_run , lbn , line_tsi , line_tsf, line_interval_type );
       any_insertions = true;
+      found_runs.insert( line_run );
     }
     
   } // for each line in the file
@@ -209,9 +210,29 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     if( _t.find(run)!=_t.end() ) {
       cout << "TLALaArEventVetoData::loadRunFromFilename warning: run for " << filename << " already present." << endl;
     }
-    _t[ run ] = EventVetoLumiBlocks();
+    _t[run] = EventVetoFileHandle(filename,true/*load completed*/,EventVetoLumiBlocks());
   }
 
+  // sort all intervals in the run for rapid search
+  for( auto ri=std::begin(found_runs), rf=std::end(found_runs); ri!=rf; ++ri ) {
+    auto found_run{*ri};
+    EventVetoTable::iterator thi = _t.find(found_run);
+    assert( thi!=_t.end() ); // each run in the found_runs set should have been inserted, by definition.
+    // mark loaded
+    std::get<1>(thi->second) = true;
+    // sort each interval range
+    for( auto li=std::begin(std::get<2>(thi->second)), lf=std::end(std::get<2>(thi->second)); li!=lf; ++li ) {
+      sort( std::begin(li->second) , std::end(li->second) ,
+            [](const TimeStampRange& a, const TimeStampRange& b) {
+              return ((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
+            } );
+    }
+  }
+
+  if( _debug ) {
+    dumpLoadedTable();
+  }
+    
   // done
   return true;
 }
@@ -227,7 +248,7 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
     _lbns_for_currun = nullptr;
   }
   // insert
-  EventVetoIntervals& intervals = _t[run][lbn];
+  EventVetoIntervals& intervals = std::get<2>(_t[run])[lbn];
   TimeStampType begin_ts_sec{static_cast<uint32_t>(begin_ts / 1000000000ul)};
   TimeStampType end_ts_sec{static_cast<uint32_t>(end_ts / 1000000000ul)};
   TimeStampType begin_ts_ns{static_cast<uint32_t>(begin_ts % 1000000000ul)};
@@ -235,9 +256,36 @@ TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockT
   intervals.emplace_back( TimeStampRange({{begin_ts_sec,begin_ts_ns},{end_ts_sec,end_ts_ns},interval_type}) );
 }
 
+void
+TLALArEventVetoData::dumpLoadedTable()
+{
+  cout << "TLALArEventVetoData::dumpLoadedTable(): " << endl;
+  // compute some statistics
+  unsigned long nIntervals{0ul};
+  unsigned long nLBs{0ul};
+  for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
+    auto hi=ri->second;
+    for( auto li=std::begin(std::get<2>(hi)), lf=std::end(std::get<2>(hi)); li!=lf; ++li ) {
+      int intervals = std::distance( std::begin(li->second) , std::end(li->second) );
+      cout << "run: " << ri->first << " LB " << li->first << " nIntervals: " << intervals << endl;
+      for( auto ii=std::begin(li->second), fi=std::end(li->second); ii!=fi; ++ii ) {
+        cout << "run: " << ri->first
+             << " LB " << li->first
+             << " start: " << (ii->start.ts*1000000000ul)+ii->start.ts_ns_offset
+             << " stop: " << (ii->stop.ts*1000000000ul)+ii->stop.ts_ns_offset
+             << endl;
+      }
+    }
+  }
+  cout << " TLALArEventVetoData: contains " << _t.size() << " runs"
+       << " in " << nLBs << " LBs"
+       << endl; // << " LBs from directory " << directory_path << endl;
+}
+
+
 bool
 TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType& lbn ,
-                                 const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const
+                                 const TimeStampType& ts , const TimeStampType& ts_ns_offset )
 {
   // Look up whether the LAr event veto has fired for the event
   // recorded at the given timestamp (which has two parts, 'ts'
@@ -252,15 +300,8 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   // Throws an exception if the event veto data has not been loaded, or if
   // there is no (even empty) event veto data provided for the given run.
     
-  // look up run. check 'cached' run first. assume the LBN table for the run will never be changed
-  // during a job.
-  
-  if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
-    auto ir = _t.find(run);
-    if( ir==_t.end() ) { throw std::exception(); }
-    _currun = run;
-    _lbns_for_currun = &(ir->second);
-  }  
+  // look up run. check 'cached' run first.
+  updateRunCache(run);
 
   // look up LB
   const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
@@ -281,19 +322,13 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
     return true;
   }
   
-  // // find first element whose start time is >= this event timestamp
-  // auto i = std::lower_bound( std::begin(intervals) , std::end(intervals) , ts ,
-  //                            [](const TimeStampRange& a, const TimeStampRange& b) {
-  //                              return((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
-  //                            } );
-  
   return false;
 }
 
 
 std::string
 TLALArEventVetoData::vetoType( const RunNumberType& run , const LumiBlockType& lbn ,
-                              const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const
+                              const TimeStampType& ts , const TimeStampType& ts_ns_offset )
 {
   // Check the type of LAr event veto that has fired for the event
   // recorded at the given timestamp (which has two parts, 'ts'
@@ -306,16 +341,9 @@ TLALArEventVetoData::vetoType( const RunNumberType& run , const LumiBlockType& l
   // Throws an exception if the event veto data has not been loaded, or if
   // the event did not re is no (even empty) event veto data provided for the given run.
     
-  // look up run. check 'cached' run first. since the LBN table for the run will never be changed
-  // during a job, we'll
+  // look up run. check 'cached' run first. 
+  updateRunCache(run);
   
-  if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
-    auto ir = _t.find(run);
-    if( ir==_t.end() ) { throw std::exception(); }
-    _currun = run;
-    _lbns_for_currun = &(ir->second);
-  }  
-
   // look up LB
   const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
   auto il = blocks.find(lbn);
@@ -334,13 +362,39 @@ TLALArEventVetoData::vetoType( const RunNumberType& run , const LumiBlockType& l
     // yes
     return interval.interval_type;
   }
-  
-  // // find first element whose start time is >= this event timestamp
-  // auto i = std::lower_bound( std::begin(intervals) , std::end(intervals) , ts ,
-  //                            [](const TimeStampRange& a, const TimeStampRange& b) {
-  //                              return((a.start.ts<b.start.ts) || (a.start.ts==b.start.ts && (a.start.ts_ns_offset < b.start.ts_ns_offset)));
-  //                            } );
-  
+
   return "none";
 }
 
+
+void
+TLALArEventVetoData::updateRunCache(const RunNumberType& run)
+{
+  if (run!=0 && run==_currun && _lbns_for_currun!=nullptr ) { return; }
+  // need to switch runs.
+  auto ir{_t.find(run)};
+  if( ir==_t.end() ) { throw std::exception(); }
+  // do we need to load the current run from disk?
+  const EventVetoFileHandle* lbns_handle{&(ir->second)};
+  if( !std::get<1>(*lbns_handle) ) {
+    // we need to load the run data from disk
+    bool ok{ loadRunFromFilename( std::get<0>(*lbns_handle) , false /*testOnly=false*/ ) };
+    if( !ok ) { 
+      cout << "TLALArEventVetoData::loadFromDirectory failed to read " << std::get<0>(*lbns_handle) << endl;
+      throw std::exception();
+    }
+    ir = _t.find(run);
+    if( ir==_t.end() ) { throw std::exception(); }
+    _currun = run;
+    lbns_handle = &(ir->second);
+    // list may be empty if run does not contain any veto periods
+    // it is normal for some runs (e.g. short ones) to have no veto periods
+    const bool loaded{ std::get<1>(*lbns_handle) };
+    assert( loaded );
+  }
+  if( _debug ) {
+    cout << " TLALArEventVetoData: switched to run " << run << endl;
+  }
+  _currun = run;
+  _lbns_for_currun = &(std::get<2>(_t.find(_currun)->second));
+}
