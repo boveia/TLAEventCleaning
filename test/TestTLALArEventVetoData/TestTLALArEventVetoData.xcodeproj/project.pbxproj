@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		166C70CE1C4BDF0E001AD2DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 166C70CD1C4BDF0E001AD2DC /* main.cpp */; };
 		166C70D51C4BE020001AD2DC /* TLALArEventVetoData.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */; };
-		16E411AC21EFBB060031BE17 /* event-veto-info-merge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16E411AB21EFB81C0031BE17 /* event-veto-info-merge */; };
+		16E411AF21EFF8BB0031BE17 /* event-veto-info-merge-bz2 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16E411AE21EFF8A20031BE17 /* event-veto-info-merge-bz2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +19,7 @@
 			dstPath = ./TLAEventCleaning/data;
 			dstSubfolderSpec = 16;
 			files = (
-				16E411AC21EFBB060031BE17 /* event-veto-info-merge in CopyFiles */,
+				16E411AF21EFF8BB0031BE17 /* event-veto-info-merge-bz2 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,7 +29,7 @@
 		166C70CA1C4BDF0E001AD2DC /* TestTLALArEventVetoData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestTLALArEventVetoData; sourceTree = BUILT_PRODUCTS_DIR; };
 		166C70CD1C4BDF0E001AD2DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TLALArEventVetoData.cxx; path = ../../../Root/TLALArEventVetoData.cxx; sourceTree = "<group>"; };
-		16E411AB21EFB81C0031BE17 /* event-veto-info-merge */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "event-veto-info-merge"; sourceTree = "<group>"; };
+		16E411AE21EFF8A20031BE17 /* event-veto-info-merge-bz2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "event-veto-info-merge-bz2"; path = "../../../data/event-veto-info-merge-bz2"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		166C70CC1C4BDF0E001AD2DC /* TestTLALArEventVetoData */ = {
 			isa = PBXGroup;
 			children = (
-				16E411AB21EFB81C0031BE17 /* event-veto-info-merge */,
+				16E411AE21EFF8A20031BE17 /* event-veto-info-merge-bz2 */,
 				166C70CD1C4BDF0E001AD2DC /* main.cpp */,
 				166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */,
 			);
@@ -177,6 +177,7 @@
 					"-lboost_system",
 					"-lboost_filesystem",
 					"-lboost_timer",
+					"-lboost_iostreams",
 				);
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../../**";
@@ -220,6 +221,7 @@
 					"-lboost_system",
 					"-lboost_filesystem",
 					"-lboost_timer",
+					"-lboost_iostreams",
 				);
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../../**";

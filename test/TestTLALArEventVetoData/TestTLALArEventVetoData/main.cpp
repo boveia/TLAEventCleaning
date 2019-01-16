@@ -17,7 +17,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
   
   // replace this path with the path to your event veto data directory
-  string path_to_data = "./TLAEventCleaning/data/event-veto-info-merge/";
+  string path_to_data = "./TLAEventCleaning/data/event-veto-info-merge-bz2/";
   
   struct TextFileInterval {
     unsigned long start;
@@ -50,6 +50,7 @@ int main(int argc, const char * argv[]) {
       } catch (...) {
         missing = true;
       }
+      cout << " missing run exception verified" << endl;
       assert( missing && "missing run should throw an exception" );
     }
     
@@ -59,6 +60,7 @@ int main(int argc, const char * argv[]) {
       // 50 ms duration
       bool veto = data.shouldVeto(284420, 254, i.startSec(), i.startNSOffset()+25);
       assert( veto && "should veto this event" );
+      cout << " veto of event in known 288420 interval verified" << endl;
     }
 
     {
@@ -70,18 +72,22 @@ int main(int argc, const char * argv[]) {
       TextFileInterval b{1446420066431450112,1446420066520062976};
       bool veto = data.shouldVeto(284420, 247, a.startSec(), a.startNSOffset()+100);
       assert( veto && "should veto this event" );
+      cout << " veto of event in known 288420 interval verified" << endl;
       veto = data.shouldVeto(284420, 247, a.stopSec(), a.stopNSOffset()+1);
       assert( !veto && "should not veto this event" );
+      cout << " non-veto of event known to be outside 288420 intervals verified" << endl;
       veto = data.shouldVeto(284420, 247, b.startSec(), b.startNSOffset()-25);
       assert( !veto && "should not veto this event" );
+      cout << " non-veto of event known to be outside 288420 intervals verified" << endl;
       // Event Veto ['NoiseBurst'], Wed Oct 26 20:35:00 2016 UTC-Wed Oct 26 20:35:00 2016 UTC (0.020 )  Run 311481, LB 859 (1477514100558606336.000000,1477514100538863872.000000)
       // Event Veto ['MiniNoiseBurst'], Wed Oct 26 20:35:15 2016 UTC-Wed Oct 26 20:35:15 2016 UTC (0.001 )  Run 311481, LB 859 (1477514115985445376.000000,1477514115984445440.000000)
       TextFileInterval c{1477514115984445440,1477514115985445376};
       veto = data.shouldVeto(311481, 859, c.startSec(), c.startNSOffset()-500);
       assert( !veto && "should not veto this event" );
+      cout << " veto of event in known 288420 mininoiseburst interval verified" << endl;
       veto = data.shouldVeto(311481, 859, c.startSec(), c.startNSOffset()+100);
       assert( veto && "should veto this event" );
-
+      cout << " non-veto of event known to be outside 288420 intervals verified" << endl;
     }
   }
   

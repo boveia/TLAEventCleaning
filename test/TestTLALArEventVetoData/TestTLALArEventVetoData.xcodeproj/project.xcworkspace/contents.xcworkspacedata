@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TestTLALArEventVetoData.xcodeproj">
+      location = "group:/Users/boveia/Code/TLAEventCleaning/test/TestTLALArEventVetoData/TestTLALArEventVetoData/event-veto-info-merge-bz">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

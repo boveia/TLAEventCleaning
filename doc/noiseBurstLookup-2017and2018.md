@@ -856,7 +856,7 @@ Once merging the changes, I ran makeEventVetoLists.sh with the list of runs.
 
 - [ ] **Anything special needed for data corruption veto type?**
 - [ ] check changes from merged data at TLAEventCleaning/data/
-- [ ] implement bzip2
+- [x] implement bzip2 decompression (achieved 10x file size reduction on 2015+2016 data with "bzip2 -9")
 
 
 

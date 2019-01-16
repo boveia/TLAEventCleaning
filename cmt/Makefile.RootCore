@@ -10,7 +10,7 @@
 PACKAGE          = TLAEventCleaning
 
 # the libraries to link with this one:
-PACKAGE_PRELOAD  = boost_system boost_filesystem
+PACKAGE_PRELOAD  = boost_system boost_filesystem boost_iostreams
 
 # additional compilation flags to pass (not propagated to dependent packages):
 PACKAGE_CXXFLAGS =

@@ -12,6 +12,9 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/iostreams/device/file.hpp>
+#include <boost/iostreams/filtering_stream.hpp>
+#include <boost/iostreams/filter/bzip2.hpp>
 
 using namespace std;
 using namespace boost;
@@ -73,7 +76,7 @@ TLALArEventVetoData::runNumberFromFilename( const boost::filesystem::path filena
 {
   // what is the run number? filename format should be event-veto-${runnumber}.txt
   // return 0 if failure.
-  vector<string> filename_parts;
+  vector<string> filename_parts; 
   split( filename_parts , filename.filename().string() , is_any_of("-.") );
   if( filename_parts.size()<3 ) { return 0; }
   try {
@@ -86,9 +89,16 @@ TLALArEventVetoData::runNumberFromFilename( const boost::filesystem::path filena
 bool
 TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename , const bool testOnly )
 {
-  // open the file 
-  boost::filesystem::ifstream file( filename );
-  if( !file || !file.is_open() ) { return false; }
+  // open the file. if the extension indicates it is a bzip2 file, decompress it on the fly.
+  string extension = boost::filesystem::extension(filename);
+  boost::iostreams::filtering_istream file;
+  if( boost::algorithm::icontains( extension , ".bz2" ) ||
+      boost::algorithm::icontains( extension , ".bzip2" ) ) {
+    file.push( boost::iostreams::bzip2_decompressor{} );
+  }
+  auto file_source{ boost::iostreams::file_source(filename.string()) };
+  if( !file_source.is_open() ) { return false; }
+  file.push( file_source );
 
   bool any_insertions{false};
   set<RunNumberType> found_runs;
