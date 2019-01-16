@@ -8,6 +8,7 @@
 
 echo "Post-processing script to prepare LAr Electronic calibration upload"
 echo "POOL-file merging, OFC/Shape computation, Conversion to COOL-inline for online DB" 
+echo "Possible input variables: '$'GlobalTag, '$'sqlitedest, '$'IOVBegin"
 
 if [[ $sqlitedest == "" ]];
 then
@@ -129,11 +130,19 @@ mergeFolders=["/LAR/ElecCalibOfl/AutoCorrs/AutoCorr",
               "/LAR/ElecCalibOfl/OFCBin/PhysWaveShifts"
               ]
 fileName="LArConditionsCalib"
+EOF
 
+if [[ $IOVBegin != "" ]]
+then
+ echo "IOVBegin="$IOVBegin >>merge.py
+fi
+
+cat >>merge.py << EOF
 include("LArCalibProcessing/LArCalib_Merge.py")
 EOF
 
 athena.py merge.py > merge.log 2>&1
+
 if [ $? -ne 0 ]; 
 then
     echo "Athena reported an error. Please check merge.log!"
@@ -153,16 +162,20 @@ echo -e "Building a tag-hierarchy in  ${mergesqlite}, linking to $GlobalTag" >> 
  
 $pyDir/BuildTagHierarchy.py ${mergesqlite} $GlobalTag >> $copylog
 # hack for new OFCBin:
-$pyDir/BuildTagHierarchy.py bindiff_run2.db $GlobalTag >> $copylog
-pool_insertFileToCatalog.py AdjustedOFCBin.pool.root --catalog="xmlcatalog_file:$outputCat"
+#$pyDir/BuildTagHierarchy.py bindiff_run2.db $GlobalTag >> $copylog
+#pool_insertFileToCatalog.py AdjustedOFCBin.pool.root --catalog="xmlcatalog_file:$outputCat"
 
 echo "Creating temporary sqlite including the FCAL PhsyWave"
 echo -e "Creating temporary sqlite including the FCAL PhsyWave" >> $copylog
 
 cp $mergesqlite  ${mergesqlite}.tmp
-#FIXME: Auto-detect the destination folder name
-AtlCoolCopy.exe "COOLOFL_LAR/CONDBR2" "sqlite://;schema=${mergesqlite}.tmp;dbname=CONDBR2" -f /LAR/ElecCalibOfl/PhysWaves/FCALFromTB -t LARElecCalibOflPhysWavesFCALFromTB-calib-01 -of /LAR/ElecCalibOfl/PhysWaves/RTM -ot LARElecCalibOflPhysWavesRTM-RUN2-UPD3-00 -nochannel
+tstring=`/afs/cern.ch/user/a/atlcond/utils/AtlCoolTag.py trace CONDBR2 $GlobalTag | grep LARElecCalibOflPhysWavesRTM | awk '{print $5}'`
+AtlCoolCopy.exe "COOLOFL_LAR/CONDBR2" "sqlite://;schema=${mergesqlite}.tmp;dbname=CONDBR2" -f /LAR/ElecCalibOfl/PhysWaves/FCALFromTB -t LARElecCalibOflPhysWavesFCALFromTB-calib-01 -of /LAR/ElecCalibOfl/PhysWaves/RTM -ot $tstring -nochannel
+# for repro:
+#AtlCoolCopy.exe "COOLOFL_LAR/CONDBR2" "sqlite://;schema=${mergesqlite}.tmp;dbname=CONDBR2" -f /LAR/ElecCalibOfl/PhysWaves/FCALFromTB -t LARElecCalibOflPhysWavesFCALFromTB-calib-01 -of /LAR/ElecCalibOfl/PhysWaves/RTM -ot LARElecCalibOflPhysWavesRTM-RUN2-UPD3-01 -nochannel
 
+#For pedestal only stop here
+#exit -1
 
 echo "Running athena to compute OFCs and Shapes and apply residual shape correction" 
 echo -e "Running athena to compute OFCs and Shapes and apply residual shape correction"  >> $copylog
@@ -175,27 +188,35 @@ InputAutoCorrPhysSQLiteFile="${mergesqlite}.tmp"
 InputPhysWaveSQLiteFile="${mergesqlite}.tmp"
 
 # hack for new OFCBin
-InputDBConnectionPhysWaveShift="sqlite://;schema=bindiff_run2.db;dbname=CONDBR2"
+#InputDBConnectionPhysWaveShift="sqlite://;schema=bindiff_run2.db;dbname=CONDBR2"
 
 OutputSQLiteFile="${mergesqlite}"
 poolcat="$outputCat"
 
 RunThreaded=False
+EOF
 
+if [[ $IOVBegin != "" ]]
+then
+ echo "IOVBegin="$IOVBegin >>computeOFCShape.py
+ echo "RunNumber="$IOVBegin >>computeOFCShape.py
+fi
+
+cat >> computeOFCShape.py <<EOF
 include("LArCalibProcessing/LArCalib_OFC_Phys_Run2.py")
 EOF
 
-athena.py -s computeOFCShape.py > computeOFCShape.log 2>&1
+athena.py -s -c "GlobalTag=\"$GlobalTag\"" computeOFCShape.py > computeOFCShape.log 2>&1
 if [ $? -ne 0 ]; 
 then
     echo "Athena reported an error. Please check computeOFCShape.log!"
     echo "Aborting now."
     exit -1
-#elif grep -q ERROR computeOFCShape.log 
-#then
-#    echo "ERROR occured during the OFC computation. Please check computeOFCShape.log!"
-#    echo "Aborting now."
-#    exit -1
+elif grep -q ERROR computeOFCShape.log 
+then
+    echo "ERROR occured during the OFC computation. Please check computeOFCShape.log!"
+    echo "Aborting now."
+    exit -1
 else
     echo "OFC & Shape computation job finished"
 fi
@@ -225,7 +246,7 @@ sqliteIn="${mergesqlite}"
 sqliteOut="${outputsqliteONL}"
 poolcat="$outputCat"
 dbname="CONDBR2"
-globalTag="LARCALIB-RUN2-00"
+globalTag="${GlobalTag}"
 include("OFCShapeFolderTag.py")
 
 inputFolders+=[("/LAR/ElecCalibOfl/Pedestals/Pedestal",""),
@@ -235,9 +256,10 @@ inputFolders+=[("/LAR/ElecCalibOfl/Pedestals/Pedestal",""),
               #("/LAR/ElecCalibOfl/Shape/RTM/5samples1phase","LARElecCalibOflShapeRTM5samples1phase-corr-RUN2-UPD3-00"),
              ]
 include ("LArCalibProcessing/LArCalib_ToCoolInline.py")
+svcMgr.MessageSvc.OutputLevel = DEBUG
 EOF
 
-athena.py ConvertToInline.py  > convertToInline.log 2>&1
+athena.py -s ConvertToInline.py  > convertToInline.log 2>&1
 if [ $? -ne 0 ]; 
 then
     echo "Athena reported an error. Please check convertToInline.log!"

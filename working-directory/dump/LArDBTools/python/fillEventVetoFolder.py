@@ -21,7 +21,9 @@ from ROOT import TTree,TFile
 noiseWord=0x1<<15
 corruptWord=0x1<<31
 
-eoscmd="/afs/cern.ch/project/eos/installation/0.3.84-aquamarine/bin/eos.select"
+# removed from AFS in July 2017:
+#eoscmd="/afs/cern.ch/project/eos/installation/0.3.84-aquamarine/bin/eos.select"
+eoscmd="/usr/bin/eos"
 
 class RunLumiToTimeStamp:
     def __init__(self):
@@ -201,7 +203,10 @@ def convertMissingFebList(inputList):
         ts1,ts2=rlTots.getStartStop((run1,LB1),(run2,LB2))
         if ts1 is None: ts1=mintime
         if ts2 is None: ts2=maxtime
-        outputList.append((ts1,ts2,pl))
+        pl32=set()
+        for fpl in pl: pl32.add(fpl>>32)
+        #outputList.append((ts1,ts2,pl))
+        outputList.append((ts1,ts2,pl32))
         #print "Missing FEB IOV",ts1,ts2,pl
     return outputList
 
@@ -398,6 +403,7 @@ def readCorruptionFromROOT(inTree,filename, ignoreFebs=()):
         if hasattr(inTree,"febHwId"):
             febids=set(inTree.febHwId)
             ignoreFebsNow=getMissingFEBsForTime(t,ignoreFebs)
+            print 'febids ',febids,' ignoreFebsNow ',ignoreFebsNow,' ignoreFebs ',ignoreFebs
             if not len(febids-ignoreFebsNow)>0: continue
             pass
 
@@ -457,7 +463,12 @@ def getCastorPath(run,stream):
     path1="/eos/atlas/atlastier0/rucio/"+projectTag+"/"+stream+"/"+eigthDigits
     print path1
 
-    filenamestart=".".join((projectTag,eigthDigits,stream,"merge","HIST","x"))
+    if "Main" in stream:
+       filenamestart=".".join((projectTag,eigthDigits,stream,"merge","HIST","f"))
+    else:
+       filenamestart=".".join((projectTag,eigthDigits,stream,"merge","HIST","x"))
+    # For HI changed to
+    #filenamestart=".".join((projectTag,eigthDigits,stream,"recon","HIST","x"))
 
     print 'Looking for sub-directory starting with "%s" in castor directory %s' % (filenamestart,path1)
     cmd="%s ls %s" % (eoscmd,path1)
@@ -488,40 +499,51 @@ def getCastorPath(run,stream):
         pass
     return histfiles
 
-def fillEventVetoForRun(runnumber,withNoise=True):
+def fillEventVetoForRun(runnumber,withNoise=True,fromMain=False):
 
-    cosmiccalofiles=getCastorPath(runnumber,"physics_CosmicCalo")
-    if cosmiccalofiles is None or len(cosmiccalofiles)==0:
-        print "ERROR: No files found for CosmicCalo stream of run",runnumber
-        sys.exit(-1)
-        pass
+    if fromMain:
+       mainfiles=getCastorPath(runnumber,"physics_Main")
+       if mainfiles is None or len(mainfiles)==0:
+          print "ERROR: No files found for Main stream of run",runnumber
+          sys.exit(-1)
+          pass
+
+       print "Main stream files:"
+       for f in mainfiles:
+          print "\t",f
+    else: 
+       cosmiccalofiles=getCastorPath(runnumber,"physics_CosmicCalo")
+       if cosmiccalofiles is None or len(cosmiccalofiles)==0:
+          print "ERROR: No files found for CosmicCalo stream of run",runnumber
+          sys.exit(-1)
+          pass
     
-    if len(cosmiccalofiles)>1:
-        print "WARNING: More than one monitoring root file fould for CosmicCalo stream of run",runnumber
+       if len(cosmiccalofiles)>1:
+          print "WARNING: More than one monitoring root file fould for CosmicCalo stream of run",runnumber
         
 
-    expressexpressfiles=getCastorPath(runnumber,"express_express")
-    if expressexpressfiles is None or len(expressexpressfiles)==0:
-        print "ERROR: No files found for express_express stream of run",runnumber
-        sys.exit(-1)
-        pass
+       expressexpressfiles=getCastorPath(runnumber,"express_express")
+       if expressexpressfiles is None or len(expressexpressfiles)==0:
+          print "ERROR: No files found for express_express stream of run",runnumber
+          sys.exit(-1)
+          pass
 
-    if len(expressexpressfiles)>1:
-        print "WARNING: More than one monitoring root file fould for express_express stream of run",runnumber
+       if len(expressexpressfiles)>1:
+          print "WARNING: More than one monitoring root file fould for express_express stream of run",runnumber
 
 
-    print "CosmicCalo stream files:"
-    for f in cosmiccalofiles:
-        print "\t",f
+       print "CosmicCalo stream files:"
+       for f in cosmiccalofiles:
+          print "\t",f
 
-    print "Express stream files:"
-    for f in expressexpressfiles:
-        print "\t",f
+       print "Express stream files:"
+       for f in expressexpressfiles:
+          print "\t",f
 
 
     #Read MissingFEB info from database:
     from LArBadChannelTool.getMissingFebs import getMissingFebs
-    ignoreFebsLB=getMissingFebs(runnumber,"LARBadChannelsOflMissingFEBs-RUN2-UPD4-01")
+    ignoreFebsLB=getMissingFebs(runnumber,"LARBadChannelsOflMissingFEBs-RUN2-UPD4-02")
     #ignoreFebsLB=getMissingFebs(runnumber)
     if ignoreFebsLB is None:
         print "Failed to get list of missing/corrupt febs from MissingFeb database!"
@@ -533,30 +555,42 @@ def fillEventVetoForRun(runnumber,withNoise=True):
     print "Missing FEBs:",ignoreFebs
 
     #sys.stdout.flush()
-    noisePointsCC=dict()
-    corruptionPointsCC=set()
-    for f in cosmiccalofiles:
-        fileResult=readFromROOT(f,readNoise=withNoise, readCorruption=True,ignoreFebs=ignoreFebs)
-        if fileResult is None:
+    noisePointsM=dict()
+    corruptionPointsM=set()
+    if fromMain:
+       for f in mainfiles:
+          fileResult=readFromROOT(f,readNoise=withNoise, readCorruption=True,ignoreFebs=ignoreFebs)
+          if fileResult is None:
+             print "ERROR, failed read from",f
+             sys.exit(-1)
+             pass
+          noisePointsM.update(fileResult[0])
+          corruptionPointsM|=fileResult[1]
+          pass
+    else:
+       noisePointsCC=dict()
+       corruptionPointsCC=set()
+       for f in cosmiccalofiles:
+          fileResult=readFromROOT(f,readNoise=withNoise, readCorruption=True,ignoreFebs=ignoreFebs)
+          if fileResult is None:
             print "ERROR, failed read from",f
             sys.exit(-1)
             pass
-        noisePointsCC.update(fileResult[0])
-        corruptionPointsCC|=fileResult[1]
-        pass
+          noisePointsCC.update(fileResult[0])
+          corruptionPointsCC|=fileResult[1]
+          pass
 
-    noisePointsEE=dict()
-    corruptionPointsEE=set()
-    for f in expressexpressfiles:
-        fileResult=readFromROOT(f,readNoise=withNoise, readCorruption=True,ignoreFebs=ignoreFebs)
-        if fileResult is None:
+       noisePointsEE=dict()
+       corruptionPointsEE=set()
+       for f in expressexpressfiles:
+          fileResult=readFromROOT(f,readNoise=withNoise, readCorruption=True,ignoreFebs=ignoreFebs)
+          if fileResult is None:
             print "ERROR, failed read from",f
             sys.exit(-1)
             pass
-        noisePointsEE.update(fileResult[0])
-        corruptionPointsEE|=(fileResult[1])
-        pass
-
+          noisePointsEE.update(fileResult[0])
+          corruptionPointsEE|=(fileResult[1])
+          pass
 
     #Strategy:
     #1. We search for noise burst in the CosmicCalo stream, with 1 event in 1 second, eg. also isolated events are accepted
@@ -574,8 +608,11 @@ def fillEventVetoForRun(runnumber,withNoise=True):
 
     if (withNoise):
         print "Searching boise burst events in Express and CosmicCalo stream."
-        allNoise=noisePointsCC;
-        allNoise.update(noisePointsEE);
+        if fromMain:
+           allNoise=noisePointsM
+        else:
+           allNoise=noisePointsCC;
+           allNoise.update(noisePointsEE);
         #noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);
         noiseRangesEECC=buildFilteredRange(allNoise,2,0.05,noiseWord,1);
         print "Found a total of %i veto periods covering %.2f seconds because of noise bursts in the Express+CosmicCalo stream" % (len(noiseRangesEECC),sumRanges(noiseRangesEECC))
@@ -588,8 +625,12 @@ def fillEventVetoForRun(runnumber,withNoise=True):
     #print "Found a total of %i veto periods covering %.2f seconds because of noise bursts in the Express stream (requesting 2 events in 2 seconds" % (len(noiseRangesEE),sumRanges(noiseRangesEE))
     #del noiseRangesEE
 
-    print "Filtering data corruption from Express and CosmicCalo"
-    corruptionRanges=buildFilteredRange(corruptionPointsEE | corruptionPointsCC,2,0.5,corruptWord)
+    if fromMain:
+       print "Filtering data corruption from Main"
+       corruptionRanges=buildFilteredRange(corruptionPointsM,2,0.5,corruptWord)
+    else:
+       print "Filtering data corruption from Express and CosmicCalo"
+       corruptionRanges=buildFilteredRange(corruptionPointsEE | corruptionPointsCC,2,0.5,corruptWord)
     print "Found a total of %i veto periods covering %.2f seconds because of data-corrpution (CosmicCalo+express combined)" % (len(corruptionRanges),sumRanges(corruptionRanges))
 
 
@@ -606,14 +647,14 @@ if __name__=='__main__':
         print "Usage:"
 
         print "Automated version:"
-        print "fillEventVetoFolder.py runnumber {--withNoise}"
+        print "fillEventVetoFolder.py runnumber {--withNoise} {--fromMain}"
         print "Finds monitoring files for given run on castor and builds sqlite file EventVeto<run>.db"
         print "containing only data corruption (unless run with --withNoise option) from the"
         print "physics_CosmicCalo stream and the express_express stream. The folder-level tag is resolved"
         print "from CURRENT global tag"
     
         print "\nManual version:"
-        print "fillEventVetoFolder.py {-t tagSuffix --noNoise --noCorruption} <sqlitefile> <rootfile1> <rootfile2> <textfile1>..."
+        print "fillEventVetoFolder.py {-t tagSuffix --noNoise --noCorruption } <sqlitefile> <rootfile1> <rootfile2> <textfile1>..."
         print "\nThe trees 'LArNoise' and 'LArCorruption' are read from the monitoring root file(s)"
         print "Paramters:"
         print "tagSuffix : Suffix for the folder-tag in the database"
@@ -636,30 +677,48 @@ if __name__=='__main__':
         print "Failed to get CURRENT folder level tag!"
         sys.exit(-1)
     
-    if (len(sys.argv)==2 or len(sys.argv)==3) and sys.argv[1].isdigit():
+    if (len(sys.argv)==2 or len(sys.argv)==3 or len(sys.argv)==4) and sys.argv[1].isdigit():
         #Fully automated case:
         runnumber=int(sys.argv[1])
 
+        withNoise=False
+        fromMain=False
         if len(sys.argv)==3:
             if (sys.argv[2]=="--withNoise"):
                 print "Will include noise-bursts vetos" 
                 withNoise=True
+            elif (sys.argv[2]=="--fromMain"):
+                print "Will run on Main stream"
+                fromMain=True
             else:
-                print "Parameter error, don't understand argument",sys.argv[2]
+                print "Parameter error, 2, don't understand argument",sys.argv[2]
                 sys.exit(-1)
-                pass
-        else:
-            withNoise=False
             pass
-        folderTag=current
-        sqlitename="EventVeto%i.db" % runnumber
+        elif len(sys.argv)==4:
+            if (sys.argv[3]=="--withNoise"):
+                print "Will include noise-bursts vetos" 
+                withNoise=True
+            elif (sys.argv[3]=="--fromMain"):
+                print "Will run on Main stream"
+                fromMain=True
+            else:
+                print "Parameter error, 3, don't understand argument",sys.argv[3]
+                sys.exit(-1)
+            pass
+        pass
+        if fromMain:
+           folderTag="LARBadChannelsOflEventVeto-RUN2-Bulk-00"
+           sqlitename="EventVeto%i_Main.db" % runnumber
+        else:
+           folderTag=current
+           sqlitename="EventVeto%i.db" % runnumber
         if os.access(sqlitename,os.F_OK):
             print "ERROR: File",sqlitename,"exists already. Please delete!"
             sys.exit(-1)
 
-        print "Using folder-level tag:",current
+        print "Using folder-level tag:",folderTag
 
-        data=fillEventVetoForRun(runnumber,withNoise)
+        data=fillEventVetoForRun(runnumber,withNoise,fromMain)
     else:
         #Manual case:
         folderTag=current

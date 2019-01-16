@@ -1,0 +1,54 @@
+# Will work only with gcc49 and COOL from release
+# export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+# alias setupATLAS 'source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
+# setupATLAS
+# lsetup "lcgenv -p LCG_81c x86_64-slc6-gcc49-opt COOL"
+#
+# but doesn't work for me properly, therefore better manualy set gcc:
+# source /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/gcc/4.9.3/x86_64-slc6/setup.sh
+#
+# and COOL is hardcoded to:
+# /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/COOL/3_1_0/x86_64-slc6-gcc49-opt
+#
+##############################################################
+LCGLIBS	      = /afs/cern.ch/atlas/software/releases/20.7.5/LCGCMT/LCGCMT_81c/InstallArea/x86_64-slc6-gcc49-opt/lib
+#COOLLIBS      = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/COOL/3_1_0/x86_64-slc6-gcc49-opt/lib
+#CORALLIBS     = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/CORAL/3_1_0/x86_64-slc6-gcc49-opt/lib
+#BOOSTLIB      = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/Boost/1.59.0_python2.7/x86_64-slc6-gcc49-opt/lib
+#ROOTLIBS      = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/ROOT/6.04.14/x86_64-slc6-gcc49-opt/lib
+LIBS          = -L$(LCGLIBS) -llcg_CoolApplication -llcg_RelationalCool -llcg_CoolKernel -llcg_CoralBase -llcg_RelationalAccess -llcg_CoralKernel  -lboost_thread-gcc49-mt-1_59 -lboost_system-gcc49-mt-1_59 -lboost_program_options-gcc49-mt-1_59 -lboost_filesystem-gcc49-mt-1_59 -lCore -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lOracle -pthread -lm -ldl -rdynamic
+
+CXX           = g++
+LFLAGSSO      =
+CXXFLAGS      = -std=c++11  -Wall -g -fPIC -I/afs/cern.ch/atlas/software/releases/20.7.5/sw/lcg/releases/LCG_81c/Boost/1.59.0_python2.7/x86_64-slc6-gcc49-opt/include/boost-1_59  -I/afs/cern.ch/atlas/software/releases/20.7.5/sw/lcg/releases/LCG_81c/COOL/3_1_0/x86_64-slc6-gcc49-opt/include -I/afs/cern.ch/atlas/software/releases/20.7.5/sw/lcg/releases/LCG_81c/CORAL/3_1_0/x86_64-slc6-gcc49-opt/include -I/afs/cern.ch/atlas/software/releases/20.7.5/sw/lcg/releases/LCG_81c/ROOT/6.04.14/x86_64-slc6-gcc49-opt/include
+LDFLAGS       = -O -g
+SOFLAGS       = -shared
+
+LD            = $(CXX)
+
+
+##############################################################
+
+all:            EventVetoToCool
+
+clean:
+		rm -f *.o *.so 
+
+%:              %.o
+		$(LD) $(LDFLAGS) $< $(GLIBS) -o $@
+
+%.o:            %.cpp *.h
+		$(CXX) -c $(CXXFLAGS) $< -o $@
+
+%.o:            %C. *.h
+		$(CXX) -c $(CXXFLAGS) $< -o $@
+
+EventVetoToCool:     EventVetoToCool.o vetoBuilder.o vetoDB.o FillLArNoiseBurstCandidates.o
+		$(LD) $(LDFLAGS) $< vetoBuilder.o vetoDB.o FillLArNoiseBurstCandidates.o $(LIBS) -o $@
+
+EventVetoToCool_noOverlaps:     EventVetoToCool_noOverlaps.o vetoBuilder.o vetoDB.o FillLArNoiseBurstCandidates.o
+		$(LD) $(LDFLAGS) $< vetoBuilder.o vetoDB.o FillLArNoiseBurstCandidates.o $(LIBS) -o $@
+
+testeos:	test.o
+		$(LD) $(LDFLAGS) $< -L$(ROOTLIBS) -lCore -lRIO -lNet -pthread -lm -ldl -rdynamic -o $@
+# DO NOT DELETE

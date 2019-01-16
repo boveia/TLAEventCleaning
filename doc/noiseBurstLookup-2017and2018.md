@@ -1,7 +1,9 @@
 
 # how to retrieve noise burst info from the COOL database?
 
-The following are notes from the 2015 development of the TLA noise burst lookup tools. For 2016 changes, skip to [here][notes2016]
+The following are notes from the 2015 development of the TLA noise burst lookup tools. 
+For 2016 changes, skip to [here][notes2016].
+For 2017--2018 changes, skip to [here][notes20172018].
 
 ## accessing the DB from athena.py
 
@@ -685,7 +687,18 @@ There are some interesting ones:
 - ```LARBadChannelsOflEventVeto-RUN2-UPD1-00``` instead of ```LARBadChannelsOflEventVeto-RUN2-UPD4-04```
 
 - in fillEventVetoFolder.py,
-  ```noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);``` becomes ```noiseRangesEECC=buildFilteredRange(allNoise,2,0.05,noiseWord,1);``` and elsewhere ```window``` changes similarly from 0.2 s to 0.05 s
+  ```
+  noiseRangesEECC=buildFilteredRange(allNoise,2,0.2,noiseWord,1);
+  ``` 
+  becomes
+  ```
+  noiseRangesEECC=buildFilteredRange(allNoise,2,0.05,noiseWord,1);
+  ``` 
+  and elsewhere
+  ```
+  window
+  ``` 
+  changes similarly from 0.2 s to 0.05 s.
 
 
 and some routine ones
@@ -753,7 +766,14 @@ stream as of run 306384.
 
 On the afternoon before Thanksgiving, I glanced through the diffs
 above, copied what seemed to be the mini-noise-burst changes in
-```showEventVeto.py```, and ran the ```makeEventVetoLists.sh``` script
+```
+showEventVeto.py
+```
+and ran the
+```
+makeEventVetoLists.sh
+```
+script
 for all of the 2016 runs. Will Kalderon passed this data into my
 TLAEventCleaning reader and compared to the offline LArError flag for
 physics_Main data
@@ -789,6 +809,41 @@ Using the hasty-attempt output, Will checked a run prior to this run. So we have
   that offline run?
   
 
+# Notes on 2017--2018 development [notes20172018]
+
+Starting by examing the differences with in use at Point1 as of the end of 2018:
+
+- now Athena 21.0.20 instead of 20.7.5.2
+- some changes to filter data corruption from Express and CosmicCalo streams, in addition to (as earlier) Physics_main
+- changes to how the MissingFEBs IOVs are converted to timestamps. the code
+
+    ```
+    print "Found ",len(inputList),"MissingFEBs IOVs for this run. Converting to time-stamps."
+    rlTots=RunLumiToTimeStamp()
+    outputList=[]
+    for (rl1,rl2,pl) in inputList:
+        run1=rl1>>32
+        LB1=rl1 & 0xFFFFFFFF
+        run2=rl2>>32
+        LB2=rl2 & 0xFFFFFFFF
+        ts1,ts2=rlTots.getStartStop((run1,LB1),(run2,LB2))
+        if ts1 is None: ts1=mintime
+        if ts2 is None: ts2=maxtime
+        pl32=set()
+        for fpl in pl: pl32.add(fpl>>32)
+        #outputList.append((ts1,ts2,pl))   <--- earlier implementation commented out, with new on the line below
+        outputList.append((ts1,ts2,pl32))
+        #print "Missing FEB IOV",ts1,ts2,pl
+    return outputList
+    ```
+
+- the new MissingFEB database table is now "LARBadChannelsOflMissingFEBs-RUN2-UPD4-02" instead of version "-01".
+- new scripts to get and set the data in the DB in new ways?
+- options to showEventVeto.py to separately retrieve only noise bursts, mini-noise bursts, or data corruption intervals, and a calculation of the overall luminosity lost.
+
+I don't see any changes to https://twiki.cern.ch/twiki/bin/view/AtlasComputing/LArDatabaseUpdateHowTo that stand out.
+
+
 
 # Appendix
 
@@ -799,6 +854,7 @@ Using the hasty-attempt output, Will checked a run prior to this run. So we have
 LArCalorimeter/​LArMonitoring/​python/​MiscLibraries/​MyCOOLlib.py
 LArCalorimeter/​LArBadChannelTool/​LArBadChannelTool/​LArBadChannelDBTools.h
 ```
+
 ## given a good run list XML, scrape run numbers to a text file with
 
 ```less data15_13TeV.periodAllYear_DetStatus-v67-pro19-02_DQDefects-00-01-02_PHYS_StandardGRL_All_Good.xml | grep '<Run>' | awk -F'>' '{print $2}' | awk -F'<' '{print $1}' > goodruns.txt```

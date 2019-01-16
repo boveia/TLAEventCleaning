@@ -1,0 +1,49 @@
+# Will work only with gcc49 and COOL from release
+# export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+# alias setupATLAS 'source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
+# setupATLAS
+# lsetup "lcgenv -p LCG_81c x86_64-slc6-gcc49-opt COOL"
+#
+# but doesn't work for me properly, therefore better manualy set gcc:
+# source /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/gcc/4.9.3/x86_64-slc6/setup.sh
+#
+# and COOL is hardcoded to:
+# /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/COOL/3_1_0/x86_64-slc6-gcc49-opt
+#
+##############################################################
+COOLLIBS      = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/COOL/3_1_0/x86_64-slc6-gcc49-opt/lib
+CORALLIBS     = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/CORAL/3_1_0/x86_64-slc6-gcc49-opt/lib
+BOOSTLIB      = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/Boost/1.59.0_python2.7/x86_64-slc6-gcc49-opt/lib
+ROOTLIBS      = /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/ROOT/6.04.14/x86_64-slc6-gcc49-opt/lib
+LIBS          = -L$(COOLLIBS) -llcg_CoolApplication -llcg_RelationalCool -llcg_CoolKernel -L$(CORALLIBS) -llcg_CoralBase -llcg_RelationalAccess -llcg_CoralKernel  -L$(BOOSTLIB) -lboost_thread-gcc49-mt-1_59 -lboost_system-gcc49-mt-1_59 -lboost_program_options-gcc49-mt-1_59 -L$(ROOTLIBS) -lCore -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lOracle -pthread -lm -ldl -rdynamic
+
+CXX           = g++
+LFLAGSSO      =
+CXXFLAGS      = -std=c++11  -Wall -g -fPIC -I/cvmfs/sft.cern.ch/lcg/releases/LCG_81c/Boost/1.59.0_python2.7/x86_64-slc6-gcc49-opt/include/boost-1_59 -I/cvmfs/sft.cern.ch/lcg/releases/LCG_81c/COOL/3_1_0/x86_64-slc6-gcc49-opt/include -I /cvmfs/sft.cern.ch/lcg/releases/LCG_81c/CORAL/3_1_0/x86_64-slc6-gcc49-opt/include -I/cvmfs/sft.cern.ch/lcg/releases/LCG_81c/ROOT/6.04.14/x86_64-slc6-gcc49-opt/include
+LDFLAGS       = -O -g
+SOFLAGS       = -shared
+
+LD            = $(CXX)
+
+
+##############################################################
+
+all:            EventVetoToCool
+
+clean:
+		rm -f *.o *.so 
+
+%:              %.o
+		$(LD) $(LDFLAGS) $< $(GLIBS) -o $@
+
+%.o:            %.cpp
+		$(CXX) -c $(CXXFLAGS) $< -o $@
+
+%.o:            %C.
+		$(CXX) -c $(CXXFLAGS) $< -o $@
+
+EventVetoToCool:     EventVetoToCool.o vetoBuilder.o vetoDB.o FillLArNoiseBurstCandidates.o
+		$(LD) $(LDFLAGS) $< vetoBuilder.o vetoDB.o FillLArNoiseBurstCandidates.o $(LIBS) -o $@
+
+testeos:	test.o
+		$(LD) $(LDFLAGS) $< -L$(ROOTLIBS) -lCore -lRIO -lNet -pthread -lm -ldl -rdynamic -o $@

@@ -12,21 +12,34 @@ lardbtoolsdir=` echo $0 | grep -o ".*/" `
 
 
 pyDir="${lardbtoolsdir}/python"
-if [[ $# != 1 ]];
+if [[ $# != 1 ]] && [[ $# != 2 ]] && [[ $# != 3 ]]
 then
   echo "Expected a text file containing a list of directories as parameter"
+  echo "Optionaly an IOVBegin run number could be supplied"
+  echo "Optionaly an GlobalTag could be supplied"
   exit
 fi
 
 listOfDirFile=$1
 shift
+if [[ $# > 0 ]]
+then
+  export IOVBegin=$1
+  shift
+fi
+if [[ $# > 0 ]]
+then
+  export GlobalTag=$1
+  shift
+fi
 
 
 echo "Check availablity of AtlCoolCopy.exe ...." 
 if ! which AtlCoolCopy.exe 2>/dev/null 
 then
     echo "Setting up offline envirnoment from AP area..."
-    source /afs/cern.ch/atlas/maxidisk/d20/Automation/AtlasProduction-20.1.0.2/env.sh
+    #source /afs/cern.ch/atlas/maxidisk/d20/Automation/AtlasProduction-20.1.0.2/env.sh
+    source /afs/cern.ch/atlas/maxidisk/d20/Automation/AtlasOffline-21.0.20/env.sh
     if ! which AtlCoolCopy.exe 2>/dev/null 
 	then
 	echo "Failed to get AtlCoolCopy.exe"

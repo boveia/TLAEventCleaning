@@ -72,6 +72,7 @@ then
     echo "$copylog exists, removing..."
     rm -f $copylog
 fi
+touch $copylog
 
 
 
