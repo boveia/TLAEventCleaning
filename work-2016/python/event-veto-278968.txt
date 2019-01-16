@@ -1,0 +1,55 @@
+278968 278968
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-04  Run 278968 to 278968
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/x86_64-slc6-gcc48-opt/20.1.8/AtlasCore/20.1.8/InstallArea/XML/AtlasAuthentication/dblookup.xml file
+Error in <TCint::AutoLoadCallback>: failure loading library libGaudiPythonDict for class basic_ostream<char,char_traits<char> >
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<bool>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<double>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<float>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<short>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-char>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-int>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-long>=vector.dll vectorbool.dll> for level 0; ignored
+Warning in <TEnvRec::ChangeValue>: duplicate entry <Library.vector<unsigned-short>=vector.dll vectorbool.dll> for level 0; ignored
+[?1034hDumping EventVeto data from run 278968 to run 278968  lasting from Wed Sep  9 21:24:02 2015 UTC to Thu Sep 10 00:08:59 2015 UTC
+Event Veto ['NoiseBurst'], Wed Sep  9 21:43:32 2015 UTC-Wed Sep  9 21:43:32 2015 UTC (0.050 )  Run 278968, LB 22 (1441835012500649472.000000,1441835012450649088.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:43:53 2015 UTC-Wed Sep  9 21:43:53 2015 UTC (0.050 )  Run 278968, LB 22 (1441835033952631296.000000,1441835033902630400.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:44:34 2015 UTC-Wed Sep  9 21:44:34 2015 UTC (0.050 )  Run 278968, LB 23 (1441835074996382720.000000,1441835074946382080.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:46:57 2015 UTC-Wed Sep  9 21:46:57 2015 UTC (0.050 )  Run 278968, LB 25 (1441835217145570048.000000,1441835217095569408.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:53:17 2015 UTC-Wed Sep  9 21:53:17 2015 UTC (0.050 )  Run 278968, LB 31 (1441835597155495424.000000,1441835597105495296.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:53:17 2015 UTC-Wed Sep  9 21:53:17 2015 UTC (0.050 )  Run 278968, LB 31 (1441835597597063424.000000,1441835597546906880.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:55:00 2015 UTC-Wed Sep  9 21:55:00 2015 UTC (0.050 )  Run 278968, LB 33 (1441835700844045568.000000,1441835700794044416.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:55:21 2015 UTC-Wed Sep  9 21:55:21 2015 UTC (0.053 )  Run 278968, LB 34 (1441835721527487744.000000,1441835721474945024.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 21:59:35 2015 UTC-Wed Sep  9 21:59:35 2015 UTC (0.050 )  Run 278968, LB 38 (1441835975892722944.000000,1441835975842721792.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:06:14 2015 UTC-Wed Sep  9 22:06:14 2015 UTC (0.050 )  Run 278968, LB 46 (1441836374946143744.000000,1441836374896143360.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:11:59 2015 UTC-Wed Sep  9 22:11:59 2015 UTC (0.050 )  Run 278968, LB 53 (1441836719791784192.000000,1441836719741783552.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:12:25 2015 UTC-Wed Sep  9 22:12:25 2015 UTC (0.050 )  Run 278968, LB 53 (1441836745461527552.000000,1441836745411526656.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:13:14 2015 UTC-Wed Sep  9 22:13:14 2015 UTC (0.050 )  Run 278968, LB 54 (1441836794967736064.000000,1441836794917735680.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:13:48 2015 UTC-Wed Sep  9 22:13:48 2015 UTC (0.050 )  Run 278968, LB 55 (1441836828984827136.000000,1441836828934826496.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:17:28 2015 UTC-Wed Sep  9 22:17:28 2015 UTC (0.050 )  Run 278968, LBs 58-59 (1441837048572781568.000000,1441837048522781184.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:25:48 2015 UTC-Wed Sep  9 22:25:48 2015 UTC (0.050 )  Run 278968, LB 67 (1441837548112244224.000000,1441837548062243584.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:27:31 2015 UTC-Wed Sep  9 22:27:31 2015 UTC (0.050 )  Run 278968, LB 69 (1441837651237534464.000000,1441837651187534080.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:36:22 2015 UTC-Wed Sep  9 22:36:22 2015 UTC (0.050 )  Run 278968, LB 79 (1441838182103530496.000000,1441838182053529856.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:38:33 2015 UTC-Wed Sep  9 22:38:33 2015 UTC (0.050 )  Run 278968, LB 81 (1441838313955468544.000000,1441838313905467904.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:38:57 2015 UTC-Wed Sep  9 22:38:57 2015 UTC (0.050 )  Run 278968, LB 81 (1441838337890662400.000000,1441838337840661760.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:39:09 2015 UTC-Wed Sep  9 22:39:09 2015 UTC (0.050 )  Run 278968, LB 81 (1441838349359399424.000000,1441838349309398528.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:49:53 2015 UTC-Wed Sep  9 22:49:53 2015 UTC (0.050 )  Run 278968, LB 92 (1441838993525417216.000000,1441838993475416832.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:49:55 2015 UTC-Wed Sep  9 22:49:55 2015 UTC (0.050 )  Run 278968, LB 92 (1441838995174930688.000000,1441838995124930048.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:57:00 2015 UTC-Wed Sep  9 22:57:00 2015 UTC (0.050 )  Run 278968, LB 99 (1441839420895133440.000000,1441839420845132800.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 22:58:51 2015 UTC-Wed Sep  9 22:58:51 2015 UTC (0.050 )  Run 278968, LB 102 (1441839531266442496.000000,1441839531216441856.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:06:13 2015 UTC-Wed Sep  9 23:06:13 2015 UTC (0.050 )  Run 278968, LB 109 (1441839973324048640.000000,1441839973274048256.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:16:33 2015 UTC-Wed Sep  9 23:16:33 2015 UTC (0.050 )  Run 278968, LB 119 (1441840593277869056.000000,1441840593227868160.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:17:44 2015 UTC-Wed Sep  9 23:17:44 2015 UTC (0.050 )  Run 278968, LB 120 (1441840664060062208.000000,1441840664010061824.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:27:03 2015 UTC-Wed Sep  9 23:27:03 2015 UTC (0.050 )  Run 278968, LB 132 (1441841223054504704.000000,1441841223004504320.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:27:19 2015 UTC-Wed Sep  9 23:27:19 2015 UTC (0.050 )  Run 278968, LB 132 (1441841239167284224.000000,1441841239117283584.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:27:43 2015 UTC-Wed Sep  9 23:27:43 2015 UTC (0.050 )  Run 278968, LB 133 (1441841263129972736.000000,1441841263079972352.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:33:00 2015 UTC-Wed Sep  9 23:33:00 2015 UTC (0.050 )  Run 278968, LB 138 (1441841580695659776.000000,1441841580645659392.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:34:52 2015 UTC-Wed Sep  9 23:34:52 2015 UTC (0.050 )  Run 278968, LB 140 (1441841692427682560.000000,1441841692377280512.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:37:08 2015 UTC-Wed Sep  9 23:37:08 2015 UTC (0.050 )  Run 278968, LB 143 (1441841828558576384.000000,1441841828508575744.000000)
+Event Veto ['NoiseBurst'], Wed Sep  9 23:59:15 2015 UTC-Wed Sep  9 23:59:15 2015 UTC (0.064 )  Run 278968, LB 165 (1441843155678985728.000000,1441843155614773760.000000)
+Found a total of 35 noisy periods, covering a total of 1.77 seconds
+Found a total of 0 corruption periods, covering a total of 0.00 seconds
+Lumi loss due to noise-bursts: 2.86 nb-1 out of 12941.74 nb-1 (0.22 per-mil)
+Overlaps are counted as noise
