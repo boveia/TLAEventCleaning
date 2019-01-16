@@ -1,0 +1,6 @@
+data17_13TeV.00341294.calibration_DataScouting_05_Jets.merge.AOD.r10993_p3630
+data17_13TeV.00341312.calibration_DataScouting_05_Jets.merge.AOD.r10993_p3630
+data17_13TeV.00341419.calibration_DataScouting_05_Jets.merge.AOD.r10993_p3630
+data17_13TeV.00341534.calibration_DataScouting_05_Jets.merge.AOD.r10993_p3630
+data17_13TeV.00341615.calibration_DataScouting_05_Jets.merge.AOD.r10993_p3630
+data17_13TeV.00341649.calibration_DataScouting_05_Jets.merge.AOD.r10993_p3630

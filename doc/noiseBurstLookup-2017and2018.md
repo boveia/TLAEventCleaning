@@ -843,6 +843,13 @@ Starting by examing the differences with in use at Point1 as of the end of 2018:
 
 I don't see any changes to https://twiki.cern.ch/twiki/bin/view/AtlasComputing/LArDatabaseUpdateHowTo that stand out.
 
+## Making event veto data
+
+First I need the lists of runs to process for 2017 and 2018 data. To get these, I grabbed the AOD and DAOD requests at
+- https://its.cern.ch/jira/browse/ATLASDPD-1188 (2015-2017 data, including special runs)
+- https://its.cern.ch/jira/browse/DATREP-142 (2018 data)
+
+
 
 
 # Appendix
