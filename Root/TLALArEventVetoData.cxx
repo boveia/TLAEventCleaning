@@ -252,8 +252,8 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
   // Throws an exception if the event veto data has not been loaded, or if
   // there is no (even empty) event veto data provided for the given run.
     
-  // look up run. check 'cached' run first. since the LBN table for the run will never be changed
-  // during a job, we'll
+  // look up run. check 'cached' run first. assume the LBN table for the run will never be changed
+  // during a job.
   
   if( (run!=0 && run!=_currun) || _lbns_for_currun==nullptr ) {
     auto ir = _t.find(run);
