@@ -144,14 +144,10 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Mon Aug 15 00:21:52 2016 UTC-Mon Aug 15 00:21:52 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220512684932864.000000,1471220512674932736.000000)
     // in this case, concatenate the elements of the vector to give 'NoiseBurst+MiniNoiseBurst'
     if (fields.size()==26) {
-      vector<string> newfields(25);
-      newfields[0] = fields[0];
-      newfields[1] = fields[1];
-      newfields[2] = fields[2]+"+"+fields[3];
-      for(int i_field = 3; i_field < fields.size()-1; i_field++) {
-	newfields[i_field] = fields[i_field+1];
-      }
-      fields = newfields;
+      vector<string> newfields(fields);
+      newfields[2] = newfields[2]+"+"+newfields[3];
+      newfields.erase(newfields.cbegin()+3);
+      fields.swap(newfields);
     }
 
     if( fields.size()!=25 ) {
@@ -161,7 +157,7 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
       return false;
     }
     const string line_interval_type{fields[2]};
-    bool lbn_range{false};
+    // bool lbn_range{false};
     RunNumberType line_run;
     LumiBlockType line_lbni;
     LumiBlockType line_lbnf;
@@ -170,13 +166,13 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     try {
       line_run = lexical_cast<RunNumberType>(fields[17]);
       if( fields[18]=="LBs" ) {
-        lbn_range = true;
+        // lbn_range = true;
         vector<string> lbn_fields;
         split( lbn_fields , fields[19] , is_any_of("-") , token_compress_on );
         line_lbni = lexical_cast<LumiBlockType>(lbn_fields[0]);
         line_lbnf = lexical_cast<LumiBlockType>(lbn_fields[1]);
       } else {
-        lbn_range = false;
+        // lbn_range = false;
         line_lbni = lexical_cast<LumiBlockType>(fields[19]);
         line_lbnf = line_lbni;
       }
@@ -222,8 +218,8 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
 
 void
 TLALArEventVetoData::insertInterval( const RunNumberType& run , const LumiBlockType& lbn ,
-                                     const unsigned long& begin_ts , const unsigned long& end_ts, 
-				     const std::string& interval_type)
+                                    const unsigned long& begin_ts , const unsigned long& end_ts, 
+                                    const std::string& interval_type)
 {
   // first check if loaded is true. if so, we have to invalidate the run cache first
   if( _loaded ) {
@@ -297,7 +293,7 @@ TLALArEventVetoData::shouldVeto( const RunNumberType& run , const LumiBlockType&
 
 std::string
 TLALArEventVetoData::vetoType( const RunNumberType& run , const LumiBlockType& lbn ,
-			       const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const
+                              const TimeStampType& ts , const TimeStampType& ts_ns_offset ) const
 {
   // Check the type of LAr event veto that has fired for the event
   // recorded at the given timestamp (which has two parts, 'ts'
@@ -323,7 +319,7 @@ TLALArEventVetoData::vetoType( const RunNumberType& run , const LumiBlockType& l
   // look up LB
   const EventVetoLumiBlocks& blocks{*_lbns_for_currun};
   auto il = blocks.find(lbn);
-  if( il == blocks.end() ) { return false; }
+  if( il == blocks.end() ) { throw std::exception(); }
   
   // do any intervals contain this timestamp?
   //   - std::function<bool(const TimeStampType&,const TimeStampType&>> 
