@@ -242,7 +242,7 @@ if __name__=="__main__":
     db="oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2"
     run1=None
     run2=None
-    tag="LARBadChannelsOflEventVeto-RUN2-UPD1-00"
+    tag="LARBadChannelsOflEventVeto-RUN2-UPD4-10"
     folderName="/LAR/BadChannelsOfl/EventVeto"
     levelOfDetail=3
     try:
