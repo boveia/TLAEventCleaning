@@ -17,7 +17,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
   
   // replace this path with the path to your event veto data directory
-  string path_to_data = "./TLAEventCleaning/data/event-veto-info-merge-bz2/";
+  string path_to_data = "./TLAEventCleaning/data/event-veto-info-run2/";
   
   struct TextFileInterval {
     unsigned long start;

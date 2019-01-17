@@ -117,18 +117,29 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     // parse the run, lbn, and timestamp info. the lbn can either be a single number or
     // a range "2-3".
     
-    // normal line:
+    // normal line, 2018: (30 fields)
+    // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Sun Sep 30 11:38:07 2018 UTC-Sun Sep 30 11:38:07 2018 UTC (0.001 )  Time stamp start 1538307487727678470 end 1538307487726678470  Run 362345, LB 245, lumi 18.17
+    
+    // normal line, 2016: (26 fields)
     // Event Veto ['MiniNoiseBurst'], Mon Aug 15 00:21:38 2016 UTC-Mon Aug 15 00:21:38 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220498122718208.000000,1471220498112718080.000000)
 
-    vector<string> fields(25); // 24 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
+    vector<string> fields(30); // up to 30 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
     split( fields , line , is_any_of(" ,().[]'") , token_compress_on );
+    
+    // 2018
+    // field(0-29) / desc
+    //
+    
+    // 2016
     // field(0-21) / desc
     // 2: veto interval type
     // 17: run number
     // 18: 'LB' if one LB, 'LBs' if range of LBs
     // 19: lumi block
     // 22,20: stop and start (note reversed order)
+    // 2-3 veto interval type
 
+    
     // with mini noise bursts, some lines can look like:
     // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Mon Aug 15 00:21:52 2016 UTC-Mon Aug 15 00:21:52 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220512684932864.000000,1471220512674932736.000000)
     // in this case, concatenate the elements of the vector to give 'NoiseBurst+MiniNoiseBurst'
@@ -385,6 +396,8 @@ TLALArEventVetoData::updateRunCache(const RunNumberType& run)
   auto ir{_t.find(run)};
   if( ir==_t.end() ) { throw std::exception(); }
   // do we need to load the current run from disk?
+  //   note: performance of std::tuple constructor would be a massive issue here. don't
+  //         copy the EventVetoFileHandle by value.
   const EventVetoFileHandle* lbns_handle{&(ir->second)};
   if( !std::get<1>(*lbns_handle) ) {
     // we need to load the run data from disk
