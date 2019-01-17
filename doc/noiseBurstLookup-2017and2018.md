@@ -843,6 +843,71 @@ Starting by examing the differences with in use at Point1 as of the end of 2018:
 
 I don't see any changes to https://twiki.cern.ch/twiki/bin/view/AtlasComputing/LArDatabaseUpdateHowTo that stand out.
 
+## Contents of offline db
+
+```
+] AtlCoolConsole.py  "COOLOFL_LAR/CONDBR2"
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+cd LARConnected to 'frontier://ATLF/();schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2'
+Welcome to AtlCoolConsole. Type 'help' for instructions.
+>>> cd LAR
+>>> ls
+  Name              Description     
+  /LAR/BadChannelsOfl                  
+  /LAR/CellCorrOfl                  
+  /LAR/ElecCalibOfl                  
+  /LAR/ElecCalibOflSC                  
+  /LAR/HVPathologiesOfl                  
+  /LAR/IdentifierOfl                  
+  /LAR/NoiseOfl                     
+  /LAR/TimeCorrectionOfl                  
+  Name              Description       Count     Size        
+  /LAR/LArCellPositionShiftOfl  <timeStamp>run-lumi</timeStamp><key>LArCellPositionShift</key><addrHeader><address_header service_type="71" clid="96609121" /></addrHeader><typeName>CaloRec::CaloCellPositionShift</typeName>  -         -           
+>>> cd BadChannelsOfl
+>>> ls  
+  Name              Description     
+  Name              Description       Count     Size        
+  /LAR/BadChannelsOfl/BadChannels  <timeStamp>run-lumi</timeStamp><addrHeader><address_header service_type="71" clid="1238547719" /></addrHeader><typeName>CondAttrListCollection</typeName>  -         -           
+  /LAR/BadChannelsOfl/EventVeto  <timeStamp>time</timeStamp><addrHeader><address_header service_type="71" clid="40774348" /></addrHeader><typeName>AthenaAttributeList</typeName>  -         -           
+  /LAR/BadChannelsOfl/KnownBADFEBs  <timeStamp>run-lumi</timeStamp><addrHeader><address_header service_type="71" clid="40774348" /></addrHeader><typeName>AthenaAttributeList</typeName>  -         -           
+  /LAR/BadChannelsOfl/KnownMNBFEBs  <timeStamp>run-lumi</timeStamp><addrHeader><address_header service_type="71" clid="40774348" /></addrHeader><typeName>AthenaAttributeList</typeName>  -         -           
+  /LAR/BadChannelsOfl/MissingFEBs  <timeStamp>run-lumi</timeStamp><addrHeader><address_header service_type="71" clid="40774348" /></addrHeader><typeName>AthenaAttributeList</typeName>  -         -           
+  /LAR/BadChannelsOfl/TTFailedAttempts  <timeStamp>run-lumi</timeStamp><addrHeader><address_header service_type="71"clid="1238547719"/></addrHeader><typeName>CondAttrListCollection</typeName>  -         -           
+>>> listtags EventVeto
+listListing tags for folder /LAR/BadChannelsOfl/EventVeto
+LARBadChannelsOflEventVeto-RUN2-Bulk-00 (unlocked) []
+LARBadChannelsOflEventVeto-RUN2-UPD1-00 (unlocked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-04 (locked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-05 (locked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-06 (locked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-07 (locked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-08 (locked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-09 (locked) []
+LARBadChannelsOflEventVeto-RUN2-UPD4-10 (locked) []
+LARBadChannelsOflEventVeto-RUN2-empty (locked) []
+LARBadChannelsOflEventVeto-RUN2-run-339435 (unlocked) []
+LARBadChannelsOflEventVeto-RUN2-test (locked) []
+>>> listtags MissingFEBs
+Listing tags for folder /LAR/BadChannelsOfl/MissingFEBs
+LARBadChannelsOflMissingFEBs-RUN2-RUN2-UPD4-01 (unlocked) []
+LARBadChannelsOflMissingFEBs-RUN2-UPD1-01 (locked) []
+LARBadChannelsOflMissingFEBs-RUN2-UPD3-01 (unlocked) []
+LARBadChannelsOflMissingFEBs-RUN2-UPD3-02 (unlocked) []
+LARBadChannelsOflMissingFEBs-RUN2-UPD4-01 (locked) []
+LARBadChannelsOflMissingFEBs-RUN2-UPD4-02 (locked) []
+LARBadChannelsOflMissingFEBs-UPD3-01 (unlocked) []
+LARBadChannelsOflMissingFEBs-UPD4-01 (unlocked) []
+>>> 
+```
+
+According to https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/LArDatabaseUpdateHowTo, the most recent tags are:
+
+```
+LARBadChannelsOflEventVeto-RUN2-UPD4-10
+LARBadChannelsOflMissingFEBs-RUN2-UPD4-02
+```
+
 ## Making event veto data
 
 I grabbed the AOD and DAOD requests at
@@ -850,14 +915,46 @@ I grabbed the AOD and DAOD requests at
 - https://its.cern.ch/jira/browse/DATREP-142 (2018 data)
 create a list of runs to process for 2017 and 2018 data. This includes the 2015 and 2016 data; i.e., I updated the entire event veto database.
 
-Once merging the changes, I ran makeEventVetoLists.sh with the list of runs.
+Once merging the changes, I ran makeEventVetoLists.sh with the list of runs. I parallelized this in three runs, two of which used the full run list (but one in reverse order of the other, using "tac" instead of "cat"). With diff, I merged text files that resulted. I checked that all runs ended properly ("event-veto-info-run2 ] grep -L -e "^Overall Lumi loss is" *.txt"). One did not: event-veto-338933.txt. The job for that run appears to have crashed with:
+
+    Event Veto ['NoiseBurst'], Sun Oct 22 21:10:32 2017 UTC-Sun Oct 22 21:10:32 2017 UTC (0.001 )  Time stamp start 1508706632358840700 end 1508706632357635855 CORAL/RelationalPlugins/oracle Error The connection was lost (ConnectionProperties::wasConnectionLost). OCIS
+    CORAL/RelationalPlugins/oracle Error The session was lost (SessionProperties::ociSvcCtxHandle). Possibly a network glitch or ORA-03113 error.
+    Traceback (most recent call last):
+      File "showEventVeto-2018.py", line 310, in <module>
+        showEventVetoFolder(db,folderName,tag,run1,run2,levelOfDetail)
+      File "showEventVeto-2018.py", line 188, in showEventVetoFolder
+        rl1=tsToRl.getRunLumi(tf)
+      File "showEventVeto-2018.py", line 75, in getRunLumi
+        obj=self._folder.findObject(cool.ValidityKey(pointInTime),0)
+    Exception: shared_ptr<cool::IObject> cool::IFolder::findObject(const ULong64_t& pointInTime, const unsigned int& channelId, const string& tagName = "") =>
+        The connection was lost! Possibly a network glitch or ORA-03113 error. Reconnection is not attempted in serializable R/O transactions. ( CORAL : "SessionProxy::ociSvcCtxHandle" from "CORAL/RelationalPlugins/oracle" ) (C++ exception of type coral::ConnectionLos
+    CORAL/RelationalPlugins/oracle Error The connection was lost (ConnectionProperties::wasConnectionLost). OCIServerVersion fails for this connection.
+    CORAL/RelationalPlugins/oracle Error The connection was lost (ConnectionProperties::wasConnectionLost). OCIServerVersion fails for this connection.
+    CORAL/RelationalPlugins/oracle Error The session was lost (SessionProperties::ociSvcCtxHandle). Possibly a network glitch or ORA-03113 error.
+    terminate called after throwing an instance of 'coral::ConnectionLostException'
+      what():  The connection was lost! Possibly a network glitch or ORA-03113 error. Reconnection is not attempted in serializable R/O transactions. ( CORAL : "SessionProxy::ociSvcCtxHandle" from "CORAL/RelationalPlugins/oracle" )
+    ORA-24550: signal received: [si_signo=6] [si_errno=0] [si_code=-6] [si_int=0] [si_ptr=(nil)] [si_addr=0x8e9100006635]
+    kpedbg_dmp_stack()+360<-kpeDbgCrash()+192<-kpeDbgSignalHandler()+119<-skgesig_sigactionHandler()+218<-__sighandler()<-gsignal()+53<-__default_morecore()<-_IO_2_1_stderr_()+131<-_IO_2_1_stderr_()+131<-_IO_2_1_stderr_()+131<-_IO_2_1_stderr_()+131<-_IO_2_1_stderr_()+
+
+
+## Database table for corruption?
+
+Current run-2 setup:
+    
+    Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD1-00  Run 276073 to 276073
+    
+Old 2016 setup:
+
+	Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-04  Run 276073 to 276073
+
+
 
 ## TODO
 
-- [ ] **Anything special needed for data corruption veto type?**
-- [ ] check changes from merged data at TLAEventCleaning/data/
+- [ ] **Anything special needed for data corruption veto type?** "DataCorruption" does not appear in the event veto dumps for run 2, but it does appear in the 2015--2016 dumps.
+- [ ] understgand changes from merged data at TLAEventCleaning/data/. The veto intervals appear slightly wider. Presumably this is because the database table version is different, but 1) can we understand what was done for each database table and 2) which is the one we want for TLA?
 - [x] implement bzip2 decompression (achieved 10x file size reduction on 2015+2016 data with "bzip2 -9")
-
+- [x] implement read-on-demand from disk, rather than loading every run at the start of the job.
 
 
 # Appendix
