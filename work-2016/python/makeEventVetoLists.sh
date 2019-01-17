@@ -25,8 +25,8 @@ do
     BATCHNAME="${BATCHDIR}/job_${runno}.sh"
     echo "#!/bin/bash" > $BATCHNAME
     echo "cd $WORKDIR" >> $BATCHNAME
-    echo "export AtlasSetup=/afs/cern.ch/atlas/software/dist/AtlasSetup" >> $BATCHNAME
-    echo "alias asetup='source $AtlasSetup/scripts/asetup.sh'" >> $BATCHNAME
+    # echo "export AtlasSetup=/afs/cern.ch/atlas/software/dist/AtlasSetup" >> $BATCHNAME
+    # echo "alias asetup='source $AtlasSetup/scripts/asetup.sh'" >> $BATCHNAME
     echo "source /afs/cern.ch/atlas/software/dist/AtlasSetup/scripts/asetup.sh 21.0.20" >> $BATCHNAME
     echo "python showEventVeto-2018.py -r $runno -e $runno >& ${EVENTVETOLISTDIR}/event-veto-$runno.txt" >> $BATCHNAME
     chmod u+x $BATCHNAME
