@@ -86,6 +86,123 @@ TLALArEventVetoData::runNumberFromFilename( const boost::filesystem::path filena
   return 0;
 }
 
+const TLALArEventVetoData::ParseResult
+TLALArEventVetoData::parseVetoLine16(const std::string& line)
+{
+  RunNumberType line_run{0};
+  LumiBlockType line_lbni{0};
+  LumiBlockType line_lbnf{0};
+  unsigned long line_tsi{0};
+  unsigned long line_tsf{0};
+  string line_interval_type{};
+  ParseResult null_result{std::tie(line_run,line_lbni,line_lbnf,line_tsi,line_tsf,line_interval_type)};
+  
+  // 2016
+  // field(0-21) / desc
+  // 2: veto interval type
+  // 17: run number
+  // 18: 'LB' if one LB, 'LBs' if range of LBs
+  // 19: lumi block
+  // 22,20: stop and start (note reversed order)
+  // 2-3 veto interval type
+
+  vector<string> fields(30); // up to 30 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
+  split( fields , line , is_any_of(" ,().[]'") , token_compress_on );
+
+  // with mini noise bursts, some lines can look like:
+  // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Mon Aug 15 00:21:52 2016 UTC-Mon Aug 15 00:21:52 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220512684932864.000000,1471220512674932736.000000)
+  // in this case, concatenate the elements of the vector to give 'NoiseBurst+MiniNoiseBurst'
+  if (fields.size()==27) {
+    vector<string> newfields(fields);
+    newfields[2] = newfields[2]+"+"+newfields[3]+"+"+newfields[4];
+    newfields.erase(newfields.cbegin()+4);
+    fields.swap(newfields);
+  } else if (fields.size()==26) {
+    vector<string> newfields(fields);
+    newfields[2] = newfields[2]+"+"+newfields[3];
+    newfields.erase(newfields.cbegin()+3);
+    fields.swap(newfields);
+  }
+
+  if( fields.size()!=25 ) {
+    cout << "TLALaArEventVetoData::loadRunFromFilename could not parse event veto data at line:" << endl;
+    cout << line << endl;
+    cout << "fields.size() = " << fields.size() << endl;
+    line_run = 0;
+    return null_result;
+  }
+  line_interval_type = fields[2];
+  try {
+    line_run = lexical_cast<RunNumberType>(fields[17]);
+    if( fields[18]=="LBs" ) {
+      // lbn_range = true;
+      vector<string> lbn_fields;
+      split( lbn_fields , fields[19] , is_any_of("-") , token_compress_on );
+      line_lbni = lexical_cast<LumiBlockType>(lbn_fields[0]);
+      line_lbnf = lexical_cast<LumiBlockType>(lbn_fields[1]);
+    } else {
+      // lbn_range = false;
+      line_lbni = lexical_cast<LumiBlockType>(fields[19]);
+      line_lbnf = line_lbni;
+    }
+    line_tsi = lexical_cast<unsigned long>(fields[22]);
+    line_tsf = lexical_cast<unsigned long>(fields[20]);
+  } catch( const bad_lexical_cast& ) {
+    cout << "TLALaArEventVetoData::loadRunFromFilename could not parse run/lbn/timestamp info from line:" << endl;
+    cout << line << endl;
+    line_run = 0;
+    return null_result;
+  }
+  return std::tie(line_run,line_lbni,line_lbnf,line_tsi,line_tsf,line_interval_type);
+}
+
+const TLALArEventVetoData::ParseResult
+TLALArEventVetoData::parseVetoLine18(const std::string& line)
+{
+  RunNumberType line_run{0};
+  LumiBlockType line_lbni{0};
+  LumiBlockType line_lbnf{0};
+  unsigned long line_tsi{0};
+  unsigned long line_tsf{0};
+  string line_interval_type{};
+  ParseResult null_result{std::tie(line_run,line_lbni,line_lbnf,line_tsi,line_tsf,line_interval_type)};
+
+  // separate veto type tokens and extract type
+  vector<string> type_fields(3);
+  split( type_fields , line , is_any_of("[]") , token_compress_on );
+  assert( type_fields.size()==3 && "should only have one ['stringA','stringB'] token in the line" );
+  line_interval_type = type_fields[1];
+
+  // remove "Event Veto" and veto type preface, then extract remaining tokens
+  split( type_fields , line , is_any_of("]") , token_compress_off );
+  assert( type_fields.size()==2 && "should only have one ] character in the line" );
+  vector<string> fields(30); // up to 30 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
+  split( fields , type_fields[1] , is_any_of(" ,().'") , token_compress_on );
+
+  try {
+    line_run = lexical_cast<RunNumberType>(fields[21]);
+    if( fields[22]=="LBs" ) {
+      // lbn_range = true;
+      vector<string> lbn_fields;
+      split( lbn_fields , fields[23] , is_any_of("-") , token_compress_on );
+      line_lbni = lexical_cast<LumiBlockType>(lbn_fields[0]);
+      line_lbnf = lexical_cast<LumiBlockType>(lbn_fields[1]);
+    } else {
+      line_lbni = lexical_cast<LumiBlockType>(fields[23]);
+      line_lbnf = line_lbni;
+    }
+    line_tsi = lexical_cast<unsigned long>(fields[19]);
+    line_tsf = lexical_cast<unsigned long>(fields[17]);
+  } catch( const bad_lexical_cast& ) {
+    cout << "TLALaArEventVetoData::loadRunFromFilename could not parse run/lbn/timestamp info from line:" << endl;
+    cout << line << endl;
+    line_run = 0;
+    return null_result;
+  }
+  return std::tie(line_run,line_lbni,line_lbnf,line_tsi,line_tsf,line_interval_type);
+}
+
+
 bool
 TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename , const bool testOnly )
 {
@@ -119,76 +236,34 @@ TLALArEventVetoData::loadRunFromFilename( const boost::filesystem::path filename
     
     // normal line, 2018: (30 fields)
     // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Sun Sep 30 11:38:07 2018 UTC-Sun Sep 30 11:38:07 2018 UTC (0.001 )  Time stamp start 1538307487727678470 end 1538307487726678470  Run 362345, LB 245, lumi 18.17
-    
+   
     // normal line, 2016: (26 fields)
     // Event Veto ['MiniNoiseBurst'], Mon Aug 15 00:21:38 2016 UTC-Mon Aug 15 00:21:38 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220498122718208.000000,1471220498112718080.000000)
 
-    vector<string> fields(30); // up to 30 space-or-comma-or-parentheses-or-period-or-...-separated fields in a veto line
-    split( fields , line , is_any_of(" ,().[]'") , token_compress_on );
     
-    // 2018
-    // field(0-29) / desc
-    //
-    
-    // 2016
-    // field(0-21) / desc
-    // 2: veto interval type
-    // 17: run number
-    // 18: 'LB' if one LB, 'LBs' if range of LBs
-    // 19: lumi block
-    // 22,20: stop and start (note reversed order)
-    // 2-3 veto interval type
-
-    
-    // with mini noise bursts, some lines can look like:
-    // Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Mon Aug 15 00:21:52 2016 UTC-Mon Aug 15 00:21:52 2016 UTC (0.010 )  Run 306310, LB 1003 (1471220512684932864.000000,1471220512674932736.000000)
-    // in this case, concatenate the elements of the vector to give 'NoiseBurst+MiniNoiseBurst'
-    if (fields.size()==26) {
-      vector<string> newfields(fields);
-      newfields[2] = newfields[2]+"+"+newfields[3];
-      newfields.erase(newfields.cbegin()+3);
-      fields.swap(newfields);
+    ParseResult parsed_line{};
+    if( boost::algorithm::icontains( line , ", lumi" ) ) {
+      parsed_line = parseVetoLine18(line);
+    } else {
+      parsed_line = parseVetoLine16(line);
     }
-
-    if( fields.size()!=25 ) {
-      cout << "TLALaArEventVetoData::loadRunFromFilename could not parse " << filename << " at line:" << endl;
-      cout << line << endl;
-      cout << "fields.size() = " << fields.size() << endl;
+    if( std::get<0>(parsed_line)==0 ) {
+      // parse failed
       return false;
-    }
-    const string line_interval_type{fields[2]};
-    // bool lbn_range{false};
-    RunNumberType line_run;
+    }    
+    RunNumberType line_run;;
     LumiBlockType line_lbni;
     LumiBlockType line_lbnf;
     unsigned long line_tsi;
     unsigned long line_tsf;
-    try {
-      line_run = lexical_cast<RunNumberType>(fields[17]);
-      if( fields[18]=="LBs" ) {
-        // lbn_range = true;
-        vector<string> lbn_fields;
-        split( lbn_fields , fields[19] , is_any_of("-") , token_compress_on );
-        line_lbni = lexical_cast<LumiBlockType>(lbn_fields[0]);
-        line_lbnf = lexical_cast<LumiBlockType>(lbn_fields[1]);
-      } else {
-        // lbn_range = false;
-        line_lbni = lexical_cast<LumiBlockType>(fields[19]);
-        line_lbnf = line_lbni;
-      }
-      line_tsi = lexical_cast<unsigned long>(fields[22]);
-      line_tsf = lexical_cast<unsigned long>(fields[20]);
-    } catch( const bad_lexical_cast& ) {
-      cout << "TLALaArEventVetoData::loadRunFromFilename could not parse run/lbn/timestamp info from " << filename << "  at line:" << endl;
-      cout << line << endl;
-      return false;
-    }
+    string line_interval_type;
+    std::tie(line_run,line_lbni,line_lbnf,line_tsi,line_tsf,line_interval_type) = parsed_line;
+    
     // sanity check that run number is correct? no, forget about
     // whether run is contained in a single file---allow text files
     // to be any combination of runs, i.e. just any pile of lines that start with "Event Veto"...
-    
     //cout << boost::format("%1% %2% %3% %4% %5% %6%") % line_interval_type % line_run % line_lbni % line_lbnf % line_tsi % line_tsf << endl;
-
+    
     // if testOnly, then do not insert entries into the table. just return an empty table for the current run number.
     if( testOnly ) {
       if( _t.find(line_run)!=_t.end() ) {

@@ -88,6 +88,9 @@ private:
                        const unsigned long& begin_ts , const unsigned long& end_ts,
 		       const std::string& interval_type );
   void updateRunCache(const RunNumberType& run);
+  using ParseResult = std::tuple<RunNumberType,LumiBlockType,LumiBlockType,unsigned long,unsigned long,std::string>;
+  const ParseResult parseVetoLine16(const std::string& line);
+  const ParseResult parseVetoLine18(const std::string& line);
   void dumpLoadedTable();
 };
 
