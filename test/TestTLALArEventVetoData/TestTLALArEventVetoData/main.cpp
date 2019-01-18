@@ -47,9 +47,9 @@ int main(int argc, const char * argv[]) {
 
     // check a run that is not in the list
     {
-      bool missing = false;
+      bool missing{false};
       try {
-        bool veto = data.shouldVeto(499420, 0, 1447419981013013504/1000000000ul, 0);
+        data.shouldVeto(499420, 0, 1447419981013013504/1000000000ul, 0);
       } catch (...) {
         missing = true;
       }
@@ -105,8 +105,8 @@ int main(int argc, const char * argv[]) {
     assert( run_numbers.size()==212 );
   }
   boost::random::mt19937 gen;
-  boost::random::uniform_int_distribution<uint32_t> make_run(0,run_numbers.size()-1);
-  boost::random::uniform_int_distribution<uint32_t> make_lbn(1,2000);
+  boost::random::uniform_int_distribution<uint32_t> make_run(0u,run_numbers.size()-1u);
+  boost::random::uniform_int_distribution<uint32_t> make_lbn(1u,2000u);
     boost::random::uniform_int_distribution<unsigned long> make_ts(1439413081827032064,1446530604045700352); // smallest and largest timestamps in the veto list (approximately 82 days difference)
   // or to the end of 2016 data: 1477516533236929024
 

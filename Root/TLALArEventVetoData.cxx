@@ -357,12 +357,11 @@ TLALArEventVetoData::dumpLoadedTable()
 {
   cout << "TLALArEventVetoData::dumpLoadedTable(): " << endl;
   // compute some statistics
-  unsigned long nIntervals{0ul};
   unsigned long nLBs{0ul};
   for( auto ri=std::begin(_t), rf=std::end(_t); ri!=rf; ++ri ) {
     auto hi=ri->second;
     for( auto li=std::begin(std::get<2>(hi)), lf=std::end(std::get<2>(hi)); li!=lf; ++li ) {
-      int intervals = std::distance( std::begin(li->second) , std::end(li->second) );
+      auto intervals = std::distance( std::begin(li->second) , std::end(li->second) );
       cout << "run: " << ri->first << " LB " << li->first << " nIntervals: " << intervals << endl;
       for( auto ii=std::begin(li->second), fi=std::end(li->second); ii!=fi; ++ii ) {
         cout << "run: " << ri->first
