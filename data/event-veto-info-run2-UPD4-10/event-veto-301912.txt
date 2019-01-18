@@ -1,0 +1,26 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 301912 to 301912
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 301912 to run 301912  lasting from Sat Jun 11 07:55:10 2016 UTC to Sat Jun 11 10:41:52 2016 UTC
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 09:04:03 2016 UTC-Sat Jun 11 09:04:03 2016 UTC (0.001 )  Time stamp start 1465635843081439930 end 1465635843080439930  Run 301912, LB 75, lumi 0.00
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 09:15:30 2016 UTC-Sat Jun 11 09:15:30 2016 UTC (0.001 )  Time stamp start 1465636530370979110 end 1465636530369979110  Run 301912, LB 86, lumi 0.00
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 09:29:56 2016 UTC-Sat Jun 11 09:29:56 2016 UTC (0.001 )  Time stamp start 1465637396542423210 end 1465637396541422910  Run 301912, LB 102, lumi 1.68
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 09:34:23 2016 UTC-Sat Jun 11 09:34:23 2016 UTC (0.001 )  Time stamp start 1465637663572136100 end 1465637663571136100  Run 301912, LB 106, lumi 2.57
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 09:37:36 2016 UTC-Sat Jun 11 09:37:36 2016 UTC (0.001 )  Time stamp start 1465637856861187450 end 1465637856860187450  Run 301912, LB 109, lumi 2.44
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 09:46:24 2016 UTC-Sat Jun 11 09:46:24 2016 UTC (0.001 )  Time stamp start 1465638384806482525 end 1465638384805482525  Run 301912, LB 119, lumi 2.53
+Event Veto ['NoiseBurst'], Sat Jun 11 09:46:41 2016 UTC-Sat Jun 11 09:46:41 2016 UTC (0.010 )  Time stamp start 1465638401151618305 end 1465638401141518625  Run 301912, LB 119, lumi 25.54
+Event Veto ['NoiseBurst'], Sat Jun 11 09:47:19 2016 UTC-Sat Jun 11 09:47:19 2016 UTC (0.010 )  Time stamp start 1465638439708811755 end 1465638439698699255  Run 301912, LB 120, lumi 25.46
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 10:02:01 2016 UTC-Sat Jun 11 10:02:01 2016 UTC (0.001 )  Time stamp start 1465639321109664570 end 1465639321108664570  Run 301912, LB 135, lumi 2.48
+Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Sat Jun 11 10:11:27 2016 UTC-Sat Jun 11 10:11:27 2016 UTC (0.001 )  Time stamp start 1465639887984624660 end 1465639887983624660  Run 301912, LB 144, lumi 2.45
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 10:12:56 2016 UTC-Sat Jun 11 10:12:56 2016 UTC (0.001 )  Time stamp start 1465639976579736145 end 1465639976578736145  Run 301912, LB 146, lumi 2.44
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 10:13:13 2016 UTC-Sat Jun 11 10:13:13 2016 UTC (0.001 )  Time stamp start 1465639993097680035 end 1465639993096680035  Run 301912, LB 146, lumi 2.44
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 10:16:13 2016 UTC-Sat Jun 11 10:16:13 2016 UTC (0.001 )  Time stamp start 1465640173950416695 end 1465640173949416695  Run 301912, LB 149, lumi 2.44
+Event Veto ['NoiseBurst'], Sat Jun 11 10:16:27 2016 UTC-Sat Jun 11 10:16:27 2016 UTC (0.010 )  Time stamp start 1465640187379436285 end 1465640187369310630  Run 301912, LB 150, lumi 24.74
+Event Veto ['NoiseBurst'], Sat Jun 11 10:21:47 2016 UTC-Sat Jun 11 10:21:47 2016 UTC (0.010 )  Time stamp start 1465640507396149700 end 1465640507385960550  Run 301912, LB 155, lumi 25.00
+Found a total of 5 noisy periods, covering a total of 0.04 seconds
+Found a total of 10 Mini noise periods, covering a total of 0.01 seconds
+Lumi loss due to noise-bursts: 0.10 nb-1 out of 10269.25 nb-1 (0.01 per-mil)
+Lumi loss due to mini-noise-bursts: 0.02 nb-1 out of 10269.25 nb-1 (0.00 per-mil)
+Overall Lumi loss is 0.122218063904 by 0.051527285 s of veto length

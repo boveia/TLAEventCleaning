@@ -1,0 +1,82 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 280614 to 280614
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 280614 to run 280614  lasting from Mon Sep 28 22:53:07 2015 UTC to Tue Sep 29 08:03:41 2015 UTC
+Event Veto ['NoiseBurst'], Tue Sep 29 04:44:37 2015 UTC-Tue Sep 29 04:44:38 2015 UTC (0.050 )  Time stamp start 1443501878003106105 end 1443501877953104935  Run 280614, LB 356, lumi 141.36
+Event Veto ['NoiseBurst'], Tue Sep 29 04:45:00 2015 UTC-Tue Sep 29 04:45:00 2015 UTC (0.064 )  Time stamp start 1443501900408305495 end 1443501900344234300  Run 280614, LB 356, lumi 181.14
+Event Veto ['NoiseBurst'], Tue Sep 29 04:46:16 2015 UTC-Tue Sep 29 04:46:16 2015 UTC (0.050 )  Time stamp start 1443501976161177525 end 1443501976111176775  Run 280614, LB 357, lumi 139.82
+Event Veto ['NoiseBurst'], Tue Sep 29 04:50:20 2015 UTC-Tue Sep 29 04:50:20 2015 UTC (0.050 )  Time stamp start 1443502220050415430 end 1443502220000414160  Run 280614, LB 361, lumi 140.31
+Event Veto ['NoiseBurst'], Tue Sep 29 04:53:07 2015 UTC-Tue Sep 29 04:53:08 2015 UTC (0.050 )  Time stamp start 1443502388018996620 end 1443502387968996020  Run 280614, LB 364, lumi 141.12
+Event Veto ['NoiseBurst'], Tue Sep 29 05:08:56 2015 UTC-Tue Sep 29 05:08:56 2015 UTC (0.050 )  Time stamp start 1443503336333552835 end 1443503336283552210  Run 280614, LB 381, lumi 144.85
+Event Veto ['NoiseBurst'], Tue Sep 29 05:09:41 2015 UTC-Tue Sep 29 05:09:41 2015 UTC (0.050 )  Time stamp start 1443503381504425915 end 1443503381454425665  Run 280614, LB 381, lumi 144.84
+Event Veto ['NoiseBurst'], Tue Sep 29 05:11:22 2015 UTC-Tue Sep 29 05:11:22 2015 UTC (0.050 )  Time stamp start 1443503482287000410 end 1443503482236999660  Run 280614, LB 383, lumi 144.79
+Event Veto ['NoiseBurst'], Tue Sep 29 05:11:35 2015 UTC-Tue Sep 29 05:11:35 2015 UTC (0.082 )  Time stamp start 1443503495884577495 end 1443503495802244955  Run 280614, LB 383, lumi 238.42
+Event Veto ['NoiseBurst'], Tue Sep 29 05:11:40 2015 UTC-Tue Sep 29 05:11:40 2015 UTC (0.050 )  Time stamp start 1443503500356874085 end 1443503500306873460  Run 280614, LB 383, lumi 144.79
+Event Veto ['NoiseBurst'], Tue Sep 29 05:11:46 2015 UTC-Tue Sep 29 05:11:46 2015 UTC (0.050 )  Time stamp start 1443503506965487145 end 1443503506915486525  Run 280614, LB 383, lumi 144.79
+Event Veto ['NoiseBurst'], Tue Sep 29 05:12:03 2015 UTC-Tue Sep 29 05:12:03 2015 UTC (0.050 )  Time stamp start 1443503523280955560 end 1443503523230955065  Run 280614, LB 384, lumi 144.77
+Event Veto ['NoiseBurst'], Tue Sep 29 05:12:36 2015 UTC-Tue Sep 29 05:12:36 2015 UTC (0.055 )  Time stamp start 1443503556228643800 end 1443503556173476800  Run 280614, LB 385, lumi 159.63
+Event Veto ['NoiseBurst'], Tue Sep 29 05:12:50 2015 UTC-Tue Sep 29 05:12:50 2015 UTC (0.050 )  Time stamp start 1443503570414615430 end 1443503570364614680  Run 280614, LB 385, lumi 144.68
+Event Veto ['NoiseBurst'], Tue Sep 29 05:13:01 2015 UTC-Tue Sep 29 05:13:01 2015 UTC (0.050 )  Time stamp start 1443503581367976030 end 1443503581317975405  Run 280614, LB 385, lumi 144.68
+Event Veto ['NoiseBurst'], Tue Sep 29 05:13:25 2015 UTC-Tue Sep 29 05:13:25 2015 UTC (0.050 )  Time stamp start 1443503605443558020 end 1443503605393557395  Run 280614, LB 386, lumi 144.58
+Event Veto ['NoiseBurst'], Tue Sep 29 05:13:50 2015 UTC-Tue Sep 29 05:13:50 2015 UTC (0.050 )  Time stamp start 1443503630329895295 end 1443503630279894545  Run 280614, LB 386, lumi 144.58
+Event Veto ['NoiseBurst'], Tue Sep 29 05:14:26 2015 UTC-Tue Sep 29 05:14:26 2015 UTC (0.050 )  Time stamp start 1443503666178143090 end 1443503666128142465  Run 280614, LB 387, lumi 144.50
+Event Veto ['NoiseBurst'], Tue Sep 29 05:15:26 2015 UTC-Tue Sep 29 05:15:26 2015 UTC (0.080 )  Time stamp start 1443503726976992945 end 1443503726897471055  Run 280614, LB 388, lumi 229.66
+Event Veto ['NoiseBurst'], Tue Sep 29 05:16:04 2015 UTC-Tue Sep 29 05:16:04 2015 UTC (0.050 )  Time stamp start 1443503764508303495 end 1443503764458302995  Run 280614, LB 388, lumi 144.40
+Event Veto ['NoiseBurst'], Tue Sep 29 05:18:36 2015 UTC-Tue Sep 29 05:18:36 2015 UTC (0.050 )  Time stamp start 1443503916506407075 end 1443503916456406450  Run 280614, LB 392, lumi 144.16
+Event Veto ['NoiseBurst'], Tue Sep 29 05:19:39 2015 UTC-Tue Sep 29 05:19:39 2015 UTC (0.050 )  Time stamp start 1443503979892352810 end 1443503979842352185  Run 280614, LB 393, lumi 144.11
+Event Veto ['NoiseBurst'], Tue Sep 29 05:20:54 2015 UTC-Tue Sep 29 05:20:54 2015 UTC (0.050 )  Time stamp start 1443504054953203385 end 1443504054903202760  Run 280614, LB 395, lumi 143.99
+Event Veto ['NoiseBurst'], Tue Sep 29 05:22:35 2015 UTC-Tue Sep 29 05:22:35 2015 UTC (0.052 )  Time stamp start 1443504155160106900 end 1443504155107935715  Run 280614, LB 396, lumi 150.24
+Event Veto ['NoiseBurst'], Tue Sep 29 05:26:00 2015 UTC-Tue Sep 29 05:26:00 2015 UTC (0.050 )  Time stamp start 1443504360469629305 end 1443504360419628680  Run 280614, LB 400, lumi 143.63
+Event Veto ['NoiseBurst'], Tue Sep 29 05:29:40 2015 UTC-Tue Sep 29 05:29:40 2015 UTC (0.050 )  Time stamp start 1443504580739172220 end 1443504580689171620  Run 280614, LB 404, lumi 143.32
+Event Veto ['NoiseBurst'], Tue Sep 29 05:33:58 2015 UTC-Tue Sep 29 05:33:59 2015 UTC (0.050 )  Time stamp start 1443504839032432210 end 1443504838982431585  Run 280614, LB 408, lumi 143.03
+Event Veto ['NoiseBurst'], Tue Sep 29 05:34:01 2015 UTC-Tue Sep 29 05:34:01 2015 UTC (0.050 )  Time stamp start 1443504841591172880 end 1443504841541172380  Run 280614, LB 408, lumi 143.03
+Event Veto ['NoiseBurst'], Tue Sep 29 05:34:07 2015 UTC-Tue Sep 29 05:34:07 2015 UTC (0.050 )  Time stamp start 1443504847686029330 end 1443504847636028580  Run 280614, LB 408, lumi 143.03
+Event Veto ['NoiseBurst'], Tue Sep 29 05:34:18 2015 UTC-Tue Sep 29 05:34:18 2015 UTC (0.050 )  Time stamp start 1443504858200969230 end 1443504858150968480  Run 280614, LB 408, lumi 143.03
+Event Veto ['NoiseBurst'], Tue Sep 29 05:34:20 2015 UTC-Tue Sep 29 05:34:20 2015 UTC (0.050 )  Time stamp start 1443504860848087735 end 1443504860798087110  Run 280614, LB 408, lumi 143.03
+Event Veto ['NoiseBurst'], Tue Sep 29 05:34:55 2015 UTC-Tue Sep 29 05:34:55 2015 UTC (0.050 )  Time stamp start 1443504895754691635 end 1443504895704691260  Run 280614, LB 409, lumi 142.96
+Event Veto ['NoiseBurst'], Tue Sep 29 05:35:02 2015 UTC-Tue Sep 29 05:35:02 2015 UTC (0.069 )  Time stamp start 1443504902118170290 end 1443504902049035340  Run 280614, LB 409, lumi 197.67
+Event Veto ['NoiseBurst'], Tue Sep 29 05:35:05 2015 UTC-Tue Sep 29 05:35:05 2015 UTC (0.057 )  Time stamp start 1443504905120522370 end 1443504905063146310  Run 280614, LB 409, lumi 164.05
+Event Veto ['NoiseBurst'], Tue Sep 29 05:35:24 2015 UTC-Tue Sep 29 05:35:24 2015 UTC (0.087 )  Time stamp start 1443504924370247400 end 1443504924282976560  Run 280614, LB 410, lumi 249.40
+Event Veto ['NoiseBurst'], Tue Sep 29 05:35:49 2015 UTC-Tue Sep 29 05:35:49 2015 UTC (0.050 )  Time stamp start 1443504949193308405 end 1443504949143307905  Run 280614, LB 410, lumi 142.89
+Event Veto ['NoiseBurst'], Tue Sep 29 05:35:55 2015 UTC-Tue Sep 29 05:35:55 2015 UTC (0.050 )  Time stamp start 1443504955130944985 end 1443504955080944485  Run 280614, LB 410, lumi 142.89
+Event Veto ['NoiseBurst'], Tue Sep 29 05:36:25 2015 UTC-Tue Sep 29 05:36:25 2015 UTC (0.050 )  Time stamp start 1443504985119246555 end 1443504985069246055  Run 280614, LB 411, lumi 142.83
+Event Veto ['NoiseBurst'], Tue Sep 29 05:36:51 2015 UTC-Tue Sep 29 05:36:51 2015 UTC (0.050 )  Time stamp start 1443505011835582240 end 1443505011785581745  Run 280614, LB 411, lumi 142.83
+Event Veto ['NoiseBurst'], Tue Sep 29 05:36:59 2015 UTC-Tue Sep 29 05:36:59 2015 UTC (0.050 )  Time stamp start 1443505019061552455 end 1443505019011551835  Run 280614, LB 411, lumi 142.83
+Event Veto ['NoiseBurst'], Tue Sep 29 05:37:10 2015 UTC-Tue Sep 29 05:37:10 2015 UTC (0.050 )  Time stamp start 1443505030080542570 end 1443505030030541945  Run 280614, LB 411, lumi 142.83
+Event Veto ['NoiseBurst'], Tue Sep 29 05:38:05 2015 UTC-Tue Sep 29 05:38:05 2015 UTC (0.050 )  Time stamp start 1443505085235978270 end 1443505085185977770  Run 280614, LB 412, lumi 142.73
+Event Veto ['NoiseBurst'], Tue Sep 29 05:38:08 2015 UTC-Tue Sep 29 05:38:08 2015 UTC (0.050 )  Time stamp start 1443505088158618005 end 1443505088108617505  Run 280614, LB 412, lumi 142.73
+Event Veto ['NoiseBurst'], Tue Sep 29 05:38:54 2015 UTC-Tue Sep 29 05:38:54 2015 UTC (0.050 )  Time stamp start 1443505134594294540 end 1443505134544293915  Run 280614, LB 413, lumi 142.64
+Event Veto ['NoiseBurst'], Tue Sep 29 05:39:01 2015 UTC-Tue Sep 29 05:39:01 2015 UTC (0.050 )  Time stamp start 1443505141840397930 end 1443505141790397430  Run 280614, LB 413, lumi 142.64
+Event Veto ['NoiseBurst'], Tue Sep 29 05:39:08 2015 UTC-Tue Sep 29 05:39:08 2015 UTC (0.050 )  Time stamp start 1443505148629680630 end 1443505148579680010  Run 280614, LB 413, lumi 142.64
+Event Veto ['NoiseBurst'], Tue Sep 29 05:41:36 2015 UTC-Tue Sep 29 05:41:36 2015 UTC (0.050 )  Time stamp start 1443505296991072470 end 1443505296941071625  Run 280614, LB 416, lumi 142.40
+Event Veto ['NoiseBurst'], Tue Sep 29 05:42:19 2015 UTC-Tue Sep 29 05:42:19 2015 UTC (0.050 )  Time stamp start 1443505339304180240 end 1443505339254179615  Run 280614, LB 416, lumi 142.40
+Event Veto ['NoiseBurst'], Tue Sep 29 05:53:41 2015 UTC-Tue Sep 29 05:53:41 2015 UTC (0.050 )  Time stamp start 1443506021814039025 end 1443506021764038530  Run 280614, LB 428, lumi 141.44
+Event Veto ['NoiseBurst'], Tue Sep 29 05:53:59 2015 UTC-Tue Sep 29 05:53:59 2015 UTC (0.050 )  Time stamp start 1443506039170423485 end 1443506039120422865  Run 280614, LB 428, lumi 141.44
+Event Veto ['NoiseBurst'], Tue Sep 29 06:08:10 2015 UTC-Tue Sep 29 06:08:10 2015 UTC (0.050 )  Time stamp start 1443506890099771230 end 1443506890049771105  Run 280614, LB 442, lumi 140.39
+Event Veto ['NoiseBurst'], Tue Sep 29 06:09:23 2015 UTC-Tue Sep 29 06:09:24 2015 UTC (0.105 )  Time stamp start 1443506964014859985 end 1443506963910059130  Run 280614, LB 443, lumi 294.10
+Event Veto ['NoiseBurst'], Tue Sep 29 06:23:24 2015 UTC-Tue Sep 29 06:23:24 2015 UTC (0.050 )  Time stamp start 1443507804350137525 end 1443507804300136900  Run 280614, LB 458, lumi 139.13
+Event Veto ['NoiseBurst'], Tue Sep 29 06:26:33 2015 UTC-Tue Sep 29 06:26:33 2015 UTC (0.050 )  Time stamp start 1443507993356666460 end 1443507993306665835  Run 280614, LB 461, lumi 138.91
+Event Veto ['NoiseBurst'], Tue Sep 29 06:32:11 2015 UTC-Tue Sep 29 06:32:12 2015 UTC (0.050 )  Time stamp start 1443508332046338210 end 1443508331996337585  Run 280614, LB 466, lumi 138.49
+Event Veto ['NoiseBurst'], Tue Sep 29 06:38:08 2015 UTC-Tue Sep 29 06:38:08 2015 UTC (0.050 )  Time stamp start 1443508688991548900 end 1443508688941548280  Run 280614, LB 472, lumi 138.02
+Event Veto ['NoiseBurst'], Tue Sep 29 06:39:44 2015 UTC-Tue Sep 29 06:39:44 2015 UTC (0.055 )  Time stamp start 1443508784893709845 end 1443508784838493795  Run 280614, LB 474, lumi 152.20
+Event Veto ['NoiseBurst'], Tue Sep 29 06:49:07 2015 UTC-Tue Sep 29 06:49:07 2015 UTC (0.050 )  Time stamp start 1443509347700536365 end 1443509347650387385  Run 280614, LB 484, lumi 137.48
+Event Veto ['NoiseBurst'], Tue Sep 29 06:49:51 2015 UTC-Tue Sep 29 06:49:51 2015 UTC (0.050 )  Time stamp start 1443509391117193340 end 1443509391066749070  Run 280614, LB 485, lumi 138.24
+Event Veto ['NoiseBurst'], Tue Sep 29 07:05:14 2015 UTC-Tue Sep 29 07:05:14 2015 UTC (0.050 )  Time stamp start 1443510314405540185 end 1443510314355539440  Run 280614, LB 500, lumi 135.77
+Event Veto ['NoiseBurst'], Tue Sep 29 07:05:14 2015 UTC-Tue Sep 29 07:05:14 2015 UTC (0.050 )  Time stamp start 1443510314516879615 end 1443510314466877195  Run 280614, LB 500, lumi 135.77
+Event Veto ['NoiseBurst'], Tue Sep 29 07:07:34 2015 UTC-Tue Sep 29 07:07:34 2015 UTC (0.050 )  Time stamp start 1443510454696329140 end 1443510454646328515  Run 280614, LB 503, lumi 135.53
+Event Veto ['NoiseBurst'], Tue Sep 29 07:11:38 2015 UTC-Tue Sep 29 07:11:38 2015 UTC (0.050 )  Time stamp start 1443510698599086200 end 1443510698549085700  Run 280614, LB 507, lumi 135.27
+Event Veto ['NoiseBurst'], Tue Sep 29 07:16:28 2015 UTC-Tue Sep 29 07:16:28 2015 UTC (0.050 )  Time stamp start 1443510988959311095 end 1443510988909310345  Run 280614, LB 511, lumi 134.85
+Event Veto ['NoiseBurst'], Tue Sep 29 07:16:44 2015 UTC-Tue Sep 29 07:16:44 2015 UTC (0.050 )  Time stamp start 1443511004455154530 end 1443511004404684035  Run 280614, LB 512, lumi 136.09
+Event Veto ['NoiseBurst'], Tue Sep 29 07:17:29 2015 UTC-Tue Sep 29 07:17:29 2015 UTC (0.050 )  Time stamp start 1443511049327786190 end 1443511049277785815  Run 280614, LB 512, lumi 134.82
+Event Veto ['NoiseBurst'], Tue Sep 29 07:17:44 2015 UTC-Tue Sep 29 07:17:44 2015 UTC (0.050 )  Time stamp start 1443511064910953690 end 1443511064860953065  Run 280614, LB 513, lumi 134.73
+Event Veto ['NoiseBurst'], Tue Sep 29 07:29:39 2015 UTC-Tue Sep 29 07:29:39 2015 UTC (0.050 )  Time stamp start 1443511779183605400 end 1443511779133561585  Run 280614, LB 525, lumi 134.07
+Event Veto ['NoiseBurst'], Tue Sep 29 07:30:19 2015 UTC-Tue Sep 29 07:30:19 2015 UTC (0.050 )  Time stamp start 1443511819905447610 end 1443511819855446985  Run 280614, LB 526, lumi 133.86
+Event Veto ['DataCorruption'], Tue Sep 29 07:31:08 2015 UTC-Tue Sep 29 07:31:12 2015 UTC (4.226 )  Time stamp start 1443511872446282980 end 1443511868220173575  Run 280614, LB 527, lumi 11313.11
+Event Veto ['NoiseBurst'], Tue Sep 29 07:43:10 2015 UTC-Tue Sep 29 07:43:10 2015 UTC (0.088 )  Time stamp start 1443512590938707215 end 1443512590850642045  Run 280614, LB 539, lumi 234.14
+Found a total of 70 noisy periods, covering a total of 3.75 seconds
+Found a total of 1 corruption periods, covering a total of 4.23 seconds
+Lumi loss due to noise-bursts: 10.59 nb-1 out of 31719.64 nb-1 (0.33 per-mil)
+Lumi loss due to corruption: 11.31 nb-1 out of 31719.64 nb-1 (0.36 per-mil)
+Overall Lumi loss is 21.8995300418 by 7.97238031 s of veto length

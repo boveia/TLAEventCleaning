@@ -1,0 +1,37 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 359586 to 359586
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 359586 to run 359586  lasting from Fri Aug 31 18:01:56 2018 UTC to Fri Aug 31 19:03:52 2018 UTC
+Event Veto ['NoiseBurst'], Fri Aug 31 18:41:00 2018 UTC-Fri Aug 31 18:41:00 2018 UTC (0.001 )  Time stamp start 1535740860775244050 end 1535740860774108420  Run 359586, LB 49, lumi 18.44
+Event Veto ['NoiseBurst'], Fri Aug 31 18:41:00 2018 UTC-Fri Aug 31 18:41:00 2018 UTC (0.002 )  Time stamp start 1535740860778248595 end 1535740860776322950  Run 359586, LB 49, lumi 31.26
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:45:09 2018 UTC-Fri Aug 31 18:45:09 2018 UTC (0.001 )  Time stamp start 1535741109470959835 end 1535741109469959835  Run 359586, LB 53, lumi 18.87
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:46:11 2018 UTC-Fri Aug 31 18:46:11 2018 UTC (0.001 )  Time stamp start 1535741171128091235 end 1535741171127091235  Run 359586, LB 54, lumi 18.79
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:46:42 2018 UTC-Fri Aug 31 18:46:42 2018 UTC (0.001 )  Time stamp start 1535741202054903590 end 1535741202053903590  Run 359586, LB 55, lumi 18.69
+Event Veto ['NoiseBurst'], Fri Aug 31 18:48:09 2018 UTC-Fri Aug 31 18:48:09 2018 UTC (0.003 )  Time stamp start 1535741289929762155 end 1535741289927000510  Run 359586, LB 57, lumi 51.47
+Event Veto ['NoiseBurst'], Fri Aug 31 18:48:10 2018 UTC-Fri Aug 31 18:48:10 2018 UTC (0.001 )  Time stamp start 1535741290081423405 end 1535741290080320185  Run 359586, LB 57, lumi 20.56
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:49:02 2018 UTC-Fri Aug 31 18:49:02 2018 UTC (0.001 )  Time stamp start 1535741342746535435 end 1535741342745535435  Run 359586, LB 58, lumi 18.56
+Event Veto ['NoiseBurst'], Fri Aug 31 18:49:45 2018 UTC-Fri Aug 31 18:49:45 2018 UTC (0.001 )  Time stamp start 1535741385881263615 end 1535741385880263090  Run 359586, LB 59, lumi 18.66
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:50:05 2018 UTC-Fri Aug 31 18:50:05 2018 UTC (0.001 )  Time stamp start 1535741405671265515 end 1535741405670265340  Run 359586, LB 59, lumi 18.66
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:51:59 2018 UTC-Fri Aug 31 18:51:59 2018 UTC (0.001 )  Time stamp start 1535741519878980555 end 1535741519877980555  Run 359586, LB 61, lumi 18.26
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:53:00 2018 UTC-Fri Aug 31 18:53:00 2018 UTC (0.001 )  Time stamp start 1535741580378346710 end 1535741580377346710  Run 359586, LB 62, lumi 18.12
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:12 2018 UTC-Fri Aug 31 18:53:12 2018 UTC (0.001 )  Time stamp start 1535741592927727430 end 1535741592926716050  Run 359586, LB 62, lumi 18.33
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:16 2018 UTC-Fri Aug 31 18:53:16 2018 UTC (0.002 )  Time stamp start 1535741596759670650 end 1535741596757630205  Run 359586, LB 62, lumi 36.97
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:16 2018 UTC-Fri Aug 31 18:53:16 2018 UTC (0.004 )  Time stamp start 1535741596766473745 end 1535741596762599420  Run 359586, LB 62, lumi 70.21
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:16 2018 UTC-Fri Aug 31 18:53:16 2018 UTC (0.003 )  Time stamp start 1535741596770064230 end 1535741596766858360  Run 359586, LB 62, lumi 58.09
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:16 2018 UTC-Fri Aug 31 18:53:16 2018 UTC (0.003 )  Time stamp start 1535741596933919210 end 1535741596931161900  Run 359586, LB 62, lumi 49.96
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:16 2018 UTC-Fri Aug 31 18:53:16 2018 UTC (0.002 )  Time stamp start 1535741596935893760 end 1535741596933947925  Run 359586, LB 62, lumi 35.26
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:16 2018 UTC-Fri Aug 31 18:53:16 2018 UTC (0.001 )  Time stamp start 1535741596937180570 end 1535741596936179695  Run 359586, LB 62, lumi 18.14
+Event Veto ['NoiseBurst'], Fri Aug 31 18:53:29 2018 UTC-Fri Aug 31 18:53:29 2018 UTC (0.002 )  Time stamp start 1535741609821895485 end 1535741609819821980  Run 359586, LB 63, lumi 37.43
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:54:01 2018 UTC-Fri Aug 31 18:54:01 2018 UTC (0.001 )  Time stamp start 1535741641937504020 end 1535741641936504020  Run 359586, LB 63, lumi 18.05
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:54:09 2018 UTC-Fri Aug 31 18:54:09 2018 UTC (0.001 )  Time stamp start 1535741649602045195 end 1535741649601044945  Run 359586, LB 63, lumi 18.05
+Event Veto ['NoiseBurst'], Fri Aug 31 18:55:02 2018 UTC-Fri Aug 31 18:55:02 2018 UTC (0.001 )  Time stamp start 1535741702500869770 end 1535741702499819765  Run 359586, LB 64, lumi 18.90
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:56:31 2018 UTC-Fri Aug 31 18:56:31 2018 UTC (0.001 )  Time stamp start 1535741791238487265 end 1535741791237487265  Run 359586, LB 66, lumi 17.76
+Event Veto ['MiniNoiseBurst'], Fri Aug 31 18:58:30 2018 UTC-Fri Aug 31 18:58:30 2018 UTC (0.001 )  Time stamp start 1535741910108551440 end 1535741910107551140  Run 359586, LB 68, lumi 17.59
+Event Veto ['NoiseBurst'], Fri Aug 31 18:58:41 2018 UTC-Fri Aug 31 18:58:41 2018 UTC (0.001 )  Time stamp start 1535741921058488885 end 1535741921057488760  Run 359586, LB 68, lumi 17.59
+Found a total of 15 noisy periods, covering a total of 0.03 seconds
+Found a total of 11 Mini noise periods, covering a total of 0.01 seconds
+Lumi loss due to noise-bursts: 0.50 nb-1 out of 19511.54 nb-1 (0.03 per-mil)
+Lumi loss due to mini-noise-bursts: 0.20 nb-1 out of 19511.54 nb-1 (0.01 per-mil)
+Overall Lumi loss is 0.70267386581 by 0.038887065 s of veto length

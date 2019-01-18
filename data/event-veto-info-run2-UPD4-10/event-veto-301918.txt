@@ -1,0 +1,23 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 301918 to 301918
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 301918 to run 301918  lasting from Sat Jun 11 12:43:16 2016 UTC to Sat Jun 11 16:49:19 2016 UTC
+Event Veto ['NoiseBurst'], Sat Jun 11 13:58:41 2016 UTC-Sat Jun 11 13:58:41 2016 UTC (0.010 )  Time stamp start 1465653521135468455 end 1465653521125138355  Run 301918, LB 81, lumi 22.81
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 14:21:19 2016 UTC-Sat Jun 11 14:21:19 2016 UTC (0.001 )  Time stamp start 1465654879664335895 end 1465654879663335895  Run 301918, LB 104, lumi 2.18
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 14:22:17 2016 UTC-Sat Jun 11 14:22:17 2016 UTC (0.001 )  Time stamp start 1465654937134284045 end 1465654937133284045  Run 301918, LB 105, lumi 2.18
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 14:41:07 2016 UTC-Sat Jun 11 14:41:07 2016 UTC (0.001 )  Time stamp start 1465656067169622050 end 1465656067168622050  Run 301918, LB 123, lumi 2.15
+Event Veto ['NoiseBurst'], Sat Jun 11 14:54:23 2016 UTC-Sat Jun 11 14:54:23 2016 UTC (0.010 )  Time stamp start 1465656863242607695 end 1465656863232281015  Run 301918, LB 137, lumi 22.02
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 15:06:58 2016 UTC-Sat Jun 11 15:06:58 2016 UTC (0.001 )  Time stamp start 1465657618060229755 end 1465657618059229755  Run 301918, LB 149, lumi 2.12
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 15:14:19 2016 UTC-Sat Jun 11 15:14:19 2016 UTC (0.001 )  Time stamp start 1465658059642315570 end 1465658059641315570  Run 301918, LB 156, lumi 2.11
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 15:28:35 2016 UTC-Sat Jun 11 15:28:35 2016 UTC (0.001 )  Time stamp start 1465658915236804835 end 1465658915235804835  Run 301918, LB 171, lumi 2.08
+Event Veto ['NoiseBurst'], Sat Jun 11 15:33:25 2016 UTC-Sat Jun 11 15:33:25 2016 UTC (0.010 )  Time stamp start 1465659205976890325 end 1465659205966889700  Run 301918, LB 176, lumi 20.81
+Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Sat Jun 11 15:38:02 2016 UTC-Sat Jun 11 15:38:02 2016 UTC (0.001 )  Time stamp start 1465659482069085490 end 1465659482068085490  Run 301918, LB 180, lumi 2.07
+Event Veto ['NoiseBurst'], Sat Jun 11 15:40:10 2016 UTC-Sat Jun 11 15:40:10 2016 UTC (0.013 )  Time stamp start 1465659610740989400 end 1465659610728449215  Run 301918, LB 182, lumi 25.86
+Event Veto ['MiniNoiseBurst'], Sat Jun 11 15:45:10 2016 UTC-Sat Jun 11 15:45:10 2016 UTC (0.001 )  Time stamp start 1465659910335026385 end 1465659910334026385  Run 301918, LB 187, lumi 2.05
+Found a total of 5 noisy periods, covering a total of 0.04 seconds
+Found a total of 7 Mini noise periods, covering a total of 0.01 seconds
+Lumi loss due to noise-bursts: 0.09 nb-1 out of 27792.92 nb-1 (0.00 per-mil)
+Lumi loss due to mini-noise-bursts: 0.01 nb-1 out of 27792.92 nb-1 (0.00 per-mil)
+Overall Lumi loss is 0.10842551668 by 0.05119759 s of veto length

@@ -1,0 +1,24 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 279515 to 279515
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 279515 to run 279515  lasting from Wed Sep 16 04:27:17 2015 UTC to Wed Sep 16 12:37:03 2015 UTC
+Event Veto ['NoiseBurst'], Wed Sep 16 12:11:43 2015 UTC-Wed Sep 16 12:11:43 2015 UTC (0.050 )  Time stamp start 1442405503640818215 end 1442405503590817290  Run 279515, LB 467, lumi 11.59
+Event Veto ['NoiseBurst'], Wed Sep 16 12:12:23 2015 UTC-Wed Sep 16 12:12:23 2015 UTC (0.050 )  Time stamp start 1442405543491753115 end 1442405543441752540  Run 279515, LB 468, lumi 106.65
+Event Veto ['NoiseBurst'], Wed Sep 16 12:13:26 2015 UTC-Wed Sep 16 12:13:26 2015 UTC (0.050 )  Time stamp start 1442405606979083740 end 1442405606929083040  Run 279515, LB 469, lumi 105.89
+Event Veto ['NoiseBurst'], Wed Sep 16 12:15:17 2015 UTC-Wed Sep 16 12:15:17 2015 UTC (0.050 )  Time stamp start 1442405717595654380 end 1442405717545653730  Run 279515, LB 471, lumi 109.74
+Event Veto ['NoiseBurst'], Wed Sep 16 12:16:45 2015 UTC-Wed Sep 16 12:16:45 2015 UTC (0.050 )  Time stamp start 1442405805286034410 end 1442405805236033710  Run 279515, LB 472, lumi 105.70
+Event Veto ['NoiseBurst'], Wed Sep 16 12:18:38 2015 UTC-Wed Sep 16 12:18:38 2015 UTC (0.050 )  Time stamp start 1442405918727901685 end 1442405918677900910  Run 279515, LB 474, lumi 104.07
+Event Veto ['NoiseBurst'], Wed Sep 16 12:22:55 2015 UTC-Wed Sep 16 12:22:55 2015 UTC (0.050 )  Time stamp start 1442406175317593830 end 1442406175267593030  Run 279515, LB 479, lumi 103.42
+Event Veto ['NoiseBurst'], Wed Sep 16 12:25:52 2015 UTC-Wed Sep 16 12:25:52 2015 UTC (0.050 )  Time stamp start 1442406352259942395 end 1442406352209940770  Run 279515, LB 482, lumi 97.99
+Event Veto ['NoiseBurst'], Wed Sep 16 12:26:03 2015 UTC-Wed Sep 16 12:26:03 2015 UTC (0.050 )  Time stamp start 1442406363066088560 end 1442406363016086415  Run 279515, LB 482, lumi 97.99
+Event Veto ['NoiseBurst'], Wed Sep 16 12:26:06 2015 UTC-Wed Sep 16 12:26:06 2015 UTC (0.050 )  Time stamp start 1442406366652275225 end 1442406366602274430  Run 279515, LB 482, lumi 97.99
+Event Veto ['NoiseBurst'], Wed Sep 16 12:26:32 2015 UTC-Wed Sep 16 12:26:32 2015 UTC (0.050 )  Time stamp start 1442406392364607330 end 1442406392314606705  Run 279515, LB 483, lumi 97.22
+Event Veto ['NoiseBurst'], Wed Sep 16 12:26:53 2015 UTC-Wed Sep 16 12:26:53 2015 UTC (0.050 )  Time stamp start 1442406413344110685 end 1442406413294110060  Run 279515, LB 483, lumi 97.22
+Event Veto ['NoiseBurst'], Wed Sep 16 12:27:16 2015 UTC-Wed Sep 16 12:27:16 2015 UTC (0.050 )  Time stamp start 1442406436124324320 end 1442406436074323695  Run 279515, LB 484, lumi 109.53
+Event Veto ['NoiseBurst'], Wed Sep 16 12:27:39 2015 UTC-Wed Sep 16 12:27:39 2015 UTC (0.066 )  Time stamp start 1442406459824727950 end 1442406459758799870  Run 279515, LB 484, lumi 144.43
+Event Veto ['NoiseBurst'], Wed Sep 16 12:31:26 2015 UTC-Wed Sep 16 12:31:26 2015 UTC (0.050 )  Time stamp start 1442406686674987020 end 1442406686624986345  Run 279515, LB 489, lumi 0.01
+Found a total of 15 noisy periods, covering a total of 0.77 seconds
+Lumi loss due to noise-bursts: 1.39 nb-1 out of 2267.07 nb-1 (0.61 per-mil)
+Overall Lumi loss is 1.38945354109 by 0.76594032 s of veto length

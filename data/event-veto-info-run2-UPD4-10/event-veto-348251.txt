@@ -1,0 +1,19 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 348251 to 348251
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 348251 to run 348251  lasting from Tue Apr 17 20:53:40 2018 UTC to Wed Apr 18 05:27:50 2018 UTC
+Event Veto ['DataCorruption'], Tue Apr 17 23:47:10 2018 UTC-Tue Apr 17 23:47:11 2018 UTC (0.640 )  Time stamp start 1524008831468351670 end 1524008830828607000  Run 348251, LB 181, lumi 4.49
+Event Veto ['MiniNoiseBurst'], Wed Apr 18 01:48:07 2018 UTC-Wed Apr 18 01:48:07 2018 UTC (0.001 )  Time stamp start 1524016087675094575 end 1524016087674094575  Run 348251, LB 337, lumi 0.01
+Event Veto ['MiniNoiseBurst'], Wed Apr 18 02:13:26 2018 UTC-Wed Apr 18 02:13:26 2018 UTC (0.001 )  Time stamp start 1524017606858436770 end 1524017606857436770  Run 348251, LB 362, lumi 0.01
+Event Veto ['MiniNoiseBurst'], Wed Apr 18 02:16:33 2018 UTC-Wed Apr 18 02:16:33 2018 UTC (0.001 )  Time stamp start 1524017793676128850 end 1524017793675128850  Run 348251, LB 366, lumi 0.01
+Event Veto ['MiniNoiseBurst'], Wed Apr 18 02:34:23 2018 UTC-Wed Apr 18 02:34:23 2018 UTC (0.001 )  Time stamp start 1524018863119089025 end 1524018863118089025  Run 348251, LB 383, lumi 0.01
+Event Veto ['MiniNoiseBurst'], Wed Apr 18 03:45:43 2018 UTC-Wed Apr 18 03:45:43 2018 UTC (0.001 )  Time stamp start 1524023143372620565 end 1524023143371620565  Run 348251, LB 454, lumi 0.01
+Event Veto ['MiniNoiseBurst'], Wed Apr 18 04:07:51 2018 UTC-Wed Apr 18 04:07:51 2018 UTC (0.001 )  Time stamp start 1524024471891523935 end 1524024471890523935  Run 348251, LB 477, lumi 0.01
+Event Veto ['DataCorruption'], Wed Apr 18 04:35:35 2018 UTC-Wed Apr 18 04:36:57 2018 UTC (81.750 )  Time stamp start 1524026217261279400 end 1524026135511071500  Run 348251, LBs 536-538, lumi 443.82
+Found a total of 6 Mini noise periods, covering a total of 0.01 seconds
+Found a total of 2 corruption periods, covering a total of 82.39 seconds
+Lumi loss due to mini-noise-bursts: 0.00 nb-1 out of 153.74 nb-1 (0.00 per-mil)
+Lumi loss due to corruption: 0.45 nb-1 out of 153.74 nb-1 (2.92 per-mil)
+Overall Lumi loss is 0.448343960102 by 82.39595257 s of veto length

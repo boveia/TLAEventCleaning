@@ -1,0 +1,10 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 278734 to 278734
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 278734 to run 278734  lasting from Sun Sep  6 21:46:36 2015 UTC to Sun Sep  6 21:54:15 2015 UTC
+Event Veto ['DataCorruption'], Sun Sep  6 21:47:46 2015 UTC-Sun Sep  6 21:47:47 2015 UTC (0.660 )  Time stamp start 1441576067002151215 end 1441576066342331725  Run 278734, LBs 2-3, lumi 24.37
+Found a total of 1 corruption periods, covering a total of 0.66 seconds
+Lumi loss due to corruption: 0.02 nb-1 out of 25.29 nb-1 (0.96 per-mil)
+Overall Lumi loss is 0.0243677366035 by 0.65981949 s of veto length

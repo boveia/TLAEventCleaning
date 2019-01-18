@@ -1,0 +1,117 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 348511 to 348511
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 348511 to run 348511  lasting from Sat Apr 21 00:56:32 2018 UTC to Sat Apr 21 08:57:45 2018 UTC
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 01:46:06 2018 UTC-Sat Apr 21 01:46:06 2018 UTC (0.001 )  Time stamp start 1524275166831567195 end 1524275166830566125  Run 348511, LB 55, lumi 0.00
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:12:45 2018 UTC-Sat Apr 21 02:12:45 2018 UTC (0.001 )  Time stamp start 1524276765839795455 end 1524276765838795455  Run 348511, LB 82, lumi 0.50
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:19:09 2018 UTC-Sat Apr 21 02:19:09 2018 UTC (0.001 )  Time stamp start 1524277149288121080 end 1524277149287121080  Run 348511, LB 90, lumi 0.49
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:19:55 2018 UTC-Sat Apr 21 02:19:55 2018 UTC (0.001 )  Time stamp start 1524277195587760885 end 1524277195586760885  Run 348511, LB 91, lumi 0.49
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:29:45 2018 UTC-Sat Apr 21 02:29:45 2018 UTC (0.001 )  Time stamp start 1524277785524268250 end 1524277785523268250  Run 348511, LB 132, lumi 0.48
+Event Veto ['NoiseBurst'], Sat Apr 21 02:32:13 2018 UTC-Sat Apr 21 02:32:13 2018 UTC (0.001 )  Time stamp start 1524277933106537225 end 1524277933105536975  Run 348511, LB 134, lumi 0.48
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:32:13 2018 UTC-Sat Apr 21 02:32:13 2018 UTC (0.000 )  Time stamp start 1524277933106537600 end 1524277933106537225  Run 348511, LB 134, lumi 0.00
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:33:12 2018 UTC-Sat Apr 21 02:33:12 2018 UTC (0.001 )  Time stamp start 1524277992150314940 end 1524277992149314940  Run 348511, LB 135, lumi 0.48
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:33:43 2018 UTC-Sat Apr 21 02:33:43 2018 UTC (0.001 )  Time stamp start 1524278023034682270 end 1524278023033682270  Run 348511, LB 136, lumi 0.48
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:35:44 2018 UTC-Sat Apr 21 02:35:44 2018 UTC (0.001 )  Time stamp start 1524278144203715230 end 1524278144202715230  Run 348511, LB 138, lumi 0.48
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:36:48 2018 UTC-Sat Apr 21 02:36:48 2018 UTC (0.001 )  Time stamp start 1524278208055660300 end 1524278208054660300  Run 348511, LB 139, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:37:31 2018 UTC-Sat Apr 21 02:37:31 2018 UTC (0.001 )  Time stamp start 1524278251932410050 end 1524278251931410050  Run 348511, LB 140, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:38:04 2018 UTC-Sat Apr 21 02:38:04 2018 UTC (0.001 )  Time stamp start 1524278284568388375 end 1524278284567388375  Run 348511, LB 140, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:40:34 2018 UTC-Sat Apr 21 02:40:34 2018 UTC (0.001 )  Time stamp start 1524278434741726155 end 1524278434740726155  Run 348511, LB 143, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:41:42 2018 UTC-Sat Apr 21 02:41:42 2018 UTC (0.001 )  Time stamp start 1524278502246608680 end 1524278502245608680  Run 348511, LB 144, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:42:40 2018 UTC-Sat Apr 21 02:42:40 2018 UTC (0.001 )  Time stamp start 1524278560154099865 end 1524278560153099865  Run 348511, LB 145, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:42:46 2018 UTC-Sat Apr 21 02:42:46 2018 UTC (0.001 )  Time stamp start 1524278566853632820 end 1524278566852632820  Run 348511, LB 145, lumi 0.47
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:46:41 2018 UTC-Sat Apr 21 02:46:41 2018 UTC (0.001 )  Time stamp start 1524278801531093150 end 1524278801530093150  Run 348511, LB 149, lumi 0.46
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:48:00 2018 UTC-Sat Apr 21 02:48:00 2018 UTC (0.001 )  Time stamp start 1524278880255993800 end 1524278880254993800  Run 348511, LB 150, lumi 0.46
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:50:56 2018 UTC-Sat Apr 21 02:50:56 2018 UTC (0.001 )  Time stamp start 1524279056024651310 end 1524279056023651310  Run 348511, LB 153, lumi 0.46
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:54:51 2018 UTC-Sat Apr 21 02:54:51 2018 UTC (0.001 )  Time stamp start 1524279291322970200 end 1524279291321970200  Run 348511, LB 157, lumi 0.46
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:56:17 2018 UTC-Sat Apr 21 02:56:17 2018 UTC (0.001 )  Time stamp start 1524279377141973685 end 1524279377140973685  Run 348511, LB 158, lumi 0.46
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:56:34 2018 UTC-Sat Apr 21 02:56:34 2018 UTC (0.001 )  Time stamp start 1524279394801776920 end 1524279394800776920  Run 348511, LB 159, lumi 0.45
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:56:48 2018 UTC-Sat Apr 21 02:56:48 2018 UTC (0.001 )  Time stamp start 1524279408254521045 end 1524279408253521045  Run 348511, LB 159, lumi 0.45
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 02:58:29 2018 UTC-Sat Apr 21 02:58:29 2018 UTC (0.001 )  Time stamp start 1524279509599040870 end 1524279509598040870  Run 348511, LB 161, lumi 0.45
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:02:23 2018 UTC-Sat Apr 21 03:02:23 2018 UTC (0.001 )  Time stamp start 1524279743105321565 end 1524279743104321565  Run 348511, LB 165, lumi 0.45
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:05:48 2018 UTC-Sat Apr 21 03:05:48 2018 UTC (0.001 )  Time stamp start 1524279948518006005 end 1524279948517006005  Run 348511, LB 168, lumi 0.45
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:13:40 2018 UTC-Sat Apr 21 03:13:40 2018 UTC (0.001 )  Time stamp start 1524280420327050665 end 1524280420326050665  Run 348511, LB 176, lumi 0.44
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:14:09 2018 UTC-Sat Apr 21 03:14:09 2018 UTC (0.001 )  Time stamp start 1524280449555533915 end 1524280449554533915  Run 348511, LB 176, lumi 0.44
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:15:52 2018 UTC-Sat Apr 21 03:15:52 2018 UTC (0.001 )  Time stamp start 1524280552558850615 end 1524280552557850615  Run 348511, LB 178, lumi 0.44
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:16:16 2018 UTC-Sat Apr 21 03:16:16 2018 UTC (0.001 )  Time stamp start 1524280576073683050 end 1524280576072683050  Run 348511, LB 178, lumi 0.44
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:23:44 2018 UTC-Sat Apr 21 03:23:44 2018 UTC (0.001 )  Time stamp start 1524281024029171360 end 1524281024028171360  Run 348511, LB 186, lumi 0.43
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:26:10 2018 UTC-Sat Apr 21 03:26:10 2018 UTC (0.001 )  Time stamp start 1524281170173376045 end 1524281170172376045  Run 348511, LB 188, lumi 0.41
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:27:37 2018 UTC-Sat Apr 21 03:27:37 2018 UTC (0.001 )  Time stamp start 1524281257272624455 end 1524281257271624455  Run 348511, LB 190, lumi 0.43
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:33:44 2018 UTC-Sat Apr 21 03:33:44 2018 UTC (0.001 )  Time stamp start 1524281624171990900 end 1524281624170990900  Run 348511, LB 196, lumi 0.43
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:36:34 2018 UTC-Sat Apr 21 03:36:34 2018 UTC (0.001 )  Time stamp start 1524281794710980155 end 1524281794709980155  Run 348511, LB 199, lumi 0.42
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:44:50 2018 UTC-Sat Apr 21 03:44:50 2018 UTC (0.001 )  Time stamp start 1524282290362010435 end 1524282290361010435  Run 348511, LB 207, lumi 0.42
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:45:18 2018 UTC-Sat Apr 21 03:45:18 2018 UTC (0.001 )  Time stamp start 1524282318830556195 end 1524282318829556195  Run 348511, LB 207, lumi 0.42
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:46:25 2018 UTC-Sat Apr 21 03:46:25 2018 UTC (0.001 )  Time stamp start 1524282385369119590 end 1524282385368119590  Run 348511, LB 209, lumi 0.42
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:52:40 2018 UTC-Sat Apr 21 03:52:40 2018 UTC (0.001 )  Time stamp start 1524282760242617230 end 1524282760241617230  Run 348511, LB 215, lumi 0.41
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:52:55 2018 UTC-Sat Apr 21 03:52:55 2018 UTC (0.001 )  Time stamp start 1524282775695294355 end 1524282775694294355  Run 348511, LB 215, lumi 0.41
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 03:59:22 2018 UTC-Sat Apr 21 03:59:22 2018 UTC (0.001 )  Time stamp start 1524283162349934815 end 1524283162348934815  Run 348511, LB 221, lumi 0.41
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:03:17 2018 UTC-Sat Apr 21 04:03:17 2018 UTC (0.001 )  Time stamp start 1524283397663737370 end 1524283397662737370  Run 348511, LB 225, lumi 0.40
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:03:32 2018 UTC-Sat Apr 21 04:03:32 2018 UTC (0.001 )  Time stamp start 1524283412759148855 end 1524283412758148855  Run 348511, LB 226, lumi 0.40
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:10:06 2018 UTC-Sat Apr 21 04:10:06 2018 UTC (0.001 )  Time stamp start 1524283806244742005 end 1524283806243742005  Run 348511, LB 232, lumi 0.40
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:11:53 2018 UTC-Sat Apr 21 04:11:53 2018 UTC (0.001 )  Time stamp start 1524283913295676640 end 1524283913294676640  Run 348511, LB 234, lumi 0.40
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:15:31 2018 UTC-Sat Apr 21 04:15:31 2018 UTC (0.001 )  Time stamp start 1524284131960680045 end 1524284131959680045  Run 348511, LB 238, lumi 0.40
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:20:12 2018 UTC-Sat Apr 21 04:20:12 2018 UTC (0.001 )  Time stamp start 1524284412323322850 end 1524284412322322850  Run 348511, LB 242, lumi 0.39
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:21:08 2018 UTC-Sat Apr 21 04:21:08 2018 UTC (0.001 )  Time stamp start 1524284468870303265 end 1524284468869303265  Run 348511, LB 243, lumi 0.39
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:22:57 2018 UTC-Sat Apr 21 04:22:57 2018 UTC (0.001 )  Time stamp start 1524284577508471775 end 1524284577507471775  Run 348511, LB 245, lumi 0.39
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:23:05 2018 UTC-Sat Apr 21 04:23:05 2018 UTC (0.001 )  Time stamp start 1524284585688452390 end 1524284585687452390  Run 348511, LB 245, lumi 0.39
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:29:09 2018 UTC-Sat Apr 21 04:29:09 2018 UTC (0.001 )  Time stamp start 1524284949968349005 end 1524284949967349005  Run 348511, LB 251, lumi 0.39
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:32:08 2018 UTC-Sat Apr 21 04:32:08 2018 UTC (0.001 )  Time stamp start 1524285128863245100 end 1524285128862245100  Run 348511, LB 254, lumi 0.38
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:34:34 2018 UTC-Sat Apr 21 04:34:34 2018 UTC (0.001 )  Time stamp start 1524285274848564000 end 1524285274847564000  Run 348511, LB 257, lumi 0.38
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:40:55 2018 UTC-Sat Apr 21 04:40:55 2018 UTC (0.001 )  Time stamp start 1524285655736065880 end 1524285655735065880  Run 348511, LB 263, lumi 0.38
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:43:01 2018 UTC-Sat Apr 21 04:43:01 2018 UTC (0.001 )  Time stamp start 1524285781099452950 end 1524285781098452950  Run 348511, LB 265, lumi 0.38
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:48:01 2018 UTC-Sat Apr 21 04:48:01 2018 UTC (0.001 )  Time stamp start 1524286081460189120 end 1524286081459189120  Run 348511, LB 270, lumi 0.37
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:49:27 2018 UTC-Sat Apr 21 04:49:27 2018 UTC (0.001 )  Time stamp start 1524286167509006210 end 1524286167508006210  Run 348511, LB 271, lumi 0.37
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:51:16 2018 UTC-Sat Apr 21 04:51:16 2018 UTC (0.001 )  Time stamp start 1524286276600133335 end 1524286276599133335  Run 348511, LB 273, lumi 0.37
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 04:52:23 2018 UTC-Sat Apr 21 04:52:23 2018 UTC (0.001 )  Time stamp start 1524286343654091565 end 1524286343653091565  Run 348511, LB 274, lumi 0.37
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:00:33 2018 UTC-Sat Apr 21 05:00:33 2018 UTC (0.001 )  Time stamp start 1524286833467298525 end 1524286833466298525  Run 348511, LB 282, lumi 0.37
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:09:34 2018 UTC-Sat Apr 21 05:09:34 2018 UTC (0.001 )  Time stamp start 1524287374223946445 end 1524287374222946445  Run 348511, LB 291, lumi 0.36
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:20:15 2018 UTC-Sat Apr 21 05:20:15 2018 UTC (0.001 )  Time stamp start 1524288015273515695 end 1524288015272515695  Run 348511, LB 302, lumi 0.36
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:22:05 2018 UTC-Sat Apr 21 05:22:05 2018 UTC (0.001 )  Time stamp start 1524288125565800765 end 1524288125564800765  Run 348511, LB 304, lumi 0.36
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:32:57 2018 UTC-Sat Apr 21 05:32:57 2018 UTC (0.001 )  Time stamp start 1524288777453223720 end 1524288777452223720  Run 348511, LB 315, lumi 0.35
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:46:45 2018 UTC-Sat Apr 21 05:46:45 2018 UTC (0.001 )  Time stamp start 1524289605302525455 end 1524289605301525455  Run 348511, LB 329, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:51:51 2018 UTC-Sat Apr 21 05:51:51 2018 UTC (0.001 )  Time stamp start 1524289911444716440 end 1524289911443716440  Run 348511, LB 334, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:53:19 2018 UTC-Sat Apr 21 05:53:19 2018 UTC (0.001 )  Time stamp start 1524289999955817835 end 1524289999954817835  Run 348511, LB 335, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:54:33 2018 UTC-Sat Apr 21 05:54:33 2018 UTC (0.001 )  Time stamp start 1524290073358990810 end 1524290073357990810  Run 348511, LB 336, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 05:57:57 2018 UTC-Sat Apr 21 05:57:57 2018 UTC (0.001 )  Time stamp start 1524290277688219190 end 1524290277687219190  Run 348511, LB 340, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:02:25 2018 UTC-Sat Apr 21 06:02:25 2018 UTC (0.001 )  Time stamp start 1524290545776633330 end 1524290545775633330  Run 348511, LB 344, lumi 0.33
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:07:07 2018 UTC-Sat Apr 21 06:07:07 2018 UTC (0.001 )  Time stamp start 1524290827869755785 end 1524290827868755785  Run 348511, LB 349, lumi 0.33
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:07:43 2018 UTC-Sat Apr 21 06:07:43 2018 UTC (0.001 )  Time stamp start 1524290863253498980 end 1524290863252498980  Run 348511, LB 349, lumi 0.33
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:09:39 2018 UTC-Sat Apr 21 06:09:39 2018 UTC (0.001 )  Time stamp start 1524290979821070175 end 1524290979820070175  Run 348511, LB 351, lumi 0.33
+Event Veto ['NoiseBurst'], Sat Apr 21 06:11:20 2018 UTC-Sat Apr 21 06:11:20 2018 UTC (0.002 )  Time stamp start 1524291080642752375 end 1524291080641240215  Run 348511, LB 353, lumi 0.50
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:21:49 2018 UTC-Sat Apr 21 06:21:49 2018 UTC (0.001 )  Time stamp start 1524291709514704100 end 1524291709513704100  Run 348511, LB 364, lumi 0.32
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:29:19 2018 UTC-Sat Apr 21 06:29:19 2018 UTC (0.001 )  Time stamp start 1524292159883754880 end 1524292159882754880  Run 348511, LB 371, lumi 0.33
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:37:03 2018 UTC-Sat Apr 21 06:37:03 2018 UTC (0.001 )  Time stamp start 1524292623926348980 end 1524292623925348980  Run 348511, LB 379, lumi 0.33
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 06:58:00 2018 UTC-Sat Apr 21 06:58:00 2018 UTC (0.001 )  Time stamp start 1524293880783217510 end 1524293880782217510  Run 348511, LB 400, lumi 0.32
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:09:03 2018 UTC-Sat Apr 21 07:09:03 2018 UTC (0.001 )  Time stamp start 1524294543305812550 end 1524294543304812550  Run 348511, LB 413, lumi 0.31
+Event Veto ['NoiseBurst'], Sat Apr 21 07:09:58 2018 UTC-Sat Apr 21 07:09:58 2018 UTC (0.001 )  Time stamp start 1524294598726320755 end 1524294598725320505  Run 348511, LB 414, lumi 0.31
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:14:04 2018 UTC-Sat Apr 21 07:14:04 2018 UTC (0.001 )  Time stamp start 1524294844676840805 end 1524294844675840805  Run 348511, LB 418, lumi 0.31
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:14:55 2018 UTC-Sat Apr 21 07:14:55 2018 UTC (0.001 )  Time stamp start 1524294895978735165 end 1524294895977735165  Run 348511, LB 419, lumi 0.31
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:16:03 2018 UTC-Sat Apr 21 07:16:03 2018 UTC (0.001 )  Time stamp start 1524294963275145285 end 1524294963274145285  Run 348511, LB 420, lumi 0.31
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:17:44 2018 UTC-Sat Apr 21 07:17:44 2018 UTC (0.001 )  Time stamp start 1524295064856137665 end 1524295064855137665  Run 348511, LB 422, lumi 0.31
+Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Sat Apr 21 07:18:29 2018 UTC-Sat Apr 21 07:18:29 2018 UTC (0.001 )  Time stamp start 1524295109189824640 end 1524295109188824640  Run 348511, LB 423, lumi 0.31
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:20:06 2018 UTC-Sat Apr 21 07:20:06 2018 UTC (0.001 )  Time stamp start 1524295206161407390 end 1524295206160407390  Run 348511, LB 424, lumi 0.31
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:32:40 2018 UTC-Sat Apr 21 07:32:40 2018 UTC (0.001 )  Time stamp start 1524295960344929385 end 1524295960343929385  Run 348511, LB 468, lumi 0.30
+Event Veto ['NoiseBurst'], Sat Apr 21 07:39:55 2018 UTC-Sat Apr 21 07:39:55 2018 UTC (0.001 )  Time stamp start 1524296395762354825 end 1524296395761246265  Run 348511, LB 475, lumi 0.33
+Event Veto ['NoiseBurst'], Sat Apr 21 07:46:20 2018 UTC-Sat Apr 21 07:46:20 2018 UTC (0.001 )  Time stamp start 1524296780099334225 end 1524296780097854025  Run 348511, LB 482, lumi 0.44
+Event Veto ['NoiseBurst'], Sat Apr 21 07:46:20 2018 UTC-Sat Apr 21 07:46:20 2018 UTC (0.001 )  Time stamp start 1524296780126880865 end 1524296780125746830  Run 348511, LB 482, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:50:28 2018 UTC-Sat Apr 21 07:50:28 2018 UTC (0.001 )  Time stamp start 1524297028975883800 end 1524297028974883800  Run 348511, LB 486, lumi 0.30
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 07:56:29 2018 UTC-Sat Apr 21 07:56:29 2018 UTC (0.001 )  Time stamp start 1524297389049997740 end 1524297389048997740  Run 348511, LB 492, lumi 0.31
+Event Veto ['NoiseBurst'], Sat Apr 21 08:05:58 2018 UTC-Sat Apr 21 08:05:58 2018 UTC (0.000 )  Time stamp start 1524297958912511960 end 1524297958912511710  Run 348511, LB 501, lumi 0.00
+Event Veto ['NoiseBurst'], Sat Apr 21 08:05:58 2018 UTC-Sat Apr 21 08:05:58 2018 UTC (0.001 )  Time stamp start 1524297958913512455 end 1524297958912511960  Run 348511, LB 501, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:07:56 2018 UTC-Sat Apr 21 08:07:56 2018 UTC (0.001 )  Time stamp start 1524298076684008105 end 1524298076683008105  Run 348511, LB 503, lumi 0.36
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:14:03 2018 UTC-Sat Apr 21 08:14:03 2018 UTC (0.001 )  Time stamp start 1524298443088864160 end 1524298443087864160  Run 348511, LB 509, lumi 0.36
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:14:08 2018 UTC-Sat Apr 21 08:14:08 2018 UTC (0.001 )  Time stamp start 1524298448134325305 end 1524298448133325305  Run 348511, LB 509, lumi 0.36
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:19:39 2018 UTC-Sat Apr 21 08:19:39 2018 UTC (0.001 )  Time stamp start 1524298779894310980 end 1524298779893310980  Run 348511, LB 515, lumi 0.35
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:26:32 2018 UTC-Sat Apr 21 08:26:32 2018 UTC (0.001 )  Time stamp start 1524299192861701065 end 1524299192860701065  Run 348511, LB 522, lumi 0.35
+Event Veto ['NoiseBurst', 'MiniNoiseBurst'], Sat Apr 21 08:30:58 2018 UTC-Sat Apr 21 08:30:58 2018 UTC (0.001 )  Time stamp start 1524299458293162620 end 1524299458292162245  Run 348511, LB 526, lumi 0.35
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:38:46 2018 UTC-Sat Apr 21 08:38:46 2018 UTC (0.001 )  Time stamp start 1524299926466997885 end 1524299926465997885  Run 348511, LB 534, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:42:18 2018 UTC-Sat Apr 21 08:42:18 2018 UTC (0.001 )  Time stamp start 1524300138881769010 end 1524300138880769010  Run 348511, LB 537, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:46:16 2018 UTC-Sat Apr 21 08:46:16 2018 UTC (0.001 )  Time stamp start 1524300376110214300 end 1524300376109214300  Run 348511, LB 541, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:47:20 2018 UTC-Sat Apr 21 08:47:20 2018 UTC (0.001 )  Time stamp start 1524300440133827490 end 1524300440132827490  Run 348511, LB 543, lumi 0.34
+Event Veto ['MiniNoiseBurst'], Sat Apr 21 08:51:16 2018 UTC-Sat Apr 21 08:51:16 2018 UTC (0.001 )  Time stamp start 1524300676886626585 end 1524300676885626585  Run 348511, LB 546, lumi 0.34
+Found a total of 10 noisy periods, covering a total of 0.01 seconds
+Found a total of 96 Mini noise periods, covering a total of 0.10 seconds
+Lumi loss due to noise-bursts: 0.00 nb-1 out of 9029.52 nb-1 (0.00 per-mil)
+Lumi loss due to mini-noise-bursts: 0.04 nb-1 out of 9029.52 nb-1 (0.00 per-mil)
+Overall Lumi loss is 0.0403420553356 by 0.10523802 s of veto length

@@ -1,0 +1,19 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 360348 to 360348
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 360348 to run 360348  lasting from Sun Sep  9 07:19:12 2018 UTC to Sun Sep  9 08:42:03 2018 UTC
+Event Veto ['MiniNoiseBurst'], Sun Sep  9 08:29:13 2018 UTC-Sun Sep  9 08:29:13 2018 UTC (0.001 )  Time stamp start 1536481753494577635 end 1536481753493577635  Run 360348, LB 75, lumi 9.61
+Event Veto ['NoiseBurst'], Sun Sep  9 08:30:01 2018 UTC-Sun Sep  9 08:30:01 2018 UTC (0.001 )  Time stamp start 1536481801217418930 end 1536481801216395475  Run 360348, LB 75, lumi 9.83
+Event Veto ['NoiseBurst'], Sun Sep  9 08:31:13 2018 UTC-Sun Sep  9 08:31:13 2018 UTC (0.001 )  Time stamp start 1536481873602201715 end 1536481873601201190  Run 360348, LB 77, lumi 12.53
+Event Veto ['MiniNoiseBurst'], Sun Sep  9 08:31:45 2018 UTC-Sun Sep  9 08:31:45 2018 UTC (0.001 )  Time stamp start 1536481905653216625 end 1536481905652216625  Run 360348, LB 77, lumi 12.52
+Event Veto ['NoiseBurst'], Sun Sep  9 08:32:18 2018 UTC-Sun Sep  9 08:32:18 2018 UTC (0.001 )  Time stamp start 1536481938144806635 end 1536481938143805890  Run 360348, LB 78, lumi 17.55
+Event Veto ['NoiseBurst'], Sun Sep  9 08:32:36 2018 UTC-Sun Sep  9 08:32:36 2018 UTC (0.001 )  Time stamp start 1536481956069262440 end 1536481956068261915  Run 360348, LB 78, lumi 17.55
+Event Veto ['MiniNoiseBurst'], Sun Sep  9 08:32:39 2018 UTC-Sun Sep  9 08:32:39 2018 UTC (0.001 )  Time stamp start 1536481959020240470 end 1536481959019240470  Run 360348, LB 78, lumi 17.54
+Event Veto ['MiniNoiseBurst'], Sun Sep  9 08:34:44 2018 UTC-Sun Sep  9 08:34:44 2018 UTC (0.001 )  Time stamp start 1536482084075209730 end 1536482084074209730  Run 360348, LB 82, lumi 18.82
+Found a total of 4 noisy periods, covering a total of 0.00 seconds
+Found a total of 4 Mini noise periods, covering a total of 0.00 seconds
+Lumi loss due to noise-bursts: 0.06 nb-1 out of 6530.23 nb-1 (0.01 per-mil)
+Lumi loss due to mini-noise-bursts: 0.06 nb-1 out of 6530.23 nb-1 (0.01 per-mil)
+Overall Lumi loss is 0.115937196153 by 0.00802525 s of veto length

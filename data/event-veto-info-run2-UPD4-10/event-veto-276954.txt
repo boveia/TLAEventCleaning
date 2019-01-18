@@ -1,0 +1,12 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 276954 to 276954
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 276954 to run 276954  lasting from Sun Aug 23 17:43:15 2015 UTC to Sun Aug 23 21:35:07 2015 UTC
+Event Veto ['NoiseBurst'], Sun Aug 23 21:02:34 2015 UTC-Sun Aug 23 21:02:34 2015 UTC (0.050 )  Time stamp start 1440363754528329380 end 1440363754478329005  Run 276954, LB 205, lumi 47.78
+Event Veto ['NoiseBurst'], Sun Aug 23 21:17:55 2015 UTC-Sun Aug 23 21:17:55 2015 UTC (0.050 )  Time stamp start 1440364675847070125 end 1440364675797069350  Run 276954, LB 222, lumi 47.06
+Event Veto ['NoiseBurst'], Sun Aug 23 21:19:17 2015 UTC-Sun Aug 23 21:19:17 2015 UTC (0.051 )  Time stamp start 1440364757480108735 end 1440364757429441875  Run 276954, LB 223, lumi 47.64
+Found a total of 3 noisy periods, covering a total of 0.15 seconds
+Lumi loss due to noise-bursts: 0.14 nb-1 out of 1486.31 nb-1 (0.10 per-mil)
+Overall Lumi loss is 0.142480224803 by 0.15066801 s of veto length

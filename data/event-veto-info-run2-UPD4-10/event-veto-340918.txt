@@ -1,0 +1,15 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  UCharDbArray found in libRootCnvDict.so  is already in libStorageSvcDict.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  Event found in libtest_GPyTestDict.so  is already in libG4AtlasControlDict.so 
+Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-10  Run 340918 to 340918
+Reading folder /LAR/BadChannelsOfl/EventVeto from DB oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2
+Data source lookup using /cvmfs/atlas.cern.ch/repo/sw/software/21.0/AtlasCore/21.0.20/InstallArea/x86_64-slc6-gcc62-opt/XML/AtlasAuthentication/dblookup.xml file
+Dumping EventVeto data from run 340918 to run 340918  lasting from Thu Nov 16 04:51:29 2017 UTC to Thu Nov 16 10:32:42 2017 UTC
+Event Veto ['NoiseBurst'], Thu Nov 16 05:05:52 2017 UTC-Thu Nov 16 05:05:52 2017 UTC (0.001 )  Time stamp start 1510808752867627590 end 1510808752866181345  Run 340918, LB 18, lumi 0.92
+Event Veto ['NoiseBurst'], Thu Nov 16 07:53:50 2017 UTC-Thu Nov 16 07:53:50 2017 UTC (0.001 )  Time stamp start 1510818830004227945 end 1510818830003151470  Run 340918, LB 193, lumi 0.67
+Event Veto ['NoiseBurst'], Thu Nov 16 07:53:50 2017 UTC-Thu Nov 16 07:53:50 2017 UTC (0.001 )  Time stamp start 1510818830006335210 end 1510818830005141020  Run 340918, LB 193, lumi 0.74
+Event Veto ['NoiseBurst'], Thu Nov 16 07:53:50 2017 UTC-Thu Nov 16 07:53:50 2017 UTC (0.005 )  Time stamp start 1510818830018572500 end 1510818830013358520  Run 340918, LB 193, lumi 3.22
+Event Veto ['NoiseBurst'], Thu Nov 16 07:53:50 2017 UTC-Thu Nov 16 07:53:50 2017 UTC (0.004 )  Time stamp start 1510818830032504670 end 1510818830028007600  Run 340918, LB 193, lumi 2.78
+Event Veto ['NoiseBurst'], Thu Nov 16 07:53:50 2017 UTC-Thu Nov 16 07:53:50 2017 UTC (0.001 )  Time stamp start 1510818830034063270 end 1510818830032734415  Run 340918, LB 193, lumi 0.82
+Found a total of 6 noisy periods, covering a total of 0.01 seconds
+Lumi loss due to noise-bursts: 0.01 nb-1 out of 13058.63 nb-1 (0.00 per-mil)
+Overall Lumi loss is 0.00914265227579 by 0.014756815 s of veto length
