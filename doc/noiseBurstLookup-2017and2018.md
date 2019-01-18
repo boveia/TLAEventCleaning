@@ -966,6 +966,15 @@ Old 2016 setup:
       performance is 28x faster than worst case (randomly accessed
       runs).
 
+- [ ] Run 302265 appears in the 2016 event data but not in the list
+      for reprocessing at https://its.cern.ch/jira/browse/ATLASDPD-1188. 
+      why? is it not in the GRL?
+
+- [ ] does our cleaning catch problems like
+      https://its.cern.ch/jira/browse/ATLASDQ-636, e.g. "In Run 360471
+      LAr was not included so any system having LAr has input should
+      expect strange behaviour (essentially empty plots)" (maybe this
+      is not even in the GRL)
 
 # Appendix
 
@@ -981,4 +990,8 @@ LArCalorimeter/​LArBadChannelTool/​LArBadChannelTool/​LArBadChannelDBTools
 
 ```less data15_13TeV.periodAllYear_DetStatus-v67-pro19-02_DQDefects-00-01-02_PHYS_StandardGRL_All_Good.xml | grep '<Run>' | awk -F'>' '{print $2}' | awk -F'<' '{print $1}' > goodruns.txt```
 
+
+## cool DB tag descriptions
+
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/LArDatabaseUpdateHowTo
 
