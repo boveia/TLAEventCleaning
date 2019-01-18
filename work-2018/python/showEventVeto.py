@@ -78,7 +78,7 @@ class TimeStampToRunLumi:
             lb=pl["LumiBlock"]
             return run,lb
 
-def showEventVetoFolder(dbname,folderName,tag,run1,run2,levelOfDetail=3):
+def showEventVetoFolder(dbname,folderName,tag,run1,run2,levelOfDetail=3,onlyFlag=-1):
     retval=dict() 
     
     dbSvc = cool.DatabaseSvcFactory.databaseService()
@@ -99,15 +99,17 @@ def showEventVetoFolder(dbname,folderName,tag,run1,run2,levelOfDetail=3):
         print "Tag",tag,"does not exist in foder",folder
         return
 
-    totalVeto=[0,0]
-    nPeriods=[0,0]
-    lostLumi=[0.,0.]
+    totalVeto=[0,0,0]
+    nPeriods=[0,0,0]
+    lostLumi=[0.,0.,0.]
 
     allNoise=[]
+    allMNB=[]
     allCorruption=[]
 
-    corrMask =0xFFFF0000
-    noiseMask=0x0000FFFF 
+    corrMask =0xFFF00000
+    noiseMask=0x00008FFF 
+    MNBMask = 0x10FFF
 
     totalLumi=None
     lg=LumiGetter()
@@ -142,6 +144,10 @@ def showEventVetoFolder(dbname,folderName,tag,run1,run2,levelOfDetail=3):
 
     
     itr=folder.browseObjects(t1,t2,cool.ChannelSelection(0),tag)
+    if onlyFlag < 0:
+       selection = noiseMask | MNBMask | corrMask
+    else:
+       selection = onlyFlag
     while itr.goToNext():
         obj=itr.currentRef()
         payload=obj.payload()
@@ -150,54 +156,82 @@ def showEventVetoFolder(dbname,folderName,tag,run1,run2,levelOfDetail=3):
         tf=obj.since()
         ts=obj.until()
         types=[]
-        if flag & noiseMask:
+        #Define the type of noise
+        if flag & noiseMask & selection:
             types+=["NoiseBurst",]
+        if flag & MNBMask & selection:
+            types+=["MiniNoiseBurst",]
+        if flag & corrMask & selection:
+            types+=["DataCorruption",]
+        #Fill the cumulative varibales (elif used to avoid double counting)
+        if flag & noiseMask & selection:
             totalVeto[0]+=(ts-tf)
             nPeriods[0]+=1
             lostLumi[0]+=lg.getLumi(tf,ts)
             allNoise.append((tf,ts))
-        if flag & corrMask:
-            types+=["DataCorruption",]
+        elif flag & MNBMask & selection:        
             totalVeto[1]+=(ts-tf)
             nPeriods[1]+=1
             lostLumi[1]+=lg.getLumi(tf,ts)
+            allMNB.append((tf,ts))
+        elif flag & corrMask & selection:
+            totalVeto[2]+=(ts-tf)
+            nPeriods[2]+=1
+            lostLumi[2]+=lg.getLumi(tf,ts)
             allCorruption.append((tf,ts))
         if len(types)==0:
             types=("UnkonwnFlag",)
-        if levelOfDetail>1:
+        if levelOfDetail>1 and (flag & selection):
             print "Event Veto %s, %s-%s (%.3f ) " % (str(types),ts2string(tf),ts2string(ts),(ts-tf)/1e9 ),
+            print "Time stamp start %s end %s " %(ts,tf),
             if levelOfDetail>2:
                 rl1=tsToRl.getRunLumi(tf)
                 rl2=tsToRl.getRunLumi(ts)
                 if rl1==rl2:
-                    print "Run %i, LB %i" % (rl1[0],rl1[1]),
+                    print "Run %i, LB %i, lumi %.2f" % (rl1[0],rl1[1],lg.getLumi(tf,ts))
                 else:
-                    print "Run %i, LBs %i-%i" % (rl1[0],rl1[1],rl2[1]),
-                print "(%f,%f)" % (ts,tf)
+                    print "Run %i, LBs %i-%i, lumi %.2f" % (rl1[0],rl1[1],rl2[1],lg.getLumi(tf,ts)) 
                 pass
             else:
                 print ""
     itr.close()
-    db.closeDatabase()
+    try:
+       if db.isOpen():
+          db.closeDatabase()
+    except Exception:
+       print "Closing database exception, not a problem...."
     if levelOfDetail>0:
-        print "Found a total of %i noisy periods, covering a total of %.2f seconds" % (nPeriods[0],totalVeto[0]/1e9)
-        print "Found a total of %i corruption periods, covering a total of %.2f seconds" % (nPeriods[1],totalVeto[1]/1e9)
-        if totalLumi is not None and totalLumi>0:
-            print "Lumi loss due to noise-bursts: %.2f nb-1 out of %.2f nb-1 (%.2f per-mil)" %(lostLumi[0]/1e3,totalLumi/1e3,1000.*lostLumi[0]/totalLumi)
+       if nPeriods[0] > 0:
+         print "Found a total of %i noisy periods, covering a total of %.2f seconds" % (nPeriods[0],totalVeto[0]/1e9)
+       if nPeriods[1] > 0:
+         print "Found a total of %i Mini noise periods, covering a total of %.2f seconds" % (nPeriods[1],totalVeto[1]/1e9)
+       if nPeriods[2] > 0:
+         print "Found a total of %i corruption periods, covering a total of %.2f seconds" % (nPeriods[2],totalVeto[2]/1e9)
+       if totalLumi is not None and totalLumi>0:
+            if (nPeriods[0]>0): 
+               print "Lumi loss due to noise-bursts: %.2f nb-1 out of %.2f nb-1 (%.2f per-mil)" %(lostLumi[0]/1e3,totalLumi/1e3,1000.*lostLumi[0]/totalLumi)
             if (nPeriods[1]>0): 
-                print "Lumi loss due to corruption: %.2f nb-1 out of %.2f nb-1 (%.2f per-mil)" %(lostLumi[1]/1e3,totalLumi/1e3,1000.*lostLumi[1]/totalLumi)
-        else:
-            print "Lumi loss due to noise-bursts: %.2f nb-1" % (lostLumi[0]/1e3)
+               print "Lumi loss due to mini-noise-bursts: %.2f nb-1 out of %.2f nb-1 (%.2f per-mil)" %(lostLumi[1]/1e3,totalLumi/1e3,1000.*lostLumi[1]/totalLumi)
+            if (nPeriods[2]>0): 
+               print "Lumi loss due to corruption: %.2f nb-1 out of %.2f nb-1 (%.2f per-mil)" %(lostLumi[2]/1e3,totalLumi/1e3,1000.*lostLumi[2]/totalLumi)
+       else:
+            if (nPeriods[0]>0): 
+                print "Lumi loss due to noise-bursts: %.2f nb-1" % (lostLumi[0]/1e3)
             if (nPeriods[1]>0): 
-                print "Lumi loss due to corruption: %.2f nb-1" % (lostLumi[1]/1e3)
-        
-        print "Overlaps are counted as noise"
+                print "Lumi loss due to mini-noise-burts: %.2f nb-1" % (lostLumi[1]/1e3)
+            if (nPeriods[2]>0): 
+                print "Lumi loss due to corruption: %.2f nb-1" % (lostLumi[2]/1e3)
+       print "Overall Lumi loss is %s by %s s of veto length"%(lostLumi[0]/1e3+lostLumi[1]/1e3+lostLumi[2]/1e3,totalVeto[0]/1e9+totalVeto[1]/1e9+totalVeto[2]/1e9)
+        #print "Overlaps are counted as noise"
 
         
     retval['noiseBurst']=(nPeriods[0],totalVeto[0],lostLumi[0])
-    retval['corruption']=(nPeriods[1],totalVeto[1],lostLumi[1])
+    retval['miniNoiseBurst']=(nPeriods[1],totalVeto[1],lostLumi[1])
+    retval['corruption']=(nPeriods[2],totalVeto[2],lostLumi[2])
     retval['allCorruption']=allCorruption
     retval['allNoise']=allNoise
+    retval['MNBNoise']=allMNB
+
         
     return retval
 
@@ -208,7 +242,7 @@ if __name__=="__main__":
     db="oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2"
     run1=None
     run2=None
-    tag="LARBadChannelsOflEventVeto-RUN2-UPD4-04"
+    tag="LARBadChannelsOflEventVeto-RUN2-UPD1-00"
     folderName="/LAR/BadChannelsOfl/EventVeto"
     levelOfDetail=3
     try:
