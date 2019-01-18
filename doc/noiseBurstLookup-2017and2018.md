@@ -951,10 +951,20 @@ Old 2016 setup:
 
 ## TODO
 
-- [ ] **Anything special needed for data corruption veto type?** "DataCorruption" does not appear in the event veto dumps for run 2, but it does appear in the 2015--2016 dumps.
-- [ ] understgand changes from merged data at TLAEventCleaning/data/. The veto intervals appear slightly wider. Presumably this is because the database table version is different, but 1) can we understand what was done for each database table and 2) which is the one we want for TLA?
-- [x] implement bzip2 decompression (achieved 10x file size reduction on 2015+2016 data with "bzip2 -9")
-- [x] implement read-on-demand from disk, rather than loading every run at the start of the job.
+- [ ] **Anything special needed for data corruption veto type?**
+      "DataCorruption" does not appear in the event veto dumps for run
+      2, but it does appear in the 2015--2016 dumps.
+- [ ] understgand changes from merged data at
+      TLAEventCleaning/data/. The veto intervals appear slightly
+      wider. Presumably this is because the database table version is
+      different, but 1) can we understand what was done for each
+      database table and 2) which is the one we want for TLA?
+- [x] implement bzip2 decompression (achieved 10x file size reduction
+      on 2015+2016 data with "bzip2 -9")
+- [x] implement read-on-demand from disk, rather than loading every
+      run at the start of the job. for full run-2 runlist, typical
+      performance is 28x faster than worst case (randomly accessed
+      runs).
 
 
 # Appendix
