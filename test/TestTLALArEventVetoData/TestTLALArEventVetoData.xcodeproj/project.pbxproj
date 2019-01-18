@@ -10,6 +10,7 @@
 		166C70CE1C4BDF0E001AD2DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 166C70CD1C4BDF0E001AD2DC /* main.cpp */; };
 		166C70D51C4BE020001AD2DC /* TLALArEventVetoData.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */; };
 		16E411B121F109620031BE17 /* event-veto-info-run2 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16E411B021F109480031BE17 /* event-veto-info-run2 */; };
+		16E411B321F14F7D0031BE17 /* event-veto-info-merge in CopyFiles */ = {isa = PBXBuildFile; fileRef = 16E411B221F14F5D0031BE17 /* event-veto-info-merge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,6 +20,7 @@
 			dstPath = ./TLAEventCleaning/data;
 			dstSubfolderSpec = 16;
 			files = (
+				16E411B321F14F7D0031BE17 /* event-veto-info-merge in CopyFiles */,
 				16E411B121F109620031BE17 /* event-veto-info-run2 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,6 +32,7 @@
 		166C70CD1C4BDF0E001AD2DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TLALArEventVetoData.cxx; path = ../../../Root/TLALArEventVetoData.cxx; sourceTree = "<group>"; };
 		16E411B021F109480031BE17 /* event-veto-info-run2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "event-veto-info-run2"; path = "../../../data/event-veto-info-run2"; sourceTree = "<group>"; };
+		16E411B221F14F5D0031BE17 /* event-veto-info-merge */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "event-veto-info-merge"; path = "../../../data/event-veto-info-merge"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				166C70CD1C4BDF0E001AD2DC /* main.cpp */,
+				16E411B221F14F5D0031BE17 /* event-veto-info-merge */,
 				16E411B021F109480031BE17 /* event-veto-info-run2 */,
 				166C70D41C4BE020001AD2DC /* TLALArEventVetoData.cxx */,
 			);
@@ -95,7 +99,7 @@
 		166C70C21C4BDF0E001AD2DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = ch.cern;
 				TargetAttributes = {
 					166C70C91C4BDF0E001AD2DC = {
@@ -141,13 +145,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -192,13 +206,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
