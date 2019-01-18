@@ -947,14 +947,29 @@ Old 2016 setup:
 
 	Reading event veto info from db oracle://ATLAS_COOLPROD;schema=ATLAS_COOLOFL_LAR;dbname=CONDBR2, tag LARBadChannelsOflEventVeto-RUN2-UPD4-04  Run 276073 to 276073
 
+## Split jobs
+
+Some of the event veto dump jobs take a ridiculous amount of time to
+complete, and some crash with database transaction errors. At least
+some of the crashed jobs do so after outputting the final lost lumi
+summary, so I suspect that they are hanging at the end after
+successfully dumping all of the necessary data to the file. Indeed,
+I've compared some crashed jobs with jobs that have rerun, and when
+the lost luminosity summary is present, the event veto data is
+identical.
+
+I don't like waiting for jobs, so I've modified the dump jobs to run
+over only a portion of a run. The flags '-n 10 -i 0' tell the
+showEventVeto-split-2018.py script to split the db records into 10
+subsets and only run on the 0th of every 10 consecutive records. By
+running the 10 jobs -i 0 through -i 9, one can then concatenate the
+resulting 10 log files and recover the full event data. I've checked
+that this succeeds for Run 310249.
 
 
 ## TODO
 
-- [ ] **Anything special needed for data corruption veto type?**
-      "DataCorruption" does not appear in the event veto dumps for run
-      2, but it does appear in the 2015--2016 dumps.
-- [ ] understgand changes from merged data at
+- [ ] understand changes from merged data at
       TLAEventCleaning/data/. The veto intervals appear slightly
       wider. Presumably this is because the database table version is
       different, but 1) can we understand what was done for each
